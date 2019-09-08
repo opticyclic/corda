@@ -123,6 +123,7 @@ buildscript {
             "unknown"
         }
     }()
+    ext.detekt_version = '1.0.1'
     repositories {
         mavenLocal()
         mavenCentral()
@@ -154,6 +155,7 @@ buildscript {
         // Capsule gradle plugin forked and maintained locally to support Gradle 5.x
         // See https://github.com/corda/gradle-capsule-plugin
         classpath "us.kirchmeier:gradle-capsule-plugin:1.0.4_r3"
+        classpath "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:$detekt_version"
     }
 }
 
@@ -186,6 +188,7 @@ allprojects {
     apply plugin: 'jacoco'
     apply plugin: 'org.owasp.dependencycheck'
     apply plugin: 'kotlin-allopen'
+    apply plugin: "io.gitlab.arturbosch.detekt"
 
     allOpen {
         annotations(
@@ -227,6 +230,13 @@ allprojects {
             allWarningsAsErrors = project.hasProperty('compilation.allWarningsAsErrors') ? project.property('compilation.allWarningsAsErrors').toBoolean() : false
         }
     }
+
+//    detekt {
+//        toolVersion = detekt_version
+//        buildUponDefaultConfig = true
+//        config = files(new File(rootProject.rootDir, "config/detekt-config.yml"))
+//        baseline = new File("detekt-baseline.xml")
+//    }
 
     tasks.withType(Jar) { task ->
         // Includes War and Ear
