@@ -337,9 +337,9 @@ subprojects {
             classpath = configurations.detekt
             main = "io.gitlab.arturbosch.detekt.cli.Main"
             args "--build-upon-default-config",
+                    "--config", rootProject.file("config/detekt-config.yml").path,
                     "--input", project.file("/src/main/kotlin").path,
-                    "--config", new File(rootProject.rootDir, "config/detekt-config.yml").absolutePath,
-                    "--baseline", project.projectDir.absolutePath + "/detekt-baseline.xml"
+                    "--baseline", project.file("detekt-baseline.xml").path
         }
         check.dependsOn detekt
 
@@ -349,8 +349,8 @@ subprojects {
             main = "io.gitlab.arturbosch.detekt.cli.Main"
             args "--build-upon-default-config",
                     "--config", rootProject.file("config/detekt-config.yml").path + "," + rootProject.file("config/detekt-config-baseline.yml").path,
-                    "--input", project.projectDir.absolutePath + "/src/main/kotlin",
-                    "--baseline", project.projectDir.absolutePath + "/detekt-baseline.xml",
+                    "--input", project.file("/src/main/kotlin").path,
+                    "--baseline", project.file("detekt-baseline.xml").path,
                     "--create-baseline"
         }
     }
