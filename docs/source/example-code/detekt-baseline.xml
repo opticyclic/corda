@@ -1,0 +1,93 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ClassNaming:CustomVaultQuery.kt$TopupIssuerFlow.TopupIssuer.Companion$AWAITING_REQUEST : Step</ID>
+    <ID>ClassNaming:CustomVaultQuery.kt$TopupIssuerFlow.TopupIssuer.Companion$SENDING_TOP_UP_ISSUE_REQUEST : Step</ID>
+    <ID>ClassNaming:FlowCookbook.kt$InitiatorFlow.Companion$EXTRACTING_VAULT_STATES : Step</ID>
+    <ID>ClassNaming:FlowCookbook.kt$InitiatorFlow.Companion$ID_OTHER_NODES : Step</ID>
+    <ID>ClassNaming:FlowCookbook.kt$InitiatorFlow.Companion$OTHER_TX_COMPONENTS : Step</ID>
+    <ID>ClassNaming:FlowCookbook.kt$InitiatorFlow.Companion$SENDING_AND_RECEIVING_DATA : Step</ID>
+    <ID>ClassNaming:FlowCookbook.kt$InitiatorFlow.Companion$SIGS_GATHERING : Step</ID>
+    <ID>ClassNaming:FlowCookbook.kt$InitiatorFlow.Companion$TX_BUILDING : Step</ID>
+    <ID>ClassNaming:FlowCookbook.kt$InitiatorFlow.Companion$TX_SIGNING : Step</ID>
+    <ID>ClassNaming:FlowCookbook.kt$InitiatorFlow.Companion$TX_VERIFICATION : Step</ID>
+    <ID>ClassNaming:FlowCookbook.kt$InitiatorFlow.Companion$VERIFYING_SIGS : Step</ID>
+    <ID>ClassNaming:FlowCookbook.kt$ResponderFlow.Companion$RECEIVING_AND_SENDING_DATA : Step</ID>
+    <ID>EmptyFunctionBlock:LaunchSpaceshipFlow.kt$LaunchSpaceshipFlow${ }</ID>
+    <ID>EmptyFunctionBlock:LaunchSpaceshipFlow.kt$LaunchSpaceshipFlowCorrect${ }</ID>
+    <ID>LongMethod:FlowCookbook.kt$InitiatorFlow$@Suppress("RemoveExplicitTypeArguments") @Suspendable override fun call()</ID>
+    <ID>MagicNumber:ClientRpcExample.kt$ClientRpcExample$3</ID>
+    <ID>MagicNumber:ClientRpcTutorial.kt$0.7</ID>
+    <ID>MagicNumber:ClientRpcTutorial.kt$0.8</ID>
+    <ID>MagicNumber:ClientRpcTutorial.kt$1000</ID>
+    <ID>MagicNumber:ClientRpcTutorial.kt$10000</ID>
+    <ID>MagicNumber:ClientRpcTutorial.kt$2000</ID>
+    <ID>MagicNumber:FlowCookbook.kt$InitiatorFlow$30</ID>
+    <ID>MagicNumber:FlowCookbook.kt$InitiatorFlow$45</ID>
+    <ID>MagicNumber:FlowCookbook.kt$InitiatorFlow$777</ID>
+    <ID>MagicNumber:FlowCookbook.kt$ResponderFlow$99</ID>
+    <ID>MagicNumber:FlowCookbook.kt$ResponderFlow.&lt;no name provided&gt;$777</ID>
+    <ID>MagicNumber:IOUFlowResponder.kt$IOUFlowResponder.&lt;no name provided&gt;$100</ID>
+    <ID>MagicNumber:WorkflowTransactionBuildTutorial.kt$SubmitCompletionFlow$60</ID>
+    <ID>MagicNumber:WorkflowTransactionBuildTutorial.kt$SubmitTradeApprovalFlow$60</ID>
+    <ID>MatchingDeclarationName:TutorialFlowStateMachines.kt$net.corda.docs.kotlin.tutorial.flowstatemachines.TutorialFlowStateMachines.kt</ID>
+    <ID>MaxLineLength:ClientRpcTutorial.kt$PrintOrVisualise</ID>
+    <ID>MaxLineLength:ClientRpcTutorial.kt$driver</ID>
+    <ID>MaxLineLength:ClientRpcTutorial.kt$val (transactions: List&lt;SignedTransaction&gt;, futureTransactions: Observable&lt;SignedTransaction&gt;) = proxy.internalVerifiedTransactionsFeed()</ID>
+    <ID>MaxLineLength:CustomVaultQuery.kt$TopupIssuerFlow.TopupIssuanceRequester$return initiateFlow(issuerBankParty).sendAndReceive&lt;List&lt;AbstractCashFlow.Result&gt;&gt;(topupRequest).unwrap { it }</ID>
+    <ID>MaxLineLength:CustomVaultQuery.kt$TopupIssuerFlow.TopupIssuer$val txn = issueCashTo(amount, topupRequest.issueToParty, topupRequest.issuerPartyRef, topupRequest.notaryParty)</ID>
+    <ID>MaxLineLength:CustomVaultQuery.kt$TopupIssuerFlow.TopupIssuer${ // invoke Cash subflow to issue Asset progressTracker.currentStep = ISSUING val issueCashFlow = CashIssueFlow(amount, issuerPartyRef, notaryParty) val issueTx = subFlow(issueCashFlow) // NOTE: issueCashFlow performs a Broadcast (which stores a local copy of the txn to the ledger) // short-circuit when issuing to self if (serviceHub.myInfo.isLegalIdentity(issueTo)) return issueTx // now invoke Cash subflow to Move issued assetType to issue requester progressTracker.currentStep = TRANSFERRING val moveCashFlow = CashPaymentFlow(amount, issueTo, anonymous = false) // NOTE: CashFlow PayCash calls FinalityFlow which performs a Broadcast (which stores a local copy of the txn to the ledger) return subFlow(moveCashFlow) }</ID>
+    <ID>MaxLineLength:FinalityFlowMigration.kt$ExistingInitiatingFlow : FlowLogic</ID>
+    <ID>MaxLineLength:FinalityFlowMigration.kt$ExistingInitiatingFlow${ // Otherwise they're at least on version 2 and so we can send the finalised transaction on the existing session. subFlow(FinalityFlow(fullySignedTx, session)) }</ID>
+    <ID>MaxLineLength:FinalityFlowMigration.kt$ExistingResponderFlow${ // The other side is not using the old CorDapp so call ReceiveFinalityFlow to record the finalised transaction. // If SignTransactionFlow is used then we can verify the tranaction we receive for recording is the same one // that was just signed. subFlow(ReceiveFinalityFlow(otherSide, expectedTxId = txWeJustSigned.id)) }</ID>
+    <ID>MaxLineLength:FlowCookbook.kt$InitiatorFlow : FlowLogic</ID>
+    <ID>MaxLineLength:FlowCookbook.kt$InitiatorFlow$val fullySignedTx: SignedTransaction = subFlow(CollectSignaturesFlow(twiceSignedTx, setOf(counterpartySession, regulatorSession), SIGS_GATHERING.childProgressTracker()))</ID>
+    <ID>MaxLineLength:FlowCookbook.kt$InitiatorFlow$val notarisedTx1: SignedTransaction = subFlow(FinalityFlow(fullySignedTx, listOf(counterpartySession), FINALISATION.childProgressTracker()))</ID>
+    <ID>MaxLineLength:FlowCookbook.kt$InitiatorFlow$val notarisedTx2: SignedTransaction = subFlow(FinalityFlow(fullySignedTx, partySessions, FINALISATION.childProgressTracker()))</ID>
+    <ID>MaxLineLength:FlowCookbook.kt$InitiatorFlow$val otherIdentity2: PartyAndCertificate = serviceHub.keyManagementService.freshKeyAndCert(ourIdentityAndCert, false)</ID>
+    <ID>MaxLineLength:FlowCookbook.kt$InitiatorFlow$val otherIdentity: PartyAndCertificate = serviceHub.keyManagementService.freshKeyAndCert(ourIdentityAndCert, false)</ID>
+    <ID>MaxLineLength:FlowCookbook.kt$InitiatorFlow$val packet2: UntrustworthyData&lt;Boolean&gt; = counterpartySession.sendAndReceive&lt;Boolean&gt;("You can send and receive any class!")</ID>
+    <ID>MaxLineLength:FlowCookbook.kt$InitiatorFlow$val txState: TransactionState&lt;DummyState&gt; = TransactionState(ourOutputState, DummyContract.PROGRAM_ID, specificNotary)</ID>
+    <ID>MaxLineLength:FlowCookbook.kt$ResponderFlow${ // The ``ResponderFlow` has all the same APIs available. It looks // up network information, sends and receives data, and constructs // transactions in exactly the same way. /**----------------------------- * SENDING AND RECEIVING DATA * -----------------------------**/ progressTracker.currentStep = RECEIVING_AND_SENDING_DATA // We need to respond to the messages sent by the initiator: // 1. They sent us an ``Any`` instance // 2. They waited to receive an ``Integer`` instance back // 3. They sent a ``String`` instance and waited to receive a // ``Boolean`` instance back // Our side of the flow must mirror these calls. // DOCSTART 08 val any: Any = counterpartySession.receive&lt;Any&gt;().unwrap { data -&gt; data } val string: String = counterpartySession.sendAndReceive&lt;String&gt;(99).unwrap { data -&gt; data } counterpartySession.send(true) // DOCEND 08 /**---------------------------------------- * RESPONDING TO COLLECT_SIGNATURES_FLOW * ----------------------------------------**/ progressTracker.currentStep = SIGNING // The responder will often need to respond to a call to // ``CollectSignaturesFlow``. It does so my invoking its own // ``SignTransactionFlow`` subclass. // DOCSTART 16 val signTransactionFlow: SignTransactionFlow = object : SignTransactionFlow(counterpartySession) { override fun checkTransaction(stx: SignedTransaction) = requireThat { // Any additional checking we see fit... val outputState = stx.tx.outputsOfType&lt;DummyState&gt;().single() require(outputState.magicNumber == 777) } } val idOfTxWeSigned = subFlow(signTransactionFlow).id // DOCEND 16 /**----------------------------- * FINALISING THE TRANSACTION * -----------------------------**/ progressTracker.currentStep = FINALISATION // As the final step the responder waits to receive the notarised transaction from the sending party // Since it knows the ID of the transaction it just signed, the transaction ID is specified to ensure the correct // transaction is received and recorded. // DOCSTART ReceiveFinalityFlow subFlow(ReceiveFinalityFlow(counterpartySession, expectedTxId = idOfTxWeSigned)) // DOCEND ReceiveFinalityFlow }</ID>
+    <ID>MaxLineLength:FxTransactionBuildTutorial.kt$ForeignExchangeFlow$val sum = it.filter { it.owner.let { it is Party &amp;&amp; serviceHub.myInfo.isLegalIdentity(it) } }.map { it.amount.quantity }.sum()</ID>
+    <ID>MaxLineLength:FxTransactionBuildTutorial.kt$ForeignExchangeRemoteFlow$val ourKey = serviceHub.keyManagementService.filterMyKeys(ourInputState.flatMap { it.state.data.participants }.map { it.owningKey }).single()</ID>
+    <ID>MaxLineLength:FxTransactionBuildTutorial.kt$private</ID>
+    <ID>MaxLineLength:FxTransactionBuildTutorial.kt$val eligibleStates = serviceHub.vaultService.tryLockFungibleStatesForSpending(lockId, fullCriteria, amountRequired.withoutIssuer(), Cash.State::class.java)</ID>
+    <ID>MaxLineLength:FxTransactionBuildTutorial.kt$val logicalExpression = builder { CashSchemaV1.PersistentCashState::currency.equal(amountRequired.token.product.currencyCode) }</ID>
+    <ID>MaxLineLength:FxTransactionBuildTutorial.kt$val ourParties = ourKeys.map { serviceHub.identityService.partyFromKey(it) ?: throw IllegalStateException("Unable to resolve party from key") }</ID>
+    <ID>MaxLineLength:IOUFlow.kt$IOUFlow$val fullySignedTx = subFlow(CollectSignaturesFlow(signedTx, listOf(otherPartySession), CollectSignaturesFlow.tracker()))</ID>
+    <ID>MaxLineLength:TutorialContract.kt$CommercialPaper$"output states are issued by a command signer" using (output.issuance.party.owningKey in command.signers)</ID>
+    <ID>MaxLineLength:TutorialContract.kt$CommercialPaper$"the transaction is signed by the owner of the CP" using (input.owner.owningKey in command.signers)</ID>
+    <ID>MaxLineLength:TutorialContract.kt$CommercialPaper$return TransactionBuilder(notary = notary).withItems(stateAndContract, Command(Commands.Issue(), issuance.party.owningKey))</ID>
+    <ID>MaxLineLength:TutorialContract.kt$State$override fun withNewOwner(newOwner: AbstractParty)</ID>
+    <ID>MaxLineLength:TutorialFlowStateMachines.kt$TwoPartyTradeFlow.Seller$override val progressTracker: ProgressTracker = TwoPartyTradeFlow.Seller.tracker()</ID>
+    <ID>MaxLineLength:WorkflowTransactionBuildTutorial.kt$SubmitCompletionFlow : FlowLogic</ID>
+    <ID>MaxLineLength:WorkflowTransactionBuildTutorial.kt$TradeApprovalContract$"Completed command requires the counterparty as signer" using (command.signers.contains(before.counterparty.owningKey))</ID>
+    <ID>MaxLineLength:WorkflowTransactionBuildTutorial.kt$TradeApprovalContract$"Completed command requires the source Party as signer" using (command.signers.contains(before.source.owningKey))</ID>
+    <ID>MaxLineLength:WorkflowTransactionBuildTutorial.kt$TradeApprovalContract$"Issue requires the source Party as signer" using (command.signers.contains(issued.source.owningKey))</ID>
+    <ID>MaxLineLength:WorkflowTransactionBuildTutorial.kt$TradeApprovalContract$"Output must be a final state" using (after.state in setOf(WorkflowState.APPROVED, WorkflowState.REJECTED))</ID>
+    <ID>NewLineAtEndOfFile:ClientRpcExample.kt$net.corda.docs.kotlin.ClientRpcExample.kt</ID>
+    <ID>NewLineAtEndOfFile:ClientRpcTutorial.kt$net.corda.docs.kotlin.ClientRpcTutorial.kt</ID>
+    <ID>NewLineAtEndOfFile:IOUContract.kt$net.corda.docs.kotlin.tutorial.twoparty.IOUContract.kt</ID>
+    <ID>NewLineAtEndOfFile:IOUState.kt$net.corda.docs.kotlin.tutorial.twoparty.IOUState.kt</ID>
+    <ID>NewLineAtEndOfFile:TutorialContract.kt$net.corda.docs.kotlin.tutorial.contract.TutorialContract.kt</ID>
+    <ID>NewLineAtEndOfFile:TutorialFlowStateMachines.kt$net.corda.docs.kotlin.tutorial.flowstatemachines.TutorialFlowStateMachines.kt</ID>
+    <ID>SpreadOperator:FxTransactionBuildTutorial.kt$ForeignExchangeFlow$(*ourInputStates.toTypedArray())</ID>
+    <ID>SpreadOperator:FxTransactionBuildTutorial.kt$ForeignExchangeFlow$(*ourOutputState.map { StateAndContract(it, Cash.PROGRAM_ID) }.toTypedArray())</ID>
+    <ID>SpreadOperator:FxTransactionBuildTutorial.kt$ForeignExchangeFlow$(*theirInputStates.toTypedArray())</ID>
+    <ID>SpreadOperator:FxTransactionBuildTutorial.kt$ForeignExchangeFlow$(*theirOutputState.map { StateAndContract(it, Cash.PROGRAM_ID) }.toTypedArray())</ID>
+    <ID>WildcardImport:CustomVaultQuery.kt$import net.corda.core.flows.*</ID>
+    <ID>WildcardImport:CustomVaultQuery.kt$import net.corda.core.utilities.*</ID>
+    <ID>WildcardImport:FinalityFlowMigration.kt$import net.corda.core.flows.*</ID>
+    <ID>WildcardImport:FlowCookbook.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:FlowCookbook.kt$import net.corda.core.flows.*</ID>
+    <ID>WildcardImport:FxTransactionBuildTutorial.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:FxTransactionBuildTutorial.kt$import net.corda.core.flows.*</ID>
+    <ID>WildcardImport:IOUContract.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:IOUFlowResponder.kt$import net.corda.core.flows.*</ID>
+    <ID>WildcardImport:TutorialContract.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:WorkflowTransactionBuildTutorial.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:WorkflowTransactionBuildTutorial.kt$import net.corda.core.flows.*</ID>
+  </Whitelist>
+</SmellBaseline>

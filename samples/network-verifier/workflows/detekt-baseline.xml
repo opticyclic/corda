@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ClassNaming:TestCommsFlow.kt$TestCommsFlowInitiator$RECIEVED_ALL : Step</ID>
+    <ID>MaxLineLength:TestCommsFlow.kt$TestCommsFlowInitiator$tx.addOutputState(CommsTestState(responses, serviceHub.myInfo.legalIdentities.first()), CommsTestContract::class.java.name)</ID>
+    <ID>MaxLineLength:TestNotaryFlow.kt$TestNotaryFlow$issueBuilder.addOutputState(NotaryTestState(notary.name.toString(), myIdentity), NotaryTestContract::class.java.name)</ID>
+    <ID>WildcardImport:TestCommsFlow.kt$import net.corda.core.flows.*</ID>
+  </Whitelist>
+</SmellBaseline>

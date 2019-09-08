@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ComplexMethod:SwapData.kt$SwapData$private fun getSwapConvention(name: String): FixedIborSwapConvention</ID>
+    <ID>ConstructorParameterNaming:PortfolioState.kt$PortfolioState$val _parties: Pair&lt;AbstractParty, AbstractParty&gt;</ID>
+    <ID>ConstructorParameterNaming:SwapData.kt$FixedLeg$val _notional: BigDecimal</ID>
+    <ID>ConstructorParameterNaming:SwapData.kt$FloatingLeg$val _notional: BigDecimal</ID>
+    <ID>ForbiddenComment:SwapData.kt$SwapData$// TODO: Fix below to be correct - change tenor and reference data</ID>
+    <ID>MatchingDeclarationName:CurrencyParameterSensitivitySerialiser.kt$net.corda.vega.plugin.customserializers.CurrencyParameterSensitivitySerialiser.kt</ID>
+    <ID>MaxLineLength:CurrencyParameterSensitivitiesSerializer.kt$CurrencyParameterSensitivitiesSerializer$override fun fromProxy(proxy: Proxy): CurrencyParameterSensitivities</ID>
+    <ID>MaxLineLength:CurrencyParameterSensitivitySerialiser.kt$CurrencyParameterSensitivitySerializer$override fun toProxy(obj: CurrencyParameterSensitivity)</ID>
+    <ID>MaxLineLength:IRSState.kt$IRSState$override val linearId: UniqueIdentifier = UniqueIdentifier(swap.id.first + swap.id.second)</ID>
+    <ID>MaxLineLength:IRSState.kt$IRSState$return TransactionBuilder(notary).withItems(StateAndContract(state, IRS_PROGRAM_ID), Command(OGTrade.Commands.Agree(), participants.map { it.owningKey }))</ID>
+    <ID>MaxLineLength:OGTrade.kt$OGTrade$val groups: List&lt;LedgerTransaction.InOutGroup&lt;IRSState, UniqueIdentifier&gt;&gt; = tx.groupStates { state -&gt; state.linearId }</ID>
+    <ID>MaxLineLength:PortfolioState.kt$PortfolioState$override</ID>
+    <ID>MaxLineLength:PortfolioState.kt$PortfolioState$return ScheduledActivity(flow, LocalDate.now().plus(1, ChronoUnit.DAYS).atStartOfDay().toInstant(ZoneOffset.UTC))</ID>
+    <ID>MaxLineLength:PortfolioState.kt$PortfolioState$return TransactionBuilder(notary).withItems(StateAndContract(copy(), PORTFOLIO_SWAP_PROGRAM_ID), Command(PortfolioSwap.Commands.Agree(), participants.map { it.owningKey }))</ID>
+    <ID>MaxLineLength:PortfolioState.kt$PortfolioState$val flow = flowLogicRefFactory.create("net.corda.vega.flows.SimmRevaluation\$Initiator", thisStateRef, LocalDate.now())</ID>
+    <ID>MaxLineLength:PortfolioSwap.kt$PortfolioSwap$val groups: List&lt;LedgerTransaction.InOutGroup&lt;PortfolioState, UniqueIdentifier&gt;&gt; = tx.groupStates { state -&gt; state.linearId }</ID>
+    <ID>MaxLineLength:SwapData.kt$FixedLeg$data</ID>
+    <ID>MaxLineLength:SwapData.kt$FloatingLeg$data</ID>
+    <ID>MaxLineLength:SwapData.kt$SwapData$return getSwapConvention(convention).createTrade(startDate, Tenor.TENOR_4Y, buySell, notional.toDouble(), fixedRate.toDouble(), ReferenceData.standard()) .toBuilder() .info(tradeInfo) .build()</ID>
+    <ID>MaxLineLength:TenorDateParameterMetadataSerializer.kt$TenorDateParameterMetadataSerializer$override fun fromProxy(proxy: Proxy): TenorDateParameterMetadata</ID>
+    <ID>NewLineAtEndOfFile:CurrencyParameterSensitivitiesSerializer.kt$net.corda.vega.plugin.customserializers.CurrencyParameterSensitivitiesSerializer.kt</ID>
+    <ID>WildcardImport:IRSState.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:MultiCurrencyAmountSerializer.kt$import net.corda.core.serialization.*</ID>
+    <ID>WildcardImport:OGTrade.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:PortfolioState.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:PortfolioSwap.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:TenorDateParameterMetadataSerializer.kt$import net.corda.core.serialization.*</ID>
+    <ID>WildcardImport:TenorSerializer.kt$import net.corda.core.serialization.*</ID>
+  </Whitelist>
+</SmellBaseline>

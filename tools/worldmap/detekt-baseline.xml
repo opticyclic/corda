@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>LongParameterList:PhysicalLocationStructures.kt$WorldCoordinate$(screenWidth: Double, screenHeight: Double, topLatitude: Double, bottomLatitude: Double, leftLongitude: Double, rightLongitude: Double)</ID>
+    <ID>MagicNumber:PhysicalLocationStructures.kt$WorldCoordinate$180</ID>
+    <ID>MagicNumber:PhysicalLocationStructures.kt$WorldCoordinate$180.0</ID>
+    <ID>MagicNumber:PhysicalLocationStructures.kt$WorldCoordinate$360.0</ID>
+    <ID>MagicNumber:PhysicalLocationStructures.kt$WorldCoordinate$4</ID>
+    <ID>MagicNumber:PhysicalLocationStructures.kt$WorldCoordinate$90</ID>
+    <ID>MaxLineLength:PhysicalLocationStructures.kt$WorldCoordinate$fun latitudeToScreenY(lat: Double)</ID>
+    <ID>MaxLineLength:PhysicalLocationStructures.kt$WorldCoordinate$require(longitude in leftLongitude..rightLongitude){"Longitude must be between $leftLongitude and $rightLongitude"}</ID>
+    <ID>TooGenericExceptionThrown:PhysicalLocationStructures.kt$CityDatabase$throw Exception("Could not parse line: $line")</ID>
+  </Whitelist>
+</SmellBaseline>

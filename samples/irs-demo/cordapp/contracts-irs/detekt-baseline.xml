@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ComplexMethod:IRS.kt$InterestRateSwap.CommonLeg$override fun equals(other: Any?): Boolean</ID>
+    <ID>ComplexMethod:IRS.kt$InterestRateSwap.FloatingLeg$override fun equals(other: Any?): Boolean</ID>
+    <ID>EqualsWithHashCodeExist:IRSUtils.kt$FixedRate : Rate</ID>
+    <ID>ForbiddenComment:IRS.kt$FloatingRatePaymentEvent$// TODO: Should an uncalculated amount return a zero ? null ? etc.</ID>
+    <ID>ForbiddenComment:IRS.kt$InterestRateSwap$// TODO: Confirm: would someone really enter a swap with a negative fixed rate?</ID>
+    <ID>ForbiddenComment:IRS.kt$InterestRateSwap$// TODO: further tests</ID>
+    <ID>ForbiddenComment:IRS.kt$InterestRateSwap.Commands.Mature$// Trade has matured; no more actions. Cleanup. // TODO: Do we need this?</ID>
+    <ID>ForbiddenComment:IRS.kt$InterestRateSwap.State$// TODO: Jexl is purely for prototyping. It may be replaced</ID>
+    <ID>ForbiddenComment:IRS.kt$InterestRateSwap.State$// TODO: Whatever we do use must be secure and sandboxed</ID>
+    <ID>ForbiddenComment:IRSUtils.kt$// TODO: For further discussion.</ID>
+    <ID>ForbiddenComment:IRSUtils.kt$RatioUnit$// TODO: Discuss this type</ID>
+    <ID>ForbiddenComment:OracleUtils.kt$// TODO: we would ordinarily convert clock to same time zone as the index/source would announce in</ID>
+    <ID>LongParameterList:IRS.kt$FloatingRatePaymentEvent$(date: LocalDate = this.date, accrualStartDate: LocalDate = this.accrualStartDate, accrualEndDate: LocalDate = this.accrualEndDate, dayCountBasisDay: DayCountBasisDay = this.dayCountBasisDay, dayCountBasisYear: DayCountBasisYear = this.dayCountBasisYear, fixingDate: LocalDate = this.fixingDate, notional: Amount&lt;Currency&gt; = this.notional, rate: Rate = this.rate)</ID>
+    <ID>LongParameterList:IRS.kt$InterestRateSwap$(floatingLeg: FloatingLeg, fixedLeg: FixedLeg, calculation: Calculation, common: Common, oracle: Party, notary: Party)</ID>
+    <ID>LongParameterList:IRS.kt$InterestRateSwap.FixedLeg$(fixedRatePayer: AbstractParty = this.fixedRatePayer, notional: Amount&lt;Currency&gt; = this.notional, paymentFrequency: Frequency = this.paymentFrequency, effectiveDate: LocalDate = this.effectiveDate, effectiveDateAdjustment: DateRollConvention? = this.effectiveDateAdjustment, terminationDate: LocalDate = this.terminationDate, terminationDateAdjustment: DateRollConvention? = this.terminationDateAdjustment, dayCountBasisDay: DayCountBasisDay = this.dayCountBasisDay, dayCountBasisYear: DayCountBasisYear = this.dayCountBasisYear, dayInMonth: Int = this.dayInMonth, paymentRule: PaymentRule = this.paymentRule, paymentDelay: Int = this.paymentDelay, paymentCalendar: BusinessCalendar = this.paymentCalendar, interestPeriodAdjustment: AccrualAdjustment = this.interestPeriodAdjustment, fixedRate: FixedRate = this.fixedRate)</ID>
+    <ID>LongParameterList:IRS.kt$InterestRateSwap.FloatingLeg$(floatingRatePayer: AbstractParty = this.floatingRatePayer, notional: Amount&lt;Currency&gt; = this.notional, paymentFrequency: Frequency = this.paymentFrequency, effectiveDate: LocalDate = this.effectiveDate, effectiveDateAdjustment: DateRollConvention? = this.effectiveDateAdjustment, terminationDate: LocalDate = this.terminationDate, terminationDateAdjustment: DateRollConvention? = this.terminationDateAdjustment, dayCountBasisDay: DayCountBasisDay = this.dayCountBasisDay, dayCountBasisYear: DayCountBasisYear = this.dayCountBasisYear, dayInMonth: Int = this.dayInMonth, paymentRule: PaymentRule = this.paymentRule, paymentDelay: Int = this.paymentDelay, paymentCalendar: BusinessCalendar = this.paymentCalendar, interestPeriodAdjustment: AccrualAdjustment = this.interestPeriodAdjustment, rollConvention: DateRollConvention = this.rollConvention, fixingRollConvention: DateRollConvention = this.fixingRollConvention, resetDayInMonth: Int = this.resetDayInMonth, fixingPeriod: Int = this.fixingPeriodOffset, resetRule: PaymentRule = this.resetRule, fixingsPerPayment: Frequency = this.fixingsPerPayment, fixingCalendar: BusinessCalendar = this.fixingCalendar, index: String = this.index, indexSource: String = this.indexSource, indexTenor: Tenor = this.indexTenor )</ID>
+    <ID>MagicNumber:IRS.kt$RatePaymentEvent$360.0</ID>
+    <ID>MagicNumber:IRS.kt$RatePaymentEvent$4</ID>
+    <ID>MagicNumber:IRS.kt$RatePaymentEvent$8</ID>
+    <ID>MagicNumber:IRSUtils.kt$PercentageRatioUnit$100</ID>
+    <ID>MagicNumber:OracleUtils.kt$11</ID>
+    <ID>MagicNumber:OracleUtils.kt$24</ID>
+    <ID>MagicNumber:OracleUtils.kt$45</ID>
+    <ID>MaxLineLength:IRS.kt$FixedRatePaymentEvent$"FixedRatePaymentEvent $accrualStartDate -&gt; $accrualEndDate : $dayCountFactor : $days : $date : $notional : $rate : $flow"</ID>
+    <ID>MaxLineLength:IRS.kt$FixedRatePaymentEvent$override val flow: Amount&lt;Currency&gt; get() = Amount(dayCountFactor.times(BigDecimal(notional.quantity)).times(rate.ratioUnit!!.value).toLong(), notional.token)</ID>
+    <ID>MaxLineLength:IRS.kt$FloatingRatePaymentEvent$override fun asCSV(): String</ID>
+    <ID>MaxLineLength:IRS.kt$FloatingRatePaymentEvent$override fun toString(): String</ID>
+    <ID>MaxLineLength:IRS.kt$FloatingRatePaymentEvent$rate: Rate</ID>
+    <ID>MaxLineLength:IRS.kt$FloatingRatePaymentEvent$rate: Rate = this.rate</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap : Contract</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap$ private fun getFloatingLegPaymentsDifferences(payments1: Map&lt;LocalDate, Event&gt;, payments2: Map&lt;LocalDate, Event&gt;): List&lt;Pair&lt;LocalDate, Pair&lt;FloatingRatePaymentEvent, FloatingRatePaymentEvent&gt;&gt;&gt;</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap$"All notionals must be non zero" using (irs.fixedLeg.notional.quantity &gt; 0 &amp;&amp; irs.floatingLeg.notional.quantity &gt; 0)</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap$"The changed payments dates are aligned" using (oldFloatingRatePaymentEvent.date == newFixedRatePaymentEvent.date)</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap$"The currency of the notionals must be the same" using (irs.fixedLeg.notional.token == irs.floatingLeg.notional.token)</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap$"The effective date is before the termination date for the fixed leg" using (irs.fixedLeg.effectiveDate &lt; irs.fixedLeg.terminationDate)</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap$"The effective date is before the termination date for the floating leg" using (irs.floatingLeg.effectiveDate &lt; irs.floatingLeg.terminationDate)</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap$"The fix payment has the same currency as the notional" using (newFixedRatePaymentEvent.flow.token == irs.floatingLeg.notional.token)</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap$"The fixed leg parties are constant" using (irs.fixedLeg.fixedRatePayer == prevIrs.fixedLeg.fixedRatePayer)</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap$"The fixed leg payment schedule is constant" using (irs.calculation.fixedLegPaymentSchedule == prevIrs.calculation.fixedLegPaymentSchedule)</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap$"The fixing is for the next required date" using (prevIrs.calculation.nextFixingDate() == fixValue.of.forDay)</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap$"The new payment has the correct rate" using (newFixedRatePaymentEvent.rate.ratioUnit!!.value == fixValue.value)</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap$"There is at least one difference in the IRS floating leg payment schedules" using !paymentDifferences.isEmpty()</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap$Calculation</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap$TransactionBuilder(notary) .addCommand(Command(Commands.Agree(), listOf(state.floatingLeg.floatingRatePayer.owningKey, state.fixedLeg.fixedRatePayer.owningKey)))</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap$private</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap$tx.addCommand(Commands.Refix(fixing), listOf(irs.state.data.floatingLeg.floatingRatePayer.owningKey, irs.state.data.fixedLeg.fixedRatePayer.owningKey))</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap$val (oldFloatingRatePaymentEvent, newFixedRatePaymentEvent) = paymentDifferences.single().second // Ignore the date of the changed rate (we checked that earlier).</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap$val groups: List&lt;LedgerTransaction.InOutGroup&lt;State, UniqueIdentifier&gt;&gt; = tx.groupStates { state -&gt; state.linearId }</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap$val paymentDifferences = getFloatingLegPaymentsDifferences(prevIrs.calculation.floatingLegPaymentSchedule, irs.calculation.floatingLegPaymentSchedule)</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap.Calculation$return floatingLegPaymentSchedule.filter { it.value.rate is ReferenceRate }.// TODO - a better way to determine what fixings remain to be fixed minBy { it.value.fixingDate.toEpochDay() }?.value?.fixingDate</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap.Commands$Mature : TypeOnlyCommandDataCommands</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap.Common$val valuationDateDescription: String</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap.CommonLeg$"PaymentRule=$paymentRule,PaymentDelay=$paymentDelay,PaymentCalendar=$paymentCalendar,InterestPeriodAdjustment=$interestPeriodAdjustment"</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap.CommonLeg$"TerminationDateAdjustment=$terminationDateAdjustment,DayCountBasis=$dayCountBasisDay/$dayCountBasisYear,DayInMonth=$dayInMonth,"</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap.CommonLeg$dayCountBasisDay</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap.CommonLeg$effectiveDateAdjustment</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap.CommonLeg$return "Notional=$notional,PaymentFrequency=$paymentFrequency,EffectiveDate=$effectiveDate,EffectiveDateAdjustment:$effectiveDateAdjustment,TerminatationDate=$terminationDate," + "TerminationDateAdjustment=$terminationDateAdjustment,DayCountBasis=$dayCountBasisDay/$dayCountBasisYear,DayInMonth=$dayInMonth," + "PaymentRule=$paymentRule,PaymentDelay=$paymentDelay,PaymentCalendar=$paymentCalendar,InterestPeriodAdjustment=$interestPeriodAdjustment"</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap.FixedLeg$dayCountBasisDay</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap.FixedLeg$override</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap.FloatingLeg$"FixingPeriondOffset=$fixingPeriodOffset,ResetRule=$resetRule,FixingsPerPayment=$fixingsPerPayment,FixingCalendar=$fixingCalendar,"</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap.FloatingLeg$"rollConvention=$rollConvention,FixingRollConvention=$fixingRollConvention,ResetDayInMonth=$resetDayInMonth"</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap.FloatingLeg$( var floatingRatePayer: AbstractParty, notional: Amount&lt;Currency&gt;, paymentFrequency: Frequency, effectiveDate: LocalDate, effectiveDateAdjustment: DateRollConvention?, terminationDate: LocalDate, terminationDateAdjustment: DateRollConvention?, dayCountBasisDay: DayCountBasisDay, dayCountBasisYear: DayCountBasisYear, dayInMonth: Int, paymentRule: PaymentRule, paymentDelay: Int, paymentCalendar: BusinessCalendar, interestPeriodAdjustment: AccrualAdjustment, var rollConvention: DateRollConvention, var fixingRollConvention: DateRollConvention, var resetDayInMonth: Int, var fixingPeriodOffset: Int, var resetRule: PaymentRule, var fixingsPerPayment: Frequency, var fixingCalendar: BusinessCalendar, var index: String, var indexSource: String, var indexTenor: Tenor )</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap.FloatingLeg$dayCountBasisDay</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap.State$InterestRateSwap().generateFix(ptx, StateAndRef(TransactionState(this, IRS_PROGRAM_ID, oldState.state.notary, constraint = AlwaysAcceptAttachmentConstraint), oldState.ref), fix)</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap.State$override</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap.State$return ScheduledActivity(flowLogicRefFactory.create("net.corda.irs.flows.FixingFlow\$FixingRoleDecider", thisStateRef), instant)</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap.State$val instant = suggestInterestRateAnnouncementTimeWindow(index = nextFixingOf.name, source = floatingLeg.indexSource, date = nextFixingOf.forDay).fromTime!!</ID>
+    <ID>MaxLineLength:IRS.kt$InterestRateSwap.State${ val nextFixingOf = nextFixingOf() ?: return null // This is perhaps not how we should determine the time point in the business day, but instead expect the schedule to detail some of these aspects val instant = suggestInterestRateAnnouncementTimeWindow(index = nextFixingOf.name, source = floatingLeg.indexSource, date = nextFixingOf.forDay).fromTime!! return ScheduledActivity(flowLogicRefFactory.create("net.corda.irs.flows.FixingFlow\$FixingRoleDecider", thisStateRef), instant) }</ID>
+    <ID>MaxLineLength:IRS.kt$PaymentEvent : Event</ID>
+    <ID>MaxLineLength:IRS.kt$RatePaymentEvent$// TODO : Fix below (use daycount convention for division, not hardcoded 360 etc) val dayCountFactor: BigDecimal get() = (BigDecimal(days).divide(BigDecimal(360.0), 8, RoundingMode.HALF_UP)).setScale(4, RoundingMode.HALF_UP)</ID>
+    <ID>MaxLineLength:IRS.kt$RatePaymentEvent$open fun asCSV()</ID>
+    <ID>MaxLineLength:IRS.kt$RatePaymentEvent$val days: Int get() = BusinessCalendar.calculateDaysBetween(accrualStartDate, accrualEndDate, dayCountBasisYear, dayCountBasisDay)</ID>
+    <ID>MaxLineLength:IRS.kt$UnknownType</ID>
+    <ID>MaxLineLength:IRSExport.kt$this.calculation.floatingLegPaymentSchedule.toSortedMap().values.joinToString("\n") { it.asCSV() }</ID>
+    <ID>MaxLineLength:IRSUtils.kt$PercentageRatioUnit$open</ID>
+    <ID>MaxLineLength:IRSUtils.kt$net.corda.irs.contract.IRSUtils.kt</ID>
+    <ID>MaxLineLength:IRSUtils.kt$operator</ID>
+    <ID>MaxLineLength:IRSUtils.kt$operator fun kotlin.Int.times(other: FixedRate): Int</ID>
+    <ID>TooManyFunctions:IRS.kt$InterestRateSwap : Contract</ID>
+    <ID>WildcardImport:IRS.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:IRS.kt$import net.corda.finance.contracts.*</ID>
+  </Whitelist>
+</SmellBaseline>

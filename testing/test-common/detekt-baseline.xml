@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ForbiddenComment:ParametersUtilities.kt$// TODO: Make this configurable and consistence across driver, bootstrapper, demobench and NetworkMapServer</ID>
+    <ID>LongParameterList:ParametersUtilities.kt$( notaries: List&lt;NotaryInfo&gt; = emptyList(), minimumPlatformVersion: Int = 1, modifiedTime: Instant = Instant.now(), maxMessageSize: Int = 10485760, // TODO: Make this configurable and consistence across driver, bootstrapper, demobench and NetworkMapServer maxTransactionSize: Int = maxMessageSize * 50, whitelistedContractImplementations: Map&lt;String, List&lt;AttachmentId&gt;&gt; = emptyMap(), epoch: Int = 1, eventHorizon: Duration = 30.days, packageOwnership: Map&lt;String, PublicKey&gt; = emptyMap() )</ID>
+    <ID>MagicNumber:Eventually.kt$100</ID>
+    <ID>MagicNumber:Eventually.kt$5</ID>
+    <ID>MagicNumber:ParametersUtilities.kt$30</ID>
+    <ID>MagicNumber:ParametersUtilities.kt$50</ID>
+    <ID>MaxLineLength:CommonSerializationTestHelpers.kt$fun &lt;T&gt; SerializationEnvironment.asContextEnv(inheritable: Boolean = false, callable: (SerializationEnvironment) -&gt; T): T</ID>
+    <ID>MaxLineLength:Eventually.kt$ inline fun &lt;R&gt; eventually( duration: Duration = Duration.ofSeconds(5), waitBetween: Duration = Duration.ofMillis(100), waitBefore: Duration = waitBetween, test: () -&gt; R): R</ID>
+    <ID>MaxLineLength:ParametersUtilities.kt$ fun NetworkParameters.addNotary(party: Party, validating: Boolean = true): NetworkParameters</ID>
+    <ID>MaxLineLength:TestCommonUtils.kt$inline fun &lt;reified TYPE : Throwable&gt; AbstractThrowableAssert&lt;*, *&gt;.isInstanceOf(): AbstractThrowableAssert&lt;*, *&gt;</ID>
+    <ID>NewLineAtEndOfFile:Eventually.kt$net.corda.testing.common.internal.Eventually.kt</ID>
+    <ID>TooGenericExceptionCaught:Eventually.kt$e: Exception</ID>
+  </Whitelist>
+</SmellBaseline>

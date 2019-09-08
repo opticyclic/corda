@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>MagicNumber:NodeInfo.kt$NodeInfoSigner$4</ID>
+    <ID>MaxLineLength:NodeInfo.kt$NodeInfoSigner$@Option(names = ["--address"], paramLabel = "host:port", description = ["Public address of node"], converter = [NetworkHostAndPortConverter::class])</ID>
+    <ID>MaxLineLength:NodeInfo.kt$NodeInfoSigner$@Option(names = ["--platform-version"], paramLabel = "int", description = ["Platform version that this node supports"])</ID>
+    <ID>MaxLineLength:NodeInfo.kt$NodeInfoSigner$require(keyStorePath != null &amp;&amp; keyAlias != null) { "The --keystore and --keyalias parameters must be specified" }</ID>
+    <ID>MaxLineLength:NodeInfo.kt$NodeInfoSigner.AMQPInspectorSerializationScheme$override</ID>
+    <ID>WildcardImport:NodeInfo.kt$import net.corda.core.crypto.*</ID>
+    <ID>WildcardImport:NodeInfo.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:NodeInfo.kt$import net.corda.serialization.internal.*</ID>
+    <ID>WildcardImport:NodeInfo.kt$import net.corda.serialization.internal.amqp.*</ID>
+    <ID>WildcardImport:NodeInfo.kt$import picocli.CommandLine.*</ID>
+  </Whitelist>
+</SmellBaseline>

@@ -1,0 +1,127 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ComplexMethod:CordaRPCClient.kt$CordaRPCClientConfiguration$override fun equals(other: Any?): Boolean</ID>
+    <ID>ComplexMethod:RPCClientProxyHandler.kt$RPCClientProxyHandler$ private fun close(notify: Boolean = true)</ID>
+    <ID>ComplexMethod:RPCClientProxyHandler.kt$RPCClientProxyHandler$// The handler for Artemis messages. private fun artemisMessageHandler(message: ClientMessage)</ID>
+    <ID>ComplexMethod:RPCClientProxyHandler.kt$RPCClientProxyHandler$// This is the general function that transforms a client side RPC to internal Artemis messages. override fun invoke(proxy: Any, method: Method, arguments: Array&lt;out Any?&gt;?): Any?</ID>
+    <ID>ComplexMethod:RPCClientProxyHandler.kt$RPCClientProxyHandler$private fun attemptReconnect()</ID>
+    <ID>ComplexMethod:ReconnectingCordaRPCOps.kt$ReconnectingCordaRPCOps.ErrorInterceptingHandler$override fun invoke(proxy: Any, method: Method, args: Array&lt;out Any&gt;?): Any?</ID>
+    <ID>EmptyCatchBlock:RPCClientProxyHandler.kt$RPCClientProxyHandler${}</ID>
+    <ID>EmptyClassBlock:CordaRPCClient.kt$CordaRPCClient$Companion</ID>
+    <ID>ForbiddenComment:CordaRPCClient.kt$CordaRPCClientConfiguration$// TODO: acquire this value from Network Map when supported.</ID>
+    <ID>LongParameterList:CordaRPCClient.kt$CordaRPCClient$(username: String, password: String, externalTrace: Trace?, impersonatedActor: Actor?, targetLegalIdentity: CordaX500Name?, gracefulReconnect: Boolean = false)</ID>
+    <ID>LongParameterList:CordaRPCClient.kt$CordaRPCClientConfiguration$( connectionMaxRetryInterval: Duration = this.connectionMaxRetryInterval, minimumServerProtocolVersion: Int = this.minimumServerProtocolVersion, trackRpcCallSites: Boolean = this.trackRpcCallSites, reapInterval: Duration = this.reapInterval, observationExecutorPoolSize: Int = this.observationExecutorPoolSize, cacheConcurrencyLevel: Int = this.cacheConcurrencyLevel, connectionRetryInterval: Duration = this.connectionRetryInterval, connectionRetryIntervalMultiplier: Double = this.connectionRetryIntervalMultiplier, maxReconnectAttempts: Int = this.maxReconnectAttempts, maxFileSize: Int = this.maxFileSize, deduplicationCacheExpiry: Duration = this.deduplicationCacheExpiry )</ID>
+    <ID>LongParameterList:RPCClient.kt$RPCClient$( rpcOpsClass: Class&lt;I&gt;, username: String, password: String, externalTrace: Trace? = null, impersonatedActor: Actor? = null, targetLegalIdentity: CordaX500Name? = null )</ID>
+    <ID>MagicNumber:AMQPClientSerializationScheme.kt$AMQPClientSerializationScheme$128</ID>
+    <ID>MagicNumber:AMQPClientSerializationScheme.kt$AMQPClientSerializationScheme.Companion$128</ID>
+    <ID>MagicNumber:CordaRPCClient.kt$CordaRPCClient$128</ID>
+    <ID>MagicNumber:CordaRPCClient.kt$CordaRPCClientConfiguration$3</ID>
+    <ID>MagicNumber:CordaRPCClient.kt$CordaRPCClientConfiguration$5</ID>
+    <ID>MagicNumber:RPCClient.kt$RPCClient$30000</ID>
+    <ID>MagicNumber:RPCClient.kt$RPCClient$60000</ID>
+    <ID>MagicNumber:RPCClientProxyHandler.kt$RPCClientProxyHandler$1000</ID>
+    <ID>MagicNumber:RPCClientProxyHandler.kt$RPCClientProxyHandler$16384</ID>
+    <ID>MagicNumber:ReconnectingCordaRPCOps.kt$ReconnectingCordaRPCOps$4</ID>
+    <ID>MagicNumber:ReconnectingCordaRPCOps.kt$ReconnectingCordaRPCOps.ErrorInterceptingHandler$1000</ID>
+    <ID>MagicNumber:ReconnectingCordaRPCOps.kt$ReconnectingCordaRPCOps.ReconnectingRPCConnection$10</ID>
+    <ID>MagicNumber:ReconnectingCordaRPCOps.kt$ReconnectingCordaRPCOps.ReconnectingRPCConnection$9</ID>
+    <ID>MaxLineLength:AMQPClientSerializationScheme.kt$AMQPClientSerializationScheme$( cordappCustomSerializers: Set&lt;SerializationCustomSerializer&lt;*,*&gt;&gt;, cordappSerializationWhitelists: Set&lt;SerializationWhitelist&gt;, serializerFactoriesForContexts: MutableMap&lt;SerializationFactoryCacheKey, SerializerFactory&gt; )</ID>
+    <ID>MaxLineLength:AMQPClientSerializationScheme.kt$AMQPClientSerializationScheme$@Suppress("UNUSED") constructor() : this(emptySet(), emptySet(), AccessOrderLinkedHashMap&lt;SerializationFactoryCacheKey, SerializerFactory&gt;(128).toSynchronised())</ID>
+    <ID>MaxLineLength:AMQPClientSerializationScheme.kt$AMQPClientSerializationScheme$constructor(cordapps: List&lt;Cordapp&gt;) : this(cordapps.customSerializers, cordapps.serializationWhitelists, AccessOrderLinkedHashMap&lt;SerializationFactoryCacheKey, SerializerFactory&gt;(128).toSynchronised())</ID>
+    <ID>MaxLineLength:AMQPClientSerializationScheme.kt$AMQPClientSerializationScheme$constructor(cordapps: List&lt;Cordapp&gt;, serializerFactoriesForContexts: MutableMap&lt;SerializationFactoryCacheKey, SerializerFactory&gt;) : this(cordapps.customSerializers, cordapps.serializationWhitelists, serializerFactoriesForContexts)</ID>
+    <ID>MaxLineLength:AMQPClientSerializationScheme.kt$AMQPClientSerializationScheme$return SerializerFactoryBuilder.build(context.whitelist, context.deserializationClassLoader, context.lenientCarpenterEnabled).apply { register(RpcClientObservableDeSerializer) register(RpcClientCordaFutureSerializer(this)) register(RxNotificationSerializer(this)) }</ID>
+    <ID>MaxLineLength:AMQPClientSerializationScheme.kt$AMQPClientSerializationScheme.Companion$ fun initialiseSerialization(classLoader: ClassLoader? = null, customSerializers: Set&lt;SerializationCustomSerializer&lt;*, *&gt;&gt; = emptySet(), serializationWhitelists: Set&lt;SerializationWhitelist&gt; = emptySet(), serializerFactoriesForContexts: MutableMap&lt;SerializationFactoryCacheKey, SerializerFactory&gt; = AccessOrderLinkedHashMap&lt;SerializationFactoryCacheKey, SerializerFactory&gt;(128).toSynchronised())</ID>
+    <ID>MaxLineLength:AMQPClientSerializationScheme.kt$AMQPClientSerializationScheme.Companion$fun createSerializationEnv(classLoader: ClassLoader? = null, customSerializers: Set&lt;SerializationCustomSerializer&lt;*, *&gt;&gt; = emptySet(), serializationWhitelists: Set&lt;SerializationWhitelist&gt; = emptySet(), serializerFactoriesForContexts: MutableMap&lt;SerializationFactoryCacheKey, SerializerFactory&gt; = AccessOrderLinkedHashMap&lt;SerializationFactoryCacheKey, SerializerFactory&gt;(128).toSynchronised()): SerializationEnvironment</ID>
+    <ID>MaxLineLength:AMQPClientSerializationScheme.kt$AMQPClientSerializationScheme.Companion$nodeSerializationEnv = createSerializationEnv(classLoader, customSerializers, serializationWhitelists, serializerFactoriesForContexts)</ID>
+    <ID>MaxLineLength:AMQPClientSerializationScheme.kt$AMQPClientSerializationScheme.Companion$p2pContext = if (classLoader != null) AMQP_P2P_CONTEXT.withClassLoader(classLoader) else AMQP_P2P_CONTEXT</ID>
+    <ID>MaxLineLength:AMQPClientSerializationScheme.kt$AMQPClientSerializationScheme.Companion$registerScheme(AMQPClientSerializationScheme(customSerializers, serializationWhitelists, serializerFactoriesForContexts))</ID>
+    <ID>MaxLineLength:ClientCacheFactory.kt$ClientCacheFactory$override</ID>
+    <ID>MaxLineLength:CordaRPCClient.kt$CordaRPCClient</ID>
+    <ID>MaxLineLength:CordaRPCClient.kt$CordaRPCClient$ @JvmOverloads fun start(username: String, password: String, externalTrace: Trace?, impersonatedActor: Actor?, gracefulReconnect: Boolean = false): CordaRPCConnection</ID>
+    <ID>MaxLineLength:CordaRPCClient.kt$CordaRPCClient$ @JvmOverloads fun start(username: String, password: String, externalTrace: Trace?, impersonatedActor: Actor?, targetLegalIdentity: CordaX500Name?, gracefulReconnect: Boolean = false): CordaRPCConnection</ID>
+    <ID>MaxLineLength:CordaRPCClient.kt$CordaRPCClient$ @JvmOverloads fun start(username: String, password: String, gracefulReconnect: Boolean = false): CordaRPCConnection</ID>
+    <ID>MaxLineLength:CordaRPCClient.kt$CordaRPCClient$ @JvmOverloads fun start(username: String, password: String, targetLegalIdentity: CordaX500Name, gracefulReconnect: Boolean = false): CordaRPCConnection</ID>
+    <ID>MaxLineLength:CordaRPCClient.kt$CordaRPCClient$( haAddressPool: List&lt;NetworkHostAndPort&gt;, configuration: CordaRPCClientConfiguration = CordaRPCClientConfiguration.DEFAULT, sslConfiguration: ClientRpcSslOptions? = null, classLoader: ClassLoader? = null )</ID>
+    <ID>MaxLineLength:CordaRPCClient.kt$CordaRPCClient$( hostAndPort: NetworkHostAndPort, configuration: CordaRPCClientConfiguration, sslConfiguration: ClientRpcSslOptions?, classLoader: ClassLoader? = null )</ID>
+    <ID>MaxLineLength:CordaRPCClient.kt$CordaRPCClient$( hostAndPort: NetworkHostAndPort, sslConfiguration: ClientRpcSslOptions? = null, classLoader: ClassLoader? = null )</ID>
+    <ID>MaxLineLength:CordaRPCClient.kt$CordaRPCClient$@JvmOverloads constructor(hostAndPort: NetworkHostAndPort, configuration: CordaRPCClientConfiguration = CordaRPCClientConfiguration.DEFAULT) : this( hostAndPort = hostAndPort, haAddressPool = emptyList(), configuration = configuration )</ID>
+    <ID>MaxLineLength:CordaRPCClient.kt$CordaRPCClient$AMQPClientSerializationScheme.initialiseSerialization(serializationClassLoader, customSerializers, serializationWhitelists, cache)</ID>
+    <ID>MaxLineLength:CordaRPCClient.kt$CordaRPCClient$CordaRPCConnection(getRpcClient().start(InternalCordaRPCOps::class.java, username, password, externalTrace, impersonatedActor, targetLegalIdentity))</ID>
+    <ID>MaxLineLength:CordaRPCClient.kt$CordaRPCClient$if (classLoader != null) AMQP_RPC_CLIENT_CONTEXT.withClassLoader(classLoader) else AMQP_RPC_CLIENT_CONTEXT</ID>
+    <ID>MaxLineLength:CordaRPCClient.kt$CordaRPCClient$val cache = Caffeine.newBuilder().maximumSize(128).build&lt;SerializationFactoryCacheKey, SerializerFactory&gt;().asMap()</ID>
+    <ID>MaxLineLength:CordaRPCClient.kt$CordaRPCClient$val customSerializers = createInstancesOfClassesImplementing(serializationClassLoader, SerializationCustomSerializer::class.java)</ID>
+    <ID>MaxLineLength:CordaRPCClient.kt$CordaRPCClient$val serializationWhitelists = ServiceLoader.load(SerializationWhitelist::class.java, serializationClassLoader).toSet()</ID>
+    <ID>MaxLineLength:CordaRPCClient.kt$CordaRPCClient${ val cache = Caffeine.newBuilder().maximumSize(128).build&lt;SerializationFactoryCacheKey, SerializerFactory&gt;().asMap() // If the client has explicitly provided a classloader use this one to scan for custom serializers, otherwise use the current one. val serializationClassLoader = this.classLoader ?: this.javaClass.classLoader val customSerializers = createInstancesOfClassesImplementing(serializationClassLoader, SerializationCustomSerializer::class.java) val serializationWhitelists = ServiceLoader.load(SerializationWhitelist::class.java, serializationClassLoader).toSet() AMQPClientSerializationScheme.initialiseSerialization(serializationClassLoader, customSerializers, serializationWhitelists, cache) }</ID>
+    <ID>MaxLineLength:CordaRPCClient.kt$CordaRPCClientConfiguration$/** * The interval of unused observable reaping. Leaked Observables (unused ones) are detected using weak references * and are cleaned up in batches in this interval. If set too large it will waste server side resources for this * duration. If set too low it wastes client side cycles. The default is to check once per second. */ open val reapInterval: Duration = 1.seconds</ID>
+    <ID>MaxLineLength:CordaRPCClient.kt$CordaRPCConnection.Companion$@CordaInternal internal</ID>
+    <ID>MaxLineLength:CouldNotStartFlowException.kt$CouldNotStartFlowException : RPCException</ID>
+    <ID>MaxLineLength:RPCClient.kt$RPCClient$reconnectAttempts = if (haPoolTransportConfigurations.isEmpty()) rpcConfiguration.maxReconnectAttempts else 0</ID>
+    <ID>MaxLineLength:RPCClient.kt$RPCClient$throw RPCException("Requested minimum protocol version (${rpcConfiguration.minimumServerProtocolVersion}) is higher" + " than the server's supported protocol version ($serverProtocolVersion)")</ID>
+    <ID>MaxLineLength:RPCClient.kt$RPCClient$val ops: I = uncheckedCast(Proxy.newProxyInstance(rpcOpsClass.classLoader, arrayOf(rpcOpsClass), proxyHandler))</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$ObservableContext</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler : InvocationHandler</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler$ fun notifyServerAndClose()</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler$ private fun close(notify: Boolean = true)</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler$artemisMessage.putLongProperty(RPCApi.DEDUPLICATION_SEQUENCE_NUMBER_FIELD_NAME, deduplicationSequenceNumber.getAndIncrement())</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler$if (deduplicationChecker.checkDuplicateMessageId(serverToClient.deduplicationIdentity, deduplicationSequenceNumber)) { log.info("Message duplication detected, discarding message") return }</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler$log</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler$log.debug("Server locator is closed or garbage collected. Proxy may have been closed during reconnect.")</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler$log.error("RPC reply arrived to unknown RPC ID ${serverToClient.id}, this indicates an internal RPC error.")</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler$private</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler$private val deduplicationChecker = DeduplicationChecker(rpcConfiguration.deduplicationCacheExpiry, cacheFactory = cacheFactory)</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler$private val serializationContextWithObservableContext = RpcClientObservableDeSerializer.createContext(serializationContext, observableContext)</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler$producerSession = sessionFactory!!.createSession(rpcUsername, rpcPassword, false, true, true, false, DEFAULT_ACK_BATCH_SIZE)</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler$retryInterval = minOf(maxRetryInterval, retryInterval.times(rpcConfiguration.connectionRetryIntervalMultiplier.toLong()))</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler$return "{rpcUsername='$rpcUsername', clientAddress=$clientAddress, sessionId=$sessionId, targetLegalIdentity=$targetLegalIdentity}"</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler$return cacheFactory.buildNamed(Caffeine.newBuilder().weakValues().removalListener(onObservableRemove).executor(SameThreadExecutor.getExecutor()), "RpcClientProxyHandler_rpcObservable")</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler$throw UnsupportedOperationException("Method $calledMethod was added in RPC protocol version $sinceVersion but the server is running $serverProtocolVersion")</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler$val observable: UnicastSubject&lt;Notification&lt;*&gt;&gt;? = observableContext.observableMap.getIfPresent(serverToClient.id)</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler$val serialisedArguments = (arguments?.toList() ?: emptyList()).serialize(context = serializationContextWithObservableContext)</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler$var reconnectAttempts = rpcConfiguration.maxReconnectAttempts.times(serverLocator.staticTransportConfigurations.size)</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler${ // Deserialize the reply from the server, both the wrapping metadata and the actual body of the return value. val serverToClient: RPCApi.ServerToClient = try { RPCApi.ServerToClient.fromClientMessage(serializationContextWithObservableContext, message) } catch (e: RPCApi.ServerToClient.FailedToDeserializeReply) { // Might happen if something goes wrong during mapping the response to classes, evolution, class synthesis etc. log.error("Failed to deserialize RPC body", e) completeExceptionally(e.id, e, rpcReplyMap.remove(e.id)) return } val deduplicationSequenceNumber = message.getLongProperty(RPCApi.DEDUPLICATION_SEQUENCE_NUMBER_FIELD_NAME) if (deduplicationChecker.checkDuplicateMessageId(serverToClient.deduplicationIdentity, deduplicationSequenceNumber)) { log.info("Message duplication detected, discarding message") return } log.debug { "Got message from RPC server $serverToClient" } when (serverToClient) { is RPCApi.ServerToClient.RpcReply -&gt; { val replyFuture = rpcReplyMap.remove(serverToClient.id) if (replyFuture == null) { log.error("RPC reply arrived to unknown RPC ID ${serverToClient.id}, this indicates an internal RPC error.") } else { val result: Try&lt;Any?&gt; = serverToClient.result when (result) { is Try.Success -&gt; replyFuture.set(result.value) is Try.Failure -&gt; { completeExceptionally(serverToClient.id, result.exception, replyFuture) } } } } is RPCApi.ServerToClient.Observation -&gt; { val observable: UnicastSubject&lt;Notification&lt;*&gt;&gt;? = observableContext.observableMap.getIfPresent(serverToClient.id) if (observable == null) { log.debug("Observation ${serverToClient.content} arrived to unknown Observable with ID ${serverToClient.id}. " + "This may be due to an observation arriving before the server was " + "notified of observable shutdown") } else { // We schedule the onNext() on an executor sticky-pooled based on the Observable ID. observationExecutorPool.run(serverToClient.id) { executor -&gt; executor.submit { val content = serverToClient.content if (content.isOnCompleted || content.isOnError) { observableContext.observableMap.invalidate(serverToClient.id) } // Add call site information on error if (content.isOnError) { val rpcCallSite = callSiteMap?.get(serverToClient.id) if (rpcCallSite != null) addRpcCallSiteToThrowable(content.throwable, rpcCallSite) } observable.onNext(content) } } } } } }</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler${ // Might happen if something goes wrong during mapping the response to classes, evolution, class synthesis etc. log.error("Failed to deserialize RPC body", e) completeExceptionally(e.id, e, rpcReplyMap.remove(e.id)) return }</ID>
+    <ID>MaxLineLength:RPCClientProxyHandler.kt$RPCClientProxyHandler${ // This is going to send remote message, see `org.apache.activemq.artemis.core.client.impl.ClientConsumerImpl.doCleanUp()`. sessionFactory?.close() }</ID>
+    <ID>MaxLineLength:ReconnectingCordaRPCOps.kt$ReconnectingCordaRPCOps : AutoCloseableInternalCordaRPCOps</ID>
+    <ID>MaxLineLength:ReconnectingCordaRPCOps.kt$ReconnectingCordaRPCOps$ fun runFlowWithLogicalRetry(runFlow: (CordaRPCOps) -&gt; StateMachineRunId, hasFlowStarted: (CordaRPCOps) -&gt; Boolean, onFlowConfirmed: () -&gt; Unit = {}, timeout: Duration = 4.seconds)</ID>
+    <ID>MaxLineLength:ReconnectingCordaRPCOps.kt$ReconnectingCordaRPCOps.Companion$private</ID>
+    <ID>MaxLineLength:ReconnectingCordaRPCOps.kt$ReconnectingCordaRPCOps.ErrorInterceptingHandler$log.error("Node is being shutdown. Operation ${method.name} rejected. Retrying when node is up...", e)</ID>
+    <ID>MaxLineLength:ReconnectingCordaRPCOps.kt$ReconnectingCordaRPCOps.ErrorInterceptingHandler$private</ID>
+    <ID>MaxLineLength:ReconnectingCordaRPCOps.kt$ReconnectingCordaRPCOps.ReconnectingRPCConnection$CurrentState.CONNECTING, CurrentState.DIED -&gt; throw IllegalArgumentException("Illegal state: $currentState ")</ID>
+    <ID>MaxLineLength:ReconnectingCordaRPCOps.kt$ReconnectingCordaRPCOps.ReconnectingRPCConnection$attemptedAddress</ID>
+    <ID>MaxLineLength:ReconnectingCordaRPCOps.kt$ReconnectingCordaRPCOps.ReconnectingRPCConnection$private tailrec</ID>
+    <ID>MaxLineLength:ReconnectingObservable.kt$ReconnectingObservable.ReconnectingSubscriber$backingSubscription = dataFeed.updates.subscribe(subscriber::onNext, ::scheduleResubscribe, subscriber::onCompleted)</ID>
+    <ID>MaxLineLength:RpcClientCordaFutureSerializer.kt$RpcClientCordaFutureSerializer$throw NotSerializableException("Failed to deserialize Future from proxy Observable - ${e.message}\n").apply { initCause(e.cause) }</ID>
+    <ID>MaxLineLength:RpcClientObservableDeSerializer.kt$RpcClientObservableDeSerializer : Implements</ID>
+    <ID>MaxLineLength:RpcClientObservableDeSerializer.kt$RpcClientObservableDeSerializer$private</ID>
+    <ID>MaxLineLength:RpcClientObservableDeSerializer.kt$RpcClientObservableDeSerializer$val observableId: Trace.InvocationId = Trace.InvocationId((obj[0] as String), Instant.ofEpochMilli((obj[1] as Long)))</ID>
+    <ID>MaxLineLength:Utils.kt$ fun &lt;T&gt; Observable&lt;T&gt;.notUsed()</ID>
+    <ID>NestedBlockDepth:RPCClientProxyHandler.kt$RPCClientProxyHandler$// The handler for Artemis messages. private fun artemisMessageHandler(message: ClientMessage)</ID>
+    <ID>NewLineAtEndOfFile:ClientCacheFactory.kt$net.corda.client.rpc.internal.ClientCacheFactory.kt</ID>
+    <ID>NewLineAtEndOfFile:CordaRPCClient.kt$net.corda.client.rpc.CordaRPCClient.kt</ID>
+    <ID>NewLineAtEndOfFile:PermissionException.kt$net.corda.client.rpc.PermissionException.kt</ID>
+    <ID>NewLineAtEndOfFile:RPCConnection.kt$net.corda.client.rpc.RPCConnection.kt</ID>
+    <ID>NewLineAtEndOfFile:RPCException.kt$net.corda.client.rpc.RPCException.kt</ID>
+    <ID>NewLineAtEndOfFile:ReconnectingObservable.kt$net.corda.client.rpc.internal.ReconnectingObservable.kt</ID>
+    <ID>NewLineAtEndOfFile:RpcClientCordaFutureSerializer.kt$net.corda.client.rpc.internal.serialization.amqp.RpcClientCordaFutureSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:RpcClientObservableDeSerializer.kt$net.corda.client.rpc.internal.serialization.amqp.RpcClientObservableDeSerializer.kt</ID>
+    <ID>ReturnCount:RPCClientProxyHandler.kt$RPCClientProxyHandler$// This is the general function that transforms a client side RPC to internal Artemis messages. override fun invoke(proxy: Any, method: Method, arguments: Array&lt;out Any?&gt;?): Any?</ID>
+    <ID>SpreadOperator:RPCClient.kt$RPCClient$(*haPoolTransportConfigurations.toTypedArray())</ID>
+    <ID>SpreadOperator:ReconnectingCordaRPCOps.kt$ReconnectingCordaRPCOps.ErrorInterceptingHandler$(reconnectingRPCConnection.proxy, *(args ?: emptyArray()))</ID>
+    <ID>TooGenericExceptionCaught:RPCClient.kt$RPCClient$exception: Throwable</ID>
+    <ID>TooGenericExceptionCaught:RPCClientProxyHandler.kt$RPCClientProxyHandler$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:RPCClientProxyHandler.kt$RPCClientProxyHandler$e: RuntimeException</ID>
+    <ID>TooGenericExceptionCaught:ReconnectingCordaRPCOps.kt$ReconnectingCordaRPCOps.ReconnectingRPCConnection$ex: Exception</ID>
+    <ID>TooGenericExceptionCaught:ReconnectingObservable.kt$ReconnectingObservable.ReconnectingSubscriber$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:Utils.kt$e: Exception</ID>
+    <ID>TooManyFunctions:RPCClientProxyHandler.kt$RPCClientProxyHandler : InvocationHandler</ID>
+    <ID>WildcardImport:AMQPClientSerializationScheme.kt$import net.corda.serialization.internal.*</ID>
+    <ID>WildcardImport:AMQPClientSerializationScheme.kt$import net.corda.serialization.internal.amqp.*</ID>
+    <ID>WildcardImport:RPCClientProxyHandler.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:RPCClientProxyHandler.kt$import org.apache.activemq.artemis.api.core.client.*</ID>
+    <ID>WildcardImport:ReconnectingCordaRPCOps.kt$import net.corda.client.rpc.*</ID>
+    <ID>WildcardImport:ReconnectingCordaRPCOps.kt$import net.corda.core.utilities.*</ID>
+    <ID>WildcardImport:RpcClientObservableDeSerializer.kt$import net.corda.serialization.internal.amqp.*</ID>
+  </Whitelist>
+</SmellBaseline>

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>MagicNumber:AttachmentDemo.kt$10006</ID>
+    <ID>MagicNumber:AttachmentDemo.kt$10009</ID>
+    <ID>MagicNumber:AttachmentDemo.kt$10010</ID>
+    <ID>MatchingDeclarationName:AttachmentDemo.kt$net.corda.attachmentdemo.AttachmentDemo.kt</ID>
+    <ID>MaxLineLength:AttachmentDemo.kt$require</ID>
+    <ID>MaxLineLength:AttachmentDemo.kt$require(connection.contentType == APPLICATION_OCTET_STREAM) { "Content-Type header was ${connection.contentType}" }</ID>
+    <ID>MaxLineLength:AttachmentDemo.kt$val bankBParty = rpc.partiesFromName("Bank B", false).firstOrNull() ?: throw IllegalArgumentException("Couldn't find Bank B party")</ID>
+    <ID>MaxLineLength:AttachmentDemo.kt$val connection = URL("http://localhost:$webPort/attachments/${state.hash}").openConnection() as HttpURLConnection</ID>
+    <ID>MaxLineLength:AttachmentDemo.kt$val notaryParty = rpc.partiesFromName("Notary", false).firstOrNull() ?: throw IllegalArgumentException("Couldn't find notary party")</ID>
+    <ID>NestedBlockDepth:AttachmentDemo.kt$@Suppress("DEPRECATION") // DOCSTART 1 fun recipient(rpc: CordaRPCOps, webPort: Int)</ID>
+    <ID>SpreadOperator:AttachmentDemo.kt$(*args)</ID>
+    <ID>TooGenericExceptionCaught:AttachmentDemo.kt$e: Exception</ID>
+  </Whitelist>
+</SmellBaseline>

@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>MaxLineLength:BlobInspector.kt$BlobInspector$?:</ID>
+    <ID>MaxLineLength:BlobInspector.kt$BlobInspector$@Option(names = ["--input-format"], paramLabel = "type", description = ["Input format. If the file can't be decoded with the given value it's auto-detected, so you should never normally need to specify this. Possible values: [BINARY, HEX, BASE64]"])</ID>
+    <ID>MaxLineLength:BlobInspector.kt$BlobInspector$@Parameters(index = "0", paramLabel = "SOURCE", description = ["URL or file path to the blob"], converter = [SourceConverter::class])</ID>
+    <ID>MaxLineLength:BlobInspector.kt$BlobInspector$description = ["Display the owningKey and certPath properties of Party and PartyAndReference objects respectively"]</ID>
+    <ID>MaxLineLength:BlobInspector.kt$BlobInspector$val envelope = DeserializationInput.getEnvelope(bytes.sequence(), SerializationDefaults.STORAGE_CONTEXT.encodingWhitelist)</ID>
+    <ID>TooGenericExceptionCaught:BlobInspector.kt$BlobInspector$e: Exception</ID>
+    <ID>WildcardImport:BlobInspector.kt$import picocli.CommandLine.*</ID>
+  </Whitelist>
+</SmellBaseline>

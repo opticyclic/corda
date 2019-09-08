@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ComplexMethod:Main.kt$Node$fun dumpDag(f: File)</ID>
+    <ID>MagicNumber:Main.kt$Node$10</ID>
+    <ID>MagicNumber:Main.kt$Node$3</ID>
+    <ID>MagicNumber:Main.kt$Transaction$5</ID>
+    <ID>MagicNumber:Parameters.kt$Parameters$0.02</ID>
+    <ID>MagicNumber:Parameters.kt$Parameters$0.8</ID>
+    <ID>MagicNumber:Parameters.kt$Parameters$10</ID>
+    <ID>MagicNumber:Parameters.kt$Parameters$20</ID>
+    <ID>MagicNumber:Parameters.kt$Parameters$23L</ID>
+    <ID>MagicNumber:Parameters.kt$Parameters$5</ID>
+    <ID>MagicNumber:Parameters.kt$Parameters$50</ID>
+    <ID>MaxLineLength:Main.kt$Node$if (transactions.size == 1) listOf(genesisTx) else transactions.values.reversed().take(10).filter { !isAccepted(it) &amp;&amp; conflicts[it.data]!!.size == 1 }.shuffled(network.rng).take(3)</ID>
+    <ID>MaxLineLength:Main.kt$Transaction$return "T(id=${id.toString().take(5)}, data=$data, parents=[${parents.map {it.toString().take(5) }}, chit=$chit, confidence=$confidence)"</ID>
+    <ID>MaxLineLength:Main.kt$require(acceptance.filter { it }.size &lt; 2) { "More than one transaction of the conflict set of $v got accepted." }</ID>
+    <ID>MaxLineLength:Parameters.kt$Parameters$@CommandLine.Option(names = ["-d", "--double-spend-ratio"], description = ["The double spend ratio (default: 0.02)"])</ID>
+    <ID>MaxLineLength:Parameters.kt$Parameters$@CommandLine.Option(names = ["-n", "--num-transactions"], description = ["How many transactions to generate (default: 20)"])</ID>
+    <ID>NestedBlockDepth:Main.kt$Node$fun avalancheLoop()</ID>
+    <ID>ReturnCount:Main.kt$Node$fun isAccepted(tx: Transaction): Boolean</ID>
+    <ID>SpreadOperator:Main.kt$(*args)</ID>
+    <ID>TooManyFunctions:Main.kt$Node</ID>
+  </Whitelist>
+</SmellBaseline>

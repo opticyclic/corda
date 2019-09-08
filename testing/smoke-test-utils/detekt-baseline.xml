@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>MagicNumber:NodeProcess.kt$NodeProcess$60</ID>
+    <ID>MagicNumber:NodeProcess.kt$NodeProcess.Factory$120</ID>
+    <ID>MagicNumber:NodeProcess.kt$NodeProcess.Factory$5</ID>
+    <ID>MaxLineLength:NodeProcess.kt$NodeProcess$Factory</ID>
+    <ID>MaxLineLength:NodeProcess.kt$NodeProcess.Factory$networkParametersCopier = NetworkParametersCopier(testNetworkParameters(notaries = listOf(notaryInfo)))</ID>
+    <ID>MaxLineLength:NodeProcess.kt$NodeProcess.Factory.Companion$val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss.SSS").withZone(systemDefault())</ID>
+    <ID>TooGenericExceptionCaught:NodeProcess.kt$NodeProcess.Factory$e: Exception</ID>
+    <ID>WildcardImport:NodeProcess.kt$import net.corda.core.internal.*</ID>
+  </Whitelist>
+</SmellBaseline>

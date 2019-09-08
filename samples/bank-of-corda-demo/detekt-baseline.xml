@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ForbiddenComment:BankOfCordaClientApi.kt$BankOfCordaClientApi$// TODO: privileged security controls required</ID>
+    <ID>ForbiddenComment:BankOfCordaClientApi.kt$BankOfCordaClientApi$// TODO: security controls required</ID>
+    <ID>MaxLineLength:BankOfCordaClientApi.kt$BankOfCordaClientApi$ fun requestRPCIssue(rpcAddress: NetworkHostAndPort, params: IssueRequestParams): SignedTransaction</ID>
+    <ID>MaxLineLength:BankOfCordaClientApi.kt$BankOfCordaClientApi$ fun requestRPCIssueHA(availableRpcServers: List&lt;NetworkHostAndPort&gt;, params: IssueRequestParams): SignedTransaction</ID>
+    <ID>MaxLineLength:BankOfCordaClientApi.kt$BankOfCordaClientApi$return rpc.startFlow(::CashIssueAndPaymentFlow, params.amount, issuerBankPartyRef, issueToParty, anonymous, notaryLegalIdentity) .returnValue.getOrThrow().stx</ID>
+    <ID>MaxLineLength:BankOfCordaWebApi.kt$BankOfCordaWebApi$?:</ID>
+    <ID>MaxLineLength:BankOfCordaWebApi.kt$BankOfCordaWebApi$rpc.startFlow(::CashIssueAndPaymentFlow, params.amount, issuerBankPartyRef, issueToParty, anonymous, notaryParty).returnValue.getOrThrow()</ID>
+    <ID>MaxLineLength:BankOfCordaWebApi.kt$BankOfCordaWebApi$rpc.wellKnownPartyFromX500Name(params.issuerBankName) ?: return Response.status(Response.Status.FORBIDDEN).entity("Unable to locate ${params.issuerBankName} in identity service").build()</ID>
+    <ID>MaxLineLength:IssueCash.kt$IssueCash$BankOfCordaClientApi.requestWebIssue(NetworkHostAndPort("localhost", BOC_WEB_PORT), createParams(amount, NOTARY_NAME))</ID>
+    <ID>MaxLineLength:IssueCash.kt$IssueCash$private</ID>
+    <ID>MaxLineLength:IssueCash.kt$IssueCash$return BankOfCordaClientApi.requestRPCIssue(NetworkHostAndPort("localhost", BOC_RPC_PORT), createParams(amount, NOTARY_NAME))</ID>
+    <ID>MaxLineLength:IssueCash.kt$IssueCash$val currency = parser.accepts("currency").withOptionalArg().ofType(String::class.java).describedAs("[GBP|USD|CHF|EUR]")</ID>
+    <ID>MaxLineLength:IssueCash.kt$IssueCash$val roleArg = parser.accepts("role").withRequiredArg().ofType(Role::class.java).describedAs("[ISSUER|ISSUE_CASH_RPC|ISSUE_CASH_WEB]")</ID>
+    <ID>NewLineAtEndOfFile:BankOfCordaWebApi.kt$net.corda.bank.api.BankOfCordaWebApi.kt</ID>
+    <ID>NewLineAtEndOfFile:IssueCash.kt$net.corda.bank.IssueCash.kt</ID>
+    <ID>ReturnCount:BankOfCordaWebApi.kt$BankOfCordaWebApi$ @POST @Path("issue-asset-request") @Consumes(MediaType.APPLICATION_JSON) fun issueAssetRequest(params: IssueRequestParams): Response</ID>
+    <ID>SpreadOperator:IssueCash.kt$IssueCash$(*args)</ID>
+    <ID>TooGenericExceptionCaught:BankOfCordaWebApi.kt$BankOfCordaWebApi$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:IssueCash.kt$IssueCash$e: Exception</ID>
+    <ID>WildcardImport:BankOfCordaWebApi.kt$import javax.ws.rs.*</ID>
+  </Whitelist>
+</SmellBaseline>

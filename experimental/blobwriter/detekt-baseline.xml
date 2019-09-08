@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ClassNaming:BlobWriter.kt$_Li_</ID>
+    <ID>ClassNaming:BlobWriter.kt$_Mis_</ID>
+    <ID>ClassNaming:BlobWriter.kt$_i_</ID>
+    <ID>ClassNaming:BlobWriter.kt$_i_is__</ID>
+    <ID>ClassNaming:BlobWriter.kt$_is_</ID>
+    <ID>MagicNumber:BlobWriter.kt$3</ID>
+    <ID>MagicNumber:BlobWriter.kt$4</ID>
+    <ID>MagicNumber:BlobWriter.kt$5</ID>
+    <ID>MagicNumber:BlobWriter.kt$6</ID>
+    <ID>MaxLineLength:BlobWriter.kt$File("../cpp-serializer/bin/blob-inspector/test/_i_is__").writeBytes(_i_is__(1, _is_ (2, "three")).serialize().bytes)</ID>
+    <ID>WildcardImport:BlobWriter.kt$import net.corda.serialization.internal.*</ID>
+  </Whitelist>
+</SmellBaseline>

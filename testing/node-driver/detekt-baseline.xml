@@ -1,0 +1,385 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ComplexMethod:DriverDSLImpl.kt$DriverDSLImpl$override fun start()</ID>
+    <ID>ComplexMethod:DriverDSLImpl.kt$DriverDSLImpl$private fun startNodeInternal(config: NodeConfig, webAddress: NetworkHostAndPort, localNetworkMap: LocalNetworkMap?, parameters: NodeParameters): CordaFuture&lt;NodeHandle&gt;</ID>
+    <ID>ComplexMethod:DriverDSLImpl.kt$DriverDSLImpl$private fun startRegisteredNode(name: CordaX500Name, localNetworkMap: LocalNetworkMap?, parameters: NodeParameters, p2pAddress: NetworkHostAndPort = portAllocation.nextHostAndPort()): CordaFuture&lt;NodeHandle&gt;</ID>
+    <ID>ForbiddenComment:DriverDSLImpl.kt$DriverDSLImpl$// TODO: Derive name from the full picked name, don't just wrap the common name</ID>
+    <ID>ForbiddenComment:DriverDSLImpl.kt$DriverDSLImpl$//TODO: remove this once we can bundle quasar properly.</ID>
+    <ID>ForbiddenComment:DriverDSLImpl.kt$DriverDSLImpl.Companion$// TODO: There is pending work to fix this issue without custom blacklisting. See: https://r3-cev.atlassian.net/browse/CORDA-2164.</ID>
+    <ID>ForbiddenComment:DriverDSLImpl.kt$DriverDSLImpl.LocalNetworkMap$// TODO: this object will copy NodeInfo files from started nodes to other nodes additional-node-infos/</ID>
+    <ID>ForbiddenComment:MockServices.kt$MockServices.Companion$// TODO: Can we use an X509 principal generator here?</ID>
+    <ID>ForbiddenComment:SharedMemoryIncremental.kt$SharedMemoryIncremental$// TODO: Do we really need 16 bytes? Given that we care about Int it should be enough to have 4</ID>
+    <ID>LongMethod:DriverDSLImpl.kt$DriverDSLImpl$private fun startNodeInternal(config: NodeConfig, webAddress: NetworkHostAndPort, localNetworkMap: LocalNetworkMap?, parameters: NodeParameters): CordaFuture&lt;NodeHandle&gt;</ID>
+    <ID>LongParameterList:Driver.kt$DriverParameters$( isDebug: Boolean, driverDirectory: Path, portAllocation: PortAllocation, debugPortAllocation: PortAllocation, systemProperties: Map&lt;String, String&gt;, useTestClock: Boolean, startNodesInProcess: Boolean, waitForAllNodesToFinish: Boolean, notarySpecs: List&lt;NotarySpec&gt;, extraCordappPackagesToScan: List&lt;String&gt;, jmxPolicy: JmxPolicy, networkParameters: NetworkParameters )</ID>
+    <ID>LongParameterList:Driver.kt$DriverParameters$( isDebug: Boolean, driverDirectory: Path, portAllocation: PortAllocation, debugPortAllocation: PortAllocation, systemProperties: Map&lt;String, String&gt;, useTestClock: Boolean, startNodesInProcess: Boolean, waitForAllNodesToFinish: Boolean, notarySpecs: List&lt;NotarySpec&gt;, extraCordappPackagesToScan: List&lt;String&gt;, jmxPolicy: JmxPolicy, networkParameters: NetworkParameters, cordappsForAllNodes: Set&lt;TestCordapp&gt;? )</ID>
+    <ID>LongParameterList:DriverDSL.kt$DriverDSL$( defaultParameters: NodeParameters = NodeParameters(), providedName: CordaX500Name? = defaultParameters.providedName, rpcUsers: List&lt;User&gt; = defaultParameters.rpcUsers, verifierType: VerifierType = defaultParameters.verifierType, customOverrides: Map&lt;String, Any?&gt; = defaultParameters.customOverrides, startInSameProcess: Boolean? = defaultParameters.startInSameProcess, maximumHeapSize: String = defaultParameters.maximumHeapSize )</ID>
+    <ID>LongParameterList:DriverDSL.kt$DriverDSL$( defaultParameters: NodeParameters = NodeParameters(), providedName: CordaX500Name? = defaultParameters.providedName, rpcUsers: List&lt;User&gt; = defaultParameters.rpcUsers, verifierType: VerifierType = defaultParameters.verifierType, customOverrides: Map&lt;String, Any?&gt; = defaultParameters.customOverrides, startInSameProcess: Boolean? = defaultParameters.startInSameProcess, maximumHeapSize: String = defaultParameters.maximumHeapSize, logLevelOverride: String? = defaultParameters.logLevelOverride )</ID>
+    <ID>LongParameterList:DriverDSLImpl.kt$( isDebug: Boolean = DriverParameters().isDebug, driverDirectory: Path = DriverParameters().driverDirectory, portAllocation: PortAllocation = DriverParameters().portAllocation, debugPortAllocation: PortAllocation = DriverParameters().debugPortAllocation, systemProperties: Map&lt;String, String&gt; = DriverParameters().systemProperties, useTestClock: Boolean = DriverParameters().useTestClock, startNodesInProcess: Boolean = DriverParameters().startNodesInProcess, extraCordappPackagesToScan: List&lt;String&gt; = DriverParameters().extraCordappPackagesToScan, waitForAllNodesToFinish: Boolean = DriverParameters().waitForAllNodesToFinish, notarySpecs: List&lt;NotarySpec&gt; = DriverParameters().notarySpecs, jmxPolicy: JmxPolicy = DriverParameters().jmxPolicy, networkParameters: NetworkParameters = DriverParameters().networkParameters, compatibilityZone: CompatibilityZoneParams? = null, notaryCustomOverrides: Map&lt;String, Any?&gt; = DriverParameters().notaryCustomOverrides, inMemoryDB: Boolean = DriverParameters().inMemoryDB, cordappsForAllNodes: Collection&lt;TestCordappInternal&gt;? = null, dsl: DriverDSLImpl.() -&gt; A )</ID>
+    <ID>LongParameterList:DriverDSLImpl.kt$DriverDSLImpl.Companion$( config: NodeConfig, quasarJarPath: String, debugPort: Int?, overriddenSystemProperties: Map&lt;String, String&gt;, maximumHeapSize: String, logLevelOverride: String?, vararg extraCmdLineFlag: String )</ID>
+    <ID>LongParameterList:Injectors.kt$( metricRegistry: MetricRegistry, parallelism: Int, overallDuration: Duration, injectionRate: Rate, queueSizeMetricName: String = "QueueSize", workDurationMetricName: String = "WorkDuration", work: () -&gt; Unit )</ID>
+    <ID>LongParameterList:MockServices.kt$MockServices.Companion$( cordappLoader: CordappLoader, identityService: IdentityService, networkParameters: NetworkParameters, initialIdentity: TestIdentity, moreKeys: Set&lt;KeyPair&gt;, keyManagementService: KeyManagementService, schemaService: SchemaService, persistence: CordaPersistence )</ID>
+    <ID>LongParameterList:NodeParameters.kt$NodeParameters$( providedName: CordaX500Name?, rpcUsers: List&lt;User&gt;, verifierType: VerifierType, customOverrides: Map&lt;String, Any?&gt;, startInSameProcess: Boolean?, maximumHeapSize: String )</ID>
+    <ID>LongParameterList:NodeParameters.kt$NodeParameters$( providedName: CordaX500Name?, rpcUsers: List&lt;User&gt;, verifierType: VerifierType, customOverrides: Map&lt;String, Any?&gt;, startInSameProcess: Boolean?, maximumHeapSize: String, additionalCordapps: Collection&lt;TestCordapp&gt; = emptySet(), flowOverrides: Map&lt;out Class&lt;out FlowLogic&lt;*&gt;&gt;, Class&lt;out FlowLogic&lt;*&gt;&gt;&gt; )</ID>
+    <ID>LongParameterList:ProcessUtilities.kt$ProcessUtilities$( arguments: List&lt;String&gt;, classPath: List&lt;String&gt; = defaultClassPath, workingDirectory: Path? = null, jdwpPort: Int? = null, extraJvmArguments: List&lt;String&gt; = emptyList(), maximumHeapSize: String? = null )</ID>
+    <ID>LongParameterList:ProcessUtilities.kt$ProcessUtilities$( className: String, arguments: List&lt;String&gt;, classPath: List&lt;String&gt; = defaultClassPath, workingDirectory: Path? = null, jdwpPort: Int? = null, extraJvmArguments: List&lt;String&gt; = emptyList(), maximumHeapSize: String? = null )</ID>
+    <ID>LongParameterList:RPCDriver.kt$( isDebug: Boolean = false, driverDirectory: Path = Paths.get("build") / "rpc-driver" / getTimestampAsDirectoryName(), portAllocation: PortAllocation = globalPortAllocation, debugPortAllocation: PortAllocation = globalDebugPortAllocation, systemProperties: Map&lt;String, String&gt; = emptyMap(), useTestClock: Boolean = false, startNodesInProcess: Boolean = false, waitForNodesToFinish: Boolean = false, extraCordappPackagesToScan: List&lt;String&gt; = emptyList(), notarySpecs: List&lt;NotarySpec&gt; = emptyList(), externalTrace: Trace? = null, @Suppress("DEPRECATION") jmxPolicy: JmxPolicy = JmxPolicy(), networkParameters: NetworkParameters = testNetworkParameters(), notaryCustomOverrides: Map&lt;String, Any?&gt; = emptyMap(), inMemoryDB: Boolean = true, cordappsForAllNodes: Collection&lt;TestCordappInternal&gt;? = null, dsl: RPCDriverDSL.() -&gt; A )</ID>
+    <ID>LongParameterList:RPCDriver.kt$RPCDriverDSL$( rpcUser: User = rpcTestUser, nodeLegalName: CordaX500Name = fakeNodeLegalName, configuration: RPCServerConfiguration = RPCServerConfiguration.DEFAULT, ops: I, brokerHandle: RpcBrokerHandle, queueDrainTimeout: Duration = 5.seconds )</ID>
+    <ID>LongParameterList:RPCDriver.kt$RPCDriverDSL$( rpcUser: User = rpcTestUser, nodeLegalName: CordaX500Name = fakeNodeLegalName, maxFileSize: Int = MAX_MESSAGE_SIZE, maxBufferedBytesPerClient: Long = 10L * MAX_MESSAGE_SIZE, configuration: RPCServerConfiguration = RPCServerConfiguration.DEFAULT, ops: I, queueDrainTimeout: Duration = 5.seconds )</ID>
+    <ID>LongParameterList:RPCDriver.kt$RPCDriverDSL$( serverName: String = "driver-rpc-server-${random63BitValue()}", rpcUser: User = rpcTestUser, nodeLegalName: CordaX500Name = fakeNodeLegalName, maxFileSize: Int = MAX_MESSAGE_SIZE, maxBufferedBytesPerClient: Long = 5L * MAX_MESSAGE_SIZE, configuration: RPCServerConfiguration = RPCServerConfiguration.DEFAULT, customPort: NetworkHostAndPort? = null, ops: I )</ID>
+    <ID>MagicNumber:DriverDSLImpl.kt$DriverDSLImpl$1000</ID>
+    <ID>MagicNumber:DriverDSLImpl.kt$DriverDSLImpl$5</ID>
+    <ID>MagicNumber:DriverDSLImpl.kt$DriverDSLImpl$60</ID>
+    <ID>MagicNumber:InternalMockNetwork.kt$3</ID>
+    <ID>MagicNumber:InternalMockNetwork.kt$5</ID>
+    <ID>MagicNumber:InternalMockNetwork.kt$InternalMockNetwork$30000</ID>
+    <ID>MagicNumber:InternalMockNetwork.kt$InternalMockNetwork$50</ID>
+    <ID>MagicNumber:InternalMockNetwork.kt$InternalMockNetwork.MockNode$1000</ID>
+    <ID>MagicNumber:InternalTestUtils.kt$40</ID>
+    <ID>MagicNumber:InternalTestUtils.kt$500</ID>
+    <ID>MagicNumber:MockNetworkParametersService.kt$MockNetworkParametersStorage$20</ID>
+    <ID>MagicNumber:MockServices.kt$MockServices$10000</ID>
+    <ID>MagicNumber:MockServices.kt$MockServices.Companion.&lt;no name provided&gt;$512</ID>
+    <ID>MagicNumber:NetworkMapServer.kt$NetworkMapServer$500</ID>
+    <ID>MagicNumber:RPCDriver.kt$RPCDriverDSL$10L</ID>
+    <ID>MagicNumber:RPCDriver.kt$RPCDriverDSL$5</ID>
+    <ID>MagicNumber:RPCDriver.kt$RPCDriverDSL$5L</ID>
+    <ID>MagicNumber:RPCDriver.kt$RPCDriverDSL.Companion$10</ID>
+    <ID>MagicNumber:RPCDriver.kt$RandomRpcUser.Companion$100</ID>
+    <ID>MagicNumber:RPCDriver.kt$RandomRpcUser.Companion$3</ID>
+    <ID>MagicNumber:RPCDriver.kt$RandomRpcUser.Companion$4</ID>
+    <ID>MagicNumber:SharedMemoryIncremental.kt$SharedMemoryIncremental$16</ID>
+    <ID>MagicNumber:ShutdownManager.kt$ShutdownManager$5</ID>
+    <ID>MagicNumber:ShutdownManager.kt$ShutdownManager$60</ID>
+    <ID>MatchingDeclarationName:InternalTestUtils.kt$net.corda.testing.node.internal.InternalTestUtils.kt</ID>
+    <ID>MatchingDeclarationName:MockNetworkParametersService.kt$net.corda.testing.node.internal.MockNetworkParametersService.kt</ID>
+    <ID>MaxLineLength:CustomCordapp.kt$CustomCordapp : TestCordappInternal</ID>
+    <ID>MaxLineLength:CustomCordapp.kt$CustomCordapp$jos.addEntry(testEntry(JarFile.MANIFEST_NAME)) { createTestManifest(name, versionId, targetPlatformVersion).write(jos) } // The same resource may be found in different locations (this will happen when running from gradle) so just // pick the first one found. scanResult.allResources.asMap().forEach { path, resourceList -&gt; jos.addEntry(testEntry(path), resourceList[0].open()) }</ID>
+    <ID>MaxLineLength:CustomCordapp.kt$CustomCordapp$return ZipEntry(name).setCreationTime(epochFileTime).setLastAccessTime(epochFileTime).setLastModifiedTime(epochFileTime)</ID>
+    <ID>MaxLineLength:CustomCordapp.kt$CustomCordapp.Companion$val filename = it.run { "${name.replace(whitespace, "-")}_${versionId}_${targetPlatformVersion}_${UUID.randomUUID()}.jar" }</ID>
+    <ID>MaxLineLength:Driver.kt$ fun &lt;A&gt; driver(defaultParameters: DriverParameters = DriverParameters(), dsl: DriverDSL.() -&gt; A): A</ID>
+    <ID>MaxLineLength:Driver.kt$DriverParameters</ID>
+    <ID>MaxLineLength:Driver.kt$DriverParameters$@Deprecated("extraCordappPackagesToScan does not preserve the original CorDapp's versioning and metadata, which may lead to " + "misleading results in tests. Use cordappsForAllNodes instead.")</ID>
+    <ID>MaxLineLength:Driver.kt$DriverParameters$@Deprecated("extraCordappPackagesToScan does not preserve the original CorDapp's versioning and metadata, which may lead to " + "misleading results in tests. Use withCordappsForAllNodes instead.")</ID>
+    <ID>MaxLineLength:Driver.kt$DriverParameters$@Deprecated("extraCordappPackagesToScan does not preserve the original CorDapp's versioning and metadata, which may lead to " + "misleading results in tests. Use withCordappsForAllNodes instead.") fun withExtraCordappPackagesToScan(extraCordappPackagesToScan: List&lt;String&gt;): DriverParameters</ID>
+    <ID>MaxLineLength:Driver.kt$DriverParameters$constructor(cordappsForAllNodes: Collection&lt;TestCordapp&gt;) : this(isDebug = false, cordappsForAllNodes = cordappsForAllNodes)</ID>
+    <ID>MaxLineLength:Driver.kt$DriverParameters$fun withCordappsForAllNodes(cordappsForAllNodes: Collection&lt;TestCordapp&gt;?): DriverParameters</ID>
+    <ID>MaxLineLength:Driver.kt$DriverParameters$fun withDebugPortAllocation(debugPortAllocation: PortAllocation): DriverParameters</ID>
+    <ID>MaxLineLength:Driver.kt$DriverParameters$fun withNetworkParameters(networkParameters: NetworkParameters): DriverParameters</ID>
+    <ID>MaxLineLength:Driver.kt$DriverParameters$fun withNotaryCustomOverrides(notaryCustomOverrides: Map&lt;String, Any?&gt;): DriverParameters</ID>
+    <ID>MaxLineLength:Driver.kt$DriverParameters$fun withStartNodesInProcess(startNodesInProcess: Boolean): DriverParameters</ID>
+    <ID>MaxLineLength:Driver.kt$DriverParameters$fun withSystemProperties(systemProperties: Map&lt;String, String&gt;): DriverParameters</ID>
+    <ID>MaxLineLength:Driver.kt$DriverParameters$fun withWaitForAllNodesToFinish(waitForAllNodesToFinish: Boolean): DriverParameters</ID>
+    <ID>MaxLineLength:Driver.kt$InProcess$ fun &lt;T&gt; startFlow(logic: FlowLogic&lt;T&gt;): CordaFuture&lt;T&gt;</ID>
+    <ID>MaxLineLength:Driver.kt$JmxPolicy</ID>
+    <ID>MaxLineLength:Driver.kt$JmxPolicy$@Deprecated("The default constructor does not turn on monitoring. Simply leave the jmxPolicy parameter unspecified if you wish to not " + "have monitoring turned on.")</ID>
+    <ID>MaxLineLength:Driver.kt$PortAllocation.Incremental$@Deprecated("This has been superseded by net.corda.testing.driver.SharedMemoryIncremental.INSTANCE", ReplaceWith("SharedMemoryIncremental.INSTANCE"))</ID>
+    <ID>MaxLineLength:Driver.kt$PortAllocation.Incremental$@Deprecated("This has been superseded by net.corda.testing.driver.SharedMemoryIncremental.INSTANCE", ReplaceWith("net.corda.testing.driver.DriverDSL.nextPort()"))</ID>
+    <ID>MaxLineLength:DriverDSL.kt$DriverDSL$ @Suppress("DEPRECATION") fun startWebserver(handle: NodeHandle): CordaFuture&lt;WebserverHandle&gt;</ID>
+    <ID>MaxLineLength:DriverDSL.kt$DriverDSL$ fun startNode( defaultParameters: NodeParameters = NodeParameters(), providedName: CordaX500Name? = defaultParameters.providedName, rpcUsers: List&lt;User&gt; = defaultParameters.rpcUsers, verifierType: VerifierType = defaultParameters.verifierType, customOverrides: Map&lt;String, Any?&gt; = defaultParameters.customOverrides, startInSameProcess: Boolean? = defaultParameters.startInSameProcess, maximumHeapSize: String = defaultParameters.maximumHeapSize ): CordaFuture&lt;NodeHandle&gt;</ID>
+    <ID>MaxLineLength:DriverDSL.kt$DriverDSL$ fun startNode( defaultParameters: NodeParameters = NodeParameters(), providedName: CordaX500Name? = defaultParameters.providedName, rpcUsers: List&lt;User&gt; = defaultParameters.rpcUsers, verifierType: VerifierType = defaultParameters.verifierType, customOverrides: Map&lt;String, Any?&gt; = defaultParameters.customOverrides, startInSameProcess: Boolean? = defaultParameters.startInSameProcess, maximumHeapSize: String = defaultParameters.maximumHeapSize, logLevelOverride: String? = defaultParameters.logLevelOverride ): CordaFuture&lt;NodeHandle&gt;</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$CompatibilityZoneParams</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$ private fun startOutOfProcessMiniNode(config: NodeConfig, vararg extraCmdLineFlag: String): CordaFuture&lt;Unit&gt;</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$/** * Future which completes when the network map infrastructure is available, whether a local one or one from the CZ. * This future acts as a gate to prevent nodes from starting too early. The value of the future is a [LocalNetworkMap] * object, which is null if the network map is being provided by the CZ. */ private lateinit var networkMapAvailability: CordaFuture&lt;LocalNetworkMap?&gt;</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$LocalNetworkMap</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$NodeConfig</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$NodeConfiguration::rpcUsers.name to if (users.isEmpty()) defaultRpcUserList else users.map { it.toConfig().root().unwrapped() }</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$NodeParameters(rpcUsers = spec.rpcUsers, verifierType = spec.verifierType, customOverrides = notaryConfig + customOverrides, maximumHeapSize = spec.maximumHeapSize)</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$NodeParameters(rpcUsers = spec.rpcUsers, verifierType = spec.verifierType, customOverrides = notaryConfig(clusterAddress))</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$NodeParameters(rpcUsers = spec.rpcUsers, verifierType = spec.verifierType, customOverrides = notaryConfig(nodeAddress, clusterAddress))</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$OutOfProcessImpl(rpc.nodeInfo(), rpc, config.corda, webAddress, useHTTPS, debugPort, process, onNodeExit)</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$_executorService = Executors.newScheduledThreadPool(2, ThreadFactoryBuilder().setNameFormat("driver-pool-thread-%d").build())</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$_notaries.map { notary -&gt; notary.map { handle -&gt; handle.nodeHandles } }.getOrThrow(notaryHandleTimeout).forEach { future -&gt; future.getOrThrow(notaryHandleTimeout) }</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$fun notaryConfig(nodeAddress: NetworkHostAndPort, clusterAddress: NetworkHostAndPort? = null): Map&lt;String, Any&gt;</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$override</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$p2pAddress: NetworkHostAndPort = portAllocation.nextHostAndPort()</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$paths.filter { it.fileName.toString().startsWith(NodeInfoFilesCopier.NODE_INFO_FILE_NAME_PREFIX) }.findFirst().get()</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$private</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$return (0 until spec.cluster!!.clusterSize).map { spec.name.copy(organisation = "${spec.name.organisation}-$it") }</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$startNodeRegistration(name, compatibilityZone.rootCert, compatibilityZone.config(), parameters.customOverrides)</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$val client = OkHttpClient.Builder().connectTimeout(5, TimeUnit.SECONDS).readTimeout(60, TimeUnit.SECONDS).build()</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$val flowOverrideConfig = FlowOverrideConfig(parameters.flowOverrides.map { FlowOverride(it.key.canonicalName, it.value.canonicalName) })</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$val jdbcUrl = "jdbc:h2:mem:persistence${inMemoryCounter.getAndIncrement()};DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=10000;WRITE_DELAY=100"</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$val name = parameters.providedName ?: CordaX500Name("${oneOf(names).organisation}-${p2pAddress.port}", "London", "GB")</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$val nodeInfo = Node(config.corda, MOCK_VERSION_INFO, initialiseSerialization = false).generateAndSaveNodeInfo()</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$val process = startOutOfProcessNode(config, quasarJarPath, debugPort, systemProperties, parameters.maximumHeapSize, parameters.logLevelOverride)</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl$val processDeathFuture = poll(executorService, "process death while waiting for RPC (${config.corda.myLegalName})") { if (process.isAlive) null else process }</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl${ // If no CZ is specified then the driver does the generation of the network parameters and the copying of the // node info files. startNotaryIdentityGeneration().map { notaryInfos -&gt; Pair(notaryInfos, LocalNetworkMap(notaryInfos)) } }</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl${ // In this case we're dealing with the the RPCDriver or one of it's cousins which are internal and we don't care about them emptyList() }</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl${ // Otherwise it's the CZ's job to distribute thse via the HTTP network map, as that is what the nodes will be expecting. val notaryInfosFuture = if (compatibilityZone.rootCert == null) { // No root cert specified so we use the dev root cert to generate the notary identities. startNotaryIdentityGeneration() } else { // With a root cert specified we delegate generation of the notary identities to the CZ. startAllNotaryRegistrations(compatibilityZone.rootCert, compatibilityZone) } notaryInfosFuture.map { notaryInfos -&gt; compatibilityZone.publishNotaries(notaryInfos) Pair(notaryInfos, null) } }</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl.Companion$ private fun Map&lt;String, Any&gt;.removeResolvedClasspath(): Map&lt;String, Any&gt;</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl.Companion$"com.fasterxml**;com.google**;com.ibm**;com.intellij**;com.jcabi**;com.nhaarman**;com.opengamma**;"</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl.Companion$"com.lmax**;picocli**;liquibase**;com.github.benmanes**;org.json**;org.postgresql**;nonapi.io.github.classgraph**;)"</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl.Companion$"com.typesafe**;com.zaxxer**;de.javakaffee**;groovy**;groovyjarjarantlr**;groovyjarjarasm**;io.atomix**;"</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl.Companion$"io.github**;io.netty**;jdk**;joptsimple**;junit**;kotlin**;net.bytebuddy**;net.i2p**;org.apache**;"</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl.Companion$"org.assertj**;org.bouncycastle**;org.codehaus**;org.crsh**;org.dom4j**;org.fusesource**;org.h2**;"</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl.Companion$"org.hamcrest**;org.hibernate**;org.jboss**;org.jcp**;org.joda**;org.junit**;org.mockito**;org.objectweb**;"</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl.Companion$/** * A sub-set of permissions that grant most of the essential operations used in the unit/integration tests as well as * in demo application like NodeExplorer. */ @Suppress("DEPRECATION") private val DRIVER_REQUIRED_PERMISSIONS = setOf( Permissions.invokeRpc(CordaRPCOps::nodeInfo), Permissions.invokeRpc(CordaRPCOps::networkMapFeed), Permissions.invokeRpc(CordaRPCOps::networkMapSnapshot), Permissions.invokeRpc(CordaRPCOps::notaryIdentities), Permissions.invokeRpc(CordaRPCOps::stateMachinesFeed), Permissions.invokeRpc(CordaRPCOps::stateMachineRecordedTransactionMappingFeed), Permissions.invokeRpc(CordaRPCOps::nodeInfoFromParty), Permissions.invokeRpc(CordaRPCOps::internalVerifiedTransactionsFeed), Permissions.invokeRpc(CordaRPCOps::internalFindVerifiedTransaction), Permissions.invokeRpc("vaultQueryBy"), Permissions.invokeRpc("vaultTrackBy"), Permissions.invokeRpc(CordaRPCOps::registeredFlows), Permissions.invokeRpc(CordaRPCOps::killFlow) )</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl.Companion$exclude.any { token -&gt; cpEntry.contains("${File.separatorChar}$token") } || cpEntry.endsWith("-tests.jar")</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl.Companion$log.info("Starting out-of-process Node ${config.corda.myLegalName.organisation}, debug port is " + (debugPort ?: "not enabled"))</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl.Companion$private operator fun Config.plus(property: Pair&lt;String, Any&gt;)</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl.Companion$private val defaultRpcUserList = listOf(InternalUser("default", "default", setOf("ALL")).toConfig().root().unwrapped())</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl.Companion$throw IllegalStateException("No quasar agent: -javaagent:lib/quasar.jar and working directory project root might fix")</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl.Companion$val excludePattern = "x(antlr**;bftsmart**;ch**;co.paralleluniverse**;com.codahale**;com.esotericsoftware**;" + "com.fasterxml**;com.google**;com.ibm**;com.intellij**;com.jcabi**;com.nhaarman**;com.opengamma**;" + "com.typesafe**;com.zaxxer**;de.javakaffee**;groovy**;groovyjarjarantlr**;groovyjarjarasm**;io.atomix**;" + "io.github**;io.netty**;jdk**;joptsimple**;junit**;kotlin**;net.bytebuddy**;net.i2p**;org.apache**;" + "org.assertj**;org.bouncycastle**;org.codehaus**;org.crsh**;org.dom4j**;org.fusesource**;org.h2**;" + "org.hamcrest**;org.hibernate**;org.jboss**;org.jcp**;org.joda**;org.junit**;org.mockito**;org.objectweb**;" + "org.objenesis**;org.slf4j**;org.w3c**;org.xml**;org.yaml**;reflectasm**;rx**;org.jolokia**;" + "com.lmax**;picocli**;liquibase**;com.github.benmanes**;org.json**;org.postgresql**;nonapi.io.github.classgraph**;)"</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl.Companion${ log.info("Starting out-of-process Node ${config.corda.myLegalName.organisation}, debug port is " + (debugPort ?: "not enabled")) // Write node.conf writeConfig(config.corda.baseDirectory, "node.conf", config.typesafe.toNodeOnly()) val systemProperties = mutableMapOf( "name" to config.corda.myLegalName, "visualvm.display.name" to "corda-${config.corda.myLegalName}" ) debugPort?.let { systemProperties += "log4j2.level" to "debug" systemProperties += "log4j2.debug" to "true" } systemProperties += inheritFromParentProcess() systemProperties += overriddenSystemProperties // See experimental/quasar-hook/README.md for how to generate. val excludePattern = "x(antlr**;bftsmart**;ch**;co.paralleluniverse**;com.codahale**;com.esotericsoftware**;" + "com.fasterxml**;com.google**;com.ibm**;com.intellij**;com.jcabi**;com.nhaarman**;com.opengamma**;" + "com.typesafe**;com.zaxxer**;de.javakaffee**;groovy**;groovyjarjarantlr**;groovyjarjarasm**;io.atomix**;" + "io.github**;io.netty**;jdk**;joptsimple**;junit**;kotlin**;net.bytebuddy**;net.i2p**;org.apache**;" + "org.assertj**;org.bouncycastle**;org.codehaus**;org.crsh**;org.dom4j**;org.fusesource**;org.h2**;" + "org.hamcrest**;org.hibernate**;org.jboss**;org.jcp**;org.joda**;org.junit**;org.mockito**;org.objectweb**;" + "org.objenesis**;org.slf4j**;org.w3c**;org.xml**;org.yaml**;reflectasm**;rx**;org.jolokia**;" + "com.lmax**;picocli**;liquibase**;com.github.benmanes**;org.json**;org.postgresql**;nonapi.io.github.classgraph**;)" val extraJvmArguments = systemProperties.removeResolvedClasspath().map { "-D${it.key}=${it.value}" } + "-javaagent:$quasarJarPath=$excludePattern" val loggingLevel = when { logLevelOverride != null -&gt; logLevelOverride debugPort == null -&gt; "INFO" else -&gt; "DEBUG" } val arguments = mutableListOf( "--base-directory=${config.corda.baseDirectory}", "--logging-level=$loggingLevel", "--no-local-shell").also { it += extraCmdLineFlag }.toList() // The following dependencies are excluded from the classpath of the created JVM, so that the environment resembles a real one as close as possible. // These are either classes that will be added as attachments to the node (i.e. samples, finance, opengamma etc.) or irrelevant testing libraries (test, corda-mock etc.). // TODO: There is pending work to fix this issue without custom blacklisting. See: https://r3-cev.atlassian.net/browse/CORDA-2164. val exclude = listOf("samples", "finance", "integrationTest", "test", "corda-mock", "com.opengamma.strata") val cp = ProcessUtilities.defaultClassPath.filterNot { cpEntry -&gt; exclude.any { token -&gt; cpEntry.contains("${File.separatorChar}$token") } || cpEntry.endsWith("-tests.jar") } return ProcessUtilities.startJavaProcess( className = "net.corda.node.Corda", // cannot directly get class for this, so just use string arguments = arguments, jdwpPort = debugPort, extraJvmArguments = extraJvmArguments, workingDirectory = config.corda.baseDirectory, maximumHeapSize = maximumHeapSize, classPath = cp ) }</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$DriverDSLImpl.LocalNetworkMap$// TODO: this object will copy NodeInfo files from started nodes to other nodes additional-node-infos/ // This uses the FileSystem and adds a delay (~5 seconds) given by the time we wait before polling the file system. // Investigate whether we can avoid that. val nodeInfosCopier = NodeInfoFilesCopier().also { shutdownManager.registerShutdown(it::close) }</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$InternalDriverDSL$ fun &lt;A&gt; pollUntilNonNull(pollName: String, pollInterval: Duration = DEFAULT_POLL_INTERVAL, warnCount: Int = DEFAULT_WARN_COUNT, check: () -&gt; A?): CordaFuture&lt;A&gt;</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$InternalDriverDSL$ fun pollUntilTrue(pollName: String, pollInterval: Duration = DEFAULT_POLL_INTERVAL, warnCount: Int = DEFAULT_WARN_COUNT, check: () -&gt; Boolean): CordaFuture&lt;Unit&gt;</ID>
+    <ID>MaxLineLength:DriverDSLImpl.kt$fun DriverDSL.startNode(providedName: CordaX500Name, devMode: Boolean, parameters: NodeParameters = NodeParameters()): CordaFuture&lt;NodeHandle&gt;</ID>
+    <ID>MaxLineLength:DriverInternal.kt$NodeHandleInternal$override val jmxAddress: NetworkHostAndPort? get() = configuration.jmxMonitoringHttpPort?.let { NetworkHostAndPort("localhost", it) }</ID>
+    <ID>MaxLineLength:FlowTestsUtils.kt$ @Suspendable fun &lt;R : Any&gt; FlowLogic&lt;*&gt;.receiveAll(receiveType: Class&lt;R&gt;, session: FlowSession, vararg sessions: FlowSession): List&lt;UntrustworthyData&lt;R&gt;&gt;</ID>
+    <ID>MaxLineLength:FlowTestsUtils.kt$ @Suspendable fun FlowLogic&lt;*&gt;.receiveAll(session: Pair&lt;FlowSession, Class&lt;out Any&gt;&gt;, vararg sessions: Pair&lt;FlowSession, Class&lt;out Any&gt;&gt;): Map&lt;FlowSession, UntrustworthyData&lt;Any&gt;&gt;</ID>
+    <ID>MaxLineLength:FlowTestsUtils.kt$ @Suspendable inline fun &lt;reified R : Any&gt; FlowLogic&lt;*&gt;.receiveAll(session: FlowSession, vararg sessions: FlowSession): List&lt;UntrustworthyData&lt;R&gt;&gt;</ID>
+    <ID>MaxLineLength:FlowTestsUtils.kt$@Suppress("UNCHECKED_CAST") infix</ID>
+    <ID>MaxLineLength:FlowTestsUtils.kt$@Suspendable inline</ID>
+    <ID>MaxLineLength:FlowTestsUtils.kt$flowFactory: (FlowSession) -&gt; T</ID>
+    <ID>MaxLineLength:FlowTestsUtils.kt$return this.internals.registerInitiatedFlowFactory(initiatingFlowClass, initiatedFlowClass, InitiatedFlowFactory.Core(flowFactory), track)</ID>
+    <ID>MaxLineLength:InMemoryMessagingNetwork.kt$InMemoryMessagingNetwork$@Synchronized private</ID>
+    <ID>MaxLineLength:InMemoryMessagingNetwork.kt$InMemoryMessagingNetwork$DistributedServiceHandle : MessageRecipientGroup</ID>
+    <ID>MaxLineLength:InMemoryMessagingNetwork.kt$InMemoryMessagingNetwork$MessageTransfer</ID>
+    <ID>MaxLineLength:InMemoryMessagingNetwork.kt$InMemoryMessagingNetwork$ServicePeerAllocationStrategy</ID>
+    <ID>MaxLineLength:InMemoryMessagingNetwork.kt$InMemoryMessagingNetwork$peersMapping[messagingService.myAddress.name] = messagingService.myAddress</ID>
+    <ID>MaxLineLength:InMemoryMessagingNetwork.kt$InMemoryMessagingNetwork$private val servicePeerAllocationStrategy: ServicePeerAllocationStrategy = InMemoryMessagingNetwork.ServicePeerAllocationStrategy.Random()</ID>
+    <ID>MaxLineLength:InMemoryMessagingNetwork.kt$InMemoryMessagingNetwork.Companion$servicePeerAllocationStrategy: ServicePeerAllocationStrategy = InMemoryMessagingNetwork.ServicePeerAllocationStrategy.Random()</ID>
+    <ID>MaxLineLength:InMemoryMessagingNetwork.kt$InMemoryMessagingNetwork.MessageTransfer.Companion$internal</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork$ fun createNode(parameters: InternalMockNodeParameters = InternalMockNodeParameters(), nodeFactory: (MockNodeArgs) -&gt; MockNode): TestStartedNode</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork$"You can use MockNetwork.waitQuiescent() to wait for all the nodes to process all the messages on their queues instead."</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork$/** * Returns the list of nodes started by the network. Each notary specified when the network is constructed ([notarySpecs] * parameter) maps 1:1 to the notaries returned by this list. */ val notaryNodes: List&lt;TestStartedNode&gt;</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork$?:</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork$TestCordappInternal.installCordapps(baseDirectory, parameters.additionalCordapps.toSet(), combinedCordappsForAllNodes)</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork$configOverrides = { doReturn(NotaryConfig(spec.validating, className = spec.className)).whenever(it).notary }</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork$fun createUnstartedNode(parameters: InternalMockNodeParameters = InternalMockNodeParameters(), nodeFactory: (MockNodeArgs) -&gt; MockNode): MockNode</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork$private</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork$private val serializationEnv = checkNotNull(setDriverSerialization()) { "Using more than one mock network simultaneously is not supported." }</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork$servicePeerAllocationStrategy: InMemoryMessagingNetwork.ServicePeerAllocationStrategy = defaultParameters.servicePeerAllocationStrategy</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork$val messagingNetwork = InMemoryMessagingNetwork.create(networkSendManuallyPumped, servicePeerAllocationStrategy, busyLatch)</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork$val node = nodeFactory(MockNodeArgs(config, this, id, parameters.entropyRoot, parameters.version, flowManager = parameters.flowManager))</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork$val testDirectory: Path = Paths.get("build") / "mock-network" / getTimestampAsDirectoryName()</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork.MockNode$(network as MockNodeMessagingService).start(mockNet.messagingNetwork, !mockNet.threadPerNode, id, myNotaryIdentity)</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork.MockNode$fun &lt;T : FlowLogic&lt;*&gt;&gt; registerInitiatedFlowFactory(initiatingFlowClass: Class&lt;out FlowLogic&lt;*&gt;&gt;, initiatedFlowClass: Class&lt;T&gt;, factory: InitiatedFlowFactory&lt;T&gt;, track: Boolean): Observable&lt;T&gt;</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork.MockNode$open</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork.MockNode$override</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork.MockNode$require(cryptoService is BCCryptoService) { "MockNode supports BCCryptoService only, but it is ${cryptoService.javaClass.name}" }</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork.MockNode${ require(cryptoService is BCCryptoService) { "MockNode supports BCCryptoService only, but it is ${cryptoService.javaClass.name}" } counter = counter.add(BigInteger.ONE) // The StartedMockNode specifically uses EdDSA keys as they are fixed and stored in json files for some tests (e.g IRSSimulation). val keyPair = Crypto.deriveKeyPairFromEntropy(Crypto.EDDSA_ED25519_SHA512, counter) (cryptoService as BCCryptoService).importKey(alias, keyPair) return keyPair.public }</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork.MockNode.TestStartedNodeImpl$override</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$InternalMockNetwork.MockNode.TestStartedNodeImpl$return smm.changes.filter { it is StateMachineManager.Change.Add }.map { it.logic }.ofType(initiatedFlowClass)</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$MessagingServiceSpy$val messagingService: MessagingService get() = checkNotNull(_messagingService) { "Spy has not been attached to a node" }</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$MockNodeFlowManager$override</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$TestStartedNode$ fun setMessagingServiceSpy(spy: MessagingServiceSpy)</ID>
+    <ID>MaxLineLength:InternalMockNetwork.kt$TestStartedNode$fun &lt;T : FlowLogic&lt;*&gt;&gt; registerInitiatedFlow(initiatingFlowClass: Class&lt;out FlowLogic&lt;*&gt;&gt;, initiatedFlowClass: Class&lt;T&gt;, track: Boolean = false): Observable&lt;T&gt;</ID>
+    <ID>MaxLineLength:InternalMockNetworkConfigOverrides.kt$return NotaryConfig(validating = this.validating, extraConfig = this.extraConfig, serviceLegalName = this.serviceLegalName, className = this.className)</ID>
+    <ID>MaxLineLength:InternalMockNetworkConfigOverrides.kt$this.flowTimeout?.also { fto -&gt; doReturn(FlowTimeoutConfiguration(fto.timeout, fto.maxRestartCount, fto.backoffBase)).whenever(config).flowTimeout }</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$ // TODO Rename to cordappWithClasses fun cordappForClasses(vararg classes: Class&lt;*&gt;): CustomCordapp</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$ fun JarOutputStream.addEntry(entry: ZipEntry, input: InputStream)</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$ fun addressMustBeBound(executorService: ScheduledExecutorService, hostAndPort: NetworkHostAndPort, listenProcess: Process? = null)</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$ fun cordappWithPackages(vararg packageNames: String): CustomCordapp</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$ fun findCordapp(scanPackage: String): TestCordappImpl</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$/* * The default timeout value of 40 seconds have been chosen based on previous node shutdown time estimate. * It's been observed that nodes can take up to 30 seconds to shut down, so just to stay on the safe side the 60 seconds * timeout has been chosen. */ fun addressMustNotBeBound(executorService: ScheduledExecutorService, hostAndPort: NetworkHostAndPort, timeout: Duration = 40.seconds)</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$/** * *Custom* CorDapp containing the contents of the `net.corda.testing.contracts` package, i.e. the dummy contracts. This is not a real CorDapp * in the way that [FINANCE_CONTRACTS_CORDAPP] and [FINANCE_WORKFLOWS_CORDAPP] are. */ @JvmField val DUMMY_CONTRACTS_CORDAPP: CustomCordapp = cordappWithPackages("net.corda.testing.contracts")</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$/** * Reference to the finance-contracts CorDapp in this repo. The metadata is taken directly from finance/contracts/build.gradle, including the * fact that the jar is signed. If you need an unsigned jar then use `cordappWithPackages("net.corda.finance.contracts")`. * * You will probably need to use [FINANCE_CORDAPPS] instead to get access to the flows as well. */ @JvmField val FINANCE_CONTRACTS_CORDAPP: TestCordappImpl = findCordapp("net.corda.finance.contracts")</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$/** * Reference to the finance-workflows CorDapp in this repo. The metadata is taken directly from finance/workflows/build.gradle, including the * fact that the jar is signed. If you need an unsigned jar then use `cordappWithPackages("net.corda.finance.flows")`. * * You will probably need to use [FINANCE_CORDAPPS] instead to get access to the contract classes as well. */ @JvmField val FINANCE_WORKFLOWS_CORDAPP: TestCordappImpl = findCordapp("net.corda.finance.workflows")</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$ListenProcessDeathException$CordaException("The process that was expected to listen on $hostAndPort has died with status: ${listenProcess.exitValue()}")</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$fun &lt;T&gt; StartedNodeServices.startFlow(logic: FlowLogic&lt;T&gt;): FlowStateMachine&lt;T&gt;</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$fun addressMustBeBoundFuture(executorService: ScheduledExecutorService, hostAndPort: NetworkHostAndPort, listenProcess: Process? = null): CordaFuture&lt;Unit&gt;</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$fun addressMustNotBeBoundFuture(executorService: ScheduledExecutorService, hostAndPort: NetworkHostAndPort): CordaFuture&lt;Unit&gt;</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$require(classes.isNotEmpty()) { "${receiverClass.name} does not contain any enclosed classes to build a CorDapp out of" }</ID>
+    <ID>MaxLineLength:MockCryptoService.kt$MockCryptoService$return ContentSignerBuilder.build(signatureScheme, privateKey, Crypto.findProvider(signatureScheme.providerName), newSecureRandom())</ID>
+    <ID>MaxLineLength:MockCryptoService.kt$MockCryptoService$throw CryptoServiceException("Cannot sign using the key with alias $alias. SHA256 of data to be signed: ${data.sha256()}", e)</ID>
+    <ID>MaxLineLength:MockKeyManagementService.kt$MockKeyManagementService$override fun filterMyKeys(candidateKeys: Iterable&lt;PublicKey&gt;): Iterable&lt;PublicKey&gt;</ID>
+    <ID>MaxLineLength:MockKeyManagementService.kt$MockKeyManagementService$override fun getSigner(publicKey: PublicKey): ContentSigner</ID>
+    <ID>MaxLineLength:MockKeyManagementService.kt$MockKeyManagementService$private val keyStore: MutableMap&lt;PublicKey, PrivateKey&gt; = initialKeys.associateByTo(HashMap(), { it.public }, { it.private })</ID>
+    <ID>MaxLineLength:MockKeyManagementService.kt$MockKeyManagementService$private val pkToIdCache: WritablePublicKeyToOwningIdentityCache</ID>
+    <ID>MaxLineLength:MockNetwork.kt$MockNetwork</ID>
+    <ID>MaxLineLength:MockNetwork.kt$MockNetwork$ fun createPartyNode(legalName: CordaX500Name? = null): StartedMockNode</ID>
+    <ID>MaxLineLength:MockNetwork.kt$MockNetwork$/** In a mock network, nodes have an incrementing integer ID. Real networks do not have this. Returns the next ID that will be used. */ val nextNodeId get(): Int = internalMockNetwork.nextNodeId</ID>
+    <ID>MaxLineLength:MockNetwork.kt$MockNetwork$@Deprecated("cordappPackages does not preserve the original CorDapp's versioning and metadata, which may lead to " + "misleading results in tests. Use MockNetworkParameters.cordappsForAllNodes instead.")</ID>
+    <ID>MaxLineLength:MockNetwork.kt$MockNetwork$val servicePeerAllocationStrategy: InMemoryMessagingNetwork.ServicePeerAllocationStrategy = defaultParameters.servicePeerAllocationStrategy</ID>
+    <ID>MaxLineLength:MockNetwork.kt$MockNetworkParameters</ID>
+    <ID>MaxLineLength:MockNetwork.kt$MockNetworkParameters$(networkSendManuallyPumped: Boolean, threadPerNode: Boolean, servicePeerAllocationStrategy: InMemoryMessagingNetwork.ServicePeerAllocationStrategy, notarySpecs: List&lt;MockNetworkNotarySpec&gt;, networkParameters: NetworkParameters )</ID>
+    <ID>MaxLineLength:MockNetwork.kt$MockNetworkParameters$constructor(cordappsForAllNodes: Collection&lt;TestCordapp&gt;) : this(threadPerNode = false, cordappsForAllNodes = cordappsForAllNodes)</ID>
+    <ID>MaxLineLength:MockNetwork.kt$MockNetworkParameters$fun withCordappsForAllNodes(cordappsForAllNodes: Collection&lt;TestCordapp&gt;): MockNetworkParameters</ID>
+    <ID>MaxLineLength:MockNetwork.kt$MockNetworkParameters$fun withNetworkParameters(networkParameters: NetworkParameters): MockNetworkParameters</ID>
+    <ID>MaxLineLength:MockNetwork.kt$MockNetworkParameters$fun withNetworkSendManuallyPumped(networkSendManuallyPumped: Boolean): MockNetworkParameters</ID>
+    <ID>MaxLineLength:MockNetwork.kt$MockNetworkParameters$fun withNotarySpecs(notarySpecs: List&lt;MockNetworkNotarySpec&gt;): MockNetworkParameters</ID>
+    <ID>MaxLineLength:MockNetwork.kt$MockNetworkParameters$fun withServicePeerAllocationStrategy(servicePeerAllocationStrategy: InMemoryMessagingNetwork.ServicePeerAllocationStrategy): MockNetworkParameters</ID>
+    <ID>MaxLineLength:MockNetwork.kt$MockNetworkParameters$return MockNetworkParameters(networkSendManuallyPumped, threadPerNode, servicePeerAllocationStrategy, notarySpecs, networkParameters, emptyList())</ID>
+    <ID>MaxLineLength:MockNetwork.kt$MockNetworkParameters$val servicePeerAllocationStrategy: InMemoryMessagingNetwork.ServicePeerAllocationStrategy = InMemoryMessagingNetwork.ServicePeerAllocationStrategy.Random()</ID>
+    <ID>MaxLineLength:MockNetwork.kt$MockNodeParameters</ID>
+    <ID>MaxLineLength:MockNetwork.kt$MockNodeParameters$fun copy(forcedID: Int?, legalName: CordaX500Name?, entropyRoot: BigInteger, configOverrides: MockNodeConfigOverrides): MockNodeParameters</ID>
+    <ID>MaxLineLength:MockNetwork.kt$MockNodeParameters$fun withAdditionalCordapps(additionalCordapps: Collection&lt;TestCordapp&gt;): MockNodeParameters</ID>
+    <ID>MaxLineLength:MockNetwork.kt$MockNodeParameters$fun withConfigOverrides(configOverrides: MockNodeConfigOverrides): MockNodeParameters</ID>
+    <ID>MaxLineLength:MockNetwork.kt$StartedMockNode$ fun &lt;F : FlowLogic&lt;*&gt;&gt; findStateMachines(flowClass: Class&lt;F&gt;): List&lt;Pair&lt;F, CordaFuture&lt;*&gt;&gt;&gt;</ID>
+    <ID>MaxLineLength:MockNetwork.kt$StartedMockNode$ fun &lt;F : FlowLogic&lt;*&gt;&gt; registerInitiatedFlow(initiatedFlowClass: Class&lt;F&gt;): Observable&lt;F&gt;</ID>
+    <ID>MaxLineLength:MockNetwork.kt$StartedMockNode$ fun &lt;F : FlowLogic&lt;*&gt;&gt; registerInitiatedFlow(initiatingFlowClass: Class&lt;out FlowLogic&lt;*&gt;&gt;, initiatedFlowClass: Class&lt;F&gt;): Observable&lt;F&gt;</ID>
+    <ID>MaxLineLength:MockNetwork.kt$StartedMockNode$ fun &lt;T&gt; startFlow(logic: FlowLogic&lt;T&gt;): CordaFuture&lt;T&gt;</ID>
+    <ID>MaxLineLength:MockNetwork.kt$UnstartedMockNode$ fun &lt;T : SerializeAsToken&gt; installCordaService(serviceClass: Class&lt;T&gt;): T</ID>
+    <ID>MaxLineLength:MockNetworkParametersService.kt$MockNetworkParametersStorage : NetworkParametersStorage</ID>
+    <ID>MaxLineLength:MockNetworkParametersService.kt$MockNetworkParametersStorage$override</ID>
+    <ID>MaxLineLength:MockNodeMessagingService.kt$MockNodeMessagingService$ fun start(network: InMemoryMessagingNetwork, manuallyPumped: Boolean, id: Int, notaryService: PartyAndCertificate?)</ID>
+    <ID>MaxLineLength:MockNodeMessagingService.kt$MockNodeMessagingService$ private fun unPopMessages(transfers: Collection&lt;InMemoryMessagingNetwork.MessageTransfer&gt;)</ID>
+    <ID>MaxLineLength:MockNodeMessagingService.kt$MockNodeMessagingService$OpaqueBytes(message.data.bytes.copyOf())</ID>
+    <ID>MaxLineLength:MockNodeMessagingService.kt$MockNodeMessagingService$handler.callback(receivedMessage, handler, InMemoryDeduplicationHandler(receivedMessage, transfer))</ID>
+    <ID>MaxLineLength:MockNodeMessagingService.kt$MockNodeMessagingService$override</ID>
+    <ID>MaxLineLength:MockNodeMessagingService.kt$MockNodeMessagingService$private</ID>
+    <ID>MaxLineLength:MockNodeMessagingService.kt$MockNodeMessagingService$return InMemoryMessage(topic, OpaqueBytes(data), deduplicationId.deduplicationId, senderUUID = deduplicationId.senderUUID)</ID>
+    <ID>MaxLineLength:MockNodeMessagingService.kt$MockNodeMessagingService$val matchingHandlers = handlers.filter { it.topicSession.isBlank() || transfer.message.topic == it.topicSession }</ID>
+    <ID>MaxLineLength:MockNodeMessagingService.kt$MockNodeMessagingService${ // Got no handlers for this message yet. Keep the message around and attempt redelivery after a new // handler has been registered. The purpose of this path is to make unit tests that have multi-threading // reliable, as a sender may attempt to send a message to a receiver that hasn't finished setting // up a handler for yet. Most unit tests don't run threaded, but we want to test true parallelism at // least sometimes. log.warn("Message to ${transfer.message.topic} could not be delivered") pendingRedelivery.add(transfer) null }</ID>
+    <ID>MaxLineLength:MockNodeMessagingService.kt$MockNodeMessagingService.InMemoryDeduplicationHandler$private inner</ID>
+    <ID>MaxLineLength:MockPublicKeyToOwningIdentityCache.kt$MockPublicKeyToOwningIdentityCache : WritablePublicKeyToOwningIdentityCache</ID>
+    <ID>MaxLineLength:MockPublicKeyToOwningIdentityCache.kt$MockPublicKeyToOwningIdentityCache$private val cache: MutableMap&lt;PublicKey, KeyOwningIdentity&gt; = mutableMapOf&lt;PublicKey, KeyOwningIdentity&gt;().toSynchronised()</ID>
+    <ID>MaxLineLength:MockServices.kt$ fun &lt;T : SerializeAsToken&gt; createMockCordaService(serviceHub: MockServices, serviceConstructor: (AppServiceHub) -&gt; T): T</ID>
+    <ID>MaxLineLength:MockServices.kt$MockAppServiceHubImpl&lt;out T : SerializeAsToken&gt; : AppServiceHubServiceHub</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$ fun addMockCordapp(contractClassName: ContractClassName)</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$ override fun loadContractAttachment(stateRef: StateRef)</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$/** * Create a mock [ServiceHub] that can't load CorDapp code, and which uses a default service identity. */ constructor(cordappPackages: Iterable&lt;String&gt;) : this(cordappPackages, CordaX500Name("TestIdentity", "", "GB"), makeTestIdentityService())</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$/** * Create a mock [ServiceHub] that can't load CorDapp code, which uses the provided identity service * (you can get one from [makeTestIdentityService]) and which represents the given identity. */ @JvmOverloads constructor(cordappPackages: Iterable&lt;String&gt;, initialIdentityName: CordaX500Name, identityService: IdentityService = makeTestIdentityService()) : this(cordappPackages, TestIdentity(initialIdentityName), identityService)</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$/** * Create a mock [ServiceHub] that looks for app code in the given package names, uses the provided identity service * (you can get one from [makeTestIdentityService]) and represents the given identity. */ @JvmOverloads constructor(cordappPackages: Iterable&lt;String&gt;, initialIdentityName: CordaX500Name, identityService: IdentityService = makeTestIdentityService(), key: KeyPair, vararg moreKeys: KeyPair) : this(cordappPackages, TestIdentity(initialIdentityName, key), identityService, *moreKeys)</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$/** * Create a mock [ServiceHub] which uses the package of the caller to find CorDapp code. It uses a default service * identity. */ constructor() : this(listOf(getCallerPackage(MockServices::class)!!), CordaX500Name("TestIdentity", "", "GB"), makeTestIdentityService())</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$/** * Create a mock [ServiceHub] which uses the package of the caller to find CorDapp code. It uses the provided identity service * (you can get one from [makeTestIdentityService]) and which represents the given identity. */ @JvmOverloads constructor(initialIdentityName: CordaX500Name, identityService: IdentityService = makeTestIdentityService(), key: KeyPair, vararg moreKeys: KeyPair) : this(listOf(getCallerPackage(MockServices::class)!!), TestIdentity(initialIdentityName, key), identityService, *moreKeys)</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$/** * Create a mock [ServiceHub] which uses the package of the caller to find CorDapp code. It uses the provided identity service * (you can get one from [makeTestIdentityService]) and which represents the given identity. It has no keys. */ @JvmOverloads constructor(initialIdentityName: CordaX500Name, identityService: IdentityService = makeTestIdentityService()) : this(listOf(getCallerPackage(MockServices::class)!!), TestIdentity(initialIdentityName), identityService)</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$constructor(cordappPackages: List&lt;String&gt;, firstIdentity: TestIdentity, networkParameters: NetworkParameters, vararg moreIdentities: TestIdentity) : this( cordappPackages, firstIdentity, makeTestIdentityService(*listOf(firstIdentity, *moreIdentities).map { it.identity }.toTypedArray()), networkParameters, firstIdentity.keyPair )</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$constructor(cordappPackages: List&lt;String&gt;, initialIdentityName: CordaX500Name, identityService: IdentityService, networkParameters: NetworkParameters) : this(cordappPackages, TestIdentity(initialIdentityName), identityService, networkParameters)</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$constructor(cordappPackages: List&lt;String&gt;, initialIdentityName: CordaX500Name, identityService: IdentityService, networkParameters: NetworkParameters, key: KeyPair) : this(cordappPackages, TestIdentity(initialIdentityName, key), identityService, networkParameters)</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$constructor(firstIdentity: TestIdentity, networkParameters: NetworkParameters, vararg moreIdentities: TestIdentity) : this( listOf(getCallerPackage(MockServices::class)!!), firstIdentity, networkParameters, *moreIdentities )</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$get() = ServicesForResolutionImpl(identityService, attachments, cordappProvider, networkParametersService, validatedTransactions)</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$initialIdentity: TestIdentity</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$internal</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$override var networkParametersService: NetworkParametersService = MockNetworkParametersStorage(initialNetworkParameters)</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$private</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$private constructor(cordappLoader: CordappLoader, identityService: IdentityService, networkParameters: NetworkParameters, initialIdentity: TestIdentity, moreKeys: Array&lt;out KeyPair&gt;, keyManagementService: KeyManagementService) : this(cordappLoader, MockTransactionStorage(), identityService, networkParameters, initialIdentity, moreKeys, keyManagementService)</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$return NodeInfo(listOf(NetworkHostAndPort("mock.node.services", 10000)), listOf(initialIdentity.identity), 1, serial = 1L)</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$return NodeVaultService(clock, keyManagementService, servicesForResolution, database, schemaService, cordappLoader.appClassLoader).apply { start() }</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$this(cordappLoaderForPackages(cordappPackages), identityService, networkParameters, initialIdentity, moreKeys)</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$this(cordappLoaderForPackages(cordappPackages), identityService, networkParameters, initialIdentity, moreKeys, keyManagementService)</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices$this(cordappLoaderForPackages(cordappPackages), identityService, testNetworkParameters(modifiedTime = Instant.MIN), initialIdentity, moreKeys)</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices.Companion$ @JvmStatic @JvmOverloads fun makeTestDatabaseAndMockServices(cordappPackages: List&lt;String&gt;, identityService: IdentityService, initialIdentity: TestIdentity, networkParameters: NetworkParameters = testNetworkParameters(modifiedTime = Instant.MIN), vararg moreKeys: KeyPair): Pair&lt;CordaPersistence, MockServices&gt;</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices.Companion$ @JvmStatic @JvmOverloads fun makeTestDatabaseAndPersistentServices( cordappPackages: List&lt;String&gt;, initialIdentity: TestIdentity, networkParameters: NetworkParameters = testNetworkParameters(modifiedTime = Instant.MIN), moreKeys: Set&lt;KeyPair&gt;, moreIdentities: Set&lt;PartyAndCertificate&gt; ): Pair&lt;CordaPersistence, MockServices&gt;</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices.Companion$makeMockMockServices(cordappLoader, identityService, networkParameters, initialIdentity, moreKeys, keyManagementService, schemaService, persistence)</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices.Companion$makeMockMockServices(cordappLoader, identityService, networkParameters, initialIdentity, moreKeys.toSet(), keyManagementService, schemaService, database)</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices.Companion$networkParameters: NetworkParameters = testNetworkParameters(modifiedTime = Instant.MIN)</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices.Companion$private</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices.Companion$props.setProperty("dataSource.url", "jdbc:h2:mem:${nodeName}_persistence;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE")</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices.Companion$return JarScanningCordappLoader.fromJarUrls(cordappsForPackages(packages).map { it.jarFile.toUri().toURL() }, versionInfo)</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices.Companion$return object : MockServices(cordappLoader, identityService, networkParameters, initialIdentity, moreKeys.toTypedArray(), keyManagementService) { override var networkParametersService: NetworkParametersService = MockNetworkParametersStorage(networkParameters) override val vaultService: VaultService = makeVaultService(schemaService, persistence, cordappLoader) override fun recordTransactions(statesToRecord: StatesToRecord, txs: Iterable&lt;SignedTransaction&gt;) { ServiceHubInternal.recordTransactions( statesToRecord, txs as? Collection ?: txs.toList(), validatedTransactions as WritableTransactionStorage, mockStateMachineRecordedTransactionMappingStorage, vaultService as VaultServiceInternal, persistence ) } override fun jdbcSession(): Connection = persistence.createSession() override fun &lt;T : Any?&gt; withEntityManager(block: EntityManager.() -&gt; T): T { return block(contextTransaction.restrictedEntityManager) } override fun withEntityManager(block: Consumer&lt;EntityManager&gt;) { return block.accept(contextTransaction.restrictedEntityManager) } }</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices.Companion$val database = configureDatabase(dataSourceProps, DatabaseConfig(), identityService::wellKnownPartyFromX500Name, identityService::wellKnownPartyFromAnonymous, schemaService, schemaService.internalSchemas())</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices.Companion$val persistence = configureDatabase(dataSourceProps, DatabaseConfig(), identityService::wellKnownPartyFromX500Name, identityService::wellKnownPartyFromAnonymous, schemaService, schemaService.internalSchemas())</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices.Companion${ val cordappLoader = cordappLoaderForPackages(cordappPackages) val dataSourceProps = makeTestDataSourceProperties() val schemaService = NodeSchemaService(cordappLoader.cordappSchemas) val identityService = PersistentIdentityService(TestingNamedCacheFactory()) val persistence = configureDatabase(dataSourceProps, DatabaseConfig(), identityService::wellKnownPartyFromX500Name, identityService::wellKnownPartyFromAnonymous, schemaService, schemaService.internalSchemas()) // Create a persistent identity service and add all the supplied identities. identityService.apply { ourNames = setOf(initialIdentity.name) database = persistence start(DEV_ROOT_CA.certificate) persistence.transaction { identityService.loadIdentities(moreIdentities + initialIdentity.identity) } } // Create a persistent key management service and add the key pair which was created for the TestIdentity. // We only add the keypair for the initial identity and any other keys which this node may control. Note: We don't add the keys // for the other identities. val pkToIdCache = PublicKeyToOwningIdentityCacheImpl(persistence, TestingNamedCacheFactory()) val aliasKeyMap = mutableMapOf&lt;String, KeyPair&gt;() val aliasedMoreKeys = moreKeys.mapIndexed { index, keyPair -&gt; val alias = "Extra key $index" aliasKeyMap[alias] = keyPair KeyPair(keyPair.public, AliasPrivateKey(alias)) }.toSet() val identityAlias = "${initialIdentity.name} private key" aliasKeyMap[identityAlias] = initialIdentity.keyPair val aliasedIdentityKey = KeyPair(initialIdentity.publicKey, AliasPrivateKey(identityAlias)) val keyManagementService = BasicHSMKeyManagementService( TestingNamedCacheFactory(), identityService, persistence, MockCryptoService(aliasKeyMap), pkToIdCache ) persistence.transaction { keyManagementService.start(aliasedMoreKeys + aliasedIdentityKey) } val mockService = persistence.transaction { makeMockMockServices(cordappLoader, identityService, networkParameters, initialIdentity, moreKeys, keyManagementService, schemaService, persistence) } return Pair(persistence, mockService) }</ID>
+    <ID>MaxLineLength:MockServices.kt$MockServices.Companion.&lt;no name provided&gt;$override var networkParametersService: NetworkParametersService = MockNetworkParametersStorage(networkParameters)</ID>
+    <ID>MaxLineLength:MockTransactionStorage.kt$MockTransactionStorage$override fun getTransaction(id: SecureHash): SignedTransaction?</ID>
+    <ID>MaxLineLength:MockTransactionStorage.kt$MockTransactionStorage$override fun getTransactionInternal(id: SecureHash): Pair&lt;SignedTransaction, Boolean&gt;?</ID>
+    <ID>MaxLineLength:NetworkMapServer.kt$NetworkMapServer$val jerseyServlet = ServletHolder(ServletContainer(resourceConfig)).apply { initOrder = 0 } // Initialise at server start</ID>
+    <ID>MaxLineLength:NetworkMapServer.kt$NetworkMapServer.InMemoryNetworkMapService$nodeInfoMap.filter { it.value.verified().legalIdentities.first().name == signedNodeInfo.verified().legalIdentities.first().name }</ID>
+    <ID>MaxLineLength:NetworkMapServer.kt$NetworkMapServer.InMemoryNetworkMapService$return Response.ok(signedNetworkMap.serialize().bytes).header("Cache-Control", "max-age=${pollInterval.seconds}").build()</ID>
+    <ID>MaxLineLength:NodeBasedTest.kt$InProcessNode : Node</ID>
+    <ID>MaxLineLength:NodeBasedTest.kt$InProcessNode$assertFalse(isInvalidJavaVersion(), "You are using a version of Java that is not supported (${SystemUtils.JAVA_VERSION}). Please upgrade to the latest version of Java 8.")</ID>
+    <ID>MaxLineLength:NodeBasedTest.kt$NodeBasedTest</ID>
+    <ID>MaxLineLength:NodeBasedTest.kt$NodeBasedTest$@JvmOverloads constructor(private val cordappPackages: List&lt;String&gt; = emptyList(), private val notaries: List&lt;CordaX500Name&gt; = emptyList())</ID>
+    <ID>MaxLineLength:NodeBasedTest.kt$NodeBasedTest$val customCordapps = cordappsForPackages(getCallerPackage(NodeBasedTest::class)?.let { cordappPackages + it } ?: cordappPackages)</ID>
+    <ID>MaxLineLength:NodeBasedTest.kt$NodeBasedTest$val node = InProcessNode(parsedConfig, MOCK_VERSION_INFO.copy(platformVersion = platformVersion), flowManager = flowManager)</ID>
+    <ID>MaxLineLength:NodeParameters.kt$NodeParameters</ID>
+    <ID>MaxLineLength:NodeParameters.kt$NodeParameters$/** * Create a new node parameters object with default values. Each parameter can be specified with its wither method which returns a copy * with that value. */ constructor() : this(providedName = null)</ID>
+    <ID>MaxLineLength:NodeParameters.kt$NodeParameters$fun withAdditionalCordapps(additionalCordapps: Set&lt;TestCordapp&gt;): NodeParameters</ID>
+    <ID>MaxLineLength:NodeParameters.kt$NodeParameters$fun withCustomOverrides(customOverrides: Map&lt;String, Any?&gt;): NodeParameters</ID>
+    <ID>MaxLineLength:NodeParameters.kt$NodeParameters$fun withFlowOverrides(flowOverrides: Map&lt;Class&lt;out FlowLogic&lt;*&gt;&gt;, Class&lt;out FlowLogic&lt;*&gt;&gt;&gt;): NodeParameters</ID>
+    <ID>MaxLineLength:NodeParameters.kt$NodeParameters$fun withStartInSameProcess(startInSameProcess: Boolean?): NodeParameters</ID>
+    <ID>MaxLineLength:NodeTestUtils.kt$ fun testActor(owningLegalIdentity: CordaX500Name = CordaX500Name("Test Company Inc.", "London", "GB"))</ID>
+    <ID>MaxLineLength:NodeTestUtils.kt$ fun testContext(owningLegalIdentity: CordaX500Name = CordaX500Name("Test Company Inc.", "London", "GB"))</ID>
+    <ID>MaxLineLength:NotarySpec.kt$NotarySpec</ID>
+    <ID>MaxLineLength:NotarySpec.kt$NotarySpec$// These extra fields are handled this way to preserve Kotlin wire compatibility wrt additional parameters with default values. constructor(name: CordaX500Name, validating: Boolean = true, rpcUsers: List&lt;User&gt; = emptyList(), verifierType: VerifierType = VerifierType.InMemory, cluster: ClusterSpec? = null, maximumHeapSize: String = "512m"): this(name, validating, rpcUsers, verifierType, cluster) { this.maximumHeapSize = maximumHeapSize }</ID>
+    <ID>MaxLineLength:ProcessUtilities.kt$ProcessUtilities$return startJavaProcess(C::class.java.name, arguments, classPath, workingDirectory, jdwpPort, extraJvmArguments, maximumHeapSize)</ID>
+    <ID>MaxLineLength:RPCDriver.kt$RPCDriverDSL$val artemisConfig = createRpcServerArtemisConfig(maxFileSize, maxBufferedBytesPerClient, driverDSL.driverDirectory / serverName, hostAndPort)</ID>
+    <ID>MaxLineLength:RPCDriver.kt$RPCDriverDSL$val process = ProcessUtilities.startJavaProcess&lt;RandomRpcUser&gt;(listOf(rpcOpsClass.name, rpcAddress.toString(), username, password))</ID>
+    <ID>MaxLineLength:RPCDriver.kt$RPCDriverDSL$val rpcSecurityManager = RPCSecurityManagerImpl.fromUserList(users = listOf(InternalUser(rpcUser.username, rpcUser.password, rpcUser.permissions)), id = AuthServiceId("TEST_SECURITY_MANAGER"))</ID>
+    <ID>MaxLineLength:RPCDriver.kt$RPCDriverDSL$val session = sessionFactory.createSession(username, password, false, true, true, locator.isPreAcknowledge, DEFAULT_ACK_BATCH_SIZE)</ID>
+    <ID>MaxLineLength:RPCDriver.kt$RPCDriverDSL.Companion$fun createRpcServerArtemisConfig(maxFileSize: Int, maxBufferedBytesPerClient: Long, baseDirectory: Path, hostAndPort: NetworkHostAndPort): Configuration</ID>
+    <ID>MaxLineLength:RPCDriver.kt$RandomRpcUser.Companion$private inline fun &lt;reified T&gt; HashMap&lt;Class&lt;*&gt;, Generator&lt;*&gt;&gt;.add(generator: Generator&lt;T&gt;)</ID>
+    <ID>MaxLineLength:RPCDriver.kt$RandomRpcUser.Companion$val handle = RPCClient&lt;RPCOps&gt;(hostAndPort, null, serializationContext = AMQP_RPC_CLIENT_CONTEXT).start(rpcClass, username, password)</ID>
+    <ID>MaxLineLength:RPCDriver.kt$SingleUserSecurityManager$override</ID>
+    <ID>MaxLineLength:RPCDriver.kt$SingleUserSecurityManager$override fun validateUserAndRole(user: String?, password: String?, roles: MutableSet&lt;Role&gt;?, checkType: CheckType?)</ID>
+    <ID>MaxLineLength:Reporter.kt$ObjectName("$domain:type=$category,${if (component.isNotEmpty()) "component=$component," else ""}name=$subName")</ID>
+    <ID>MaxLineLength:SharedMemoryIncremental.kt$SharedMemoryIncremental$file: File = File(System.getProperty("user.home"), "corda-$startPort-to-$endPort-port-allocator.bin")</ID>
+    <ID>MaxLineLength:SharedMemoryIncremental.kt$SharedMemoryIncremental$mb = backingFile.channel.map(FileChannel.MapMode.READ_WRITE, 0, 16)</ID>
+    <ID>MaxLineLength:ShutdownManager.kt$ShutdownManager${ isShutdown = true val result = ArrayList(registeredShutdowns) // It is important to clear `registeredShutdowns` that has been actioned upon as more than 1 driver can be created per test. // Given that `ShutdownManager` is reachable from `ApplicationShutdownHooks`, everything that was scheduled for shutdown // during 1st driver launch will not be eligible for GC during second driver launch therefore retained in memory. registeredShutdowns.clear() result }</ID>
+    <ID>MaxLineLength:TestClock.kt$TestClock$ @Synchronized fun setTo(newInstant: Instant)</ID>
+    <ID>MaxLineLength:TestCordapp.kt$TestCordapp</ID>
+    <ID>MaxLineLength:TestCordapp.kt$TestCordapp.Companion$ @JvmStatic fun findCordapp(scanPackage: String): TestCordapp</ID>
+    <ID>MaxLineLength:TestCordappImpl.kt$TestCordappImpl : TestCordappInternal</ID>
+    <ID>MaxLineLength:TestCordappImpl.kt$TestCordappImpl$0</ID>
+    <ID>MaxLineLength:TestCordappImpl.kt$TestCordappImpl$else -&gt; throw IllegalArgumentException("There is more than one CorDapp containing the package $scanPackage on the classpath " + "$jars. Specify a package name which is unique to the CorDapp.")</ID>
+    <ID>MaxLineLength:TestCordappInternal.kt$TestCordappInternal : TestCordapp</ID>
+    <ID>MaxLineLength:TestCordappInternal.kt$TestCordappInternal.Companion$cordappsWithoutMeta.forEach { require(it.value.size == 1) { "Conflicting CorDapps specified: ${it.value}" } }</ID>
+    <ID>MaxLineLength:TestCordappInternal.kt$TestCordappInternal.Companion$val allCordapps = nodeSpecificCordapps + generalCordapps.filter { it.withOnlyJarContents() !in nodeSpecificCordappsWithoutMeta }</ID>
+    <ID>MaxLineLength:TestCordappInternal.kt$TestCordappInternal.Companion${ // Ignore if the node already has the same CorDapp jar. This can happen if the node is being restarted. }</ID>
+    <ID>NestedBlockDepth:ShutdownManager.kt$ShutdownManager$fun shutdown()</ID>
+    <ID>NewLineAtEndOfFile:Driver.kt$net.corda.testing.driver.Driver.kt</ID>
+    <ID>NewLineAtEndOfFile:DummyClusterSpec.kt$net.corda.testing.node.internal.DummyClusterSpec.kt</ID>
+    <ID>NewLineAtEndOfFile:FlowTestsUtils.kt$net.corda.testing.flows.FlowTestsUtils.kt</ID>
+    <ID>NewLineAtEndOfFile:InternalMockNetworkConfigOverrides.kt$net.corda.testing.node.internal.InternalMockNetworkConfigOverrides.kt</ID>
+    <ID>NewLineAtEndOfFile:MockCryptoService.kt$net.corda.testing.node.internal.MockCryptoService.kt</ID>
+    <ID>NewLineAtEndOfFile:MockKeyManagementService.kt$net.corda.testing.node.internal.MockKeyManagementService.kt</ID>
+    <ID>NewLineAtEndOfFile:MockPublicKeyToOwningIdentityCache.kt$net.corda.testing.node.internal.MockPublicKeyToOwningIdentityCache.kt</ID>
+    <ID>NewLineAtEndOfFile:MockServices.kt$net.corda.testing.node.MockServices.kt</ID>
+    <ID>NewLineAtEndOfFile:MockTransactionStorage.kt$net.corda.testing.node.internal.MockTransactionStorage.kt</ID>
+    <ID>NewLineAtEndOfFile:NetworkMapServer.kt$net.corda.testing.node.internal.network.NetworkMapServer.kt</ID>
+    <ID>NewLineAtEndOfFile:NotarySpec.kt$net.corda.testing.node.NotarySpec.kt</ID>
+    <ID>NewLineAtEndOfFile:ProcessUtilities.kt$net.corda.testing.node.internal.ProcessUtilities.kt</ID>
+    <ID>NewLineAtEndOfFile:SharedMemoryIncremental.kt$net.corda.testing.driver.internal.SharedMemoryIncremental.kt</ID>
+    <ID>NewLineAtEndOfFile:ShutdownManager.kt$net.corda.testing.node.internal.ShutdownManager.kt</ID>
+    <ID>NewLineAtEndOfFile:User.kt$net.corda.testing.node.User.kt</ID>
+    <ID>ReturnCount:MockNodeMessagingService.kt$MockNodeMessagingService$ private fun getNextQueue(q: LinkedBlockingQueue&lt;InMemoryMessagingNetwork.MessageTransfer&gt;, block: Boolean): Pair&lt;InMemoryMessagingNetwork.MessageTransfer, List&lt;Handler&gt;&gt;?</ID>
+    <ID>SpreadOperator:CustomCordapp.kt$CustomCordapp$(*classes.map { it.name }.toTypedArray())</ID>
+    <ID>SpreadOperator:CustomCordapp.kt$CustomCordapp$(*packages.map { it.replace('.', '/') }.toTypedArray())</ID>
+    <ID>SpreadOperator:DriverDSLImpl.kt$DriverDSLImpl$( config, quasarJarPath, debugPort, systemProperties, "512m", null, *extraCmdLineFlag )</ID>
+    <ID>SpreadOperator:FlowTestsUtils.kt$(*allSessions)</ID>
+    <ID>SpreadOperator:FlowTestsUtils.kt$(session, *sessions)</ID>
+    <ID>SpreadOperator:MockServices.kt$MockServices$( identityService, *arrayOf(initialIdentity.keyPair) + moreKeys, pkToIdCache = MockPublicKeyToOwningIdentityCache() )</ID>
+    <ID>SpreadOperator:MockServices.kt$MockServices$( listOf(getCallerPackage(MockServices::class)!!), firstIdentity, *moreIdentities )</ID>
+    <ID>SpreadOperator:MockServices.kt$MockServices$( listOf(getCallerPackage(MockServices::class)!!), firstIdentity, networkParameters, *moreIdentities )</ID>
+    <ID>SpreadOperator:MockServices.kt$MockServices$(*listOf(firstIdentity, *moreIdentities).map { it.identity }.toTypedArray())</ID>
+    <ID>SpreadOperator:MockServices.kt$MockServices$(cordappPackages, TestIdentity(initialIdentityName, key), identityService, *moreKeys)</ID>
+    <ID>SpreadOperator:MockServices.kt$MockServices$(firstIdentity, *moreIdentities)</ID>
+    <ID>SpreadOperator:MockServices.kt$MockServices$(listOf(getCallerPackage(MockServices::class)!!), TestIdentity(initialIdentityName, key), identityService, *moreKeys)</ID>
+    <ID>SpreadOperator:MockServices.kt$MockServices.Companion$( identityService, *arrayOf(initialIdentity.keyPair) + moreKeys, pkToIdCache = MockPublicKeyToOwningIdentityCache() )</ID>
+    <ID>SpreadOperator:RPCDriver.kt$RandomRpcUser.Companion$(handle.proxy, *arguments.toTypedArray())</ID>
+    <ID>TooGenericExceptionCaught:DriverDSLImpl.kt$DriverDSLImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:DriverDSLImpl.kt$exception: Throwable</ID>
+    <ID>TooGenericExceptionCaught:Injectors.kt$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:InternalMockNetwork.kt$InternalMockNetwork$t: Throwable</ID>
+    <ID>TooGenericExceptionCaught:InternalTestUtils.kt$&lt;no name provided&gt;$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:MockCryptoService.kt$MockCryptoService$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:MockNodeMessagingService.kt$MockNodeMessagingService$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NetworkMapServer.kt$NetworkMapServer.InMemoryNetworkMapService$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ShutdownManager.kt$ShutdownManager$t: Throwable</ID>
+    <ID>TooGenericExceptionThrown:RPCDriver.kt$RandomRpcUser.Companion$throw Exception("No generator for ${it.type}")</ID>
+    <ID>TooManyFunctions:Driver.kt$DriverParameters</ID>
+    <ID>TooManyFunctions:DriverDSLImpl.kt$DriverDSLImpl : InternalDriverDSL</ID>
+    <ID>TooManyFunctions:InMemoryMessagingNetwork.kt$InMemoryMessagingNetwork : SingletonSerializeAsToken</ID>
+    <ID>TooManyFunctions:InternalMockNetwork.kt$InternalMockNetwork : AutoCloseable</ID>
+    <ID>TooManyFunctions:InternalMockNetwork.kt$InternalMockNetwork$MockNode : AbstractNode</ID>
+    <ID>TooManyFunctions:InternalTestUtils.kt$net.corda.testing.node.internal.InternalTestUtils.kt</ID>
+    <ID>TooManyFunctions:MockNodeMessagingService.kt$MockNodeMessagingService : SingletonSerializeAsTokenMessagingService</ID>
+    <ID>TooManyFunctions:MockServices.kt$MockServices : ServiceHub</ID>
+    <ID>TooManyFunctions:NodeParameters.kt$NodeParameters</ID>
+    <ID>TooManyFunctions:RPCDriver.kt$RPCDriverDSL : InternalDriverDSL</ID>
+    <ID>VariableNaming:InternalMockNetwork.kt$MessagingServiceSpy$internal var _messagingService: MessagingService? = null set(value) { check(field == null) { "Spy has already been attached to a node" } field = value }</ID>
+    <ID>WildcardImport:CustomCordapp.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:DriverDSLImpl.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:DriverDSLImpl.kt$import net.corda.core.internal.concurrent.*</ID>
+    <ID>WildcardImport:DriverDSLImpl.kt$import net.corda.node.services.config.*</ID>
+    <ID>WildcardImport:DriverDSLImpl.kt$import net.corda.testing.driver.*</ID>
+    <ID>WildcardImport:InternalMockNetwork.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:InternalMockNetwork.kt$import net.corda.node.services.config.*</ID>
+    <ID>WildcardImport:InternalMockNetwork.kt$import net.corda.testing.node.*</ID>
+    <ID>WildcardImport:MockKeyManagementService.kt$import net.corda.core.crypto.*</ID>
+    <ID>WildcardImport:MockNodeMessagingService.kt$import net.corda.node.services.messaging.*</ID>
+    <ID>WildcardImport:MockServices.kt$import net.corda.core.node.*</ID>
+    <ID>WildcardImport:MockServices.kt$import net.corda.core.node.services.*</ID>
+    <ID>WildcardImport:MockServices.kt$import net.corda.node.services.api.*</ID>
+    <ID>WildcardImport:MockServices.kt$import net.corda.testing.node.internal.*</ID>
+    <ID>WildcardImport:NetworkMapServer.kt$import javax.ws.rs.*</ID>
+    <ID>WildcardImport:NodeBasedTest.kt$import net.corda.node.services.config.*</ID>
+    <ID>WildcardImport:NodeTestUtils.kt$import net.corda.testing.dsl.*</ID>
+    <ID>WildcardImport:TestCordappImpl.kt$import net.corda.core.internal.*</ID>
+  </Whitelist>
+</SmellBaseline>

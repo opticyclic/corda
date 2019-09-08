@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ConstructorParameterNaming:PortfolioApi.kt$PortfolioApi.AggregatedHistoryView$val IM: Double</ID>
+    <ID>ConstructorParameterNaming:PortfolioApi.kt$PortfolioApi.AggregatedHistoryView$val MTM: Double</ID>
+    <ID>ConstructorParameterNaming:SwapDataView.kt$SwapDataView$var IM: Double? = null</ID>
+    <ID>ConstructorParameterNaming:SwapDataView.kt$SwapDataView$var MTM: Double? = null</ID>
+    <ID>ForbiddenComment:PortfolioApi.kt$//TODO: Change import namespaces vega -&gt; ....</ID>
+    <ID>ForbiddenComment:PortfolioApi.kt$PortfolioApi$// TODO: Stop using localdate.now</ID>
+    <ID>ForbiddenComment:PortfolioApi.kt$PortfolioApi$// TODO: enhancement to Vault Query to check for any participant in participants attribute</ID>
+    <ID>ForbiddenComment:SwapDataView.kt$// TODO: Should be able to display an array ?</ID>
+    <ID>FunctionParameterNaming:SwapDataView.kt$IM: InitialMarginTriple? = null</ID>
+    <ID>LongMethod:PortfolioApiUtils.kt$PortfolioApiUtils$fun createValuations(state: PortfolioState, portfolio: Portfolio): ValuationsView</ID>
+    <ID>MagicNumber:PortfolioApi.kt$PortfolioApi$2016</ID>
+    <ID>MagicNumber:PortfolioApi.kt$PortfolioApi$6</ID>
+    <ID>MaxLineLength:PortfolioApi.kt$PortfolioApi$ @POST @Path("{party}/portfolio/valuations/calculate") @Produces(MediaType.APPLICATION_JSON) fun startPortfolioCalculations(params: ValuationCreationParams = ValuationCreationParams(LocalDate.of(2016, 6, 6)), @PathParam("party") partyName: String): Response</ID>
+    <ID>MaxLineLength:PortfolioApi.kt$PortfolioApi$counterparties = counterParties.flatMap { it.legalIdentitiesAndCerts.map { ApiParty(it.owningKey.toBase58String(), it.name) } }</ID>
+    <ID>MaxLineLength:PortfolioApi.kt$PortfolioApi$rpc.startFlow(SimmRevaluation::Initiator, getPortfolioStateAndRefWith(otherParty).ref, params.valuationDate)</ID>
+    <ID>MaxLineLength:PortfolioApi.kt$PortfolioApi$val history = AggregatedHistoryView(state.valuation!!.trades, notional.toDouble(), LocalDate.now(), state.valuation!!.margin.first, mtm)</ID>
+    <ID>MaxLineLength:PortfolioApi.kt$PortfolioApi.AggregatedHistoryView$data</ID>
+    <ID>MaxLineLength:PortfolioApiUtils.kt$PortfolioApiUtils$"fixedRatePayer" to (fixedRatePayer.nameOrNull()?.organisation ?: fixedRatePayer.owningKey.toBase58String())</ID>
+    <ID>MaxLineLength:PortfolioApiUtils.kt$PortfolioApiUtils$"floatingRatePayer" to (floatingRatePayer.nameOrNull()?.organisation ?: floatingRatePayer.owningKey.toBase58String())</ID>
+    <ID>MaxLineLength:PortfolioApiUtils.kt$PortfolioApiUtils$InitialMarginView</ID>
+    <ID>MaxLineLength:PortfolioApiUtils.kt$PortfolioApiUtils$val completeSubgroups = subgroups.mapValues { it.value.mapValues { it.value[0].third.toDouble() }.toSortedMap() }</ID>
+    <ID>MaxLineLength:PortfolioApiUtils.kt$PortfolioApiUtils$val processedSensitivities = valuation.totalSensivities.sensitivities.map { it.marketDataName to it.parameterMetadata.map { it.label }.zip(it.sensitivity.toList()).toMap() }.toMap()</ID>
+    <ID>MaxLineLength:PortfolioApiUtils.kt$PortfolioApiUtils$val trade = if (state.buyer == ownParty as AbstractParty) state.swap.toFloatingLeg() else state.swap.toFloatingLeg()</ID>
+    <ID>MaxLineLength:PortfolioApiUtils.kt$PortfolioApiUtils$val yieldCurveCurrenciesValues = marketData.filter { !it.key.contains("/") }.map { it -&gt; Triple(it.key.split("-")[0], it.key.split("-", limit = 2)[1], it.value) }</ID>
+    <ID>MaxLineLength:SwapDataModel.kt$SwapDataModel$Pair("swap", id)</ID>
+    <ID>TooManyFunctions:PortfolioApi.kt$PortfolioApi</ID>
+    <ID>VariableNaming:PortfolioApi.kt$PortfolioApi$var IMs: Map&lt;String, InitialMarginTriple&gt;? = null</ID>
+    <ID>VariableNaming:PortfolioApi.kt$PortfolioApi$var PVs: Map&lt;String, MultiCurrencyAmount&gt;? = null</ID>
+    <ID>WildcardImport:PortfolioApi.kt$import javax.ws.rs.*</ID>
+  </Whitelist>
+</SmellBaseline>

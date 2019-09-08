@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ClassNaming:IdentitySyncFlow.kt$IdentitySyncFlow.Receive.Companion$RECEIVING_CERTIFICATES : Step</ID>
+    <ID>ClassNaming:IdentitySyncFlow.kt$IdentitySyncFlow.Receive.Companion$RECEIVING_IDENTITIES : Step</ID>
+    <ID>ClassNaming:IdentitySyncFlow.kt$IdentitySyncFlow.Send.Companion$SYNCING_IDENTITIES : Step</ID>
+    <ID>ClassNaming:SwapIdentitiesFlow.kt$SwapIdentitiesFlow.Companion$AWAITING_IDENTITY : Step</ID>
+    <ID>ClassNaming:SwapIdentitiesFlow.kt$SwapIdentitiesFlow.Companion$GENERATING_IDENTITY : Step</ID>
+    <ID>ClassNaming:SwapIdentitiesFlow.kt$SwapIdentitiesFlow.Companion$SIGNING_IDENTITY : Step</ID>
+    <ID>ClassNaming:SwapIdentitiesFlow.kt$SwapIdentitiesFlow.Companion$VERIFYING_IDENTITY : Step</ID>
+    <ID>ForbiddenComment:IdentitySyncFlow.kt$IdentitySyncFlow.Send$// TODO: Can this be triggered automatically from [SendTransactionFlow]?</ID>
+    <ID>ForbiddenComment:IdentitySyncFlow.kt$IdentitySyncFlow.Send$// TODO: Consider if this too restrictive - we perhaps should be checking the name on the signing certificate in the certificate path instead</ID>
+    <ID>MaxLineLength:IdentitySyncFlow.kt$IdentitySyncFlow.Receive$// Store the received confidential identities in the identity service so we have a record of which well known identity they map to. serviceHub.identityService.verifyAndRegisterIdentity(identity)</ID>
+    <ID>MaxLineLength:IdentitySyncFlow.kt$IdentitySyncFlow.Receive$val unknownIdentities = allIdentities.filter { serviceHub.identityService.wellKnownPartyFromAnonymous(it) == null }</ID>
+    <ID>MaxLineLength:IdentitySyncFlow.kt$IdentitySyncFlow.Receive${ progressTracker.currentStep = RECEIVING_IDENTITIES val allIdentities = otherSideSession.receive&lt;List&lt;AbstractParty&gt;&gt;().unwrap { it } val unknownIdentities = allIdentities.filter { serviceHub.identityService.wellKnownPartyFromAnonymous(it) == null } progressTracker.currentStep = RECEIVING_CERTIFICATES val missingIdentities = otherSideSession.sendAndReceive&lt;List&lt;PartyAndCertificate&gt;&gt;(unknownIdentities) // Batch verify the identities we've received, so we know they're all correct before we start storing them in // the identity service missingIdentities.unwrap { identities -&gt; identities.forEach { it.verify(serviceHub.identityService.trustAnchor) } identities }.forEach { identity -&gt; // Store the received confidential identities in the identity service so we have a record of which well known identity they map to. serviceHub.identityService.verifyAndRegisterIdentity(identity) } }</ID>
+    <ID>MaxLineLength:IdentitySyncFlow.kt$IdentitySyncFlow.Send$confidentialIdentities .map { Pair(it, serviceHub.identityService.certificateFromKey(it.owningKey)) } // Filter down to confidential identities of our well known identity // TODO: Consider if this too restrictive - we perhaps should be checking the name on the signing certificate in the certificate path instead .filter { it.second?.name == ourIdentity.name }</ID>
+    <ID>MaxLineLength:IdentitySyncFlow.kt$IdentitySyncFlow.Send$require(req.all { it in identityCertificates.keys }) { "${otherSideSession.counterparty} requested a confidential identity not part of transaction: ${tx.id}" }</ID>
+    <ID>MaxLineLength:IdentitySyncFlow.kt$IdentitySyncFlow.Send$throw IllegalStateException("Counterparty requested a confidential identity for which we do not have the certificate path: ${tx.id}")</ID>
+    <ID>MaxLineLength:IdentitySyncFlow.kt$IdentitySyncFlow.Send$val requestedIdentities: List&lt;AbstractParty&gt; = otherSideSession.sendAndReceive&lt;List&lt;AbstractParty&gt;&gt;(identityCertificates.keys.toList()).unwrap { req -&gt; require(req.all { it in identityCertificates.keys }) { "${otherSideSession.counterparty} requested a confidential identity not part of transaction: ${tx.id}" } req }</ID>
+    <ID>MaxLineLength:SwapIdentitiesFlow.kt$SwapIdentitiesException : FlowException</ID>
+    <ID>MaxLineLength:SwapIdentitiesFlow.kt$SwapIdentitiesFlow : FlowLogic</ID>
+    <ID>MaxLineLength:SwapIdentitiesFlow.kt$SwapIdentitiesFlow$@Deprecated("It is unsafe to use this constructor as it requires nodes to automatically vend anonymous identities without first " + "checking if they should. Instead, use the constructor that takes in an existing FlowSession.")</ID>
+    <ID>MaxLineLength:SwapIdentitiesFlow.kt$SwapIdentitiesFlow$@Deprecated("It is unsafe to use this constructor as it requires nodes to automatically vend anonymous identities without first " + "checking if they should. Instead, use the constructor that takes in an existing FlowSession.") constructor(otherParty: Party, revocationEnabled: Boolean, progressTracker: ProgressTracker) : this(null, otherParty, progressTracker)</ID>
+    <ID>MaxLineLength:SwapIdentitiesFlow.kt$SwapIdentitiesFlow$@JvmOverloads constructor(otherSideSession: FlowSession, progressTracker: ProgressTracker = tracker()) : this(otherSideSession, null, progressTracker)</ID>
+    <ID>MaxLineLength:SwapIdentitiesFlow.kt$SwapIdentitiesFlow$logger</ID>
+    <ID>MaxLineLength:SwapIdentitiesFlow.kt$SwapIdentitiesFlow$val theirAnonymousIdentity = session.sendAndReceive&lt;IdentityWithSignature&gt;(ourIdentWithSig).unwrap { theirIdentWithSig -&gt; progressTracker.currentStep = VERIFYING_IDENTITY validateAndRegisterIdentity(serviceHub, session.counterparty, theirIdentWithSig.identity.deserialize(), theirIdentWithSig.signature) }</ID>
+    <ID>MaxLineLength:SwapIdentitiesFlow.kt$SwapIdentitiesFlow$validateAndRegisterIdentity(serviceHub, session.counterparty, theirIdentWithSig.identity.deserialize(), theirIdentWithSig.signature)</ID>
+    <ID>MaxLineLength:SwapIdentitiesFlow.kt$SwapIdentitiesFlow.Companion$@JvmStatic fun tracker(): ProgressTracker</ID>
+    <ID>MaxLineLength:SwapIdentitiesFlow.kt$SwapIdentitiesFlow.Companion${ if (theirAnonymousIdentity.name != otherSide.name) { throw SwapIdentitiesException("Certificate subject must match counterparty's well known identity.") } try { theirAnonymousIdentity.owningKey.verify(buildDataToSign(theirAnonymousIdentity), signature) } catch (ex: SignatureException) { throw SwapIdentitiesException("Signature does not match the expected identity ownership assertion.", ex) } // Validate then store their identity so that we can prove the key in the transaction is owned by the counterparty. serviceHub.identityService.verifyAndRegisterIdentity(theirAnonymousIdentity) return theirAnonymousIdentity }</ID>
+    <ID>MaxLineLength:SwapIdentitiesFlow.kt$SwapIdentitiesFlow.IdentityWithSignature$@CordaSerializable data</ID>
+    <ID>NewLineAtEndOfFile:SwapIdentitiesFlow.kt$net.corda.confidential.SwapIdentitiesFlow.kt</ID>
+    <ID>WildcardImport:SwapIdentitiesFlow.kt$import net.corda.core.flows.*</ID>
+  </Whitelist>
+</SmellBaseline>

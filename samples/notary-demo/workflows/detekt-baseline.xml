@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>EmptyFunctionBlock:MyCustomNotaryService.kt$MyCustomValidatingNotaryService${}</ID>
+    <ID>MaxLineLength:DummyIssueAndMove.kt$DummyIssueAndMove : FlowLogic</ID>
+    <ID>MaxLineLength:MyCustomNotaryService.kt$MyCustomValidatingNotaryService : SinglePartyNotaryService</ID>
+    <ID>MaxLineLength:MyCustomNotaryService.kt$MyCustomValidatingNotaryService$override fun createServiceFlow(otherPartySession: FlowSession): FlowLogic&lt;Void?&gt;</ID>
+    <ID>MaxLineLength:MyCustomNotaryService.kt$MyCustomValidatingNotaryService$override val uniquenessProvider = PersistentUniquenessProvider(services.clock, services.database, services.cacheFactory)</ID>
+    <ID>MaxLineLength:MyCustomNotaryService.kt$MyValidatingNotaryFlow : ValidatingNotaryFlow</ID>
+    <ID>TooGenericExceptionCaught:MyCustomNotaryService.kt$MyValidatingNotaryFlow$e: Exception</ID>
+  </Whitelist>
+</SmellBaseline>

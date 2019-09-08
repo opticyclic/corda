@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ComplexCondition:CheckpointAgent.kt$CheckpointHook$!that.javaClass.name.endsWith("ObjectField") || arrayValue != null || that.field.type == java.lang.String::class.java || value == null</ID>
+    <ID>ComplexCondition:CheckpointAgent.kt$CheckpointHook$(checkpointId != null) || ((clazz.name == instrumentClassname) &amp;&amp; (input.total() &gt;= minimumSize) &amp;&amp; (input.total() &lt;= maximumSize))</ID>
+    <ID>ComplexCondition:CheckpointAgent.kt$CheckpointHook$(checkpointId != null) || ((obj.javaClass.name == instrumentClassname) &amp;&amp; (output.total() &gt;= minimumSize) &amp;&amp; (output.total() &lt;= maximumSize))</ID>
+    <ID>ComplexMethod:CheckpointAgent.kt$CheckpointAgent.Companion$fun parseArguments(argumentsString: String?)</ID>
+    <ID>ComplexMethod:CheckpointAgent.kt$CheckpointHook$private fun &lt;T&gt; getArrayValue(clazz: Class&lt;T&gt;, value: Any?): String?</ID>
+    <ID>ComplexMethod:CheckpointAgent.kt$CheckpointHook$private fun instrumentClass(clazz: CtClass): CtClass?</ID>
+    <ID>ComplexMethod:CheckpointAgent.kt$CheckpointHook$private fun prettyStatsTree(indent: Int, statsInfo: StatsInfo, identityInfo: IdentityInfo, builder: StringBuilder)</ID>
+    <ID>ComplexMethod:CheckpointAgent.kt$fun readTrees(events: List&lt;StatsEvent&gt;, index: Int, idMap: IdentityHashMap&lt;Any, IdentityInfo&gt;): Pair&lt;Int, List&lt;Pair&lt;StatsInfo, IdentityInfo&gt;&gt;&gt;</ID>
+    <ID>MaxLineLength:CheckpointAgent.kt$CheckpointAgent.Companion$println("Running Checkpoint agent with following arguments: instrumentClassname=$instrumentClassname, instrumentType=$instrumentType, minimumSize=$minimumSize, maximumSize=$maximumSize, graphDepth=$graphDepth, printOnce=$printOnce\n")</ID>
+    <ID>MaxLineLength:CheckpointAgent.kt$CheckpointHook : ClassFileTransformer</ID>
+    <ID>MaxLineLength:CheckpointAgent.kt$CheckpointHook$builder.append("${statsTree.className} (hash:${statsTree.value?.hashCode()}) (count:${identityInfo.refCount})")</ID>
+    <ID>MaxLineLength:CheckpointAgent.kt$CheckpointHook$if (parameterTypeNames == listOf("com.esotericsoftware.kryo.Kryo", "com.esotericsoftware.kryo.io.Input", "java.lang.Class")) { if (method.isEmpty) continue log.debug { "Instrumenting on read: ${clazz.name}" } method.insertBefore("$hookClassName.${this::readEnter.name}($2, $3);") method.insertAfter("$hookClassName.${this::readExit.name}($2, $3, (java.lang.Object)\$_);") return clazz } else if (parameterTypeNames == listOf("com.esotericsoftware.kryo.io.Input", "java.lang.Object")) { if (method.isEmpty) continue log.debug { "Instrumenting on field read: ${clazz.name}" } method.insertBefore("$hookClassName.${this::readFieldEnter.name}((java.lang.Object)this);") method.insertAfter("$hookClassName.${this::readFieldExit.name}($2, (java.lang.Object)this);") return clazz }</ID>
+    <ID>MaxLineLength:CheckpointAgent.kt$CheckpointHook$if (parameterTypeNames == listOf("com.esotericsoftware.kryo.Kryo", "com.esotericsoftware.kryo.io.Output", "java.lang.Object")) { if (method.isEmpty) continue log.debug { "Instrumenting on write: ${clazz.name}" } method.insertBefore("$hookClassName.${this::writeEnter.name}($2, $3);") method.insertAfter("$hookClassName.${this::writeExit.name}($2, $3);") return clazz }</ID>
+    <ID>MaxLineLength:CheckpointAgent.kt$CheckpointHook$log.debug { "readFieldExit basic type value: ${that.field.name}:${that.field.type} = ${arrayValue ?: value}" }</ID>
+    <ID>MaxLineLength:CheckpointAgent.kt$CheckpointHook$log.debug { "writeEnter: adding event for clazz: ${obj.javaClass.name} (strandId: ${Strand.currentStrand().id})" }</ID>
+    <ID>MaxLineLength:CheckpointAgent.kt$CheckpointHook$log.debug { "writeExit: clazz[${obj.javaClass.name}], strandId[${Strand.currentStrand().id}], eventCount[$count]" }</ID>
+    <ID>MaxLineLength:CheckpointAgent.kt$CheckpointHook$log.debug { "writeExit: clearing event for clazz: ${obj.javaClass.name} (strandId: ${Strand.currentStrand().id})" }</ID>
+    <ID>MaxLineLength:CheckpointAgent.kt$fun readTree(events: List&lt;StatsEvent&gt;, index: Int, idMap: IdentityHashMap&lt;Any, IdentityInfo&gt; = IdentityHashMap()): Pair&lt;Int, IdentityInfo&gt;</ID>
+    <ID>MaxLineLength:CheckpointAgent.kt$fun readTrees(events: List&lt;StatsEvent&gt;, index: Int, idMap: IdentityHashMap&lt;Any, IdentityInfo&gt;): Pair&lt;Int, List&lt;Pair&lt;StatsInfo, IdentityInfo&gt;&gt;&gt;</ID>
+    <ID>MaxLineLength:CheckpointAgent.kt$log.debug { "Skipping repeated StatsEvent.Enter: ${exit.value} (hashcode:${exit.value!!.hashCode()}) (count:${idMap[exit.value]?.refCount})" }</ID>
+    <ID>MaxLineLength:CheckpointAgent.kt$log.debug { "Skipping repeated StatsEvent.Exit: ${event.value} (hashcode:${event.value!!.hashCode()}) (count:${idMap[event.value]?.refCount})" }</ID>
+    <ID>MaxLineLength:CheckpointAgent.kt$log.debug { "Skipping repeated StatsEvent.ObjectField: ${event.value} (hashcode:${event.value!!.hashCode()}) (count:${idMap[event.value]?.refCount})" }</ID>
+    <ID>MaxLineLength:CheckpointAgent.kt$trees += StatsInfo(event.fieldName, event.fieldType) to IdentityInfo(StatsTree.BasicType(event.fieldValue), 1)</ID>
+    <ID>NestedBlockDepth:CheckpointAgent.kt$CheckpointAgent.Companion$fun parseArguments(argumentsString: String?)</ID>
+    <ID>NestedBlockDepth:CheckpointAgent.kt$CheckpointHook$private fun instrumentClass(clazz: CtClass): CtClass?</ID>
+    <ID>ReturnCount:CheckpointAgent.kt$CheckpointHook$private fun &lt;T&gt; getArrayValue(clazz: Class&lt;T&gt;, value: Any?): String?</ID>
+    <ID>ReturnCount:CheckpointAgent.kt$CheckpointHook$private fun instrumentClass(clazz: CtClass): CtClass?</ID>
+    <ID>TooGenericExceptionCaught:CheckpointAgent.kt$CheckpointAgent.Companion$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:CheckpointAgent.kt$CheckpointHook$throwable: Throwable</ID>
+    <ID>TooManyFunctions:CheckpointAgent.kt$CheckpointHook : ClassFileTransformer</ID>
+  </Whitelist>
+</SmellBaseline>

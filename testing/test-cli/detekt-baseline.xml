@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>MaxLineLength:CommandLineCompatibilityUtils.kt$CommandDescription</ID>
+    <ID>MaxLineLength:CommandLineCompatibilityUtils.kt$CommandLineCompatibilityChecker$?:</ID>
+    <ID>MaxLineLength:CommandLineCompatibilityUtils.kt$CommandLineCompatibilityChecker$EnumOptionsChangedError(it.key + " on command ${old.commandName} previously accepted: $oldEnums, and now is missing $toPrint}")</ID>
+    <ID>MaxLineLength:CommandLineCompatibilityUtils.kt$CommandLineCompatibilityChecker$PositionalArgumentsChangedError("Positional Parameter [ ${it.parameterName} ] has been removed from subcommand: ${old.commandName}")</ID>
+    <ID>MaxLineLength:CommandLineCompatibilityUtils.kt$CommandLineCompatibilityChecker$fun checkAllCommandsArePresent(old: List&lt;CommandDescription&gt;, new: List&lt;CommandDescription&gt;): List&lt;CliBackwardsCompatibilityValidationCheck&gt;</ID>
+    <ID>MaxLineLength:CommandLineCompatibilityUtils.kt$CommandLineCompatibilityChecker$fun checkAllOptionsArePresent(old: CommandDescription, new: CommandDescription): List&lt;CliBackwardsCompatibilityValidationCheck&gt;</ID>
+    <ID>MaxLineLength:CommandLineCompatibilityUtils.kt$CommandLineCompatibilityChecker$fun checkAllParamsAreOfTheSameType(old: CommandDescription, new: CommandDescription): List&lt;CliBackwardsCompatibilityValidationCheck&gt;</ID>
+    <ID>MaxLineLength:CommandLineCompatibilityUtils.kt$CommandLineCompatibilityChecker$fun checkAllPositionalCharactersArePresent(old: CommandDescription, new: CommandDescription): List&lt;CliBackwardsCompatibilityValidationCheck&gt;</ID>
+    <ID>MaxLineLength:CommandLineCompatibilityUtils.kt$CommandLineCompatibilityChecker$fun checkBackwardsCompatibility(old: CommandLine, new: CommandLine): List&lt;CliBackwardsCompatibilityValidationCheck&gt;</ID>
+    <ID>MaxLineLength:CommandLineCompatibilityUtils.kt$CommandLineCompatibilityChecker$fun checkCommandLineIsBackwardsCompatible(commandLineToCheck: Class&lt;*&gt;): List&lt;CliBackwardsCompatibilityValidationCheck&gt;</ID>
+    <ID>MaxLineLength:CommandLineCompatibilityUtils.kt$CommandLineCompatibilityChecker$private</ID>
+    <ID>MaxLineLength:CommandLineCompatibilityUtils.kt$CommandLineCompatibilityChecker$return objectMapper.readValue&lt;List&lt;CommandDescription&gt;&gt;(inputStream, object : TypeReference&lt;List&lt;CommandDescription&gt;&gt;() {})</ID>
+    <ID>MaxLineLength:CommandLineCompatibilityUtils.kt$CommandLineCompatibilityChecker$val potentiallyChanged = oldAcceptableTypes.filter { newAcceptableTypes[it.key] != null &amp;&amp; newAcceptableTypes[it.key]!!.toSet() != it.value.toSet() }</ID>
+    <ID>MaxLineLength:CommandLineCompatibilityUtils.kt$ParameterDescription</ID>
+    <ID>NewLineAtEndOfFile:CliBackwardsCompatibleTest.kt$net.corda.testing.CliBackwardsCompatibleTest.kt</ID>
+    <ID>NewLineAtEndOfFile:CommandLineCompatibilityUtils.kt$net.corda.testing.CommandLineCompatibilityUtils.kt</ID>
+    <ID>TooManyFunctions:CommandLineCompatibilityUtils.kt$CommandLineCompatibilityChecker</ID>
+  </Whitelist>
+</SmellBaseline>

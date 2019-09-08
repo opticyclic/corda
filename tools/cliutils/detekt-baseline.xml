@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ComplexMethod:CordaCliWrapper.kt$fun CordaCliWrapper.start(args: Array&lt;String&gt;)</ID>
+    <ID>EmptyElseBlock:CordaCliWrapper.kt${ }</ID>
+    <ID>MaxLineLength:CordaCliWrapper.kt$CliWrapperBase$// Override this function with the actual method to be run once all the arguments have been parsed. The return number // is the exit code to be returned abstract fun runProgram(): Int</ID>
+    <ID>MaxLineLength:CordaCliWrapper.kt$CliWrapperBase$// Raw args are provided for use in logging - this is a lateinit var rather than a constructor parameter as the class // needs to be parameterless for autocomplete to work. lateinit var args: Array&lt;String&gt;</ID>
+    <ID>MaxLineLength:CordaCliWrapper.kt$CliWrapperBase$// This needs to be called before loggers (See: NodeStartup.kt:51 logger called by lazy, initLogging happens before). // Node's logging is more rich. In corda configurations two properties, defaultLoggingLevel and consoleLogLevel, are usually used. open fun initLogging(): Boolean</ID>
+    <ID>MaxLineLength:CordaCliWrapper.kt$CliWrapperBase$@Option(names = ["-v", "--verbose", "--log-to-console"], description = ["If set, prints logging to the console as well as to a file."])</ID>
+    <ID>MaxLineLength:CordaCliWrapper.kt$CliWrapperBase$System.setProperty("defaultLogLevel", specifiedLogLevel)</ID>
+    <ID>MaxLineLength:CordaCliWrapper.kt$CordaCliWrapper : CliWrapperBase</ID>
+    <ID>MaxLineLength:CordaCliWrapper.kt$DefaultExceptionHandler&lt;List&lt;Any&gt;&gt;().useErr(System.err).useAnsi(defaultAnsiMode).andExit(ExitCodes.FAILURE)</ID>
+    <ID>MaxLineLength:CordaCliWrapper.kt$Validated</ID>
+    <ID>MaxLineLength:CordaCliWrapper.kt${ val defaultAnsiMode = if (CordaSystemUtils.isOsWindows()) { Help.Ansi.ON } else { Help.Ansi.AUTO } val results = cmd.parseWithHandlers(RunLast().useOut(System.out).useAnsi(defaultAnsiMode), DefaultExceptionHandler&lt;List&lt;Any&gt;&gt;().useErr(System.err).useAnsi(defaultAnsiMode).andExit(ExitCodes.FAILURE), *args) // If an error code has been returned, use this and exit results?.firstOrNull()?.let { if (it is Int) { exitProcess(it) } else { exitProcess(ExitCodes.FAILURE) } } // If no results returned, picocli ran something without invoking the main program, e.g. --help or --version, so exit successfully exitProcess(ExitCodes.SUCCESS) }</ID>
+    <ID>MaxLineLength:CordaVersionProvider.kt$CordaVersionProvider : IVersionProvider</ID>
+    <ID>MaxLineLength:InstallShellExtensionsParser.kt$InstallShellExtensionsParser : CliWrapperBase</ID>
+    <ID>MaxLineLength:InstallShellExtensionsParser.kt$ShellExtensionsGenerator$// If on Windows, Path.toString() returns a path with \ instead of /, but for bash Windows users we want to convert those back to /'s private fun Path.toStringWithDeWindowsfication(): String</ID>
+    <ID>MaxLineLength:InstallShellExtensionsParser.kt$ShellExtensionsGenerator$loggerFor&lt;InstallShellExtensionsParser&gt;().warn("Failed to run command: ${commandAndArgs.joinToString(" ")}; $exception")</ID>
+    <ID>MaxLineLength:InstallShellExtensionsParser.kt$ShellExtensionsGenerator$printWarning("Cannot install shell extension for bash major version earlier than $minSupportedBashVersion. Please upgrade your bash version. Aliases should still work.")</ID>
+    <ID>MaxLineLength:InstallShellExtensionsParser.kt$ShellExtensionsGenerator$println("Installation complete, ${parent.alias} is available in bash, but autocompletion was not installed because of an old version of bash.")</ID>
+    <ID>MaxLineLength:InstallShellExtensionsParser.kt$ShellExtensionsGenerator$println("Restart bash for this to take effect, or run `. ~/.bashrc` in bash or `. ~/.zshrc` in zsh to re-initialise your shell now")</ID>
+    <ID>MaxLineLength:InstallShellExtensionsParser.kt$ShellExtensionsGenerator$private fun jarVersion(alias: String)</ID>
+    <ID>MaxLineLength:InstallShellExtensionsParser.kt$ShellExtensionsGenerator.SettingsFile$println("Updating settings in ${filePath.fileName} - existing settings file has been backed up to $backupFilePath")</ID>
+    <ID>NewLineAtEndOfFile:CordaVersionProvider.kt$net.corda.cliutils.CordaVersionProvider.kt</ID>
+    <ID>NewLineAtEndOfFile:ExitCodes.kt$net.corda.cliutils.ExitCodes.kt</ID>
+    <ID>NewLineAtEndOfFile:InstallShellExtensionsParser.kt$net.corda.cliutils.InstallShellExtensionsParser.kt</ID>
+    <ID>SpreadOperator:CordaCliWrapper.kt$(RunLast().useOut(System.out).useAnsi(defaultAnsiMode), DefaultExceptionHandler&lt;List&lt;Any&gt;&gt;().useErr(System.err).useAnsi(defaultAnsiMode).andExit(ExitCodes.FAILURE), *args)</ID>
+    <ID>SpreadOperator:InstallShellExtensionsParser.kt$ShellExtensionsGenerator$(*commandAndArgs)</ID>
+    <ID>TooGenericExceptionCaught:InstallShellExtensionsParser.kt$ShellExtensionsGenerator$exception: Exception</ID>
+    <ID>WildcardImport:CordaCliWrapper.kt$import picocli.CommandLine.*</ID>
+    <ID>WildcardImport:InstallShellExtensionsParser.kt$import net.corda.core.internal.*</ID>
+  </Whitelist>
+</SmellBaseline>

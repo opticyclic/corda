@@ -155,7 +155,6 @@ buildscript {
         // Capsule gradle plugin forked and maintained locally to support Gradle 5.x
         // See https://github.com/corda/gradle-capsule-plugin
         classpath "us.kirchmeier:gradle-capsule-plugin:1.0.4_r3"
-        classpath "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:$detekt_version"
     }
 }
 
@@ -188,7 +187,6 @@ allprojects {
     apply plugin: 'jacoco'
     apply plugin: 'org.owasp.dependencycheck'
     apply plugin: 'kotlin-allopen'
-    apply plugin: "io.gitlab.arturbosch.detekt"
 
     allOpen {
         annotations(
@@ -229,13 +227,6 @@ allprojects {
             freeCompilerArgs = ['-Xjvm-default=compatibility']
             allWarningsAsErrors = project.hasProperty('compilation.allWarningsAsErrors') ? project.property('compilation.allWarningsAsErrors').toBoolean() : false
         }
-    }
-
-    detekt {
-        toolVersion = detekt_version
-        buildUponDefaultConfig = true
-        config = files(new File(rootProject.rootDir, "config/detekt-config.yml"))
-        baseline = new File("detekt-baseline.xml")
     }
 
     tasks.withType(Jar) { task ->
@@ -326,6 +317,44 @@ allprojects {
             exclude module: 'isolated'
         }
     }
+}
+
+subprojects {
+    configurations {
+        detekt {}
+    }
+
+    dependencies {
+        detekt "io.gitlab.arturbosch.detekt:detekt-cli:$detekt_version"
+    }
+
+    if( project.file("src/main/kotlin").isDirectory() ) {
+        // using java exec instead of gradle plugin because the detekt gradle plugin doesn't work
+        // this is probaly because we're using an older version of kotlin than the detekt gradle plugin
+
+        task detekt(type: JavaExec, group: "verification") {
+            description = "Check Kotlin code style."
+            classpath = configurations.detekt
+            main = "io.gitlab.arturbosch.detekt.cli.Main"
+            args "--build-upon-default-config",
+                    "--input", project.file("/src/main/kotlin").path,
+                    "--config", new File(rootProject.rootDir, "config/detekt-config.yml").absolutePath,
+                    "--baseline", project.projectDir.absolutePath + "/detekt-baseline.xml"
+        }
+        check.dependsOn detekt
+
+        task detektBaseline(type: JavaExec, group: "verification") {
+            description = "Generate Kotlin code style check baseline."
+            classpath = configurations.detekt
+            main = "io.gitlab.arturbosch.detekt.cli.Main"
+            args "--build-upon-default-config",
+                    "--config", rootProject.file("config/detekt-config.yml").path + "," + rootProject.file("config/detekt-config-baseline.yml").path,
+                    "--input", project.projectDir.absolutePath + "/src/main/kotlin",
+                    "--baseline", project.projectDir.absolutePath + "/detekt-baseline.xml",
+                    "--create-baseline"
+        }
+    }
+
 }
 
 // Check that we are running on a Java 8 JDK. The source/targetCompatibility values above aren't sufficient to

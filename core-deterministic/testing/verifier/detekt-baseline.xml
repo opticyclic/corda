@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>MagicNumber:LocalSerializationRule.kt$LocalSerializationRule$128</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$113</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$15</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$2</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$20</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$24</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$3</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$4</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$47</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$5</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$52</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$54</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$55</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$6</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$66</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$67</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$7</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$73</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$75</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$78</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$79</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$8</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$80</ID>
+    <ID>MagicNumber:MockContractAttachment.kt$97</ID>
+    <ID>MatchingDeclarationName:SampleData.kt$net.corda.deterministic.verifier.SampleData.kt</ID>
+    <ID>MaxLineLength:LocalSerializationRule.kt$LocalSerializationRule.AMQPSerializationScheme$( cordappCustomSerializers: Set&lt;SerializationCustomSerializer&lt;*, *&gt;&gt;, cordappSerializationWhitelists: Set&lt;SerializationWhitelist&gt;, serializerFactoriesForContexts: AccessOrderLinkedHashMap&lt;SerializationFactoryCacheKey, SerializerFactory&gt; )</ID>
+    <ID>MaxLineLength:LocalSerializationRule.kt$LocalSerializationRule.AMQPSerializationScheme$override</ID>
+    <ID>MaxLineLength:MockContractAttachment.kt$// A valid zip file with 1 entry. val simpleZip = byteArrayOf(80, 75, 3, 4, 20, 0, 8, 8, 8, 0, 15, 113, 79, 78, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 4, 0, 47, 97, -2, -54, 0, 0, 75, 4, 0, 80, 75, 7, 8, 67, -66, -73, -24, 3, 0, 0, 0, 1, 0, 0, 0, 80, 75, 1, 2, 20, 0, 20, 0, 8, 8, 8, 0, 15, 113, 79, 78, 67, -66, -73, -24, 3, 0, 0, 0, 1, 0, 0, 0, 2, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 47, 97, -2, -54, 0, 0, 80, 75, 5, 6, 0, 0, 0, 0, 1, 0, 1, 0, 52, 0, 0, 0, 55, 0, 0, 0, 0, 0)</ID>
+    <ID>MaxLineLength:TransactionVerificationRequest.kt$TransactionVerificationRequest$@Suppress("MemberVisibilityCanBePrivate") //TODO the use of deprecated toLedgerTransaction need to be revisited as resolveContractAttachment requires attachments of the transactions which created input states... //TODO ...to check contract version non downgrade rule, curretly dummy Attachment if not fund is used which sets contract version to '1' @CordaSerializable</ID>
+    <ID>MaxLineLength:TransactionVerificationRequest.kt$TransactionVerificationRequest$attachments .mapNotNull { it as? MockContractAttachment } .associateBy(Attachment::id) { ContractAttachment(it, it.contract, uploader = DEPLOYED_CORDAPP_UPLOADER) }</ID>
+    <ID>NewLineAtEndOfFile:MockContractAttachment.kt$net.corda.deterministic.verifier.MockContractAttachment.kt</ID>
+    <ID>WildcardImport:LocalSerializationRule.kt$import net.corda.serialization.internal.*</ID>
+    <ID>WildcardImport:LocalSerializationRule.kt$import net.corda.serialization.internal.amqp.*</ID>
+  </Whitelist>
+</SmellBaseline>

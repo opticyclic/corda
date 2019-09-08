@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>MaxLineLength:Validated.kt$Validated$ fun &lt;MAPPED&gt; map(convert: (TARGET) -&gt; MAPPED): Validated&lt;MAPPED, ERROR&gt;</ID>
+    <ID>MaxLineLength:Validated.kt$Validated$ fun &lt;MAPPED&gt; mapValid(convert: (TARGET) -&gt; Validated&lt;MAPPED, ERROR&gt;): Validated&lt;MAPPED, ERROR&gt;</ID>
+    <ID>MaxLineLength:Validated.kt$Validated$ fun &lt;MAPPED_ERROR&gt; mapErrors(convertError: (ERROR) -&gt; MAPPED_ERROR): Validated&lt;TARGET, MAPPED_ERROR&gt;</ID>
+    <ID>MaxLineLength:Validated.kt$Validated$ fun value(exceptionOnErrors: (Set&lt;ERROR&gt;) -&gt; Exception = { errors -&gt; IllegalStateException(errors.joinToString(System.lineSeparator())) }): TARGET</ID>
+    <ID>MaxLineLength:Validated.kt$Validated$/** * Returns the underlying value as optional, with a null result instead of an exception if validation rules were violated. */ val optional: TARGET? get() = if (isValid) value() else null</ID>
+    <ID>MaxLineLength:Validated.kt$Validated.Companion$ fun &lt;T, E&gt; withResult(target: T, errors: Set&lt;E&gt;): Validated&lt;T, E&gt;</ID>
+    <ID>MaxLineLength:Validated.kt$Validated.Result$Unsuccessful&lt;TARGET, ERROR&gt; : ResultValidated</ID>
+    <ID>MaxLineLength:Validated.kt$Validated.Result.Successful$override</ID>
+    <ID>MaxLineLength:Validated.kt$Validated.Result.Unsuccessful$override</ID>
+    <ID>MaxLineLength:Validator.kt$Validator$ fun validate(target: TARGET, options: OPTIONS): Validated&lt;TARGET, ERROR&gt;</ID>
+    <ID>NewLineAtEndOfFile:Validated.kt$net.corda.common.validation.internal.Validated.kt</ID>
+    <ID>NewLineAtEndOfFile:Validator.kt$net.corda.common.validation.internal.Validator.kt</ID>
+  </Whitelist>
+</SmellBaseline>

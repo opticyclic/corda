@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ComplexMethod:LoadTest.kt$LoadTest$fun run(nodes: Nodes, parameters: RunParameters, random: SplittableRandom)</ID>
+    <ID>EmptyFunctionBlock:ConnectionManager.kt$&lt;no name provided&gt;.&lt;no name provided&gt;${}</ID>
+    <ID>ForbiddenComment:CrossCashTest.kt$CrossCashState$// TODO: Alternative: We may possibly reduce the complexity of the search even further using some form of</ID>
+    <ID>LongMethod:LoadTest.kt$LoadTest$fun run(nodes: Nodes, parameters: RunParameters, random: SplittableRandom)</ID>
+    <ID>MagicNumber:ConnectionManager.kt$ConnectionManager$22</ID>
+    <ID>MagicNumber:CrossCashTest.kt$1000</ID>
+    <ID>MagicNumber:CrossCashTest.kt$10000</ID>
+    <ID>MagicNumber:CrossCashTest.kt$3000</ID>
+    <ID>MagicNumber:Main.kt$100</ID>
+    <ID>MagicNumber:Main.kt$10000L</ID>
+    <ID>MagicNumber:Main.kt$1000L</ID>
+    <ID>MagicNumber:Main.kt$20000L</ID>
+    <ID>MagicNumber:Main.kt$2000L</ID>
+    <ID>MagicNumber:Main.kt$4000L</ID>
+    <ID>MagicNumber:Main.kt$5000L</ID>
+    <ID>MagicNumber:Main.kt$500L</ID>
+    <ID>MagicNumber:SelfIssueTest.kt$1000</ID>
+    <ID>MagicNumber:StabilityTest.kt$StabilityTest$100000</ID>
+    <ID>MaxLineLength:ConnectionManager.kt$ fun &lt;A&gt; connectToNodes(remoteNodes: List&lt;RemoteNode&gt;, tunnelPortAllocation: PortAllocation, withConnections: (List&lt;NodeConnection&gt;) -&gt; A): A</ID>
+    <ID>MaxLineLength:CrossCashTest.kt$"Divergence detected, the remote state doesn't match any of our possible predictions."</ID>
+    <ID>MaxLineLength:CrossCashTest.kt$fun searchForStateHelper(state: Map&lt;A, Long&gt;, diffIx: Int, consumedTxs: HashMap&lt;A, Int&gt;, matched: ArrayList&lt;Map&lt;A, Int&gt;&gt;)</ID>
+    <ID>MaxLineLength:CrossCashTest.kt$is IssueAndPaymentRequest -&gt; command.node.proxy.startFlow(::CashIssueAndPaymentFlow, request).returnValue</ID>
+    <ID>MaxLineLength:CrossCashTest.kt$it.value.toDouble() / 1000 to generateMove(it.value, USD, node.mainIdentity, possibleRecipients)</ID>
+    <ID>MaxLineLength:CrossCashTest.kt$listOf(1.0 to generateIssue(10000, USD, notaryIdentity, possibleRecipients)) + moves + exits</ID>
+    <ID>MaxLineLength:CrossCashTest.kt$val minimumMatches = matches.fold&lt;Map&lt;AbstractParty, Int&gt;, HashMap&lt;AbstractParty, Int&gt;?&gt;(null) { minimum, next -&gt; if (minimum == null) { HashMap(next) } else { next.forEach { minimum.merge(it.key, it.value, Math::min) } minimum } }!!</ID>
+    <ID>MaxLineLength:CrossCashTest.kt${ log.warn( "Divergence detected, the remote state doesn't match any of our possible predictions." + "\nPredicted state/queues:\n$previousState" + "\nActual gathered state:\n${CrossCashState(currentNodeVaults, mapOf())}" ) // TODO We should terminate here with an exception, we cannot carry on as we have an inconsistent model. We carry on currently because we always diverge due to notarisation failures return@LoadTest CrossCashState(currentNodeVaults, mapOf()) }</ID>
+    <ID>MaxLineLength:Disruption.kt$connection.runShellCommandGetOutput("sudo rm ${connection.remoteNode.nodeDirectory}/persistence.mv.db").getResultOrThrow()</ID>
+    <ID>MaxLineLength:Disruption.kt$val shell = "for c in {1..$parallelism} ; do openssl enc -aes-128-cbc -in /dev/urandom -pass pass: -e &gt; /dev/null &amp; done &amp;&amp; JOBS=\$(jobs -p) &amp;&amp; (sleep $durationSeconds &amp;&amp; kill \$JOBS) &amp; wait"</ID>
+    <ID>MaxLineLength:GenerateHelpers.kt$return generateAmount(1, max, Generator.pure(Issued(PartyAndReference(issuer, OpaqueBytes.of(0)), currency))).combine( Generator.pickOne(possibleRecipients) ) { amount, recipient -&gt; PaymentRequest(amount.withoutIssuer(), recipient, true, setOf(issuer)) }</ID>
+    <ID>MaxLineLength:LoadTest.kt$LoadTest&lt;T, S&gt;</ID>
+    <ID>MaxLineLength:LoadTest.kt$RemoteNode(hostname, it.remoteSystemdServiceName, it.sshUser, it.rpcUser, it.rpcPort, it.remoteNodeDirectory)</ID>
+    <ID>MaxLineLength:LoadTest.kt$it.legalIdentitiesAndCerts.fold("") { acc, elem -&gt; acc + "\n" + elem.name + ": " + elem.owningKey.toBase58String() }</ID>
+    <ID>MaxLineLength:LoadTest.kt$simpleNodes = hostNodeMap.values.filter { it.info.legalIdentitiesAndCerts.size == 1 }</ID>
+    <ID>MaxLineLength:LoadTestConfiguration.kt$RemoteNode</ID>
+    <ID>MaxLineLength:Main.kt$ fun main(args: Array&lt;String&gt;)</ID>
+    <ID>MaxLineLength:Main.kt$nodeFilter = isNotary</ID>
+    <ID>MaxLineLength:Main.kt$val defaultConfig = ConfigFactory.parseResources("loadtest-reference.conf", ConfigParseOptions.defaults().setAllowMissing(false))</ID>
+    <ID>MaxLineLength:NodeConnection.kt$NodeConnection : Closeable</ID>
+    <ID>MaxLineLength:NodeConnection.kt$NodeConnection$fun clearDb()</ID>
+    <ID>MaxLineLength:NodeConnection.kt$NodeConnection$return runShellCommandGetOutput("sudo netstat -tlpn | grep ${remoteNode.rpcPort} | awk '{print $7}' | grep -oE '[0-9]+'").getResultOrThrow().replace("\n", "")</ID>
+    <ID>MaxLineLength:NodeConnection.kt$NodeConnection$runShellCommandGetOutput("until sudo netstat -tlpn | grep ${remoteNode.rpcPort} &gt; /dev/null ; do sleep 1 ; done")</ID>
+    <ID>MaxLineLength:NodeConnection.kt$NodeConnection$val proxy: CordaRPCOps get() = rpcConnection?.proxy ?: throw IllegalStateException("proxy requested, but the client is not running")</ID>
+    <ID>MaxLineLength:NodeConnection.kt$NodeConnection.ShellCommandOutput$data</ID>
+    <ID>MaxLineLength:SelfIssueTest.kt$diffString += "${node.propertyPath}: simulated[${node.canonicalGet(previousState.vaultsSelfIssued)}], actual[${node.canonicalGet(selfIssueVaults)}]\n"</ID>
+    <ID>MaxLineLength:StabilityTest.kt$StabilityTest$SelfIssueCommand(IssueAndPaymentRequest(Amount(100000, USD), OpaqueBytes.of(0), issuer.mainIdentity, notaryIdentity, anonymous = true), issuer)</ID>
+    <ID>MaxLineLength:StabilityTest.kt$StabilityTest$is IssueAndPaymentRequest -&gt; command.node.proxy.startFlow(::CashIssueAndPaymentFlow, request).returnValue</ID>
+    <ID>MaxLineLength:StabilityTest.kt$StabilityTest$simpleNodes.flatMap { payer -&gt; simpleNodes.map { payer to it } } .filter { it.first != it.second } .map { (payer, payee) -&gt; CrossCashCommand(PaymentRequest(Amount(1, USD), payee.mainIdentity, anonymous = true), payer) }</ID>
+    <ID>NewLineAtEndOfFile:GenerateHelpers.kt$net.corda.loadtest.tests.GenerateHelpers.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeConnection.kt$net.corda.loadtest.NodeConnection.kt</ID>
+    <ID>ThrowsCount:ConnectionManager.kt$ fun setupJSchWithSshAgent(): JSch</ID>
+    <ID>TooGenericExceptionCaught:LoadTest.kt$LoadTest$throwable: Throwable</ID>
+    <ID>TooGenericExceptionThrown:CrossCashTest.kt$throw Exception( "Generated exit of ${request.amount} from $issuer, however there is no cash to exit!" )</ID>
+    <ID>TooGenericExceptionThrown:CrossCashTest.kt$throw Exception( "Generated payment of ${request.amount} from $issuer, " + "however they only have $issuerQuantity!" )</ID>
+    <ID>TooGenericExceptionThrown:CrossCashTest.kt$throw Exception( "Generated payment of ${request.amount} from ${node.mainIdentity}, " + "however there is no cash from $issuer!" )</ID>
+    <ID>TooGenericExceptionThrown:CrossCashTest.kt$throw Exception( "Generated payment of ${request.amount} from ${node.mainIdentity}, " + "however they only have $senderQuantity!" )</ID>
+    <ID>TooGenericExceptionThrown:NodeConnection.kt$NodeConnection.ShellCommandOutput$throw Exception(diagnostic)</ID>
+    <ID>TooGenericExceptionThrown:SelfIssueTest.kt$throw Exception( "Simulated state diverged from actual state" + "\nSimulated state:\n${previousState.vaultsSelfIssued}" + "\nActual state:\n$selfIssueVaults" + "\nDiff:\n$diffString" )</ID>
+    <ID>TooManyFunctions:NodeConnection.kt$NodeConnection : Closeable</ID>
+  </Whitelist>
+</SmellBaseline>

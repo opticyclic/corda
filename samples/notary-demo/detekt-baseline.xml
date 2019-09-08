@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>MagicNumber:Notarise.kt$10</ID>
+    <ID>MagicNumber:Notarise.kt$10003</ID>
+    <ID>MaxLineLength:Notarise.kt$NotaryDemoClientApi$rpc.startFlow(::RPCStartableNotaryFlowClient, it).returnValue.toCompletableFuture().thenApply { it.map { it.by.toStringShort() } }</ID>
+    <ID>VariableNaming:Notarise.kt$NotaryDemoClientApi$/** A dummy identity. */ private val BOB_NAME = CordaX500Name("Bob Plc", "Rome", "IT")</ID>
+  </Whitelist>
+</SmellBaseline>

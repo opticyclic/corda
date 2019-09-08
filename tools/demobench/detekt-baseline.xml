@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>EmptyCatchBlock:NodeTerminalView.kt$NodeTerminalView${}</ID>
+    <ID>EmptyCatchBlock:WebServer.kt$WebServer${ }</ID>
+    <ID>ForbiddenComment:Explorer.kt$Explorer$// TODO: Remove this code when serialisation has been upgraded.</ID>
+    <ID>ForbiddenComment:NodeTerminalView.kt$NodeTerminalView$// TODO: Remove this special case once Rick's serialisation work means we can deserialise states that weren't on our own classpath.</ID>
+    <ID>MagicNumber:NodeRPC.kt$NodeRPC$5</ID>
+    <ID>MagicNumber:NodeTabView.kt$NodeTabView$24.0</ID>
+    <ID>MagicNumber:NodeTerminalView.kt$NodeTerminalView$160</ID>
+    <ID>MagicNumber:NodeTerminalView.kt$NodeTerminalView$2.5</ID>
+    <ID>MagicNumber:NodeTerminalView.kt$NodeTerminalView$80</ID>
+    <ID>MagicNumber:NodeTerminalView.kt$NodeTerminalView.TerminalSettingsProvider$50</ID>
+    <ID>MagicNumber:ProfileController.kt$ProfileController$3</ID>
+    <ID>MagicNumber:R3Pty.kt$R3Pty$30</ID>
+    <ID>MagicNumber:WebServer.kt$WebServer$500</ID>
+    <ID>MaxLineLength:Explorer.kt$Explorer${ // Make sure that the explorer has cordapps on its class path. This is only necessary because currently apps // require the original class files to deserialise states: Kryo serialisation doesn't let us write generic // tools that work with serialised data structures. But the AMQP serialisation revamp will fix this by // integrating the class carpenter, so, we can eventually get rid of this function. // // Note: does not copy dependencies because we should soon be making all apps fat jars and dependencies implicit. // // TODO: Remove this code when serialisation has been upgraded. val cordappsDir = config.explorerDir / NodeConfig.CORDAPP_DIR_NAME cordappsDir.createDirectories() config.cordappsDir.list { it.forEachOrdered { path -&gt; val destPath = cordappsDir / path.fileName.toString() try { // Try making a symlink to make things faster and use less disk space. Files.createSymbolicLink(destPath, path) } catch (e: UnsupportedOperationException) { // OS doesn't support symbolic links? path.copyTo(destPath, REPLACE_EXISTING) } catch (e: java.nio.file.FileAlreadyExistsException) { // OK, don't care ... } catch (e: IOException) { // Windows 10 might not allow this user to create a symlink log.warn("Failed to create symlink '{}' for '{}': {}", destPath, path, e.message) path.copyTo(destPath, REPLACE_EXISTING) } } } }</ID>
+    <ID>MaxLineLength:NodeConfig.kt$NodeConfig$@VisibleForTesting internal</ID>
+    <ID>MaxLineLength:NodeConfig.kt$NodeConfig$return NodeConfigurationData(myLegalName, p2pAddress, this.rpcSettings.address, notary, h2port, rpcUsers, useTestClock, detectPublicIp, devMode) .toConfig() .withoutPath("rpcAddress") .withoutPath("rpcAdminAddress") .withValue("rpcSettings", rpcSettings)</ID>
+    <ID>MaxLineLength:NodeController.kt$NodeController$(cordappConfigDir / "${CordappController.FINANCE_WORKFLOWS_CORDAPP_FILENAME}.conf").writeText(config.nodeConfig.toFinanceConfText())</ID>
+    <ID>MaxLineLength:NodeController.kt$NodeController$issuableCurrencies = nodeData.extraServices.filterIsInstance&lt;CurrencyIssuer&gt;().map { it.currency.toString() }</ID>
+    <ID>MaxLineLength:NodeController.kt$NodeController$require((config.nodeConfig.notary != null).xor(notaryIdentity != null)) { "There must be exactly one notary in the network" }</ID>
+    <ID>MaxLineLength:NodeController.kt$NodeController$val nextPort = 1 + arrayOf(config.p2pAddress.port, config.rpcSettings.address.port, config.webAddress.port, config.h2port).max() as Int</ID>
+    <ID>MaxLineLength:NodeData.kt$SuggestedDetails$( // Mike: Rome? Why Rome? // Roger: Notaries public (also called "notaries", "notarial officers", or "public notaries") hold an office // which can trace its origins back to the ancient Roman Republic, when they were called scribae ("scribes"), // tabelliones forenses, or personae publicae.[4] // Mike: Can't argue with that. It's even got a citation. "Notary" to "Rome", "Bank of Breakfast Tea" to "Liverpool", "Bank of Big Apples" to "New York", "Bank of Baguettes" to "Paris", "Bank of Fondue" to "Geneve", "Bank of Maple Syrup" to "Toronto", "Bank of Golden Gates" to "San Francisco" )</ID>
+    <ID>MaxLineLength:NodeRPC.kt$NodeRPC : AutoCloseable</ID>
+    <ID>MaxLineLength:NodeTabView.kt$NodeTabView$CityDatabase.cityMap.values.map { it.countryCode }.toSet().map { it to Image(resources["/net/corda/demobench/flags/$it.png"]) }.toMap()</ID>
+    <ID>MaxLineLength:NodeTabView.kt$NodeTabView$notaryTypeToggleGroup.selectedValueProperty&lt;NotaryService&gt;()</ID>
+    <ID>MaxLineLength:NodeTerminalView.kt$NodeTerminalView${ // TODO: Remove this special case once Rick's serialisation work means we can deserialise states that weren't on our own classpath. }</ID>
+    <ID>MaxLineLength:ProfileController.kt$ProfileController$StreamSupport.stream(fs.rootDirectories.spliterator(), false) .flatMap { Files.find(it, 2, BiPredicate { p, attr -&gt; "node.conf" == p?.fileName.toString() &amp;&amp; attr.isRegularFile }) }</ID>
+    <ID>MaxLineLength:ProfileController.kt$ProfileController$StreamSupport.stream(fs.rootDirectories.spliterator(), false) .flatMap { Files.find(it, 3, BiPredicate { p, attr -&gt; p.inCordappsDir &amp;&amp; p.isCordapp &amp;&amp; attr.isRegularFile }) }</ID>
+    <ID>MaxLineLength:R3Pty.kt$R3Pty : AutoCloseable</ID>
+    <ID>MaxLineLength:R3Pty.kt$R3Pty$private</ID>
+    <ID>NestedBlockDepth:ProfileController.kt$ProfileController$ @Throws(IOException::class) fun openProfile(): List&lt;InstallConfig&gt;?</ID>
+    <ID>NestedBlockDepth:ProfileController.kt$ProfileController$ @Throws(IOException::class) fun saveProfile(): Boolean</ID>
+    <ID>NewLineAtEndOfFile:DemoBenchNodeInfoFilesCopier.kt$net.corda.demobench.model.DemoBenchNodeInfoFilesCopier.kt</ID>
+    <ID>NewLineAtEndOfFile:Explorer.kt$net.corda.demobench.explorer.Explorer.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeRpcSettings.kt$net.corda.demobench.model.NodeRpcSettings.kt</ID>
+    <ID>ReturnCount:CloseableTab.kt$CloseableTab$fun requestClose()</ID>
+    <ID>SpreadOperator:DemoBench.kt$DemoBench.Companion$(DemoBench::class.java, *args)</ID>
+    <ID>SpreadOperator:Explorer.kt$ExplorerController$(explorerPath, *args)</ID>
+    <ID>SpreadOperator:JVMConfig.kt$JVMConfig$(jarPath, *args)</ID>
+    <ID>SpreadOperator:JVMConfig.kt$JVMConfig$(javaPath.toString(), "-jar", jarPath.toString(), *args)</ID>
+    <ID>TooGenericExceptionCaught:DemoBenchView.kt$DemoBenchView$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:Explorer.kt$Explorer$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NodeController.kt$NodeController$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NodeRPC.kt$NodeRPC$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NodeRPC.kt$NodeRPC.&lt;no name provided&gt;$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NodeTerminalView.kt$NodeTerminalView$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ProfileController.kt$ProfileController$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:R3Pty.kt$R3Pty$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:WebServer.kt$WebServer$e: Exception</ID>
+    <ID>TooManyFunctions:NodeController.kt$NodeController : Controller</ID>
+    <ID>TooManyFunctions:NodeTerminalView.kt$NodeTerminalView : Fragment</ID>
+    <ID>WildcardImport:CloseableTab.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:CordappController.kt$import java.nio.file.StandardCopyOption.*</ID>
+    <ID>WildcardImport:CordappController.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:CordappController.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:DemoBench.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:DemoBenchNodeInfoFilesCopier.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:DemoBenchView.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:Explorer.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:InstallFactory.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:JVMConfig.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:NodeConfig.kt$import com.typesafe.config.*</ID>
+    <ID>WildcardImport:NodeController.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:NodeController.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:NodeData.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:NodeTabView.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:NodeTabView.kt$import net.corda.demobench.model.*</ID>
+    <ID>WildcardImport:NodeTabView.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:NodeTerminalView.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:ProfileController.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:ProfileController.kt$import net.corda.demobench.model.*</ID>
+    <ID>WildcardImport:ProfileController.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:WebServerController.kt$import tornadofx.*</ID>
+  </Whitelist>
+</SmellBaseline>

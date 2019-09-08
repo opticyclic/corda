@@ -1,0 +1,526 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ComplexCondition:AMQPTypeIdentifierParser.kt$AMQPTypeIdentifierParser$c.isWhitespace() || c.isJavaIdentifierPart() || c.isJavaIdentifierStart() || c == '.' || c == ',' || c == '?' || c == '*'</ID>
+    <ID>ComplexCondition:DeserializationInput.kt$DeserializationInput$type != TypeIdentifier.UnknownType.getLocalType() &amp;&amp; serializer.type != type &amp;&amp; with(serializer.type) { !isSubClassOf(type) &amp;&amp; !materiallyEquivalentTo(type) }</ID>
+    <ID>ComplexCondition:Schema.kt$obj == null || obj is DescribedType || obj is Binary || forGenericType(type).run { isPrimitive(this) || this == TopType }</ID>
+    <ID>ComplexMethod:AMQPTypeIdentifierParser.kt$AMQPTypeIdentifierParser$// Make sure our inputs aren't designed to blow things up. private fun validate(typeString: String)</ID>
+    <ID>ComplexMethod:AMQPTypeIdentifierParser.kt$AMQPTypeIdentifierParser.ParseState.ParsingRawType$override fun accept(c: Char)</ID>
+    <ID>ComplexMethod:AMQPTypeIdentifiers.kt$AMQPTypeIdentifiers$fun nameForType(typeIdentifier: TypeIdentifier): String</ID>
+    <ID>ComplexMethod:ClassCarpenter.kt$ClassCarpenterImpl$ private fun validateSchema(schema: Schema)</ID>
+    <ID>ComplexMethod:CustomSerializerRegistry.kt$CachingCustomSerializerRegistry$private fun doFindCustomSerializer(clazz: Class&lt;*&gt;, declaredType: Type): AMQPSerializer&lt;Any&gt;?</ID>
+    <ID>ComplexMethod:DeserializationInput.kt$DeserializationInput$fun readObject(obj: Any, schemas: SerializationSchemas, type: Type, context: SerializationContext): Any</ID>
+    <ID>ComplexMethod:LocalTypeInformationBuilder.kt$ private fun constructorForDeserialization(type: Type): KFunction&lt;Any&gt;?</ID>
+    <ID>ComplexMethod:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$private fun buildForClass(type: Class&lt;*&gt;, typeIdentifier: TypeIdentifier, isOpaque: Boolean): LocalTypeInformation</ID>
+    <ID>ComplexMethod:RemoteTypeCarpenter.kt$SchemaBuildingRemoteTypeCarpenter$override fun carpent(typeInformation: RemoteTypeInformation): Type</ID>
+    <ID>ComplexMethod:TypeIdentifier.kt$TypeIdentifier.Companion$ fun forGenericType(type: Type, resolutionContext: Type = type): TypeIdentifier</ID>
+    <ID>ComplexMethod:TypeModellingFingerPrinter.kt$FingerPrintingState$// For a type we haven't seen before, determine the correct path depending on the type of type it is. private fun fingerprintNewType(type: LocalTypeInformation)</ID>
+    <ID>ConstructorParameterNaming:TypeIdentifier.kt$ReconstitutedParameterizedType$private val _actualTypeArguments: Array&lt;Type&gt;</ID>
+    <ID>ConstructorParameterNaming:TypeIdentifier.kt$ReconstitutedParameterizedType$private val _ownerType: Type?</ID>
+    <ID>ConstructorParameterNaming:TypeIdentifier.kt$ReconstitutedParameterizedType$private val _rawType: Type</ID>
+    <ID>EmptyFunctionBlock:AMQPPrimitiveSerializer.kt$AMQPPrimitiveSerializer${ }</ID>
+    <ID>EmptyFunctionBlock:ComposableTypePropertySerializer.kt$AMQPCharPropertyWriteStategy${}</ID>
+    <ID>EmptyFunctionBlock:ComposableTypePropertySerializer.kt$AMQPPropertyWriteStrategy${}</ID>
+    <ID>EmptyFunctionBlock:CorDappCustomSerializer.kt$CorDappCustomSerializer${}</ID>
+    <ID>EmptyFunctionBlock:CustomSerializer.kt$CustomSerializer.CustomSerializerImp${}</ID>
+    <ID>EmptyFunctionBlock:ObjectBuilder.kt$ConstructorBasedObjectBuilder${}</ID>
+    <ID>ForbiddenComment:AllButBlacklisted.kt$AllButBlacklisted$// TODO: AutoCloseable::class.java.name,</ID>
+    <ID>ForbiddenComment:AllButBlacklisted.kt$AllButBlacklisted$// TODO: add more from java.io.</ID>
+    <ID>ForbiddenComment:AllButBlacklisted.kt$AllButBlacklisted$// TODO: add more from java.lang.reflect.</ID>
+    <ID>ForbiddenComment:AllButBlacklisted.kt$AllButBlacklisted$// TODO: add more from java.net.</ID>
+    <ID>ForbiddenComment:AllButBlacklisted.kt$AllButBlacklisted$// TODO: blacklistedClasses += type.name // add it, so checking is faster next time we encounter this class.</ID>
+    <ID>ForbiddenComment:ClassCarpenter.kt$ClassCarpenterImpl$// TODO: Generate equals/hashCode.</ID>
+    <ID>ForbiddenComment:ClassCarpenter.kt$ClassCarpenterImpl$// TODO: Generics.</ID>
+    <ID>ForbiddenComment:ClassCarpenter.kt$ClassCarpenterImpl$// TODO: Sandbox the generated code when a security manager is in use.</ID>
+    <ID>ForbiddenComment:ClassCarpenter.kt$ClassCarpenterImpl$// TODO: Support annotations.</ID>
+    <ID>ForbiddenComment:ClassCarpenter.kt$ClassCarpenterImpl$// TODO: isFoo getter patterns for booleans (this is what Kotlin generates)</ID>
+    <ID>ForbiddenComment:ClassWhitelists.kt$GlobalTransientClassWhiteList$// TODO: Need some concept of from which class loader</ID>
+    <ID>ForbiddenComment:CollectionSerializer.kt$CollectionSerializer$// TODO: Can we verify the entries in the list?</ID>
+    <ID>ForbiddenComment:CustomSerializer.kt$CustomSerializer.SubClass$// TODO: should this be a custom serializer at all, or should it just be a plain AMQPSerializer?</ID>
+    <ID>ForbiddenComment:CustomSerializer.kt$CustomSerializer.SubClass$// TODO: should this be empty or contain the schema of the super?</ID>
+    <ID>ForbiddenComment:Envelope.kt$Envelope$// TODO: don't recognise a type descriptor.</ID>
+    <ID>ForbiddenComment:Envelope.kt$Envelope$// TODO: make the schema parsing lazy since mostly schemas will have been seen before and we only need it if we</ID>
+    <ID>ForbiddenComment:LocalTypeInformationBuilder.kt$// TODO: Revisit this when Kotlin issue is fixed.</ID>
+    <ID>ForbiddenComment:PublicKeySerializer.kt$PublicKeySerializer$// TODO: Instead of encoding to the default X509 format, we could have a custom per key type (space-efficient) serialiser.</ID>
+    <ID>ForbiddenComment:SerializationHelper.kt$// TODO: surely we check it is concrete at this point with no TypeVariables</ID>
+    <ID>ForbiddenComment:SerializationScheme.kt$SerializationFactoryImpl$// TODO: This is read-mostly. Probably a faster implementation to be found.</ID>
+    <ID>ForbiddenComment:ThrowableSerializer.kt$ThrowableSerializer$// TODO: This will need reworking when we have multiple class loaders</ID>
+    <ID>ForbiddenComment:TransformTypes.kt$TransformTypes$// TODO: annotated with some annotation</ID>
+    <ID>ForbiddenComment:TransformTypes.kt$TransformTypes$// TODO: it would be awesome to auto build this list by scanning for transform annotations themselves</ID>
+    <ID>FunctionNaming:SerializationOutput.kt$SerializationOutput$internal fun &lt;T : Any&gt; _serialize(obj: T, context: SerializationContext): SerializedBytes&lt;T&gt;</ID>
+    <ID>LongParameterList:AMQPSerializer.kt$AMQPSerializer$(obj: Any, data: Data, type: Type, output: SerializationOutput, context: SerializationContext, debugIndent: Int = 0)</ID>
+    <ID>LongParameterList:ObjectSerializer.kt$ComposableObjectWriter$(obj: Any, data: Data, type: Type, output: SerializationOutput, context: SerializationContext, debugIndent: Int)</ID>
+    <ID>LongParameterList:ObjectSerializer.kt$EvolutionObjectSerializer.Companion$(localTypeInformation: LocalTypeInformation.Composable, remoteTypeInformation: RemoteTypeInformation.Composable, constructor: LocalConstructorInformation, properties: Map&lt;String, LocalPropertyInformation&gt;, classLoader: ClassLoader, mustPreserveData: Boolean)</ID>
+    <ID>LongParameterList:SerializerFactoryBuilder.kt$SerializerFactoryBuilder$( whitelist: ClassWhitelist, carpenterClassLoader: ClassLoader, lenientCarpenterEnabled: Boolean = false, descriptorBasedSerializerRegistry: DescriptorBasedSerializerRegistry = DefaultDescriptorBasedSerializerRegistry(), allowEvolution: Boolean = true, overrideFingerPrinter: FingerPrinter? = null, onlyCustomSerializers: Boolean = false, mustPreserveDataWhenEvolving: Boolean = false)</ID>
+    <ID>LongParameterList:SerializerFactoryBuilder.kt$SerializerFactoryBuilder$( whitelist: ClassWhitelist, classCarpenter: ClassCarpenter, descriptorBasedSerializerRegistry: DescriptorBasedSerializerRegistry = DefaultDescriptorBasedSerializerRegistry(), allowEvolution: Boolean = true, overrideFingerPrinter: FingerPrinter? = null, onlyCustomSerializers: Boolean = false, mustPreserveDataWhenEvolving: Boolean = false)</ID>
+    <ID>LongParameterList:SerializerFactoryBuilder.kt$SerializerFactoryBuilder$(whitelist: ClassWhitelist, classCarpenter: ClassCarpenter, descriptorBasedSerializerRegistry: DescriptorBasedSerializerRegistry, allowEvolution: Boolean, overrideFingerPrinter: FingerPrinter?, onlyCustomSerializers: Boolean, mustPreserveDataWhenEvolving: Boolean)</ID>
+    <ID>MagicNumber:AMQPDescriptorRegistry.kt$AMQPDescriptorRegistry.CHOICE$7</ID>
+    <ID>MagicNumber:AMQPDescriptorRegistry.kt$AMQPDescriptorRegistry.COMPOSITE_TYPE$5</ID>
+    <ID>MagicNumber:AMQPDescriptorRegistry.kt$AMQPDescriptorRegistry.FIELD$4</ID>
+    <ID>MagicNumber:AMQPDescriptorRegistry.kt$AMQPDescriptorRegistry.OBJECT_DESCRIPTOR$3</ID>
+    <ID>MagicNumber:AMQPDescriptorRegistry.kt$AMQPDescriptorRegistry.REFERENCED_OBJECT$8</ID>
+    <ID>MagicNumber:AMQPDescriptorRegistry.kt$AMQPDescriptorRegistry.RESTRICTED_TYPE$6</ID>
+    <ID>MagicNumber:AMQPDescriptorRegistry.kt$AMQPDescriptorRegistry.TRANSFORM_ELEMENT$10</ID>
+    <ID>MagicNumber:AMQPDescriptorRegistry.kt$AMQPDescriptorRegistry.TRANSFORM_ELEMENT_KEY$11</ID>
+    <ID>MagicNumber:AMQPDescriptorRegistry.kt$AMQPDescriptorRegistry.TRANSFORM_SCHEMA$9</ID>
+    <ID>MagicNumber:AMQPSerializationScheme.kt$AbstractAMQPSerializationScheme$128</ID>
+    <ID>MagicNumber:AccessOrderLinkedHashMap.kt$AccessOrderLinkedHashMap$0.75f</ID>
+    <ID>MagicNumber:AccessOrderLinkedHashMap.kt$AccessOrderLinkedHashMap$16</ID>
+    <ID>MagicNumber:ArraySerializer.kt$ArraySerializer$4</ID>
+    <ID>MagicNumber:ByteBufferStreams.kt$1024</ID>
+    <ID>MagicNumber:ByteBufferStreams.kt$256</ID>
+    <ID>MagicNumber:ByteBufferStreams.kt$64</ID>
+    <ID>MagicNumber:ClassCarpenter.kt$ClassCarpenterImpl$3</ID>
+    <ID>MagicNumber:InputStreamSerializer.kt$InputStreamSerializer$4096</ID>
+    <ID>MagicNumber:OrdinalIO.kt$OrdinalBits$128</ID>
+    <ID>MagicNumber:Schema.kt$CompositeType.Companion$3</ID>
+    <ID>MagicNumber:Schema.kt$CompositeType.Companion$4</ID>
+    <ID>MagicNumber:Schema.kt$Descriptor$0xffff</ID>
+    <ID>MagicNumber:Schema.kt$Descriptor$32</ID>
+    <ID>MagicNumber:Schema.kt$Field.Companion$3</ID>
+    <ID>MagicNumber:Schema.kt$Field.Companion$4</ID>
+    <ID>MagicNumber:Schema.kt$Field.Companion$5</ID>
+    <ID>MagicNumber:Schema.kt$Field.Companion$6</ID>
+    <ID>MagicNumber:Schema.kt$RestrictedType.Companion$3</ID>
+    <ID>MagicNumber:Schema.kt$RestrictedType.Companion$4</ID>
+    <ID>MagicNumber:Schema.kt$RestrictedType.Companion$5</ID>
+    <ID>MagicNumber:TransformsSchema.kt$UnknownTestTransform.Companion$3</ID>
+    <ID>MatchingDeclarationName:AMQPSerializerFactories.kt$net.corda.serialization.internal.amqp.AMQPSerializerFactories.kt</ID>
+    <ID>MatchingDeclarationName:CheckpointSerializationScheme.kt$net.corda.serialization.internal.CheckpointSerializationScheme.kt</ID>
+    <ID>MatchingDeclarationName:SerializationHelper.kt$net.corda.serialization.internal.amqp.SerializationHelper.kt</ID>
+    <ID>MatchingDeclarationName:SupportedTransforms.kt$net.corda.serialization.internal.amqp.SupportedTransforms.kt</ID>
+    <ID>MaxLineLength:AMQPRemoteTypeModel.kt$AMQPRemoteTypeModel$cache.getOrPut(typeDescriptor) { interpretationState.run { typeNotation.name.typeIdentifier.interpretIdentifier() } }</ID>
+    <ID>MaxLineLength:AMQPRemoteTypeModel.kt$AMQPRemoteTypeModel$throw NotSerializableException("Cannot resolve cyclic reference to ${typeInformation.typeIdentifier}")</ID>
+    <ID>MaxLineLength:AMQPRemoteTypeModel.kt$AMQPRemoteTypeModel.InterpretationState$ fun TypeIdentifier.interpretIdentifier(): RemoteTypeInformation</ID>
+    <ID>MaxLineLength:AMQPRemoteTypeModel.kt$AMQPRemoteTypeModel.InterpretationState$ private fun TypeIdentifier.interpretNoNotation(): RemoteTypeInformation</ID>
+    <ID>MaxLineLength:AMQPRemoteTypeModel.kt$AMQPRemoteTypeModel.InterpretationState$ private fun TypeNotation.interpretNotation(identifier: TypeIdentifier): RemoteTypeInformation</ID>
+    <ID>MaxLineLength:AMQPRemoteTypeModel.kt$AMQPRemoteTypeModel.InterpretationState$private</ID>
+    <ID>MaxLineLength:AMQPRemoteTypeModel.kt$AMQPRemoteTypeModel.InterpretationState$return if (isInterface) RemoteTypeInformation.AnInterface(typeDescriptor, identifier, properties, interfaces, typeParameters) else RemoteTypeInformation.Composable(typeDescriptor, identifier, properties, interfaces, typeParameters)</ID>
+    <ID>MaxLineLength:AMQPRemoteTypeModel.kt$AMQPRemoteTypeModel.InterpretationState$val constants = choices.asSequence().mapIndexed { index, choice -&gt; choice.name to index }.toMap(LinkedHashMap())</ID>
+    <ID>MaxLineLength:AMQPSerializationScheme.kt$AbstractAMQPSerializationScheme$@DeleteForDJVM constructor(cordapps: List&lt;Cordapp&gt;) : this(cordapps.customSerializers, cordapps.serializationWhitelists, AccessOrderLinkedHashMap&lt;SerializationFactoryCacheKey, SerializerFactory&gt;(128).toSynchronised())</ID>
+    <ID>MaxLineLength:AMQPSerializationScheme.kt$AbstractAMQPSerializationScheme$private</ID>
+    <ID>MaxLineLength:AMQPSerializationScheme.kt$AbstractAMQPSerializationScheme$val key = SerializationFactoryCacheKey(context.whitelist, context.deserializationClassLoader, context.preventDataLoss, context.customSerializers)</ID>
+    <ID>MaxLineLength:AMQPSerializationScheme.kt$AbstractAMQPSerializationScheme${ // This is a hack introduced in version 3 to fix a spring boot issue - CORDA-1747. // It breaks the shell because it overwrites the CordappClassloader with the system classloader that doesn't know about any CorDapps. // In case a spring boot serialization issue with generics is found, a better solution needs to be found to address it. // var contextToUse = context // if (context.useCase == SerializationContext.UseCase.RPCClient) { // contextToUse = context.withClassLoader(getContextClassLoader()) // } val serializerFactory = getSerializerFactory(context) return DeserializationInput(serializerFactory).deserialize(byteSequence, clazz, context) }</ID>
+    <ID>MaxLineLength:AMQPSerializationScheme.kt$AbstractAMQPSerializationScheme${ with(factory) { register(publicKeySerializer) register(net.corda.serialization.internal.amqp.custom.PrivateKeySerializer) register(net.corda.serialization.internal.amqp.custom.ThrowableSerializer(this)) register(net.corda.serialization.internal.amqp.custom.BigDecimalSerializer) register(net.corda.serialization.internal.amqp.custom.BigIntegerSerializer) register(net.corda.serialization.internal.amqp.custom.CurrencySerializer) register(net.corda.serialization.internal.amqp.custom.OpaqueBytesSubSequenceSerializer(this)) register(net.corda.serialization.internal.amqp.custom.InstantSerializer(this)) register(net.corda.serialization.internal.amqp.custom.DurationSerializer(this)) register(net.corda.serialization.internal.amqp.custom.LocalDateSerializer(this)) register(net.corda.serialization.internal.amqp.custom.LocalDateTimeSerializer(this)) register(net.corda.serialization.internal.amqp.custom.LocalTimeSerializer(this)) register(net.corda.serialization.internal.amqp.custom.ZonedDateTimeSerializer(this)) register(net.corda.serialization.internal.amqp.custom.ZoneIdSerializer(this)) register(net.corda.serialization.internal.amqp.custom.OffsetTimeSerializer(this)) register(net.corda.serialization.internal.amqp.custom.OffsetDateTimeSerializer(this)) register(net.corda.serialization.internal.amqp.custom.OptionalSerializer(this)) register(net.corda.serialization.internal.amqp.custom.YearSerializer(this)) register(net.corda.serialization.internal.amqp.custom.YearMonthSerializer(this)) register(net.corda.serialization.internal.amqp.custom.MonthDaySerializer(this)) register(net.corda.serialization.internal.amqp.custom.PeriodSerializer(this)) register(net.corda.serialization.internal.amqp.custom.ClassSerializer(this)) register(net.corda.serialization.internal.amqp.custom.X509CertificateSerializer) register(net.corda.serialization.internal.amqp.custom.X509CRLSerializer) register(net.corda.serialization.internal.amqp.custom.CertPathSerializer(this)) register(net.corda.serialization.internal.amqp.custom.StringBufferSerializer) register(net.corda.serialization.internal.amqp.custom.InputStreamSerializer) register(net.corda.serialization.internal.amqp.custom.BitSetSerializer(this)) register(net.corda.serialization.internal.amqp.custom.EnumSetSerializer(this)) register(net.corda.serialization.internal.amqp.custom.ContractAttachmentSerializer(this)) registerNonDeterministicSerializers(factory) } // This step is registering custom serializers, which have been added after node initialisation (i.e. via attachments during transaction verification). // Note: the order between the registration of customSerializers and cordappCustomSerializers must be preserved as-is. The reason is the following: // Currently, the serialization infrastructure does not support multiple versions of a class (the first one that is registered dominates). // As a result, when inside a context with attachments class loader, we prioritize serializers loaded on-demand from attachments to serializers that had been // loaded during node initialisation, by scanning the cordapps folder. context.customSerializers.forEach { customSerializer -&gt; factory.registerExternal(CorDappCustomSerializer(customSerializer, factory)) } cordappCustomSerializers.forEach { customSerializer -&gt; factory.registerExternal(CorDappCustomSerializer(customSerializer, factory)) } context.properties[ContextPropertyKeys.SERIALIZERS]?.apply { uncheckedCast&lt;Any, List&lt;CustomSerializer&lt;out Any&gt;&gt;&gt;(this).forEach { factory.register(it) } } }</ID>
+    <ID>MaxLineLength:AMQPSerializer.kt$AMQPSerializer$ fun readObject(obj: Any, schemas: SerializationSchemas, input: DeserializationInput, context: SerializationContext): T</ID>
+    <ID>MaxLineLength:AMQPSerializer.kt$AMQPSerializer$ fun writeClassInfo(output: SerializationOutput)</ID>
+    <ID>MaxLineLength:AMQPSerializer.kt$AMQPSerializer$/** * Textual unique representation of the JVM type this represents. Will be encoded into the AMQP stream and * will appear in the schema. * * This should be unique enough that we can use one global cache of [AMQPSerializer]s and use this as the look up key. */ val typeDescriptor: Symbol</ID>
+    <ID>MaxLineLength:AMQPTypeIdentifierParser.kt$AMQPTypeIdentifierParser$else -&gt; throw IllegalTypeNameParserStateException("Type name '$typeString' contains illegal character '$c'")</ID>
+    <ID>MaxLineLength:AMQPTypeIdentifierParser.kt$AMQPTypeIdentifierParser$throw IllegalTypeNameParserStateException("Nested depth of type parameters exceeds maximum of $MAX_TYPE_PARAM_DEPTH")</ID>
+    <ID>MaxLineLength:AMQPTypeIdentifierParser.kt$AMQPTypeIdentifierParser.ParseState.ParsingArray$data</ID>
+    <ID>MaxLineLength:AMQPTypeIdentifierParser.kt$AMQPTypeIdentifierParser.ParseState.ParsingParameterList$data</ID>
+    <ID>MaxLineLength:AMQPTypeIdentifierParser.kt$AMQPTypeIdentifierParser.ParseState.ParsingRawType$data</ID>
+    <ID>MaxLineLength:AMQPTypeIdentifiers.kt$AMQPTypeIdentifiers$is TypeIdentifier.Parameterised</ID>
+    <ID>MaxLineLength:AMQPTypeIdentifiers.kt$AMQPTypeIdentifiers$private val primitiveByteArrayType = TypeIdentifier.ArrayOf(TypeIdentifier.forClass(Byte::class.javaPrimitiveType!!))</ID>
+    <ID>MaxLineLength:AllButBlacklisted.kt$AllButBlacklisted : ClassWhitelist</ID>
+    <ID>MaxLineLength:AllButBlacklisted.kt$AllButBlacklisted$ override fun hasListed(type: Class&lt;*&gt;): Boolean</ID>
+    <ID>MaxLineLength:AllButBlacklisted.kt$AllButBlacklisted$throw IllegalStateException("The $matchType $aMatch of ${type.name} is blacklisted, so it cannot be used in serialization.")</ID>
+    <ID>MaxLineLength:AllButBlacklisted.kt$AllButBlacklisted${ // TODO: blacklistedClasses += type.name // add it, so checking is faster next time we encounter this class. val matchType = if (Class.forName(aMatch).isInterface) "superinterface" else "superclass" throw IllegalStateException("The $matchType $aMatch of ${type.name} is blacklisted, so it cannot be used in serialization.") }</ID>
+    <ID>MaxLineLength:ArraySerializer.kt$PrimBooleanArraySerializer : PrimArraySerializer</ID>
+    <ID>MaxLineLength:BitSetSerializer.kt$BitSetSerializer : Proxy</ID>
+    <ID>MaxLineLength:ByteBufferStreams.kt$ByteBufferOutputStream.Companion$private</ID>
+    <ID>MaxLineLength:CarpentryDependencyGraph.kt$CarpentryDependencyGraph$/** * A map of inbound edges by node. * * A [RemoteTypeInformation] map key is a type that requires other types to have been constructed before it can be * constructed. * * Each [RemoteTypeInformation] in the corresponding [Set] map value is one of the types that the key-type depends on. * * No key ever maps to an empty set: types with no dependencies are not included in this map. */ private val dependencies = mutableMapOf&lt;RemoteTypeInformation, MutableSet&lt;RemoteTypeInformation&gt;&gt;()</ID>
+    <ID>MaxLineLength:CarpentryDependencyGraph.kt$CarpentryDependencyGraph$if (dependencies.isEmpty()) newlyIndependent.asSequence() else topologicalSort(remaining, newlyIndependent)</ID>
+    <ID>MaxLineLength:CarpentryDependencyGraph.kt$CarpentryDependencyGraph${ // Types which still have dependencies. val remaining = dependencies.keys.toSet() // Remove the types which have no dependencies from the dependencies of the remaining types, and identify // those types which have no dependencies left after we've done this. val newlyIndependent = dependencies.asSequence().mapNotNull { (dependent, dependees) -&gt; dependees.removeAll(noDependencies) if (dependees.isEmpty()) dependent else null }.toSet() // If there are still types with dependencies, and we have no dependencies we can remove, then we can't continue. if (newlyIndependent.isEmpty() &amp;&amp; dependencies.isNotEmpty()) { throw NotSerializableException( "Cannot build dependencies for " + dependencies.keys.map { it.typeIdentifier.prettyPrint(false) }) } // Remove the types which have no dependencies remaining, maintaining the invariant that no key maps to an // empty set. dependencies.keys.removeAll(newlyIndependent) // Return the types that had no dependencies, then recurse to process the remainder. return noDependencies.asSequence() + if (dependencies.isEmpty()) newlyIndependent.asSequence() else topologicalSort(remaining, newlyIndependent) }</ID>
+    <ID>MaxLineLength:CertPathSerializer.kt$CertPathSerializer : Proxy</ID>
+    <ID>MaxLineLength:CheckpointSerializationScheme.kt$CheckpointSerializationContextImpl$override fun withEncodingWhitelist(encodingWhitelist: EncodingWhitelist)</ID>
+    <ID>MaxLineLength:CheckpointSerializationScheme.kt$CheckpointSerializationContextImpl$override val encodingWhitelist: EncodingWhitelist = NullEncodingWhitelist</ID>
+    <ID>MaxLineLength:ClassCarpenter.kt$ClassCarpenterImpl$/** Returns a snapshot of the currently loaded classes as a map of full class name (package names+dots) -&gt; class object */ val loaded: Map&lt;String, Class&lt;*&gt;&gt; = HashMap(_loaded)</ID>
+    <ID>MaxLineLength:ClassCarpenter.kt$ClassCarpenterImpl$if (fieldNameFromItf.isEmpty() &amp;&amp; SimpleFieldAccess::class.java in schema.interfaces) continue@methodLoop</ID>
+    <ID>MaxLineLength:ClassCarpenter.kt$ClassCarpenterImpl$visitMethodInsn(INVOKEVIRTUAL, toStringHelper, "add", "(L$jlString;${field.type})L$toStringHelper;", false)</ID>
+    <ID>MaxLineLength:ClassCarpenter.kt$InterfaceMismatchMissingAMQPFieldException$"Interface ${clazz.name} requires a field named $field but that isn't found in the schema or any superclass schemas"</ID>
+    <ID>MaxLineLength:ClassWhitelists.kt$AbstractMutableClassWhitelist$sealed</ID>
+    <ID>MaxLineLength:ClassWhitelists.kt$AbstractMutableClassWhitelist${ /** * There are certain delegates like [net.corda.serialization.internal.AllButBlacklisted] * which may throw when asked whether the type is listed. * In such situations - it may be a good idea to ask [delegate] first before making a check against own [whitelist]. */ return delegate.hasListed(type) || (type.name in whitelist) }</ID>
+    <ID>MaxLineLength:ClassWhitelists.kt$TransientClassWhiteList : AbstractMutableClassWhitelist</ID>
+    <ID>MaxLineLength:CollectionSerializer.kt$CollectionSerializer : AMQPSerializer</ID>
+    <ID>MaxLineLength:CollectionSerializer.kt$CollectionSerializer$private val typeNotation: TypeNotation = RestrictedType(AMQPTypeIdentifiers.nameForType(declaredType), null, emptyList(), "list", Descriptor(typeDescriptor), emptyList())</ID>
+    <ID>MaxLineLength:CollectionSerializer.kt$CollectionSerializer.Companion$ fun resolveDeclared(declaredTypeInformation: LocalTypeInformation.ACollection): LocalTypeInformation.ACollection</ID>
+    <ID>MaxLineLength:CollectionSerializer.kt$CollectionSerializer.Companion$fun resolveActual(actualClass: Class&lt;*&gt;, declaredTypeInformation: LocalTypeInformation.ACollection): LocalTypeInformation.ACollection</ID>
+    <ID>MaxLineLength:CollectionSerializer.kt$CollectionSerializer.Companion$is TypeIdentifier.Parameterised -&gt; erasedInformation.withElementType(declaredTypeInformation.elementType)</ID>
+    <ID>MaxLineLength:CollectionSerializer.kt$CollectionSerializer.Companion$private</ID>
+    <ID>MaxLineLength:CollectionSerializer.kt$CollectionSerializer.Companion$private val supportedTypeIdentifiers = supportedTypes.keys.asSequence().map { TypeIdentifier.forClass(it) }.toSet()</ID>
+    <ID>MaxLineLength:ComposableTypePropertySerializer.kt$AMQPPropertyReadStrategy$override</ID>
+    <ID>MaxLineLength:ComposableTypePropertySerializer.kt$ComposableTypePropertySerializer.Companion$ fun make(name: String, propertyInformation: LocalPropertyInformation, factory: LocalSerializerFactory): PropertySerializer</ID>
+    <ID>MaxLineLength:ComposableTypePropertySerializer.kt$ComposableTypePropertySerializer.Companion$ fun makeForEvolution(name: String, isCalculated: Boolean, typeIdentifier: TypeIdentifier, type: Type): PropertySerializer</ID>
+    <ID>MaxLineLength:ComposableTypePropertySerializer.kt$ComposableTypePropertySerializer.Companion$PropertyReadStrategy.make(name, propertyInformation.type.typeIdentifier, propertyInformation.type.observedType)</ID>
+    <ID>MaxLineLength:ComposableTypePropertySerializer.kt$DescribedTypeReadStrategy : PropertyReadStrategy</ID>
+    <ID>MaxLineLength:ComposableTypePropertySerializer.kt$DescribedTypeReadStrategy$override</ID>
+    <ID>MaxLineLength:ComposableTypePropertySerializer.kt$EvolutionPropertyWriteStrategy$override</ID>
+    <ID>MaxLineLength:ComposableTypePropertySerializer.kt$PropertyReadStrategy$ fun readProperty(obj: Any?, schemas: SerializationSchemas, input: DeserializationInput, context: SerializationContext): Any?</ID>
+    <ID>MaxLineLength:ComposableTypePropertySerializer.kt$PropertyReader</ID>
+    <ID>MaxLineLength:ComposableTypePropertySerializer.kt$PropertyReader.Companion$is LocalPropertyInformation.PrivateConstructorPairedProperty -&gt; FieldReader(propertyInformation.observedField)</ID>
+    <ID>MaxLineLength:ComposableTypePropertySerializer.kt$PropertyWriteStrategy$ fun writeProperty(obj: Any?, data: Data, output: SerializationOutput, context: SerializationContext, debugIndent: Int)</ID>
+    <ID>MaxLineLength:ComposableTypePropertySerializer.kt$PropertyWriteStrategy.Companion$ fun make(name: String, propertyInformation: LocalPropertyInformation, factory: LocalSerializerFactory): PropertyWriteStrategy</ID>
+    <ID>MaxLineLength:ContractAttachmentSerializer.kt$ContractAttachmentSerializer$return ContractAttachment.create(proxy.attachment, proxy.contract, proxy.contracts, proxy.uploader, proxy.signers, proxy.version)</ID>
+    <ID>MaxLineLength:ContractAttachmentSerializer.kt$ContractAttachmentSerializer$return ContractAttachmentProxy(GeneratedAttachment(bytes, obj.uploader), obj.contract, obj.additionalContracts, obj.uploader, obj.signerKeys, obj.version)</ID>
+    <ID>MaxLineLength:ContractAttachmentSerializer.kt$ContractAttachmentSerializer.ContractAttachmentProxy$@KeepForDJVM data</ID>
+    <ID>MaxLineLength:CustomSerializer.kt$CustomSerializer$/** * This exists purely for documentation and cross-platform purposes. It is not used by our serialization / deserialization * code path. */ abstract val schemaForDocumentation: Schema</ID>
+    <ID>MaxLineLength:CustomSerializer.kt$CustomSerializer$Implements&lt;T : Any&gt; : CustomSerializerImp</ID>
+    <ID>MaxLineLength:CustomSerializer.kt$CustomSerializer$Proxy&lt;T : Any, P : Any&gt; : CustomSerializerImp</ID>
+    <ID>MaxLineLength:CustomSerializer.kt$CustomSerializer$SubClass&lt;T : Any&gt; : CustomSerializer</ID>
+    <ID>MaxLineLength:CustomSerializer.kt$CustomSerializer.CustomSerializerImp$abstract</ID>
+    <ID>MaxLineLength:CustomSerializer.kt$CustomSerializer.CustomSerializerImp$override fun isSerializerFor(clazz: Class&lt;*&gt;): Boolean</ID>
+    <ID>MaxLineLength:CustomSerializer.kt$CustomSerializer.Proxy$override fun isSerializerFor(clazz: Class&lt;*&gt;): Boolean</ID>
+    <ID>MaxLineLength:CustomSerializer.kt$CustomSerializer.Proxy$private val proxySerializer: ObjectSerializer by lazy { ObjectSerializer.make(factory.getTypeInformation(proxyClass), factory) }</ID>
+    <ID>MaxLineLength:CustomSerializer.kt$CustomSerializer.Proxy$withInheritance: Boolean = true</ID>
+    <ID>MaxLineLength:CustomSerializer.kt$CustomSerializer.ToString$listOf</ID>
+    <ID>MaxLineLength:CustomSerializer.kt$CustomSerializer.ToString$private</ID>
+    <ID>MaxLineLength:CustomSerializerRegistry.kt$CachingCustomSerializerRegistry$CustomSerializerIdentifier</ID>
+    <ID>MaxLineLength:CustomSerializerRegistry.kt$CachingCustomSerializerRegistry$constructor(descriptorBasedSerializerRegistry: DescriptorBasedSerializerRegistry) : this(descriptorBasedSerializerRegistry, emptySet())</ID>
+    <ID>MaxLineLength:CustomSerializerRegistry.kt$CachingCustomSerializerRegistry$logger.warn("Duplicate custom serializers detected for $clazz: ${declaredSerializers.map { it::class.qualifiedName }}")</ID>
+    <ID>MaxLineLength:CustomSerializerRegistry.kt$CachingCustomSerializerRegistry$logger.warn("Illegal custom serializer detected for $clazz: ${declaredSerializers.first()::class.qualifiedName}")</ID>
+    <ID>MaxLineLength:CustomSerializerRegistry.kt$CachingCustomSerializerRegistry$private val customSerializersCache: MutableMap&lt;CustomSerializerIdentifier, CustomSerializerLookupResult&gt; = DefaultCacheProvider.createCache()</ID>
+    <ID>MaxLineLength:CustomSerializerRegistry.kt$CachingCustomSerializerRegistry.CustomSerializerLookupResult$CustomSerializerFound : CustomSerializerLookupResult</ID>
+    <ID>MaxLineLength:CustomSerializerRegistry.kt$DuplicateCustomSerializerException : Exception</ID>
+    <ID>MaxLineLength:DeserializationInput.kt$DeserializationInput$"Existing reference type mismatch. Expected: '$type', found: '${objectRetrieved::class.java}' "</ID>
+    <ID>MaxLineLength:DeserializationInput.kt$DeserializationInput$@VisibleForTesting @Throws(AMQPNoTypeNotSerializableException::class) fun getEnvelope(byteSequence: ByteSequence, context: SerializationContext)</ID>
+    <ID>MaxLineLength:DeserializationInput.kt$DeserializationInput$clazz</ID>
+    <ID>MaxLineLength:DeserializationInput.kt$DeserializationInput$if (type != TypeIdentifier.UnknownType.getLocalType() &amp;&amp; serializer.type != type &amp;&amp; with(serializer.type) { !isSubClassOf(type) &amp;&amp; !materiallyEquivalentTo(type) } ) { throw AMQPNotSerializableException( type, "Described type with descriptor ${obj.descriptor} was " + "expected to be of type $type but was ${serializer.type}") }</ID>
+    <ID>MaxLineLength:DeserializationInput.kt$DeserializationInput$throw NotSerializableException("Internal deserialization failure: ${e.javaClass.name}: ${e.message}").apply { initCause(e) }</ID>
+    <ID>MaxLineLength:DeserializationInput.kt$DeserializationInput${ // It must be a reference to an instance that has already been read, cheaply and quickly returning it by reference. val objectIndex = (obj.described as UnsignedInteger).toInt() if (objectIndex &gt;= objectHistory.size) throw AMQPNotSerializableException( type, "Retrieval of existing reference failed. Requested index $objectIndex " + "is outside of the bounds for the list of size: ${objectHistory.size}") val objectRetrieved = objectHistory[objectIndex] if (!objectRetrieved::class.java.isSubClassOf(type.asClass())) { throw AMQPNotSerializableException( type, "Existing reference type mismatch. Expected: '$type', found: '${objectRetrieved::class.java}' " + "@ $objectIndex") } objectRetrieved }</ID>
+    <ID>MaxLineLength:DeserializationInput.kt$DeserializationInput.Companion$@Throws(AMQPNoTypeNotSerializableException::class) fun getEnvelope(byteSequence: ByteSequence, encodingWhitelist: EncodingWhitelist = NullEncodingWhitelist): Envelope</ID>
+    <ID>MaxLineLength:DeserializationInput.kt$DeserializationInput.Companion$throw AMQPNoTypeNotSerializableException(encodingNotPermittedFormat.format(encoding))</ID>
+    <ID>MaxLineLength:DurationSerializer.kt$DurationSerializer : Proxy</ID>
+    <ID>MaxLineLength:EnumEvolutionSerializer.kt$EnumEvolutionSerializer$val converted = conversions[enumName] ?: throw AMQPNotSerializableException(type, "No rule to evolve enum constant $type::$enumName")</ID>
+    <ID>MaxLineLength:EnumEvolutionSerializer.kt$EnumEvolutionSerializer$val ordinal = ordinals[converted] ?: throw AMQPNotSerializableException(type, "Ordinal not found for enum value $type::$converted")</ID>
+    <ID>MaxLineLength:EnumSerializer.kt$EnumSerializer : AMQPSerializer</ID>
+    <ID>MaxLineLength:EnumSetSerializer.kt$EnumSetSerializer : Proxy</ID>
+    <ID>MaxLineLength:EnumSetSerializer.kt$EnumSetSerializer$EnumSet.complementOf(uncheckedCast&lt;EnumSet&lt;*&gt;, EnumSet&lt;MapSerializer.EnumJustUsedForCasting&gt;&gt;(set)).first().javaClass</ID>
+    <ID>MaxLineLength:EnumTransforms.kt$EnumTransforms$ private fun validateNoCycles(constants: Map&lt;String, Int&gt;)</ID>
+    <ID>MaxLineLength:EnumTransforms.kt$EnumTransforms$"Rename chain from $chainStart to $chainEnd does not end with a known constant in ${constants.keys}"</ID>
+    <ID>MaxLineLength:EnumTransforms.kt$EnumTransforms$throw InvalidEnumTransformsException("Rename from $from to $to would rename existing constant in $constants.keys")</ID>
+    <ID>MaxLineLength:EnumTransforms.kt$EnumTransforms${ if (from in constants) { throw InvalidEnumTransformsException("Rename from $from to $to would rename existing constant in $constants.keys") } // If there is an existing chain, starting at the "to" node of this edge, then there is a chain from this edge's // "from" to that chain's end. val newEnd = chainStartsToEnds[to] ?: to // If there is an existing chain, ending at the "from" node of this edge, then there is a chain from that chain's start // to this edge's "to". val newStart = chainEndsToStarts[from] ?: from // If either chain ends where it begins, we have closed a loop, and detected a cycle. if (newEnd == from || newStart == to) { throw InvalidEnumTransformsException("Rename cycle detected in rename map starting from $newStart") } // Either update, or create, the chains in both directions. chainStartsToEnds[newStart] = newEnd chainEndsToStarts[newEnd] = newStart }</ID>
+    <ID>MaxLineLength:EvolutionSerializerFactory.kt$DefaultEvolutionSerializerFactory$private</ID>
+    <ID>MaxLineLength:EvolutionSerializerFactory.kt$DefaultEvolutionSerializerFactory$properties.asSequence().zip(localTypeInformation.properties.values.asSequence())</ID>
+    <ID>MaxLineLength:EvolutionSerializerFactory.kt$DefaultEvolutionSerializerFactory$properties: Map&lt;String, RemotePropertyInformation&gt;</ID>
+    <ID>MaxLineLength:EvolutionSerializerFactory.kt$DefaultEvolutionSerializerFactory$return EnumEvolutionSerializer(localTypeInformation.observedType, localSerializerFactory, conversions, localOrdinals)</ID>
+    <ID>MaxLineLength:EvolutionSerializerFactory.kt$DefaultEvolutionSerializerFactory$val bestMatchEvolutionConstructor = findEvolverConstructor(localTypeInformation.evolutionConstructors, properties)</ID>
+    <ID>MaxLineLength:EvolutionSerializerFactory.kt$DefaultEvolutionSerializerFactory$val convertedOrdinals = remoteOrdinals.asSequence().map { (member, ord) -&gt; ord to conversions[member]!! }.toMap()</ID>
+    <ID>MaxLineLength:EvolutionSerializerFactory.kt$DefaultEvolutionSerializerFactory$val localOrdinals = localTypeInformation.members.asSequence().mapIndexed { ord, member -&gt; member to ord }.toMap()</ID>
+    <ID>MaxLineLength:EvolutionSerializerFactory.kt$DefaultEvolutionSerializerFactory$val propertyTypes = properties.mapValues { (_, info) -&gt; info.type.typeIdentifier.getLocalType(classLoader).asClass() }</ID>
+    <ID>MaxLineLength:EvolutionSerializerFactory.kt$DefaultEvolutionSerializerFactory${ // The no-op case: although the fingerprints don't match for some reason, we have compatible signatures. // This might happen because of inconsistent type erasure, changes to the behaviour of the fingerprinter, // or changes to the type itself - such as adding an interface - that do not change its serialisation/deserialisation // signature. if (propertyNamesMatch(localTypeInformation)) { // Make sure types are assignment-compatible, and return the local serializer for the type. validateCompatibility(localTypeInformation) return null } // Failing that, we have to create an evolution serializer. val bestMatchEvolutionConstructor = findEvolverConstructor(localTypeInformation.evolutionConstructors, properties) val constructorForEvolution = bestMatchEvolutionConstructor?.constructor ?: localTypeInformation.constructor val evolverProperties = bestMatchEvolutionConstructor?.properties ?: localTypeInformation.properties validateEvolvability(evolverProperties) return buildComposableEvolutionSerializer(localTypeInformation, constructorForEvolution, evolverProperties) }</ID>
+    <ID>MaxLineLength:EvolutionSerializerFactory.kt$EvolutionSerializerFactory$ fun getEvolutionSerializer( remote: RemoteTypeInformation, local: LocalTypeInformation): AMQPSerializer&lt;Any&gt;?</ID>
+    <ID>MaxLineLength:InstantSerializer.kt$InstantSerializer : Proxy</ID>
+    <ID>MaxLineLength:InstantSerializer.kt$InstantSerializer$override fun fromProxy(proxy: InstantProxy): Instant</ID>
+    <ID>MaxLineLength:LocalDateSerializer.kt$LocalDateSerializer : Proxy</ID>
+    <ID>MaxLineLength:LocalDateSerializer.kt$LocalDateSerializer$override fun fromProxy(proxy: LocalDateProxy): LocalDate</ID>
+    <ID>MaxLineLength:LocalDateSerializer.kt$LocalDateSerializer$override fun toProxy(obj: LocalDate): LocalDateProxy</ID>
+    <ID>MaxLineLength:LocalDateTimeSerializer.kt$LocalDateTimeSerializer : Proxy</ID>
+    <ID>MaxLineLength:LocalDateTimeSerializer.kt$LocalDateTimeSerializer$override fun toProxy(obj: LocalDateTime): LocalDateTimeProxy</ID>
+    <ID>MaxLineLength:LocalDateTimeSerializer.kt$LocalDateTimeSerializer$override val additionalSerializers: Iterable&lt;CustomSerializer&lt;out Any&gt;&gt; = listOf(LocalDateSerializer(factory), LocalTimeSerializer(factory))</ID>
+    <ID>MaxLineLength:LocalPropertyInformation.kt$LocalPropertyInformation$ConstructorPairedProperty : LocalPropertyInformation</ID>
+    <ID>MaxLineLength:LocalPropertyInformation.kt$LocalPropertyInformation$GetterSetterProperty : LocalPropertyInformation</ID>
+    <ID>MaxLineLength:LocalPropertyInformation.kt$LocalPropertyInformation$PrivateConstructorPairedProperty : LocalPropertyInformation</ID>
+    <ID>MaxLineLength:LocalPropertyInformation.kt$LocalPropertyInformation$ReadOnlyProperty : LocalPropertyInformation</ID>
+    <ID>MaxLineLength:LocalPropertyInformation.kt$LocalPropertyInformation.CalculatedProperty$data</ID>
+    <ID>MaxLineLength:LocalPropertyInformation.kt$LocalPropertyInformation.ConstructorPairedProperty$data</ID>
+    <ID>MaxLineLength:LocalPropertyInformation.kt$LocalPropertyInformation.GetterSetterProperty$data</ID>
+    <ID>MaxLineLength:LocalPropertyInformation.kt$LocalPropertyInformation.PrivateConstructorPairedProperty$data</ID>
+    <ID>MaxLineLength:LocalPropertyInformation.kt$LocalPropertyInformation.ReadOnlyProperty$data</ID>
+    <ID>MaxLineLength:LocalSerializerFactory.kt$DefaultLocalSerializerFactory : LocalSerializerFactory</ID>
+    <ID>MaxLineLength:LocalSerializerFactory.kt$DefaultLocalSerializerFactory$clazz.isSynthetic</ID>
+    <ID>MaxLineLength:LocalSerializerFactory.kt$DefaultLocalSerializerFactory$is LocalTypeInformation.ACollection</ID>
+    <ID>MaxLineLength:LocalSerializerFactory.kt$DefaultLocalSerializerFactory$is LocalTypeInformation.AMap</ID>
+    <ID>MaxLineLength:LocalSerializerFactory.kt$DefaultLocalSerializerFactory$private</ID>
+    <ID>MaxLineLength:LocalSerializerFactory.kt$DefaultLocalSerializerFactory$private val serializersByActualAndDeclaredType: MutableMap&lt;ActualAndDeclaredType, AMQPSerializer&lt;Any&gt;&gt; = DefaultCacheProvider.createCache()</ID>
+    <ID>MaxLineLength:LocalSerializerFactory.kt$DefaultLocalSerializerFactory$private val serializersByTypeId: MutableMap&lt;TypeIdentifier, AMQPSerializer&lt;Any&gt;&gt; = DefaultCacheProvider.createCache()</ID>
+    <ID>MaxLineLength:LocalSerializerFactory.kt$DefaultLocalSerializerFactory$val declaredGenericType = if (declaredType !is ParameterizedType &amp;&amp; localTypeInformation.typeIdentifier is Parameterised) { localTypeInformation.typeIdentifier.getLocalType(classLoaderFor(declaredClass)) } else { declaredType }</ID>
+    <ID>MaxLineLength:LocalSerializerFactory.kt$LocalSerializerFactory</ID>
+    <ID>MaxLineLength:LocalSerializerFactory.kt$LocalSerializerFactory$ fun getTypeInformation(typeName: String): LocalTypeInformation?</ID>
+    <ID>MaxLineLength:LocalSerializerFactory.kt$LocalSerializerFactory$/** * The [ClassWhitelist] used by this factory. Classes must be whitelisted for serialization, because they are expected * to be written in a secure manner. */ val whitelist: ClassWhitelist</ID>
+    <ID>MaxLineLength:LocalTimeSerializer.kt$LocalTimeSerializer : Proxy</ID>
+    <ID>MaxLineLength:LocalTimeSerializer.kt$LocalTimeSerializer$override fun fromProxy(proxy: LocalTimeProxy): LocalTime</ID>
+    <ID>MaxLineLength:LocalTimeSerializer.kt$LocalTimeSerializer$override fun toProxy(obj: LocalTime): LocalTimeProxy</ID>
+    <ID>MaxLineLength:LocalTypeInformation.kt$LocalTypeInformation$ fun prettyPrint(simplifyClassNames: Boolean = true): String</ID>
+    <ID>MaxLineLength:LocalTypeInformation.kt$LocalTypeInformation$Abstract : LocalTypeInformation</ID>
+    <ID>MaxLineLength:LocalTypeInformation.kt$LocalTypeInformation$AnArray : LocalTypeInformation</ID>
+    <ID>MaxLineLength:LocalTypeInformation.kt$LocalTypeInformation$AnInterface : LocalTypeInformation</ID>
+    <ID>MaxLineLength:LocalTypeInformation.kt$LocalTypeInformation.ACollection$data</ID>
+    <ID>MaxLineLength:LocalTypeInformation.kt$LocalTypeInformation.AMap$fun withParameters(keyType: LocalTypeInformation, valueType: LocalTypeInformation): AMap</ID>
+    <ID>MaxLineLength:LocalTypeInformation.kt$LocalTypeInformation.AMap$val reparameterizedType = typeIdentifier.copy(parameters = listOf(keyType.typeIdentifier, valueType.typeIdentifier))</ID>
+    <ID>MaxLineLength:LocalTypeInformation.kt$LocalTypeInformation.AMap$val unerasedType = typeIdentifier.toParameterized(listOf(keyType.typeIdentifier, valueType.typeIdentifier))</ID>
+    <ID>MaxLineLength:LocalTypeInformation.kt$LocalTypeInformation.AnArray$data</ID>
+    <ID>MaxLineLength:LocalTypeInformation.kt$LocalTypeInformation.Atomic$data</ID>
+    <ID>MaxLineLength:LocalTypeInformation.kt$LocalTypeInformation.Companion$ fun forType(type: Type, typeIdentifier: TypeIdentifier, lookup: LocalTypeLookup): LocalTypeInformation</ID>
+    <ID>MaxLineLength:LocalTypeInformation.kt$LocalTypeInformation.Companion$throw IllegalStateException("Should not be attempting to build new type information when populating a cycle")</ID>
+    <ID>MaxLineLength:LocalTypeInformation.kt$LocalTypeInformation.Singleton$data</ID>
+    <ID>MaxLineLength:LocalTypeInformation.kt$LocalTypeInformationPrettyPrinter$private</ID>
+    <ID>MaxLineLength:LocalTypeInformation.kt$LocalTypeInformationPrettyPrinter$private data</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$ private fun buildNonAtomic(rawType: Class&lt;*&gt;, type: Type, typeIdentifier: TypeIdentifier, typeParameterInformation: List&lt;LocalTypeInformation&gt;): LocalTypeInformation</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$ private inline fun &lt;T&gt; suppressValidation(block: LocalTypeInformationBuilder.() -&gt; T): T</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$!EnumSet::class.java.isAssignableFrom(type)</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$Map::class.java.isAssignableFrom(type) -&gt; LocalTypeInformation.AMap(type, typeIdentifier, LocalTypeInformation.Unknown, LocalTypeInformation.Unknown)</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$constructorInformation.parameters[index].isMandatory &amp;&amp; index !in indicesAddressedByProperties -&gt; parameter</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$constructorInformation: LocalConstructorInformation</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$is TypeIdentifier.Parameterised -&gt; buildForParameterised(rawType, type as ParameterizedType, typeIdentifier, isOpaque)</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$it.name ?: throw IllegalStateException("Unnamed parameter in constructor $observedConstructor")</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$name to LocalPropertyInformation.ReadOnlyProperty(descriptor.getter, paramTypeInformation, isMandatory)</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$private</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$reason = "Mandatory constructor parameters $missingParameters are missing from the readable properties ${properties.keys}"</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$remedy = "Either annotate a constructor for this type with @ConstructorForDeserialization, or provide a custom serializer for it"</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$remedy = "Either ensure that the properties ${nonComposableProperties.keys} are serializable, or provide a custom serializer for this type"</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$remedy = "Either provide getters or readable fields for $missingParameters, or provide a custom serializer for this type"</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$return LocalTypeInformation.Composable(type, typeIdentifier, constructorInformation, evolutionConstructors, properties, superclassInformation, interfaceInformation, typeParameterInformation)</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$suppressValidation { buildNonAtomic(rawType, type, typeIdentifier, buildTypeParameterInformation(type)) }</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$throw NotSerializableException("Type '${type.typeName} has synthetic fields and is likely a nested inner class.")</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$val constants = type.enumConstants.asSequence().mapIndexed { index, constant -&gt; constant.toString() to index }.toMap()</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$val constructorParameterIndices = constructorInformation.parameters.asSequence().mapIndexed { index, parameter -&gt; parameter.name to index }.toMap()</ID>
+    <ID>MaxLineLength:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$val missingParameters = missingMandatoryConstructorProperties(constructorInformation, properties).map { it.name }</ID>
+    <ID>MaxLineLength:LocalTypeModel.kt$ConfigurableLocalTypeModel : LocalTypeModel</ID>
+    <ID>MaxLineLength:LocalTypeModel.kt$ConfigurableLocalTypeModel.BuilderLookup$override</ID>
+    <ID>MaxLineLength:LocalTypeModel.kt$LocalTypeLookup</ID>
+    <ID>MaxLineLength:LocalTypeModel.kt$LocalTypeLookup$ fun findOrBuild(type: Type, typeIdentifier: TypeIdentifier, builder: (Boolean) -&gt; LocalTypeInformation): LocalTypeInformation</ID>
+    <ID>MaxLineLength:LocalTypeModel.kt$LocalTypeModel$ fun inspect(type: Type): LocalTypeInformation</ID>
+    <ID>MaxLineLength:MapSerializer.kt$MapSerializer : AMQPSerializer</ID>
+    <ID>MaxLineLength:MapSerializer.kt$MapSerializer$private val typeNotation: TypeNotation = RestrictedType(AMQPTypeIdentifiers.nameForType(declaredType), null, emptyList(), "map", Descriptor(typeDescriptor), emptyList())</ID>
+    <ID>MaxLineLength:MapSerializer.kt$MapSerializer.Companion$fun resolveActual(actualClass: Class&lt;*&gt;, declaredTypeInformation: LocalTypeInformation.AMap): LocalTypeInformation.AMap</ID>
+    <ID>MaxLineLength:MapSerializer.kt$MapSerializer.Companion$private</ID>
+    <ID>MaxLineLength:ObjectBuilder.kt$ConstructorCaller$"Constructor for ${javaConstructor.declaringClass} (isAccessible=${javaConstructor.isAccessible}) "</ID>
+    <ID>MaxLineLength:ObjectBuilder.kt$EvolutionObjectBuilder.Companion$ fun makeProvider(typeIdentifier: TypeIdentifier, constructor: LocalConstructorInformation, localProperties: Map&lt;String, LocalPropertyInformation&gt;, remoteTypeInformation: RemoteTypeInformation.Composable, mustPreserveData: Boolean): () -&gt; ObjectBuilder</ID>
+    <ID>MaxLineLength:ObjectBuilder.kt$ObjectBuilder.Companion$ConstructorBasedObjectBuilder(ConstructorCaller(constructor.observedMethod), constructorIndices.values.toIntArray())</ID>
+    <ID>MaxLineLength:ObjectBuilder.kt$ObjectBuilder.Companion$is LocalPropertyInformation.PrivateConstructorPairedProperty -&gt; property.constructorSlot.parameterIndex</ID>
+    <ID>MaxLineLength:ObjectBuilder.kt$ObjectBuilder.Companion$private</ID>
+    <ID>MaxLineLength:ObjectBuilder.kt$ObjectBuilderProvider : </ID>
+    <ID>MaxLineLength:ObjectSerializer.kt$AbstractObjectSerializer$override</ID>
+    <ID>MaxLineLength:ObjectSerializer.kt$ComposableObjectReader$"${propertySerializers.size} properties in described type ${typeIdentifier.prettyPrint(false)}"</ID>
+    <ID>MaxLineLength:ObjectSerializer.kt$ComposableObjectReader$fun readObject(obj: Any, schemas: SerializationSchemas, input: DeserializationInput, context: SerializationContext): Any</ID>
+    <ID>MaxLineLength:ObjectSerializer.kt$ComposableObjectSerializer$override</ID>
+    <ID>MaxLineLength:ObjectSerializer.kt$ComposableObjectWriter$fun writeObject(obj: Any, data: Data, type: Type, output: SerializationOutput, context: SerializationContext, debugIndent: Int)</ID>
+    <ID>MaxLineLength:ObjectSerializer.kt$EvolutionObjectSerializer$override</ID>
+    <ID>MaxLineLength:ObjectSerializer.kt$EvolutionObjectSerializer.Companion$ComposableTypePropertySerializer.makeForEvolution(name, isCalculated, property.type.typeIdentifier, type)</ID>
+    <ID>MaxLineLength:ObjectSerializer.kt$EvolutionObjectSerializer.Companion$val type = localProperty?.type?.observedType ?: property.type.typeIdentifier.getLocalType(classLoader)</ID>
+    <ID>MaxLineLength:ObjectSerializer.kt$ObjectSerializer.Companion$serializers.isNotEmpty() -&gt; "Registered custom serializers:\n ${serializers.joinToString("\n ")}"</ID>
+    <ID>MaxLineLength:ObjectSerializer.kt$ObjectSerializer.Companion$val writer = ComposableObjectWriter(typeNotation, typeInformation.interfacesOrEmptyList, propertySerializers)</ID>
+    <ID>MaxLineLength:OffsetDateTimeSerializer.kt$OffsetDateTimeSerializer : Proxy</ID>
+    <ID>MaxLineLength:OffsetDateTimeSerializer.kt$OffsetDateTimeSerializer$override fun toProxy(obj: OffsetDateTime): OffsetDateTimeProxy</ID>
+    <ID>MaxLineLength:OffsetDateTimeSerializer.kt$OffsetDateTimeSerializer$override val additionalSerializers: Iterable&lt;CustomSerializer&lt;out Any&gt;&gt; = listOf(LocalDateTimeSerializer(factory), ZoneIdSerializer(factory))</ID>
+    <ID>MaxLineLength:OffsetTimeSerializer.kt$OffsetTimeSerializer : Proxy</ID>
+    <ID>MaxLineLength:OffsetTimeSerializer.kt$OffsetTimeSerializer$override val additionalSerializers: Iterable&lt;CustomSerializer&lt;out Any&gt;&gt; = listOf(LocalTimeSerializer(factory), ZoneIdSerializer(factory))</ID>
+    <ID>MaxLineLength:OpaqueBytesSubSequenceSerializer.kt$OpaqueBytesSubSequenceSerializer$CustomSerializer.Proxy&lt;OpaqueBytesSubSequence, OpaqueBytes&gt;(OpaqueBytesSubSequence::class.java, OpaqueBytes::class.java, factory)</ID>
+    <ID>MaxLineLength:OpaqueBytesSubSequenceSerializer.kt$OpaqueBytesSubSequenceSerializer$override fun fromProxy(proxy: OpaqueBytes): OpaqueBytesSubSequence</ID>
+    <ID>MaxLineLength:OptionalSerializer.kt$OptionalSerializer : Proxy</ID>
+    <ID>MaxLineLength:PeriodSerializer.kt$PeriodSerializer : Proxy</ID>
+    <ID>MaxLineLength:PrivateKeySerializer.kt$PrivateKeySerializer$override val schemaForDocumentation = Schema(listOf(RestrictedType(type.toString(), "", listOf(type.toString()), AMQPTypeIdentifiers.primitiveTypeName(ByteArray::class.java), descriptor, emptyList())))</ID>
+    <ID>MaxLineLength:PropertyDescriptor.kt$// Construct a map of PropertyDescriptors by name, by merging the raw field map with the map of classified property methods private fun Map&lt;String, Map&lt;MethodClassifier, Method&gt;&gt;.toClassProperties(fieldMap: Map&lt;String, Field&gt;): Map&lt;String, PropertyDescriptor&gt;</ID>
+    <ID>MaxLineLength:PropertyDescriptor.kt$// Merge the given method into a map of methods by method classifier, picking the least generic method for each classifier. private fun EnumMap&lt;MethodClassifier, Method&gt;.merge(classifier: MethodClassifier, method: Method): EnumMap&lt;MethodClassifier, Method&gt;</ID>
+    <ID>MaxLineLength:PropertyDescriptor.kt$?:</ID>
+    <ID>MaxLineLength:PropertyDescriptor.kt$private</ID>
+    <ID>MaxLineLength:PublicKeySerializer.kt$PublicKeySerializer$override val schemaForDocumentation = Schema(listOf(RestrictedType(type.toString(), "", listOf(type.toString()), AMQPTypeIdentifiers.primitiveTypeName(ByteArray::class.java), descriptor, emptyList())))</ID>
+    <ID>MaxLineLength:PublicKeySerializer.kt$PublicKeySerializer${ // TODO: Instead of encoding to the default X509 format, we could have a custom per key type (space-efficient) serialiser. output.writeObject(obj.encoded, data, clazz, context) }</ID>
+    <ID>MaxLineLength:RemoteSerializerFactory.kt$DefaultRemoteSerializerFactory : RemoteSerializerFactory</ID>
+    <ID>MaxLineLength:RemoteSerializerFactory.kt$DefaultRemoteSerializerFactory$RemoteAndLocalTypeInformation(remoteInformation, localInformationByIdentifier[remoteInformation.typeIdentifier]!!)</ID>
+    <ID>MaxLineLength:RemoteSerializerFactory.kt$DefaultRemoteSerializerFactory$logger.trace("get Serializer descriptor=$typeDescriptor") // Interpret all of the types in the schema into RemoteTypeInformation, and reflect that into LocalTypeInformation. val remoteTypeInformationMap = remoteTypeModel.interpret(schema) val reflected = reflect(remoteTypeInformationMap, context) // Get, and record in the registry, serializers for all of the types contained in the schema. // This will save us having to re-interpret the entire schema on re-entry when deserialising individual property values. val serializers = reflected.mapValues { (descriptor, remoteLocalPair) -&gt; descriptorBasedSerializerRegistry.getOrBuild(descriptor) { getUncached(remoteLocalPair.remoteTypeInformation, remoteLocalPair.localTypeInformation) } } // Return the specific serializer the caller asked for. serializers[typeDescriptor] ?: throw NotSerializableException( "Could not find type matching descriptor $typeDescriptor.")</ID>
+    <ID>MaxLineLength:RemoteSerializerFactory.kt$DefaultRemoteSerializerFactory$when { // If descriptors match, we can return the local serializer straight away. localDescriptor == remoteDescriptor -&gt; localSerializer // Can we deserialise without evolution, e.g. going from List&lt;Foo&gt; to List&lt;*&gt;? remoteTypeInformation.isDeserialisableWithoutEvolutionTo(localTypeInformation) -&gt; localSerializer // Are the remote/local types evolvable? If so, ask the evolution serializer factory for a serializer, returning // the local serializer if it returns null (i.e. no evolution required). remoteTypeInformation.isEvolvableTo(localTypeInformation) -&gt; evolutionSerializerFactory.getEvolutionSerializer(remoteTypeInformation, localTypeInformation) ?: localSerializer // Descriptors don't match, and something is probably broken, but we let the framework do what it can with the local // serialiser (BlobInspectorTest uniquely breaks if we throw an exception here, and passes if we just warn and continue). else -&gt; { logger.warn(""" Mismatch between type descriptors, but remote type is not evolvable to local type. Remote type (descriptor: $remoteDescriptor) ${remoteTypeInformation.prettyPrint(false)} Local type (descriptor $localDescriptor): ${localTypeInformation.prettyPrint(false)} """) localSerializer } }</ID>
+    <ID>MaxLineLength:RemoteSerializerFactory.kt$RemoteSerializerFactory$ @Throws(NotSerializableException::class, ClassNotFoundException::class) fun get(typeDescriptor: TypeDescriptor, schema: SerializationSchemas, context: SerializationContext): AMQPSerializer&lt;Any&gt;</ID>
+    <ID>MaxLineLength:RemoteTypeCarpenter.kt$SchemaBuildingRemoteTypeCarpenter$if (typeInformation.typeIdentifier !is TypeIdentifier.Parameterised) typeInformation.carpentComposable()</ID>
+    <ID>MaxLineLength:RemoteTypeInformation.kt$RemoteTypeInformation</ID>
+    <ID>MaxLineLength:RemoteTypeInformation.kt$RemoteTypeInformation$ fun prettyPrint(simplifyClassNames: Boolean = true): String</ID>
+    <ID>MaxLineLength:RemoteTypeInformation.kt$RemoteTypeInformation.AnArray$data</ID>
+    <ID>MaxLineLength:RemoteTypeInformation.kt$RemoteTypeInformation.AnInterface$data</ID>
+    <ID>MaxLineLength:RemoteTypeInformation.kt$RemoteTypeInformation.Parameterised$data</ID>
+    <ID>MaxLineLength:RemoteTypeInformation.kt$RemoteTypeInformation.Unparameterised$data</ID>
+    <ID>MaxLineLength:RemoteTypeInformation.kt$RemoteTypeInformationPrettyPrinter$private data</ID>
+    <ID>MaxLineLength:Schema.kt$ClassSchema$superclass: Schema? = null</ID>
+    <ID>MaxLineLength:Schema.kt$CompositeType.Companion$return CompositeType(list[0] as String, list[1] as? String, uncheckedCast(list[2]), list[3] as Descriptor, uncheckedCast(list[4]))</ID>
+    <ID>MaxLineLength:Schema.kt$CompositeType.Companion$return newInstance(listOf(list[0], list[1], list[2], Descriptor.get(list[3]!!), (list[4] as List&lt;*&gt;).map { Field.get(it!!) }))</ID>
+    <ID>MaxLineLength:Schema.kt$Field.Companion$return Field(list[0] as String, list[1] as String, uncheckedCast(list[2]), list[3] as? String, list[4] as? String, list[5] as Boolean, list[6] as Boolean)</ID>
+    <ID>MaxLineLength:Schema.kt$RestrictedType.Companion$return RestrictedType(list[0] as String, list[1] as? String, uncheckedCast(list[2]), list[3] as String, list[4] as Descriptor, uncheckedCast(list[5]))</ID>
+    <ID>MaxLineLength:Schema.kt$RestrictedType.Companion$return newInstance(listOf(list[0], list[1], list[2], list[3], Descriptor.get(list[4]!!), (list[5] as List&lt;*&gt;).map { Choice.get(it!!) }))</ID>
+    <ID>MaxLineLength:Schema.kt$fun typeDescriptorFor(typeId: TypeIdentifier): Symbol</ID>
+    <ID>MaxLineLength:Schema.kt$return if (obj == null || obj is DescribedType || obj is Binary || forGenericType(type).run { isPrimitive(this) || this == TopType }) { obj } else { /** * This must be a primitive [obj] that has a non-primitive [type]. * Rewrap it with the required descriptor for further deserialization. */ RedescribedType(typeDescriptorFor(type), obj) }</ID>
+    <ID>MaxLineLength:SerializationFormat.kt$FlushAverseOutputStream : OutputStream</ID>
+    <ID>MaxLineLength:SerializationFormat.kt$SectionId$DATA_AND_STOP</ID>
+    <ID>MaxLineLength:SerializationFormat.kt$SectionId$ENCODING</ID>
+    <ID>MaxLineLength:SerializationHelper.kt$CommonPropertyNames</ID>
+    <ID>MaxLineLength:SerializationOutput.kt$SerializationOutput$ @Throws(NotSerializableException::class) fun &lt;T : Any&gt; serialize(obj: T, context: SerializationContext): SerializedBytes&lt;T&gt;</ID>
+    <ID>MaxLineLength:SerializationOutput.kt$SerializationOutput$writeObject(obj, data, if (type == TypeIdentifier.UnknownType.getLocalType()) obj.javaClass else type, context, debugIndent)</ID>
+    <ID>MaxLineLength:SerializationOutput.kt$SerializationOutput${ serializer.writeObject(obj, data, type, this, context, debugIndent) // Important to do it after serialization such that dependent object will have preceding reference numbers // assigned to them first as they will be first read from the stream on receiving end. // Skip for primitive types as they are too small and overhead of referencing them will be much higher than their content if (suitableForObjectReference(obj.javaClass)) { objectHistory[obj] = objectHistory.size } }</ID>
+    <ID>MaxLineLength:SerializationScheme.kt$SerializationContextImpl$@KeepForDJVM data</ID>
+    <ID>MaxLineLength:SerializationScheme.kt$SerializationContextImpl$override</ID>
+    <ID>MaxLineLength:SerializationScheme.kt$SerializationContextImpl$override fun withEncodingWhitelist(encodingWhitelist: EncodingWhitelist)</ID>
+    <ID>MaxLineLength:SerializationScheme.kt$SerializationContextImpl$override fun withPreferredSerializationVersion(magic: SerializationMagic)</ID>
+    <ID>MaxLineLength:SerializationScheme.kt$SerializationContextImpl$override val customSerializers: Set&lt;SerializationCustomSerializer&lt;*, *&gt;&gt; = emptySet()</ID>
+    <ID>MaxLineLength:SerializationScheme.kt$SerializationContextImpl$override val encodingWhitelist: EncodingWhitelist = NullEncodingWhitelist</ID>
+    <ID>MaxLineLength:SerializationScheme.kt$SerializationFactoryImpl$@Throws(NotSerializableException::class) override</ID>
+    <ID>MaxLineLength:SerializationScheme.kt$SerializationFactoryImpl$private</ID>
+    <ID>MaxLineLength:SerializationScheme.kt$SerializationFactoryImpl$private val registeredSchemes: MutableCollection&lt;SerializationScheme&gt; = Collections.synchronizedCollection(mutableListOf())</ID>
+    <ID>MaxLineLength:SerializationScheme.kt$SerializationFactoryImpl$private val schemes: MutableMap&lt;Pair&lt;CordaSerializationMagic, SerializationContext.UseCase&gt;, SerializationScheme&gt;</ID>
+    <ID>MaxLineLength:SerializationScheme.kt$SerializationFactoryImpl$registeredSchemes.filter { it.canDeserializeVersion(magic, target) }.forEach { return@computeIfAbsent it }</ID>
+    <ID>MaxLineLength:SerializationScheme.kt$SerializationFactoryImpl$return asCurrent { withCurrentContext(context) { schemeFor(byteSequence, context.useCase).first.deserialize(byteSequence, clazz, context) } }</ID>
+    <ID>MaxLineLength:SerializationScheme.kt$SerializationFactoryImpl$return asCurrent { withCurrentContext(context) { schemeFor(context.preferredSerializationVersion, context.useCase).first.serialize(obj, context) } }</ID>
+    <ID>MaxLineLength:SerializeAsTokenContextImpl.kt$CheckpointSerializeAsTokenContextImpl : SerializeAsTokenContext</ID>
+    <ID>MaxLineLength:SerializeAsTokenContextImpl.kt$CheckpointSerializeAsTokenContextImpl$constructor(toBeTokenized: Any, serializer: CheckpointSerializer, context: CheckpointSerializationContext, serviceHub: ServiceHub) : this(serviceHub, { serializer.serialize(toBeTokenized, context.withTokenContext(this)) })</ID>
+    <ID>MaxLineLength:SerializeAsTokenContextImpl.kt$CheckpointSerializeAsTokenContextImpl$throw UnsupportedOperationException("Attempt to write token for lazy registered $className. All tokens should be registered during context construction.")</ID>
+    <ID>MaxLineLength:SerializeAsTokenContextImpl.kt$SerializeAsTokenContextImpl : SerializeAsTokenContext</ID>
+    <ID>MaxLineLength:SerializeAsTokenContextImpl.kt$SerializeAsTokenContextImpl$constructor(toBeTokenized: Any, serializationFactory: SerializationFactory, context: SerializationContext, serviceHub: ServiceHub) : this(serviceHub, { serializationFactory.serialize(toBeTokenized, context.withTokenContext(this)) })</ID>
+    <ID>MaxLineLength:SerializeAsTokenContextImpl.kt$SerializeAsTokenContextImpl$throw UnsupportedOperationException("Attempt to write token for lazy registered $className. All tokens should be registered during context construction.")</ID>
+    <ID>MaxLineLength:SerializeAsTokenContextImpl.kt$fun CheckpointSerializationContext.withTokenContext(serializationContext: SerializeAsTokenContext): CheckpointSerializationContext</ID>
+    <ID>MaxLineLength:SerializeAsTokenContextImpl.kt$fun SerializationContext.withTokenContext(serializationContext: SerializeAsTokenContext): SerializationContext</ID>
+    <ID>MaxLineLength:SerializerFactoryBuilder.kt$NoEvolutionSerializerFactory$override</ID>
+    <ID>MaxLineLength:SingletonSerializer.kt$SingletonSerializer : AMQPSerializer</ID>
+    <ID>MaxLineLength:SingletonSerializer.kt$SingletonSerializer$internal val typeNotation: TypeNotation = RestrictedType(type.typeName, "Singleton", generateProvides(), "boolean", Descriptor(typeDescriptor), emptyList())</ID>
+    <ID>MaxLineLength:SingletonSerializer.kt$SingletonSerializer$override</ID>
+    <ID>MaxLineLength:SupportedTransforms.kt$SupportedTransform</ID>
+    <ID>MaxLineLength:ThrowableSerializer.kt$StackTraceElementSerializer : Proxy</ID>
+    <ID>MaxLineLength:ThrowableSerializer.kt$StackTraceElementSerializer$override fun fromProxy(proxy: StackTraceElementProxy): StackTraceElement</ID>
+    <ID>MaxLineLength:ThrowableSerializer.kt$StackTraceElementSerializer$override fun toProxy(obj: StackTraceElement): StackTraceElementProxy</ID>
+    <ID>MaxLineLength:ThrowableSerializer.kt$StackTraceElementSerializer.StackTraceElementProxy$@KeepForDJVM data</ID>
+    <ID>MaxLineLength:ThrowableSerializer.kt$ThrowableSerializer : Proxy</ID>
+    <ID>MaxLineLength:ThrowableSerializer.kt$ThrowableSerializer$if (this.javaClass.name != proxy.exceptionClass) this.originalExceptionClassName = proxy.exceptionClass</ID>
+    <ID>MaxLineLength:ThrowableSerializer.kt$ThrowableSerializer$logger.warn("Unexpected exception de-serializing throwable: ${proxy.exceptionClass}. Converting to CordaRuntimeException.", e)</ID>
+    <ID>MaxLineLength:ThrowableSerializer.kt$ThrowableSerializer$override val additionalSerializers: Iterable&lt;CustomSerializer&lt;out Any&gt;&gt; = listOf(StackTraceElementSerializer(factory))</ID>
+    <ID>MaxLineLength:ThrowableSerializer.kt$ThrowableSerializer$return ThrowableProxy(obj.javaClass.name, message, stackTraceToInclude, obj.cause, obj.suppressed, extraProperties)</ID>
+    <ID>MaxLineLength:ThrowableSerializer.kt$ThrowableSerializer${ try { // TODO: This will need reworking when we have multiple class loaders val clazz = Class.forName(proxy.exceptionClass, false, factory.classloader) // If it is CordaException or CordaRuntimeException, we can seek any constructor and then set the properties // Otherwise we just make a CordaRuntimeException if (CordaThrowable::class.java.isAssignableFrom(clazz) &amp;&amp; Throwable::class.java.isAssignableFrom(clazz)) { val typeInformation = factory.getTypeInformation(clazz) val constructor = typeInformation.constructor val params = constructor.parameters.map { parameter -&gt; proxy.additionalProperties[parameter.name] ?: proxy.additionalProperties[parameter.name.capitalize()] } val throwable = constructor.observedMethod.newInstance(*params.toTypedArray()) (throwable as CordaThrowable).apply { if (this.javaClass.name != proxy.exceptionClass) this.originalExceptionClassName = proxy.exceptionClass this.setMessage(proxy.message) this.setCause(proxy.cause) this.addSuppressed(proxy.suppressed) } return (throwable as Throwable).apply { this.stackTrace = proxy.stackTrace } } } catch (e: Exception) { logger.warn("Unexpected exception de-serializing throwable: ${proxy.exceptionClass}. Converting to CordaRuntimeException.", e) } // If the criteria are not met or we experience an exception constructing the exception, we fall back to our own unchecked exception. return CordaRuntimeException(proxy.exceptionClass, null, null).apply { this.setMessage(proxy.message) this.setCause(proxy.cause) this.stackTrace = proxy.stackTrace this.addSuppressed(proxy.suppressed) } }</ID>
+    <ID>MaxLineLength:TransformsSchema.kt$TransformsAnnotationProcessor</ID>
+    <ID>MaxLineLength:TransformsSchema.kt$TransformsAnnotationProcessor$private</ID>
+    <ID>MaxLineLength:TypeIdentifier.kt$TypeIdentifier.Companion$ fun forGenericType(type: Type, resolutionContext: Type = type): TypeIdentifier</ID>
+    <ID>MaxLineLength:TypeIdentifier.kt$TypeIdentifier.Companion$is GenericArrayType -&gt; ArrayOf(forGenericType(type.genericComponentType.resolveAgainst(resolutionContext)))</ID>
+    <ID>MaxLineLength:TypeIdentifier.kt$TypeIdentifier.Parameterised$data</ID>
+    <ID>MaxLineLength:TypeLoader.kt$ClassCarpentingTypeLoader : TypeLoader</ID>
+    <ID>MaxLineLength:TypeLoader.kt$TypeLoader$ fun load(remoteTypeInformation: Collection&lt;RemoteTypeInformation&gt;, context: SerializationContext): Map&lt;TypeIdentifier, Type&gt;</ID>
+    <ID>MaxLineLength:TypeModellingFingerPrinter.kt$FingerPrintingState$writer.writeAlreadySeen()</ID>
+    <ID>MaxLineLength:TypeParameterUtils.kt$private</ID>
+    <ID>MaxLineLength:TypeParameterUtils.kt${ if (declaredClass == actualClass) { return null } if (actualClass.typeParameters.isEmpty()) { return actualClass } // The actual class can never have type variables resolved, due to the JVM's use of type erasure, so let's try and resolve them // Search for declared type in the inheritance hierarchy and then see if that fills in all the variables val implementationChain: List&lt;Type&gt; = findPathToDeclared(actualClass, declaredType)?.toList() ?: throw AMQPNotSerializableException( declaredType, "No inheritance path between actual $actualClass and declared $declaredType.") val start = implementationChain.last() val rest = implementationChain.dropLast(1).drop(1) val resolver = rest.reversed().fold(TypeResolver().where(start, declaredType)) { resolved, chainEntry -&gt; val newResolved = resolved.resolveType(chainEntry) TypeResolver().where(chainEntry, newResolved) } // The end type is a special case as it is a Class, so we need to fake up a ParameterizedType for it to get the TypeResolver to do anything. val endType = actualClass.asParameterizedType() return resolver.resolveType(endType) }</ID>
+    <ID>MaxLineLength:YearMonthSerializer.kt$YearMonthSerializer : Proxy</ID>
+    <ID>MaxLineLength:YearSerializer.kt$YearSerializer : Proxy</ID>
+    <ID>MaxLineLength:ZoneIdSerializer.kt$ZoneIdSerializer : Proxy</ID>
+    <ID>MaxLineLength:ZonedDateTimeSerializer.kt$ZonedDateTimeSerializer : Proxy</ID>
+    <ID>MaxLineLength:ZonedDateTimeSerializer.kt$ZonedDateTimeSerializer$override fun fromProxy(proxy: ZonedDateTimeProxy): ZonedDateTime</ID>
+    <ID>MaxLineLength:ZonedDateTimeSerializer.kt$ZonedDateTimeSerializer$override fun toProxy(obj: ZonedDateTime): ZonedDateTimeProxy</ID>
+    <ID>MaxLineLength:ZonedDateTimeSerializer.kt$ZonedDateTimeSerializer$override val additionalSerializers: Iterable&lt;CustomSerializer&lt;out Any&gt;&gt; = listOf(LocalDateTimeSerializer(factory), ZoneIdSerializer(factory))</ID>
+    <ID>MaxLineLength:ZonedDateTimeSerializer.kt$ZonedDateTimeSerializer.Companion$val ofLenient: Method = ZonedDateTime::class.java.getDeclaredMethod("ofLenient", LocalDateTime::class.java, ZoneOffset::class.java, ZoneId::class.java)</ID>
+    <ID>NestedBlockDepth:AllButBlacklisted.kt$AllButBlacklisted$ override fun hasListed(type: Class&lt;*&gt;): Boolean</ID>
+    <ID>NestedBlockDepth:ClassCarpenter.kt$ClassCarpenterImpl$ private fun validateSchema(schema: Schema)</ID>
+    <ID>NestedBlockDepth:DeserializationInput.kt$DeserializationInput$fun readObject(obj: Any, schemas: SerializationSchemas, type: Type, context: SerializationContext): Any</ID>
+    <ID>NestedBlockDepth:ThrowableSerializer.kt$ThrowableSerializer$override fun fromProxy(proxy: ThrowableProxy): Throwable</ID>
+    <ID>NewLineAtEndOfFile:AMQPExceptions.kt$net.corda.serialization.internal.amqp.AMQPExceptions.kt</ID>
+    <ID>NewLineAtEndOfFile:AMQPPrimitiveSerializer.kt$net.corda.serialization.internal.amqp.AMQPPrimitiveSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:AMQPRemoteTypeModel.kt$net.corda.serialization.internal.amqp.AMQPRemoteTypeModel.kt</ID>
+    <ID>NewLineAtEndOfFile:AMQPTypeIdentifierParser.kt$net.corda.serialization.internal.amqp.AMQPTypeIdentifierParser.kt</ID>
+    <ID>NewLineAtEndOfFile:BigDecimalSerializer.kt$net.corda.serialization.internal.amqp.custom.BigDecimalSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:BigIntegerSerializer.kt$net.corda.serialization.internal.amqp.custom.BigIntegerSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:BitSetSerializer.kt$net.corda.serialization.internal.amqp.custom.BitSetSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:CarpentryDependencyGraph.kt$net.corda.serialization.internal.model.CarpentryDependencyGraph.kt</ID>
+    <ID>NewLineAtEndOfFile:CertPathSerializer.kt$net.corda.serialization.internal.amqp.custom.CertPathSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:CheckpointSerializationScheme.kt$net.corda.serialization.internal.CheckpointSerializationScheme.kt</ID>
+    <ID>NewLineAtEndOfFile:ClassSerializer.kt$net.corda.serialization.internal.amqp.custom.ClassSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:CollectionSerializer.kt$net.corda.serialization.internal.amqp.CollectionSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:ComposableTypePropertySerializer.kt$net.corda.serialization.internal.amqp.ComposableTypePropertySerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:ContractAttachmentSerializer.kt$net.corda.serialization.internal.amqp.custom.ContractAttachmentSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:DefaultCacheProvider.kt$net.corda.serialization.internal.model.DefaultCacheProvider.kt</ID>
+    <ID>NewLineAtEndOfFile:DescriptorBasedSerializerRegistry.kt$net.corda.serialization.internal.amqp.DescriptorBasedSerializerRegistry.kt</ID>
+    <ID>NewLineAtEndOfFile:DurationSerializer.kt$net.corda.serialization.internal.amqp.custom.DurationSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:EnumSerializer.kt$net.corda.serialization.internal.amqp.EnumSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:EnumSetSerializer.kt$net.corda.serialization.internal.amqp.custom.EnumSetSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:EnumTransforms.kt$net.corda.serialization.internal.model.EnumTransforms.kt</ID>
+    <ID>NewLineAtEndOfFile:EvolutionSerializerFactory.kt$net.corda.serialization.internal.amqp.EvolutionSerializerFactory.kt</ID>
+    <ID>NewLineAtEndOfFile:InputStreamSerializer.kt$net.corda.serialization.internal.amqp.custom.InputStreamSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:InstantSerializer.kt$net.corda.serialization.internal.amqp.custom.InstantSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:LocalDateSerializer.kt$net.corda.serialization.internal.amqp.custom.LocalDateSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:LocalDateTimeSerializer.kt$net.corda.serialization.internal.amqp.custom.LocalDateTimeSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:LocalPropertyInformation.kt$net.corda.serialization.internal.model.LocalPropertyInformation.kt</ID>
+    <ID>NewLineAtEndOfFile:LocalTimeSerializer.kt$net.corda.serialization.internal.amqp.custom.LocalTimeSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:LocalTypeInformationBuilder.kt$net.corda.serialization.internal.model.LocalTypeInformationBuilder.kt</ID>
+    <ID>NewLineAtEndOfFile:MonthDaySerializer.kt$net.corda.serialization.internal.amqp.custom.MonthDaySerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:NotSerializableExceptions.kt$net.corda.serialization.internal.NotSerializableExceptions.kt</ID>
+    <ID>NewLineAtEndOfFile:ObjectBuilder.kt$net.corda.serialization.internal.amqp.ObjectBuilder.kt</ID>
+    <ID>NewLineAtEndOfFile:ObjectSerializer.kt$net.corda.serialization.internal.amqp.ObjectSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:OffsetDateTimeSerializer.kt$net.corda.serialization.internal.amqp.custom.OffsetDateTimeSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:OffsetTimeSerializer.kt$net.corda.serialization.internal.amqp.custom.OffsetTimeSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:OpaqueBytesSubSequenceSerializer.kt$net.corda.serialization.internal.amqp.custom.OpaqueBytesSubSequenceSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:OptionalSerializer.kt$net.corda.serialization.internal.amqp.custom.OptionalSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:PeriodSerializer.kt$net.corda.serialization.internal.amqp.custom.PeriodSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:PrivateKeySerializer.kt$net.corda.serialization.internal.amqp.custom.PrivateKeySerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:PublicKeySerializer.kt$net.corda.serialization.internal.amqp.custom.PublicKeySerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:RemoteSerializerFactory.kt$net.corda.serialization.internal.amqp.RemoteSerializerFactory.kt</ID>
+    <ID>NewLineAtEndOfFile:RemoteTypeCarpenter.kt$net.corda.serialization.internal.model.RemoteTypeCarpenter.kt</ID>
+    <ID>NewLineAtEndOfFile:RxNotificationSerializer.kt$net.corda.serialization.internal.amqp.custom.RxNotificationSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:SerializationHelper.kt$net.corda.serialization.internal.amqp.SerializationHelper.kt</ID>
+    <ID>NewLineAtEndOfFile:SerializeAsTokenContextImpl.kt$net.corda.serialization.internal.SerializeAsTokenContextImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:SerializerFactory.kt$net.corda.serialization.internal.amqp.SerializerFactory.kt</ID>
+    <ID>NewLineAtEndOfFile:SerializerFactoryBuilder.kt$net.corda.serialization.internal.amqp.SerializerFactoryBuilder.kt</ID>
+    <ID>NewLineAtEndOfFile:SimpleStringSerializer.kt$net.corda.serialization.internal.amqp.custom.SimpleStringSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:SingletonSerializer.kt$net.corda.serialization.internal.amqp.SingletonSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:StringBufferSerializer.kt$net.corda.serialization.internal.amqp.custom.StringBufferSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:TypeIdentifier.kt$net.corda.serialization.internal.model.TypeIdentifier.kt</ID>
+    <ID>NewLineAtEndOfFile:TypeNotationGenerator.kt$net.corda.serialization.internal.amqp.TypeNotationGenerator.kt</ID>
+    <ID>NewLineAtEndOfFile:WhitelistBasedTypeModelConfiguration.kt$net.corda.serialization.internal.amqp.WhitelistBasedTypeModelConfiguration.kt</ID>
+    <ID>NewLineAtEndOfFile:YearMonthSerializer.kt$net.corda.serialization.internal.amqp.custom.YearMonthSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:YearSerializer.kt$net.corda.serialization.internal.amqp.custom.YearSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:ZoneIdSerializer.kt$net.corda.serialization.internal.amqp.custom.ZoneIdSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:ZonedDateTimeSerializer.kt$net.corda.serialization.internal.amqp.custom.ZonedDateTimeSerializer.kt</ID>
+    <ID>ReturnCount:ByteBufferStreams.kt$ByteBufferInputStream$@Throws(IOException::class) override fun read(b: ByteArray, offset: Int, length: Int): Int</ID>
+    <ID>ReturnCount:LocalSerializerFactory.kt$DefaultLocalSerializerFactory$override fun get(actualClass: Class&lt;*&gt;, declaredType: Type): AMQPSerializer&lt;Any&gt;</ID>
+    <ID>ReturnCount:LocalTypeInformationBuilder.kt$ private fun constructorForDeserialization(type: Type): KFunction&lt;Any&gt;?</ID>
+    <ID>ReturnCount:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$ private fun buildNonAtomic(rawType: Class&lt;*&gt;, type: Type, typeIdentifier: TypeIdentifier, typeParameterInformation: List&lt;LocalTypeInformation&gt;): LocalTypeInformation</ID>
+    <ID>ReturnCount:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder$private fun makeConstructorPairedProperty(constructorIndex: Int, descriptor: PropertyDescriptor, constructorInformation: LocalConstructorInformation): LocalPropertyInformation?</ID>
+    <ID>ReturnCount:TypeParameterUtils.kt$ private fun inferTypeVariables(actualClass: Class&lt;*&gt;, declaredClass: Class&lt;*&gt;, declaredType: ParameterizedType): Type?</ID>
+    <ID>SpreadOperator:AMQPSerializationScheme.kt$AbstractAMQPSerializationScheme$(*it.whitelist.toTypedArray())</ID>
+    <ID>SpreadOperator:ObjectBuilder.kt$ConstructorCaller$(*parameters)</ID>
+    <ID>SpreadOperator:ThrowableSerializer.kt$ThrowableSerializer$(*params.toTypedArray())</ID>
+    <ID>ThrowsCount:AMQPTypeIdentifierParser.kt$AMQPTypeIdentifierParser$// Make sure our inputs aren't designed to blow things up. private fun validate(typeString: String)</ID>
+    <ID>ThrowsCount:ClassCarpenter.kt$ClassCarpenterImpl$ private fun validateSchema(schema: Schema)</ID>
+    <ID>ThrowsCount:DeserializationInput.kt$DeserializationInput$@Throws( AMQPNotSerializableException::class, AMQPNoTypeNotSerializableException::class) private fun &lt;R&gt; des(generator: () -&gt; R): R</ID>
+    <ID>ThrowsCount:DeserializationInput.kt$DeserializationInput$fun readObject(obj: Any, schemas: SerializationSchemas, type: Type, context: SerializationContext): Any</ID>
+    <ID>ThrowsCount:EnumTransforms.kt$EnumTransforms$ private fun validateNoCycles(constants: Map&lt;String, Int&gt;)</ID>
+    <ID>ThrowsCount:PropertyDescriptor.kt$PropertyDescriptor$ fun validate()</ID>
+    <ID>TooGenericExceptionCaught:AMQPExceptions.kt$th: Throwable</ID>
+    <ID>TooGenericExceptionCaught:ContractAttachmentSerializer.kt$ContractAttachmentSerializer$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:DeserializationInput.kt$DeserializationInput$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ThrowableSerializer.kt$ThrowableSerializer$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:TransformTypes.kt$TransformTypes.Companion$e: IndexOutOfBoundsException</ID>
+    <ID>TooManyFunctions:ClassCarpenter.kt$ClassCarpenterImpl : ClassCarpenter</ID>
+    <ID>TooManyFunctions:LocalSerializerFactory.kt$DefaultLocalSerializerFactory : LocalSerializerFactory</ID>
+    <ID>TooManyFunctions:LocalTypeInformationBuilder.kt$LocalTypeInformationBuilder</ID>
+    <ID>TooManyFunctions:PropertyDescriptor.kt$net.corda.serialization.internal.amqp.PropertyDescriptor.kt</ID>
+    <ID>TooManyFunctions:SerializationHelper.kt$net.corda.serialization.internal.amqp.SerializationHelper.kt</ID>
+    <ID>TooManyFunctions:SerializationOutput.kt$SerializationOutput</ID>
+    <ID>TooManyFunctions:SerializationScheme.kt$SerializationContextImpl : SerializationContext</ID>
+    <ID>TooManyFunctions:TypeModellingFingerPrinter.kt$FingerPrintingState</ID>
+    <ID>TopLevelPropertyNaming:SerializationFormat.kt$const val encodingNotPermittedFormat = "Encoding not permitted: %s"</ID>
+    <ID>WildcardImport:AMQPRemoteTypeModel.kt$import net.corda.serialization.internal.model.*</ID>
+    <ID>WildcardImport:AMQPSerializationScheme.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:AMQPSerializationScheme.kt$import net.corda.core.serialization.*</ID>
+    <ID>WildcardImport:AMQPTypeIdentifierParser.kt$import org.apache.qpid.proton.amqp.*</ID>
+    <ID>WildcardImport:AMQPTypeIdentifiers.kt$import org.apache.qpid.proton.amqp.*</ID>
+    <ID>WildcardImport:AllButBlacklisted.kt$import java.io.*</ID>
+    <ID>WildcardImport:AllButBlacklisted.kt$import java.lang.invoke.*</ID>
+    <ID>WildcardImport:ClassCarpenter.kt$import org.objectweb.asm.Opcodes.*</ID>
+    <ID>WildcardImport:ComposableTypePropertySerializer.kt$import net.corda.serialization.internal.model.*</ID>
+    <ID>WildcardImport:DeserializationInput.kt$import net.corda.serialization.internal.*</ID>
+    <ID>WildcardImport:EvolutionSerializerFactory.kt$import net.corda.serialization.internal.model.*</ID>
+    <ID>WildcardImport:InputStreamSerializer.kt$import net.corda.serialization.internal.amqp.*</ID>
+    <ID>WildcardImport:LocalSerializerFactory.kt$import net.corda.serialization.internal.model.*</ID>
+    <ID>WildcardImport:LocalSerializerFactory.kt$import net.corda.serialization.internal.model.TypeIdentifier.*</ID>
+    <ID>WildcardImport:LocalTypeInformation.kt$import java.lang.reflect.*</ID>
+    <ID>WildcardImport:LocalTypeInformationBuilder.kt$import net.corda.serialization.internal.amqp.*</ID>
+    <ID>WildcardImport:LocalTypeModel.kt$import java.lang.reflect.*</ID>
+    <ID>WildcardImport:ObjectBuilder.kt$import net.corda.serialization.internal.model.*</ID>
+    <ID>WildcardImport:ObjectSerializer.kt$import net.corda.serialization.internal.model.*</ID>
+    <ID>WildcardImport:PrivateKeySerializer.kt$import net.corda.serialization.internal.amqp.*</ID>
+    <ID>WildcardImport:PropertyDescriptor.kt$import net.corda.serialization.internal.amqp.MethodClassifier.*</ID>
+    <ID>WildcardImport:PublicKeySerializer.kt$import net.corda.serialization.internal.amqp.*</ID>
+    <ID>WildcardImport:RemoteSerializerFactory.kt$import net.corda.serialization.internal.model.*</ID>
+    <ID>WildcardImport:RemoteTypeCarpenter.kt$import net.corda.serialization.internal.carpenter.*</ID>
+    <ID>WildcardImport:Schema.kt$import org.apache.qpid.proton.amqp.*</ID>
+    <ID>WildcardImport:Schema.kt$import org.objectweb.asm.Opcodes.*</ID>
+    <ID>WildcardImport:SchemaFields.kt$import org.objectweb.asm.Opcodes.*</ID>
+    <ID>WildcardImport:SerializationHelper.kt$import java.lang.reflect.*</ID>
+    <ID>WildcardImport:SerializationHelper.kt$import net.corda.core.serialization.*</ID>
+    <ID>WildcardImport:SerializationScheme.kt$import net.corda.core.serialization.*</ID>
+    <ID>WildcardImport:SerializeAsTokenContextImpl.kt$import net.corda.core.serialization.*</ID>
+    <ID>WildcardImport:SerializerFactoryBuilder.kt$import net.corda.serialization.internal.model.*</ID>
+    <ID>WildcardImport:SharedContexts.kt$import net.corda.core.serialization.*</ID>
+    <ID>WildcardImport:ThrowableSerializer.kt$import net.corda.serialization.internal.amqp.*</ID>
+    <ID>WildcardImport:TypeIdentifier.kt$import java.lang.reflect.*</ID>
+    <ID>WildcardImport:TypeLoader.kt$import net.corda.serialization.internal.carpenter.*</ID>
+    <ID>WildcardImport:TypeModellingFingerPrinter.kt$import net.corda.serialization.internal.amqp.*</ID>
+    <ID>WildcardImport:TypeModellingFingerPrinter.kt$import net.corda.serialization.internal.model.TypeIdentifier.*</ID>
+    <ID>WildcardImport:TypeParameterUtils.kt$import java.lang.reflect.*</ID>
+    <ID>WildcardImport:WhitelistBasedTypeModelConfiguration.kt$import org.apache.qpid.proton.amqp.*</ID>
+    <ID>WildcardImport:X509CRLSerializer.kt$import net.corda.serialization.internal.amqp.*</ID>
+    <ID>WildcardImport:X509CertificateSerializer.kt$import net.corda.serialization.internal.amqp.*</ID>
+  </Whitelist>
+</SmellBaseline>

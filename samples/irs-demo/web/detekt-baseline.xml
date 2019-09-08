@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>MagicNumber:IrsDemoWebApplication.kt$IrsDemoWebApplication$100</ID>
+    <ID>MagicNumber:IrsDemoWebApplication.kt$IrsDemoWebApplication$1000</ID>
+    <ID>MatchingDeclarationName:InterestSwapRestAPI.kt$net.corda.irs.web.api.InterestSwapRestAPI.kt</ID>
+    <ID>MaxLineLength:InterestSwapRestAPI.kt$InterestRateSwapAPI</ID>
+    <ID>MaxLineLength:InterestSwapRestAPI.kt$InterestRateSwapAPI$val states = vault.filterStatesOfType&lt;InterestRateSwap.State&gt;().filter { it.state.data.linearId.externalId == ref }</ID>
+    <ID>NewLineAtEndOfFile:InterestRatesSwapDemoAPI.kt$net.corda.irs.web.api.InterestRatesSwapDemoAPI.kt</ID>
+    <ID>SpreadOperator:IrsDemoWebApplication.kt$IrsDemoWebApplication.Companion$(IrsDemoWebApplication::class.java, *args)</ID>
+    <ID>TooGenericExceptionCaught:InterestSwapRestAPI.kt$InterestRateSwapAPI$ex: Exception</ID>
+    <ID>WildcardImport:InterestRatesSwapDemoAPI.kt$import org.springframework.web.bind.annotation.*</ID>
+    <ID>WildcardImport:InterestSwapRestAPI.kt$import org.springframework.web.bind.annotation.*</ID>
+  </Whitelist>
+</SmellBaseline>

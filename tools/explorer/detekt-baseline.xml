@@ -1,0 +1,210 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ComplexCondition:Main.kt$Main$(hostname != null) &amp;&amp; (port != null) &amp;&amp; (username != null) &amp;&amp; (password != null)</ID>
+    <ID>ComplexMethod:LoginView.kt$LoginView$tailrec fun login(): NodeMonitorModel?</ID>
+    <ID>ComplexMethod:NewTransaction.kt$NewTransaction$fun show(window: Window)</ID>
+    <ID>ComplexMethod:NewTransaction.kt$NewTransaction$private fun newTransactionDialog(window: Window)</ID>
+    <ID>ConstructorParameterNaming:AdvancedExceptionDialog.kt$AdvancedExceptionDialog$_exception: Throwable</ID>
+    <ID>EnumNaming:LoginView.kt$LoginView.LoginStatus$exception</ID>
+    <ID>EnumNaming:LoginView.kt$LoginView.LoginStatus$exited</ID>
+    <ID>EnumNaming:LoginView.kt$LoginView.LoginStatus$loggedIn</ID>
+    <ID>ForbiddenComment:CashViewer.kt$CashViewer$// TODO: Anonymous should probably be italicised or similar</ID>
+    <ID>ForbiddenComment:CashViewer.kt$CashViewer.StateRowGraphic$// TODO: Anonymous should probably be italicised or similar</ID>
+    <ID>ForbiddenComment:GuiUtilities.kt$// TODO: This is a temporary fix for the UI to show the correct issuer identity, this will break when we start randomizing keys. More work is needed here when the identity work is done.</ID>
+    <ID>ForbiddenComment:IdenticonRenderer.kt$IdenticonRenderer$// TODO: support transparency.</ID>
+    <ID>ForbiddenComment:TransactionViewer.kt$TransactionViewer.ContractStatesView$// TODO: Anonymous should probably be italicised or similar</ID>
+    <ID>FunctionParameterNaming:IdenticonRenderer.kt$IdenticonRenderer$_invert: Boolean</ID>
+    <ID>LongParameterList:IdenticonRenderer.kt$IdenticonRenderer$(g: GraphicsContext, x: Double, y: Double, patchIndex: Int, turn: Int, patchSize: Double, _invert: Boolean, color: PatchColor)</ID>
+    <ID>MagicNumber:CashViewer.kt$CashViewer$5.0</ID>
+    <ID>MagicNumber:CashViewer.kt$CashViewer.CashWidget$10.0</ID>
+    <ID>MagicNumber:CashViewer.kt$CashViewer.CashWidget$300</ID>
+    <ID>MagicNumber:CashViewer.kt$CashViewer.StateRowGraphic$16</ID>
+    <ID>MagicNumber:CashViewer.kt$CashViewer.StateRowGraphic$30.0</ID>
+    <ID>MagicNumber:Dashboard.kt$Dashboard$10</ID>
+    <ID>MagicNumber:Dashboard.kt$Dashboard$30.0</ID>
+    <ID>MagicNumber:Dashboard.kt$Dashboard$350</ID>
+    <ID>MagicNumber:GuiUtilities.kt$1000</ID>
+    <ID>MagicNumber:GuiUtilities.kt$1000.0</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$16</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$90.0</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$0x3</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$10</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$11</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$12</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$13</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$14</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$15</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$16</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$18</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$20</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$21</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$22</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$24</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$256</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$27</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$3</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$32.0f</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$4</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$6</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$7</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$8</ID>
+    <ID>MagicNumber:IdenticonRenderer.kt$IdenticonRenderer$90</ID>
+    <ID>MagicNumber:Main.kt$Main$600.0</ID>
+    <ID>MagicNumber:Main.kt$Main$800.0</ID>
+    <ID>MagicNumber:MainView.kt$MainView$10.0</ID>
+    <ID>MagicNumber:MainView.kt$MainView$12.0</ID>
+    <ID>MagicNumber:MainView.kt$MainView$150</ID>
+    <ID>MagicNumber:MainView.kt$MainView$30</ID>
+    <ID>MagicNumber:MainView.kt$MainView$5.0</ID>
+    <ID>MagicNumber:Network.kt$Network$0.8</ID>
+    <ID>MagicNumber:Network.kt$Network$1.2</ID>
+    <ID>MagicNumber:Network.kt$Network$10</ID>
+    <ID>MagicNumber:Network.kt$Network$10.0</ID>
+    <ID>MagicNumber:Network.kt$Network$15.0</ID>
+    <ID>MagicNumber:Network.kt$Network$180.0</ID>
+    <ID>MagicNumber:Network.kt$Network$2.5</ID>
+    <ID>MagicNumber:Network.kt$Network$2000.0</ID>
+    <ID>MagicNumber:Network.kt$Network$3.0</ID>
+    <ID>MagicNumber:Network.kt$Network$300.0</ID>
+    <ID>MagicNumber:Network.kt$Network$4</ID>
+    <ID>MagicNumber:Network.kt$Network$5.0</ID>
+    <ID>MagicNumber:Network.kt$Network$500.0</ID>
+    <ID>MagicNumber:Network.kt$Network$6.0</ID>
+    <ID>MagicNumber:Network.kt$Network$85.0511</ID>
+    <ID>MagicNumber:NewTransaction.kt$NewTransaction$10.0</ID>
+    <ID>MagicNumber:NewTransaction.kt$NewTransaction$16</ID>
+    <ID>MagicNumber:NewTransaction.kt$NewTransaction$20.0</ID>
+    <ID>MagicNumber:NewTransaction.kt$NewTransaction$40.0</ID>
+    <ID>MagicNumber:SearchField.kt$SearchField$10</ID>
+    <ID>MagicNumber:SearchField.kt$SearchField$5.0</ID>
+    <ID>MagicNumber:TransactionViewer.kt$TransactionViewer$15.0</ID>
+    <ID>MagicNumber:TransactionViewer.kt$TransactionViewer$20.0</ID>
+    <ID>MagicNumber:TransactionViewer.kt$TransactionViewer$200.0</ID>
+    <ID>MagicNumber:TransactionViewer.kt$TransactionViewer$26.0</ID>
+    <ID>MagicNumber:TransactionViewer.kt$TransactionViewer$400.0</ID>
+    <ID>MagicNumber:TransactionViewer.kt$TransactionViewer.ContractStatesView$10.0</ID>
+    <ID>MagicNumber:TransactionViewer.kt$TransactionViewer.ContractStatesView$16</ID>
+    <ID>MagicNumber:TransactionViewer.kt$TransactionViewer.ContractStatesView$30.0</ID>
+    <ID>MagicNumber:TransactionViewer.kt$TransactionViewer.ContractStatesView$5.0</ID>
+    <ID>MagicNumber:TransactionViewer.kt$TransactionViewer.TransactionWidget$30.0</ID>
+    <ID>MatchingDeclarationName:TransactionTypes.kt$net.corda.explorer.model.TransactionTypes.kt</ID>
+    <ID>MaxLineLength:CashViewer.kt$CashViewer$"Issuer" to { state, text -&gt; state.resolveIssuer().value?.name?.organisation?.contains(text, true) == true }</ID>
+    <ID>MaxLineLength:CashViewer.kt$CashViewer$/** * Assemble the Issuer node. */ val treeItem = TreeItem(ViewerNode.IssuerNode(issuer.owningKey.toKnownParty().value ?: issuer, equivSumAmount, memberStates))</ID>
+    <ID>MaxLineLength:CashViewer.kt$CashViewer$/** * Next we create subgroups based on currency. [memberStates] here is all states holding currency [currency] issued by [issuer] above. * Note that these states will not be displayed in the TreeTable, but rather in the side pane if the user clicks on the row. */ val currencyNodes = AggregatedList(memberStates, { it.state.data.amount.token.product }) { currency, groupedMemberStates -&gt; /** * We sum the states in the subgroup, to be displayed in the "Local Currency" column */ val amounts = groupedMemberStates.map { it.state.data.amount.withoutIssuer() } val sumAmount = amounts.foldObservable(Amount(0, currency), Amount&lt;Currency&gt;::plus) /** * We exchange the sum to the reporting currency, to be displayed in the "&lt;currency&gt; Equiv" column. */ val equivSumAmount = EasyBind.combine(sumAmount, reportingExchange) { sum, exchange -&gt; exchange.second(sum) } /** * Finally assemble the actual TreeTable Currency node. */ TreeItem(ViewerNode.CurrencyNode(sumAmount, equivSumAmount, groupedMemberStates)) }</ID>
+    <ID>MaxLineLength:CashViewer.kt$CashViewer$/** * Next we create subgroups based on currency. [memberStates] here is all states holding currency [currency] issued by [issuer] above. * Note that these states will not be displayed in the TreeTable, but rather in the side pane if the user clicks on the row. */ val currencyNodes = AggregatedList(memberStates, { it.state.data.amount.token.product }) { currency, groupedMemberStates -&gt; /** * We sum the states in the subgroup, to be displayed in the "Local Currency" column */ val amounts = groupedMemberStates.map { it.state.data.amount.withoutIssuer() } val sumAmount = amounts.foldObservable(Amount(0, currency), Amount&lt;Currency&gt;::plus) /** * We exchange the sum to the reporting currency, to be displayed in the "&lt;currency&gt; Equiv" column. */ val equivSumAmount = EasyBind.combine(sumAmount, reportingExchange) { sum, exchange -&gt; exchange.second(sum) } /** * Finally assemble the actual TreeTable Currency node. */ TreeItem(ViewerNode.CurrencyNode(sumAmount, equivSumAmount, groupedMemberStates)) } /** * Now that we have all nodes per currency, we sum the exchanged amounts, to be displayed in the * "&lt;currency&gt; Equiv" column, this time on the issuer level. */ val equivAmounts = currencyNodes.map { it.value.equivAmount }.flatten() val equivSumAmount = reportingCurrency.bind { currency -&gt; equivAmounts.foldObservable(Amount(0, currency), Amount&lt;Currency&gt;::plus) } /** * Assemble the Issuer node. */ val treeItem = TreeItem(ViewerNode.IssuerNode(issuer.owningKey.toKnownParty().value ?: issuer, equivSumAmount, memberStates)) /** * Bind the children in the TreeTable structure. * * TODO Perhaps we shouldn't do this here, but rather have a generic way of binding nodes to the treetable once. */ treeItem.isExpanded = true val children: List&lt;TreeItem&lt;out ViewerNode.IssuerNode&gt;&gt; = treeItem.children Bindings.bindContent(children, currencyNodes) treeItem</ID>
+    <ID>MaxLineLength:CashViewer.kt$CashViewer$/** * This is where we aggregate the list of cash states into the TreeTable structure. */ val cashViewerIssueNodes: ObservableList&lt;TreeItem&lt;out ViewerNode.IssuerNode&gt;&gt; = /** * First we group the states based on the issuer. [memberStates] is all states holding currency issued by [issuer] */ AggregatedList(searchField.filteredData, { it.state.data.amount.token.issuer.party }) { issuer, memberStates -&gt; /** * Next we create subgroups based on currency. [memberStates] here is all states holding currency [currency] issued by [issuer] above. * Note that these states will not be displayed in the TreeTable, but rather in the side pane if the user clicks on the row. */ val currencyNodes = AggregatedList(memberStates, { it.state.data.amount.token.product }) { currency, groupedMemberStates -&gt; /** * We sum the states in the subgroup, to be displayed in the "Local Currency" column */ val amounts = groupedMemberStates.map { it.state.data.amount.withoutIssuer() } val sumAmount = amounts.foldObservable(Amount(0, currency), Amount&lt;Currency&gt;::plus) /** * We exchange the sum to the reporting currency, to be displayed in the "&lt;currency&gt; Equiv" column. */ val equivSumAmount = EasyBind.combine(sumAmount, reportingExchange) { sum, exchange -&gt; exchange.second(sum) } /** * Finally assemble the actual TreeTable Currency node. */ TreeItem(ViewerNode.CurrencyNode(sumAmount, equivSumAmount, groupedMemberStates)) } /** * Now that we have all nodes per currency, we sum the exchanged amounts, to be displayed in the * "&lt;currency&gt; Equiv" column, this time on the issuer level. */ val equivAmounts = currencyNodes.map { it.value.equivAmount }.flatten() val equivSumAmount = reportingCurrency.bind { currency -&gt; equivAmounts.foldObservable(Amount(0, currency), Amount&lt;Currency&gt;::plus) } /** * Assemble the Issuer node. */ val treeItem = TreeItem(ViewerNode.IssuerNode(issuer.owningKey.toKnownParty().value ?: issuer, equivSumAmount, memberStates)) /** * Bind the children in the TreeTable structure. * * TODO Perhaps we shouldn't do this here, but rather have a generic way of binding nodes to the treetable once. */ treeItem.isExpanded = true val children: List&lt;TreeItem&lt;out ViewerNode.IssuerNode&gt;&gt; = treeItem.children Bindings.bindContent(children, currencyNodes) treeItem }</ID>
+    <ID>MaxLineLength:CashViewer.kt$CashViewer$/** * We allow filtering by both issuer and currency. We do this by filtering by both at the same time and picking the * one which produces more results, which seems to work, as the set of currency strings don't really overlap with * issuer strings. */ val searchField = SearchField(cashStates, "Currency" to { state, text -&gt; state.state.data.amount.token.product.toString().contains(text, true) }, "Issuer" to { state, text -&gt; state.resolveIssuer().value?.name?.organisation?.contains(text, true) == true } )</ID>
+    <ID>MaxLineLength:CashViewer.kt$CashViewer$/** * We exchange the sum to the reporting currency, to be displayed in the "&lt;currency&gt; Equiv" column. */ val equivSumAmount = EasyBind.combine(sumAmount, reportingExchange) { sum, exchange -&gt; exchange.second(sum) }</ID>
+    <ID>MaxLineLength:CashViewer.kt$CashViewer$AggregatedList</ID>
+    <ID>MaxLineLength:CashViewer.kt$CashViewer$is ViewerNode.IssuerNode -&gt; SimpleStringProperty(node.issuer.nameOrNull()?.let { PartyNameFormatter.short.format(it) } ?: "Anonymous")</ID>
+    <ID>MaxLineLength:CashViewer.kt$CashViewer$itemsProperty().bind(selectedNode.map { it?.states?.map { StateRow(LocalDateTime.now(), it) } ?: ObservableListWrapper(emptyList()) })</ID>
+    <ID>MaxLineLength:CashViewer.kt$CashViewer$setCellValueFactory { val node = it.value.value when (node) { is ViewerNode.IssuerNode -&gt; null.lift() is ViewerNode.CurrencyNode -&gt; node.amount.map { it } } } cellFactory = currencyCellFactory /** * We must set this, otherwise on sort an exception will be thrown, as it will try to compare Amounts of differing currency */ isSortable = false</ID>
+    <ID>MaxLineLength:CashViewer.kt$CashViewer.CashWidget$if(lastTimeStamp != null &amp;&amp; currentTimeStamp - lastTimeStamp.toLong() &lt; 1.seconds.toMillis()) { data.safelyTransition { remove(size - 1, size) } }</ID>
+    <ID>MaxLineLength:CashViewer.kt$CashViewer.CashWidget$private</ID>
+    <ID>MaxLineLength:CashViewer.kt$CashViewer.CashWidget${ // If update arrived in very close succession to the previous one - kill the last point received to eliminate un-necessary noise on the graph. if(lastTimeStamp != null &amp;&amp; currentTimeStamp - lastTimeStamp.toLong() &lt; 1.seconds.toMillis()) { data.safelyTransition { remove(size - 1, size) } } // Add a new data point. data(currentTimeStamp, currAmount) // Limit population of data points to make graph painting faster. data.safelyTransition { if (size &gt; 300) remove(0, 1) } }</ID>
+    <ID>MaxLineLength:CashViewer.kt$CashViewer.StateRowGraphic$issuerValueLabel.apply { tooltip(resolvedIssuer.nameOrNull()?.let { PartyNameFormatter.full.format(it) } ?: "Anonymous") }</ID>
+    <ID>MaxLineLength:CashViewer.kt$CashViewer.StateRowGraphic$val resolvedIssuer: AbstractParty = stateRow.stateAndRef.resolveIssuer().value ?: stateRow.stateAndRef.state.data.amount.token.issuer.party</ID>
+    <ID>MaxLineLength:CordaViewModel.kt$CordaView : View</ID>
+    <ID>MaxLineLength:GuiUtilities.kt$ fun &lt;T&gt; stringConverter(fromStringFunction: ((String?) -&gt; T)? = null, toStringFunction: (T) -&gt; String): StringConverter&lt;T&gt;</ID>
+    <ID>MaxLineLength:GuiUtilities.kt$// TODO: This is a temporary fix for the UI to show the correct issuer identity, this will break when we start randomizing keys. More work is needed here when the identity work is done. fun StateAndRef&lt;Cash.State&gt;.resolveIssuer(): ObservableValue&lt;Party?&gt;</ID>
+    <ID>MaxLineLength:GuiUtilities.kt$fun PublicKey.toKnownParty()</ID>
+    <ID>MaxLineLength:IdenticonRenderer.kt$IdenticonRenderer$private</ID>
+    <ID>MaxLineLength:IdenticonRenderer.kt$IdenticonRenderer$private val patchFlags = byteArrayOf(PATCH_SYMMETRIC, 0, 0, 0, PATCH_SYMMETRIC, 0, 0, 0, PATCH_SYMMETRIC, 0, 0, 0, 0, 0, 0, (PATCH_SYMMETRIC + PATCH_INVERTED).toByte())</ID>
+    <ID>MaxLineLength:IdenticonRenderer.kt$IdenticonRenderer.Patch$return byteArray.map(Byte::toInt).map { it % PATCH_GRIDS * (patchSize / PATCH_CELLS) - patchSize / 2 }.toDoubleArray()</ID>
+    <ID>MaxLineLength:IdenticonRenderer.kt$IdenticonRenderer.Patch$return byteArray.map(Byte::toInt).map { it / PATCH_GRIDS * (patchSize / PATCH_CELLS) - patchSize / 2 }.toDoubleArray()</ID>
+    <ID>MaxLineLength:IdenticonRenderer.kt$IdenticonRenderer.PatchColor$private</ID>
+    <ID>MaxLineLength:IssuerModel.kt$IssuerModel$val currencyTypes = ChosenList(cashAppConfiguration.map { it?.issuableCurrencies?.observable() ?: FXCollections.emptyObservableList() }, "currencyTypes")</ID>
+    <ID>MaxLineLength:IssuerModel.kt$IssuerModel$val supportedCurrencies = ChosenList(cashAppConfiguration.map { it?.supportedCurrencies?.observable() ?: FXCollections.singletonObservableList(defaultCurrency) }, "supportedCurrencies")</ID>
+    <ID>MaxLineLength:LoginView.kt$LoginView$nodeModel = login(hostTextField.text, portProperty.value, usernameTextField.text, passwordTextField.text)</ID>
+    <ID>MaxLineLength:LoginView.kt$LoginView$val button = Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to exit Corda Explorer?").apply { initOwner(root.scene.window) }.showAndWait().get()</ID>
+    <ID>MaxLineLength:Main.kt$Main$// TODO : This could block the UI thread when number of views increase, maybe we can make this async and display a loading screen. // Stock Views. registerView&lt;Dashboard&gt;() registerView&lt;TransactionViewer&gt;() // CordApps Views. registerView&lt;CashViewer&gt;() // Tools. registerView&lt;Network&gt;() registerView&lt;Settings&gt;() // Default view to Dashboard. selectedView.set(find&lt;Dashboard&gt;())</ID>
+    <ID>MaxLineLength:MainView.kt$MainView$contentDisplayProperty().bind(smallIconProperty.map { if (it) ContentDisplay.TOP else ContentDisplay.LEFT })</ID>
+    <ID>MaxLineLength:MainView.kt$MainView$if (selected == it) listOf(menuItemCSS, menuItemSelectedCSS).observable() else listOf(menuItemCSS).observable()</ID>
+    <ID>MaxLineLength:MainView.kt$MainView$textAlignmentProperty().bind(smallIconProperty.map { if (it) TextAlignment.CENTER else TextAlignment.LEFT })</ID>
+    <ID>MaxLineLength:Network.kt$Network$centralLabel = mapLabels.firstOrDefault(SimpleObjectProperty(myLabel), { centralPeer?.contains(it.text, true) == true })</ID>
+    <ID>MaxLineLength:Network.kt$Network$if (it is WireTransaction) it.outputStates.observable().getParties() // For ContractUpgradeWireTransaction and NotaryChangeWireTransaction the output parties are the same as input parties else inputParties</ID>
+    <ID>MaxLineLength:Network.kt$Network$label(PartyNameFormatter.short.format(identities[0].name)) { font = Font.font(font.family, FontWeight.BOLD, 15.0) }</ID>
+    <ID>MaxLineLength:Network.kt$Network$mapScrollPane.hvalue = (valX + adjustment.x) / (mapImageView.layoutBounds.width - mapScrollPane.viewportBounds.width)</ID>
+    <ID>MaxLineLength:Network.kt$Network$mapScrollPane.vvalue = (valY + adjustment.y) / (mapImageView.layoutBounds.height - mapScrollPane.viewportBounds.height)</ID>
+    <ID>MaxLineLength:Network.kt$Network$node.getWorldMapLocation()?.coordinate?.project(mapPane.width, mapPane.height, 85.0511, -85.0511, -180.0, 180.0) ?: ScreenCoordinate(0.0, 0.0)</ID>
+    <ID>MaxLineLength:Network.kt$Network$private</ID>
+    <ID>MaxLineLength:Network.kt$Network$private val peerButtons = peerComponents.filtered { myIdentity.value !in it.nodeInfo.legalIdentitiesAndCerts.map { it.party } }.map { it.button }</ID>
+    <ID>MaxLineLength:Network.kt$Network$val inputParties = it.inputs.sequence() .map { it as? PartiallyResolvedTransaction.InputResolution.Resolved } .filterNotNull() .map { it.stateAndRef.state.data }.getParties() val outputParties = it.transaction.coreTransaction.let { if (it is WireTransaction) it.outputStates.observable().getParties() // For ContractUpgradeWireTransaction and NotaryChangeWireTransaction the output parties are the same as input parties else inputParties } val signingParties = it.transaction.sigs.map { it.by.toKnownParty() } // Input parties fire a bullets to all output parties, and to the signing parties. !! This is a rough guess of how the message moves in the network. // TODO : Expose artemis queue to get real message information. inputParties.cross(outputParties) + inputParties.cross(signingParties)</ID>
+    <ID>MaxLineLength:Network.kt$Network$val mapLabel = label(PartyNameFormatter.short.format(identities.first().name)) // We choose the first one for the name of the node on the map.</ID>
+    <ID>MaxLineLength:Network.kt$Network$val newHeight = Math.min(Math.max(mapImageView.prefHeight(-1.0) * zoomFactor, mapOriginalHeight), mapOriginalHeight * 10)</ID>
+    <ID>MaxLineLength:Network.kt$Network$val receiver = destNode.label.boundsInParentProperty().map { Point2D(it.width / 2 + it.minX, it.height / 4 - 2.5 + it.minY) }</ID>
+    <ID>MaxLineLength:Network.kt$Network$val sender = senderNode.label.boundsInParentProperty().map { Point2D(it.width / 2 + it.minX, it.height / 4 - 2.5 + it.minY) }</ID>
+    <ID>MaxLineLength:Network.kt$Network${ // It has to be a copy if we want to have notary both in notaries list and in identity (if we are looking at that particular notary node). myIdentityPane.apply { center = node.renderButton(mapLabel) } myLabel = mapLabel }</ID>
+    <ID>MaxLineLength:Network.kt$Network${ val node = this val identities = node.legalIdentitiesAndCerts.sortedBy { it.owningKey.toBase58String() } val mapLabel = label(PartyNameFormatter.short.format(identities.first().name)) // We choose the first one for the name of the node on the map. mapPane.add(mapLabel) // applyCss: This method does not normally need to be invoked directly but may be used in conjunction with Parent.layout() // to size a Node before the next pulse, or if the Scene is not in a Stage. // It's needed to properly add node label to the map (before that width and height are 0 which results in wrong placement of // nodes rendered after initial map rendering). mapPane.applyCss() mapPane.layout() mapLabel.apply { graphic = FontAwesomeIconView(FontAwesomeIcon.DOT_CIRCLE_ALT) contentDisplay = ContentDisplay.TOP val coordinate = Bindings.createObjectBinding({ // These coordinates are obtained when we generate the map using TileMill. node.getWorldMapLocation()?.coordinate?.project(mapPane.width, mapPane.height, 85.0511, -85.0511, -180.0, 180.0) ?: ScreenCoordinate(0.0, 0.0) }, arrayOf(mapPane.widthProperty(), mapPane.heightProperty())) // Center point of the label. layoutXProperty().bind(coordinate.map { it.screenX - width / 2 }) layoutYProperty().bind(coordinate.map { it.screenY - height / 4 }) } val button = node.renderButton(mapLabel) if (myIdentity.value in node.legalIdentitiesAndCerts.map { it.party }) { // It has to be a copy if we want to have notary both in notaries list and in identity (if we are looking at that particular notary node). myIdentityPane.apply { center = node.renderButton(mapLabel) } myLabel = mapLabel } return MapViewComponents(this, button, mapLabel) }</ID>
+    <ID>MaxLineLength:NewTransaction.kt$NewTransaction$CashTransaction.Exit -&gt; ExitRequest(Amount.fromDecimal(amount.value, currencyChoiceBox.value), issueRef)</ID>
+    <ID>MaxLineLength:NewTransaction.kt$NewTransaction$CashTransaction.Issue -&gt; IssueAndPaymentRequest(Amount.fromDecimal(amount.value, currencyChoiceBox.value), issueRef, partyBChoiceBox.value.party, selectNotary(), anonymous)</ID>
+    <ID>MaxLineLength:NewTransaction.kt$NewTransaction$CashTransaction.Pay -&gt; PaymentRequest(Amount.fromDecimal(amount.value, currencyChoiceBox.value), partyBChoiceBox.value.party, anonymous = anonymous, notary = selectNotary())</ID>
+    <ID>MaxLineLength:NewTransaction.kt$NewTransaction$issueRefLabel.visibleProperty().bind(transactionTypeCB.valueProperty().map { it == CashTransaction.Issue || it == CashTransaction.Exit })</ID>
+    <ID>MaxLineLength:NewTransaction.kt$NewTransaction$issuer.isNotNull.and(currencyChoiceBox.valueProperty().isNotNull).and(transactionTypeCB.valueProperty().booleanBinding(transactionTypeCB.valueProperty()) { it != CashTransaction.Issue })</ID>
+    <ID>MaxLineLength:NewTransaction.kt$NewTransaction$partyATextField.textProperty().bind(myIdentity.map { it?.let { PartyNameFormatter.short.format(it.name) } ?: "" })</ID>
+    <ID>MaxLineLength:NewTransaction.kt$NewTransaction$val filteredCash = cash.filtered { it.token.issuer.party == issuer.value &amp;&amp; it.token.product == currencyChoiceBox.value } .map { it.withoutIssuer() }.sumOrNull()</ID>
+    <ID>MaxLineLength:NewTransaction.kt$NewTransaction$val issuer = Bindings.createObjectBinding({ if (issuerChoiceBox.isVisible) issuerChoiceBox.value else myIdentity.value }, arrayOf(myIdentity, issuerChoiceBox.visibleProperty(), issuerChoiceBox.valueProperty()))</ID>
+    <ID>MaxLineLength:NewTransaction.kt$NewTransaction$visibleProperty().bind(transactionTypeCB.valueProperty().map { it == CashTransaction.Issue || it == CashTransaction.Exit })</ID>
+    <ID>MaxLineLength:SearchField.kt$SearchField&lt;T&gt; : UIComponent</ID>
+    <ID>MaxLineLength:Settings.kt$Settings$clientPane.disableProperty() .map { if (!it) FontAwesomeIconView(FontAwesomeIcon.TIMES) else FontAwesomeIconView(FontAwesomeIcon.EDIT) }</ID>
+    <ID>MaxLineLength:TransactionViewer.kt$ private fun calculateTotalEquiv(myIdentity: Party?, reportingCurrencyExchange: Pair&lt;Currency, (Amount&lt;Currency&gt;) -&gt; Amount&lt;Currency&gt;&gt;, inputs: List&lt;ContractState&gt;, outputs: List&lt;ContractState&gt;): AmountDiff&lt;Currency&gt;</ID>
+    <ID>MaxLineLength:TransactionViewer.kt$TransactionViewer$"Input Party" to { tx, s -&gt; tx.inputParties.any { it.any { it.value?.name?.organisation?.contains(s, true) == true } } }</ID>
+    <ID>MaxLineLength:TransactionViewer.kt$TransactionViewer$"Output Party" to { tx, s -&gt; tx.outputParties.any { it.any { it.value?.name?.organisation?.contains(s, true) == true } } }</ID>
+    <ID>MaxLineLength:TransactionViewer.kt$TransactionViewer$// Column stays the same size, but we don't violate column restricted resize policy for the whole table view. // It removes that irritating column at the end of table that does nothing. minWidth = 26.0 maxWidth = 26.0</ID>
+    <ID>MaxLineLength:TransactionViewer.kt$TransactionViewer$Inputs</ID>
+    <ID>MaxLineLength:TransactionViewer.kt$TransactionViewer$Outputs</ID>
+    <ID>MaxLineLength:TransactionViewer.kt$TransactionViewer$Transaction</ID>
+    <ID>MaxLineLength:TransactionViewer.kt$TransactionViewer$private</ID>
+    <ID>MaxLineLength:TransactionViewer.kt$TransactionViewer$private fun ObservableList&lt;StateAndRef&lt;ContractState&gt;&gt;.getParties()</ID>
+    <ID>MaxLineLength:TransactionViewer.kt$TransactionViewer$private fun ObservableList&lt;StateAndRef&lt;ContractState&gt;&gt;.toText()</ID>
+    <ID>MaxLineLength:TransactionViewer.kt$TransactionViewer$val commands = if (it.transaction.coreTransaction is WireTransaction) it.transaction.tx.commands else emptyList()</ID>
+    <ID>MaxLineLength:TransactionViewer.kt$TransactionViewer.ContractStatesView$copyableLabel(party.map { "${signature.toStringShort()} (${it?.let { PartyNameFormatter.short.format(it.name) } ?: "Anonymous"})" })</ID>
+    <ID>MaxLineLength:TransactionViewer.kt$TransactionViewer.ContractStatesView$label</ID>
+    <ID>MaxLineLength:TransactionViewer.kt$TransactionViewer.ContractStatesView$val issuer: AbstractParty = anonymousIssuer.owningKey.toKnownParty().value ?: anonymousIssuer</ID>
+    <ID>MaxLineLength:TransactionViewer.kt$TransactionViewer.TransactionWidget$private val partiallyResolvedTransactions by observableListReadOnly(TransactionDataModel::partiallyResolvedTransactions)</ID>
+    <ID>MaxLineLength:TransactionViewer.kt$outputs.mapNotNull { it as? Cash.State } .filter { it.amount.token.issuer.party.owningKey.toKnownParty().value == myIdentity &amp;&amp; it.owner.owningKey.toKnownParty().value != myIdentity }</ID>
+    <ID>NewLineAtEndOfFile:AdvancedExceptionDialog.kt$net.corda.explorer.ui.AdvancedExceptionDialog.kt</ID>
+    <ID>NewLineAtEndOfFile:CordaViewModel.kt$net.corda.explorer.model.CordaViewModel.kt</ID>
+    <ID>NewLineAtEndOfFile:Dashboard.kt$net.corda.explorer.views.Dashboard.kt</ID>
+    <ID>NewLineAtEndOfFile:IdenticonRenderer.kt$net.corda.explorer.identicon.IdenticonRenderer.kt</ID>
+    <ID>NewLineAtEndOfFile:MainView.kt$net.corda.explorer.views.MainView.kt</ID>
+    <ID>NewLineAtEndOfFile:SearchField.kt$net.corda.explorer.views.SearchField.kt</ID>
+    <ID>NewLineAtEndOfFile:Settings.kt$net.corda.explorer.views.Settings.kt</ID>
+    <ID>NewLineAtEndOfFile:SettingsModel.kt$net.corda.explorer.model.SettingsModel.kt</ID>
+    <ID>TooGenericExceptionCaught:LoginView.kt$LoginView$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:Main.kt$Main$e: Exception</ID>
+    <ID>VariableNaming:SearchField.kt$SearchField$private val ALL = "All"</ID>
+    <ID>WildcardImport:AdvancedExceptionDialog.kt$import javafx.scene.control.*</ID>
+    <ID>WildcardImport:CashViewer.kt$import javafx.scene.control.*</ID>
+    <ID>WildcardImport:CashViewer.kt$import net.corda.client.jfx.model.*</ID>
+    <ID>WildcardImport:CashViewer.kt$import net.corda.client.jfx.utils.*</ID>
+    <ID>WildcardImport:CashViewer.kt$import net.corda.explorer.ui.*</ID>
+    <ID>WildcardImport:CashViewer.kt$import net.corda.explorer.views.*</ID>
+    <ID>WildcardImport:CashViewer.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:CordaViewModel.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:GuiUtilities.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:IssuerModel.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:LoginView.kt$import javafx.scene.control.*</ID>
+    <ID>WildcardImport:LoginView.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:Main.kt$import net.corda.explorer.views.*</ID>
+    <ID>WildcardImport:MainView.kt$import javafx.scene.control.*</ID>
+    <ID>WildcardImport:MainView.kt$import net.corda.client.jfx.model.*</ID>
+    <ID>WildcardImport:MainView.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:Network.kt$import net.corda.client.jfx.model.*</ID>
+    <ID>WildcardImport:Network.kt$import net.corda.client.jfx.utils.*</ID>
+    <ID>WildcardImport:Network.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:NewTransaction.kt$import javafx.scene.control.*</ID>
+    <ID>WildcardImport:NewTransaction.kt$import net.corda.client.jfx.model.*</ID>
+    <ID>WildcardImport:NewTransaction.kt$import net.corda.client.jfx.utils.*</ID>
+    <ID>WildcardImport:NewTransaction.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:SearchField.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:SettingsModel.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:SettingsModel.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:TransactionViewer.kt$import net.corda.client.jfx.model.*</ID>
+    <ID>WildcardImport:TransactionViewer.kt$import net.corda.client.jfx.utils.*</ID>
+    <ID>WildcardImport:TransactionViewer.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:TransactionViewer.kt$import tornadofx.*</ID>
+  </Whitelist>
+</SmellBaseline>

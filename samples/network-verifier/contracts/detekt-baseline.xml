@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>EmptyFunctionBlock:CommsContracts.kt$CommsTestContract${ }</ID>
+    <ID>EmptyFunctionBlock:NotaryTestContracts.kt$NotaryTestContract${ }</ID>
+    <ID>NewLineAtEndOfFile:NotaryTestContracts.kt$net.corda.verification.NotaryTestContracts.kt</ID>
+  </Whitelist>
+</SmellBaseline>

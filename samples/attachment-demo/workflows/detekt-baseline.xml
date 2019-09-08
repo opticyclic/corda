@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>WildcardImport:AttachmentDemoFlow.kt$import net.corda.core.flows.*</ID>
+  </Whitelist>
+</SmellBaseline>

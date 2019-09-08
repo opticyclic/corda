@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>MagicNumber:ConfigExporter.kt$3</ID>
+    <ID>MaxLineLength:ConfigExporter.kt$ConfigExporter$fileWriter.write(configToWrite.root().render(ConfigRenderOptions.concise().setFormatted(true).setJson(false)))</ID>
+    <ID>MaxLineLength:ConfigExporter.kt$ConfigExporter$ourParsedConfig = ourParsedConfig.withValue("keyStorePassword", testNetParsedConfig.getValue("keyStorePassword"))</ID>
+    <ID>MaxLineLength:ConfigExporter.kt$ConfigExporter$ourParsedConfig = ourParsedConfig.withValue("trustStorePassword", testNetParsedConfig.getValue("trustStorePassword"))</ID>
+    <ID>NewLineAtEndOfFile:ConfigExporter.kt$net.corda.core.ConfigExporter.kt</ID>
+  </Whitelist>
+</SmellBaseline>

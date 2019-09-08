@@ -1,0 +1,431 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ClassNaming:NOT_YET_REGISTERED_MARKER_KEYS_AND_CERTS.kt$NOT_YET_REGISTERED_MARKER_KEYS_AND_CERTS</ID>
+    <ID>ComplexCondition:ConfigUtilities.kt$value is Temporal || value is NetworkHostAndPort || value is CordaX500Name || value is Path || value is URL || value is UUID || value is X500Principal</ID>
+    <ID>ComplexMethod:AMQPBridgeManager.kt$AMQPBridgeManager.AMQPBridge$private fun clientArtemisMessageHandler(artemisMessage: ClientMessage)</ID>
+    <ID>ComplexMethod:AMQPChannelHandler.kt$AMQPChannelHandler$override fun userEventTriggered(ctx: ChannelHandlerContext, evt: Any)</ID>
+    <ID>ComplexMethod:AttachmentVersionNumberMigration.kt$AttachmentVersionNumberMigration$override fun execute(database: Database?)</ID>
+    <ID>ComplexMethod:BridgeControlListener.kt$BridgeControlListener$private fun processControlMessage(msg: ClientMessage)</ID>
+    <ID>ComplexMethod:ConfigUtilities.kt$// For Iterables figure out the type parameter and apply the same logic as above on the individual elements. private fun Iterable&lt;*&gt;.toConfigIterable(field: Field): Iterable&lt;Any?&gt;</ID>
+    <ID>ComplexMethod:ConfigUtilities.kt$@Suppress("PLATFORM_CLASS_MAPPED_TO_KOTLIN") // Reflect over the fields of the receiver and generate a value Map that can use to create Config object. private fun Any.toConfigMap(): Map&lt;String, Any&gt;</ID>
+    <ID>ComplexMethod:ConfigUtilities.kt$private fun Config.getCollectionValue(path: String, type: KType, onUnknownKeys: (Set&lt;String&gt;, logger: Logger) -&gt; Unit, nestedPath: String?, baseDirectory: Path?): Collection&lt;Any&gt;</ID>
+    <ID>ComplexMethod:ConfigUtilities.kt$private fun Config.getSingleValue(path: String, type: KType, onUnknownKeys: (Set&lt;String&gt;, logger: Logger) -&gt; Unit, nestedPath: String?, baseDirectory: Path?): Any?</ID>
+    <ID>ComplexMethod:ConfigUtilities.kt$private fun convertValue(value: Any): Any</ID>
+    <ID>ComplexMethod:ConnectionStateMachine.kt$ConnectionStateMachine$override fun onConnectionFinal(event: Event)</ID>
+    <ID>ComplexMethod:ConnectionStateMachine.kt$ConnectionStateMachine$override fun onDelivery(event: Event)</ID>
+    <ID>ComplexMethod:CordaPersistence.kt$CordaPersistence$private fun &lt;T&gt; inTopLevelTransaction(isolationLevel: TransactionIsolationLevel, recoverableFailureTolerance: Int, recoverAnyNestedSQLException: Boolean, statement: DatabaseTransaction.() -&gt; T): T</ID>
+    <ID>ComplexMethod:NetworkBootstrapper.kt$NetworkBootstrapper$private fun bootstrap( directory: Path, cordappJars: List&lt;Path&gt;, copyCordapps: CopyCordapps, fromCordform: Boolean, networkParametersOverrides: NetworkParametersOverrides = NetworkParametersOverrides() )</ID>
+    <ID>ComplexMethod:NetworkBootstrapper.kt$NetworkBootstrapper$private fun createNodeDirectoriesIfNeeded(directory: Path, fromCordform: Boolean): Boolean</ID>
+    <ID>ComplexMethod:SchemaMigration.kt$SchemaMigration$ private fun migrateOlderDatabaseToUseLiquibase(existingCheckpoints: Boolean): Boolean</ID>
+    <ID>ComplexMethod:SchemaMigration.kt$SchemaMigration$private fun doRunMigration(run: Boolean, check: Boolean, existingCheckpoints: Boolean? = null)</ID>
+    <ID>EmptyFunctionBlock:AttachmentVersionNumberMigration.kt$AttachmentVersionNumberMigration${ }</ID>
+    <ID>EmptyFunctionBlock:CordaPersistence.kt$NoOpSubscriber${}</ID>
+    <ID>ForbiddenComment:ArtemisMessagingComponent.kt$ArtemisMessagingComponent.Companion$// TODO: we might want to make this value configurable.</ID>
+    <ID>ForbiddenComment:HibernateConfiguration.kt$HibernateConfiguration$// TODO: require mechanism to set schemaOptions (databaseSchema, tablePrefix) which are not global to session</ID>
+    <ID>ForbiddenComment:KeyStoreConfigHelpers.kt$// TODO: X509Utilities.validateCertificateChain()</ID>
+    <ID>ForbiddenComment:NetworkBootstrapper.kt$NetworkBootstrapper$// TODO: pass a commandline parameter to the bootstrapper instead. Better yet, a notary config map</ID>
+    <ID>ForbiddenComment:RestrictedEntityManager.kt$RestrictedEntityManager$// TODO: Figure out which other methods on EntityManager need to be blocked?</ID>
+    <ID>ForbiddenComment:X509Utilities.kt$CertificateType.LEGAL_IDENTITY$// TODO: Identity certs should have tight name constraints on child certificates</ID>
+    <ID>LongMethod:SchemaMigration.kt$SchemaMigration$ private fun migrateOlderDatabaseToUseLiquibase(existingCheckpoints: Boolean): Boolean</ID>
+    <ID>LongParameterList:X509Utilities.kt$X509Utilities$(certificateType: CertificateType, issuer: X500Principal, issuerKeyPair: KeyPair, subject: X500Principal, subjectPublicKey: PublicKey, validityWindow: Pair&lt;Date, Date&gt;, nameConstraints: NameConstraints? = null, crlDistPoint: String? = null, crlIssuer: X500Name? = null)</ID>
+    <ID>LongParameterList:X509Utilities.kt$X509Utilities$(certificateType: CertificateType, issuer: X500Principal, issuerPublicKey: PublicKey, issuerSigner: ContentSigner, subject: X500Principal, subjectPublicKey: PublicKey, validityWindow: Pair&lt;Date, Date&gt;, nameConstraints: NameConstraints? = null, crlDistPoint: String? = null, crlIssuer: X500Name? = null)</ID>
+    <ID>LongParameterList:X509Utilities.kt$X509Utilities$(certificateType: CertificateType, issuer: X500Principal, issuerPublicKey: PublicKey, subject: X500Principal, subjectPublicKey: PublicKey, validityWindow: Pair&lt;Date, Date&gt;, nameConstraints: NameConstraints? = null, crlDistPoint: String? = null, crlIssuer: X500Name? = null)</ID>
+    <ID>LongParameterList:X509Utilities.kt$X509Utilities$(certificateType: CertificateType, issuerCertificate: X509Certificate, issuerKeyPair: KeyPair, subject: X500Principal, subjectPublicKey: PublicKey, validityWindow: Pair&lt;Duration, Duration&gt; = DEFAULT_VALIDITY_WINDOW, nameConstraints: NameConstraints? = null, crlDistPoint: String? = null, crlIssuer: X500Name? = null)</ID>
+    <ID>MagicNumber:AMQPServer.kt$AMQPServer$100</ID>
+    <ID>MagicNumber:ArtemisMessagingClient.kt$ArtemisMessagingClient$30000</ID>
+    <ID>MagicNumber:ArtemisMessagingClient.kt$ArtemisMessagingClient$60000</ID>
+    <ID>MagicNumber:ConnectionStateMachine.kt$ConnectionStateMachine$1500</ID>
+    <ID>MagicNumber:ConnectionStateMachine.kt$ConnectionStateMachine$4</ID>
+    <ID>MagicNumber:CordaPersistence.kt$DatabaseConfig.Defaults$100L</ID>
+    <ID>MagicNumber:MessageSizeChecksInterceptor.kt$ArtemisMessageSizeChecksInterceptor$4</ID>
+    <ID>MagicNumber:NetworkBootstrapper.kt$NetworkBootstrapper$3</ID>
+    <ID>MagicNumber:NetworkBootstrapper.kt$NetworkBootstrapper$30</ID>
+    <ID>MagicNumber:NetworkBootstrapper.kt$NetworkBootstrapper.Companion$3</ID>
+    <ID>MagicNumber:NetworkBootstrapper.kt$NetworkBootstrapper.Companion$40</ID>
+    <ID>MagicNumber:NetworkMap.kt$NetworkMap$10</ID>
+    <ID>MagicNumber:SSLHelper.kt$32</ID>
+    <ID>MagicNumber:X509Utilities.kt$X509Utilities$3650</ID>
+    <ID>MatchingDeclarationName:KeyStoreConfigHelpers.kt$net.corda.nodeapi.internal.KeyStoreConfigHelpers.kt</ID>
+    <ID>MatchingDeclarationName:SSLHelper.kt$net.corda.nodeapi.internal.protonwrapper.netty.SSLHelper.kt</ID>
+    <ID>MaxLineLength:AMQPBridgeManager.kt$AMQPBridgeManager : BridgeManager</ID>
+    <ID>MaxLineLength:AMQPBridgeManager.kt$AMQPBridgeManager$AMQPBridge</ID>
+    <ID>MaxLineLength:AMQPBridgeManager.kt$AMQPBridgeManager$crlCheckSoftFail: Boolean</ID>
+    <ID>MaxLineLength:AMQPBridgeManager.kt$AMQPBridgeManager$val newBridge = AMQPBridge(queueName, targets, legalNames, amqpConfig, sharedEventLoopGroup!!, artemis!!, bridgeMetricsService)</ID>
+    <ID>MaxLineLength:AMQPBridgeManager.kt$AMQPBridgeManager.AMQPBridge$logDebugWithMDC { "Bridged Send to ${legalNames.first()} uuid: ${artemisMessage.getObjectProperty("_AMQ_DUPL_ID")}" }</ID>
+    <ID>MaxLineLength:AMQPBridgeManager.kt$AMQPBridgeManager.AMQPBridge$logInfoWithMDC("Rollback rejected message uuid: ${artemisMessage.getObjectProperty("_AMQ_DUPL_ID")}")</ID>
+    <ID>MaxLineLength:AMQPBridgeManager.kt$AMQPBridgeManager.AMQPBridge$val msg = "Message exceeds maxMessageSize network parameter, maxMessageSize: [${amqpConfig.maxMessageSize}], message size: [${artemisMessage.bodySize}], " + "dropping message, uuid: ${artemisMessage.getObjectProperty("_AMQ_DUPL_ID")}"</ID>
+    <ID>MaxLineLength:AMQPBridgeManager.kt$AMQPBridgeManager.AMQPBridge$val session = sessionFactory.createSession(NODE_P2P_USER, NODE_P2P_USER, false, true, true, false, DEFAULT_ACK_BATCH_SIZE)</ID>
+    <ID>MaxLineLength:AMQPBridgeManager.kt$AMQPBridgeManager.AMQPConfigurationImpl$constructor(config: MutualSslConfiguration, maxMessageSize: Int, crlCheckSoftFail: Boolean) : this(config.keyStore.get(), config.trustStore.get(), maxMessageSize, crlCheckSoftFail)</ID>
+    <ID>MaxLineLength:AMQPBridgeManager.kt$AMQPBridgeManager.AMQPConfigurationImpl$override val crlCheckSoftFail: Boolean</ID>
+    <ID>MaxLineLength:AMQPChannelHandler.kt$AMQPChannelHandler$"Message for incorrect legal identity ${msg.destinationLegalName} expected ${remoteCert!!.subjectX500Principal}"</ID>
+    <ID>MaxLineLength:AMQPChannelHandler.kt$AMQPChannelHandler$eventProcessor = EventProcessor(ch, serverMode, localCert!!.subjectX500Principal.toString(), remoteCert!!.subjectX500Principal.toString(), userName, password)</ID>
+    <ID>MaxLineLength:AMQPChannelHandler.kt$AMQPChannelHandler$logErrorWithMDC("Provided certificate subject $remoteX500Name not in expected set $allowedRemoteLegalNames")</ID>
+    <ID>MaxLineLength:AMQPChannelHandler.kt$AMQPChannelHandler$require</ID>
+    <ID>MaxLineLength:AMQPChannelHandler.kt$AMQPChannelHandler${ logWarnWithMDC("SSL Handshake closed early.") }</ID>
+    <ID>MaxLineLength:AMQPClient.kt$AMQPClient.ClientChannelInitializer$log.error("Blocking future connection attempts to $target due to bad certificate on endpoint")</ID>
+    <ID>MaxLineLength:AMQPClient.kt$AMQPClient.ClientChannelInitializer$val handler = createClientSslHelper(target, parent.allowedRemoteLegalNames, keyManagerFactory, trustManagerFactory)</ID>
+    <ID>MaxLineLength:AMQPConfiguration.kt$AMQPConfiguration$/** * Enables full debug tracing of all netty and AMQP level packets. This logs aat very high volume and is only for developers. */ @JvmDefault val trace: Boolean get() = false</ID>
+    <ID>MaxLineLength:AMQPConfiguration.kt$AMQPConfiguration$/** * Setting crlCheckSoftFail to true allows certificate paths where some leaf certificates do not contain cRLDistributionPoints * and also allows validation to continue if the CRL distribution server is not contactable. */ @JvmDefault val crlCheckSoftFail: Boolean get() = true</ID>
+    <ID>MaxLineLength:AMQPConfiguration.kt$AMQPConfiguration$/** * The maximum allowed size for packets, which will be dropped ahead of send. In future may also be enforced on receive, * but currently that is deferred to Artemis and the bridge code. */ val maxMessageSize: Int</ID>
+    <ID>MaxLineLength:AMQPServer.kt$AMQPServer$server.group(bossGroup, workerGroup).channel(NioServerSocketChannel::class.java).option(ChannelOption.SO_BACKLOG, 100).handler(LoggingHandler(LogLevel.INFO)).childHandler(ServerChannelInitializer(this))</ID>
+    <ID>MaxLineLength:AMQPServer.kt$AMQPServer$val channelFuture = server.bind(hostName, port).sync() // block/throw here as better to know we failed to claim port than carry on</ID>
+    <ID>MaxLineLength:ArtemisMessagingClient.kt$ArtemisMessagingClient$private val failoverCallback: ((FailoverEventType) -&gt; Unit)? = null</ID>
+    <ID>MaxLineLength:ArtemisMessagingClient.kt$ArtemisMessagingClient$val session = sessionFactory!!.createSession(NODE_P2P_USER, NODE_P2P_USER, false, true, true, false, DEFAULT_ACK_BATCH_SIZE)</ID>
+    <ID>MaxLineLength:ArtemisMessagingComponent.kt$ArtemisMessagingComponent.Companion$const val PEERS_PREFIX = "${INTERNAL_PREFIX}peers." //TODO Come up with better name for common peers/services queue</ID>
+    <ID>MaxLineLength:ArtemisMessagingComponent.kt$ArtemisMessagingComponent.Companion.P2PMessagingHeaders$/** * In the operation mode where we have an out of process bridge we cannot correctly populate the Artemis validated user header * as the TLS does not terminate directly onto Artemis. We therefore use this internal only header to forward * the equivalent information from the Float. */ val bridgedCertificateSubject = SimpleString("sender-subject-name")</ID>
+    <ID>MaxLineLength:ArtemisMessagingComponent.kt$ArtemisMessagingComponent.RemoteInboxAddress.Companion$require(address.startsWith(PEERS_PREFIX)) { "Failed to map address: $address to a remote topic as it is not in the $PEERS_PREFIX namespace" }</ID>
+    <ID>MaxLineLength:ArtemisTcpTransport.kt$ArtemisTcpTransport</ID>
+    <ID>MaxLineLength:ArtemisTcpTransport.kt$ArtemisTcpTransport.Companion$( // Basic TCP target details. TransportConstants.HOST_PROP_NAME to hostAndPort.host, TransportConstants.PORT_PROP_NAME to hostAndPort.port, // Turn on AMQP support, which needs the protocol jar on the classpath. // Unfortunately we cannot disable core protocol as artemis only uses AMQP for interop. // It does not use AMQP messages for its own messages e.g. topology and heartbeats. // TODO further investigate how to ensure we use a well defined wire level protocol for Node to Node communications. TransportConstants.PROTOCOLS_PROP_NAME to "CORE,AMQP", TransportConstants.USE_GLOBAL_WORKER_POOL_PROP_NAME to (nodeSerializationEnv != null), TransportConstants.REMOTING_THREADS_PROPNAME to (if (nodeSerializationEnv != null) -1 else 1), // turn off direct delivery in Artemis - this is latency optimisation that can lead to //hick-ups under high load (CORDA-1336) TransportConstants.DIRECT_DELIVER to false)</ID>
+    <ID>MaxLineLength:ArtemisTcpTransport.kt$ArtemisTcpTransport.Companion$fun p2pAcceptorTcpTransport(hostAndPort: NetworkHostAndPort, config: MutualSslConfiguration?, enableSSL: Boolean = true): TransportConfiguration</ID>
+    <ID>MaxLineLength:ArtemisTcpTransport.kt$ArtemisTcpTransport.Companion$fun p2pAcceptorTcpTransport(hostAndPort: NetworkHostAndPort, keyStore: FileBasedCertificateStoreSupplier?, trustStore: FileBasedCertificateStoreSupplier?, enableSSL: Boolean = true): TransportConfiguration</ID>
+    <ID>MaxLineLength:ArtemisTcpTransport.kt$ArtemisTcpTransport.Companion$fun p2pConnectorTcpTransport(hostAndPort: NetworkHostAndPort, config: MutualSslConfiguration?, enableSSL: Boolean = true): TransportConfiguration</ID>
+    <ID>MaxLineLength:ArtemisTcpTransport.kt$ArtemisTcpTransport.Companion$fun p2pConnectorTcpTransport(hostAndPort: NetworkHostAndPort, keyStore: FileBasedCertificateStoreSupplier?, trustStore: FileBasedCertificateStoreSupplier?, enableSSL: Boolean = true): TransportConfiguration</ID>
+    <ID>MaxLineLength:ArtemisTcpTransport.kt$ArtemisTcpTransport.Companion$fun rpcAcceptorTcpTransport(hostAndPort: NetworkHostAndPort, config: BrokerRpcSslOptions?, enableSSL: Boolean = true): TransportConfiguration</ID>
+    <ID>MaxLineLength:ArtemisTcpTransport.kt$ArtemisTcpTransport.Companion$fun rpcConnectorTcpTransport(hostAndPort: NetworkHostAndPort, config: ClientRpcSslOptions?, enableSSL: Boolean = true): TransportConfiguration</ID>
+    <ID>MaxLineLength:ArtemisTcpTransport.kt$ArtemisTcpTransport.Companion$fun rpcConnectorTcpTransportsFromList(hostAndPortList: List&lt;NetworkHostAndPort&gt;, config: ClientRpcSslOptions?, enableSSL: Boolean = true): List&lt;TransportConfiguration&gt;</ID>
+    <ID>MaxLineLength:ArtemisTcpTransport.kt$ArtemisTcpTransport.Companion$fun rpcInternalAcceptorTcpTransport(hostAndPort: NetworkHostAndPort, config: SslConfiguration): TransportConfiguration</ID>
+    <ID>MaxLineLength:ArtemisTcpTransport.kt$ArtemisTcpTransport.Companion$fun rpcInternalClientTcpTransport(hostAndPort: NetworkHostAndPort, config: SslConfiguration): TransportConfiguration</ID>
+    <ID>MaxLineLength:ArtemisTcpTransport.kt$ArtemisTcpTransport.Companion$internal val acceptorFactoryClassName = "org.apache.activemq.artemis.core.remoting.impl.netty.NettyAcceptorFactory"</ID>
+    <ID>MaxLineLength:ArtemisTcpTransport.kt$ArtemisTcpTransport.Companion$options[TransportConstants.HANDSHAKE_TIMEOUT] = 0</ID>
+    <ID>MaxLineLength:ArtemisTcpTransport.kt$ArtemisTcpTransport.Companion$private</ID>
+    <ID>MaxLineLength:ArtemisTcpTransport.kt$ArtemisTcpTransport.Companion$return TransportConfiguration(acceptorFactoryClassName, defaultArtemisOptions(hostAndPort) + defaultSSLOptions + config.toTransportOptions() + (TransportConstants.HANDSHAKE_TIMEOUT to 0))</ID>
+    <ID>MaxLineLength:ArtemisTcpTransport.kt$ArtemisTcpTransport.Companion$return TransportConfiguration(connectorFactoryClassName, defaultArtemisOptions(hostAndPort) + defaultSSLOptions + config.toTransportOptions())</ID>
+    <ID>MaxLineLength:ArtemisUtils.kt$require(messageSize &lt;= limit) { "Message exceeds maxMessageSize network parameter, maxMessageSize: [$limit], message size: [$messageSize]" }</ID>
+    <ID>MaxLineLength:AttachmentVersionNumberMigration.kt$AttachmentVersionNumberMigration$logger.error("$msg skipped, network parameters not retrieved, could not determine node base directory due to system property $NODE_BASE_DIR_KEY being not set.")</ID>
+    <ID>MaxLineLength:AttachmentVersionNumberMigration.kt$AttachmentVersionNumberMigration$logger.info("$msg skipped, network parameters not found in $path, but there are no available attachments to migrate.")</ID>
+    <ID>MaxLineLength:AttachmentVersionNumberMigration.kt$AttachmentVersionNumberMigration$logger.info("$msg using network parameters from $path, whitelistedContractImplementations: ${networkParameters.whitelistedContractImplementations}.")</ID>
+    <ID>MaxLineLength:AttachmentVersionNumberMigration.kt$AttachmentVersionNumberMigration$logger.warn("Several versions based on whitelistedContractImplementations position are available: ${versions.toSet()}. $msg")</ID>
+    <ID>MaxLineLength:AttachmentVersionNumberMigration.kt$AttachmentVersionNumberMigration$val versions = networkParameters?.whitelistedContractImplementations?.values.mapNotNull { it.indexOfFirst { it.toString() == attachmentId } }.filter { it &gt;= 0 }</ID>
+    <ID>MaxLineLength:BCCryptoService.kt$BCCryptoService : CryptoService</ID>
+    <ID>MaxLineLength:BCCryptoService.kt$BCCryptoService$certificateStore.query { setPrivateKey(alias, keyPair.private, listOf(cert), certificateStore.entryPassword) }</ID>
+    <ID>MaxLineLength:BCCryptoService.kt$BCCryptoService$null -&gt; Crypto.doSign(certificateStore.query { getPrivateKey(alias, certificateStore.entryPassword) }, data)</ID>
+    <ID>MaxLineLength:BCCryptoService.kt$BCCryptoService$return ContentSignerBuilder.build(signatureScheme, privateKey, Crypto.findProvider(signatureScheme.providerName), newSecureRandom())</ID>
+    <ID>MaxLineLength:BCCryptoService.kt$BCCryptoService$throw CryptoServiceException("Cannot generate key for alias $alias and signature scheme ${scheme.schemeCodeName} (id ${scheme.schemeNumberID})", e)</ID>
+    <ID>MaxLineLength:BCCryptoService.kt$BCCryptoService$throw CryptoServiceException("Cannot sign using the key with alias $alias. SHA256 of data to be signed: ${data.sha256()}", e)</ID>
+    <ID>MaxLineLength:BCCryptoService.kt$BCCryptoService${ // Store a self-signed certificate, as Keystore requires to store certificates instead of public keys. // We could probably add a null cert, but we store a self-signed cert that will be used to retrieve the public key. val cert = X509Utilities.createSelfSignedCACertificate(legalName, keyPair) certificateStore.query { setPrivateKey(alias, keyPair.private, listOf(cert), certificateStore.entryPassword) } }</ID>
+    <ID>MaxLineLength:BridgeControlListener.kt$BridgeControlListener$bridgeManager.deployBridge(controlMessage.bridgeInfo.queueName, controlMessage.bridgeInfo.targets, controlMessage.bridgeInfo.legalNames.toSet())</ID>
+    <ID>MaxLineLength:BridgeControlListener.kt$BridgeControlListener$return queueName.startsWith(P2P_PREFIX) &amp;&amp; artemis!!.started!!.session.queueQuery(SimpleString(queueName)).isExists</ID>
+    <ID>MaxLineLength:BridgeControlListener.kt$BridgeControlListener$return queueName.startsWith(PEERS_PREFIX) &amp;&amp; artemis!!.started!!.session.queueQuery(SimpleString(queueName)).isExists</ID>
+    <ID>MaxLineLength:BridgeControlListener.kt$BridgeControlListener$val startupMessage = BridgeControl.BridgeToNodeSnapshotRequest(bridgeId).serialize(context = SerializationDefaults.P2P_CONTEXT).bytes</ID>
+    <ID>MaxLineLength:BridgeControlMessages.kt$BridgeControl$Create : BridgeControl</ID>
+    <ID>MaxLineLength:BridgeControlMessages.kt$BridgeControl$Delete : BridgeControl</ID>
+    <ID>MaxLineLength:BridgeControlMessages.kt$BridgeControl$NodeToBridgeSnapshot : BridgeControl</ID>
+    <ID>MaxLineLength:BridgeControlMessages.kt$BridgeControl.NodeToBridgeSnapshot$@CordaSerializable data</ID>
+    <ID>MaxLineLength:BridgeControlMessages.kt$BridgeEntry</ID>
+    <ID>MaxLineLength:BridgeControlMessages.kt$BridgeEntry$@CordaSerializable data</ID>
+    <ID>MaxLineLength:CertificateStore.kt$CertificateStore$ operator fun get(alias: String): X509Certificate</ID>
+    <ID>MaxLineLength:CertificateStore.kt$CertificateStore.Companion$fun fromFile(storePath: Path, password: String, entryPassword: String, createNew: Boolean): CertificateStore</ID>
+    <ID>MaxLineLength:CertificateStore.kt$CertificateStore.Companion$fun fromInputStream(stream: InputStream, password: String, entryPassword: String): CertificateStore</ID>
+    <ID>MaxLineLength:CertificateStore.kt$CertificateStore.Companion$fun fromResource(storeResourceName: String, password: String, entryPassword: String, classLoader: ClassLoader = Thread.currentThread().contextClassLoader): CertificateStore</ID>
+    <ID>MaxLineLength:CertificateStore.kt$CertificateStore.Companion$fun of(store: X509KeyStore, password: String, entryPassword: String): CertificateStore</ID>
+    <ID>MaxLineLength:CertificateStore.kt$DelegatingCertificateStore : CertificateStore</ID>
+    <ID>MaxLineLength:CertificateStoreSupplier.kt$FileBasedCertificateStoreSupplier : CertificateStoreSupplier</ID>
+    <ID>MaxLineLength:ConfigUtilities.kt$// Problems: // - Forces you to have a primary constructor with all fields of name and type matching the configuration file structure. // - Encourages weak bean-like types. // - Cannot support a many-to-one relationship between configuration file structures and configuration domain type. This is essential for versioning of the configuration files. // - It's complicated and based on reflection, meaning problems with it are typically found at runtime. // - It doesn't support validation errors in a structured way. If something goes wrong, it throws exceptions, which doesn't support good usability practices like displaying all the errors at once. fun &lt;T : Any&gt; Config.parseAs(clazz: KClass&lt;T&gt;, onUnknownKeys: ((Set&lt;String&gt;, logger: Logger) -&gt; Unit) = UnknownConfigKeysPolicy.FAIL::handle, nestedPath: String? = null, baseDirectory: Path? = null): T</ID>
+    <ID>MaxLineLength:ConfigUtilities.kt$UnknownConfigurationKeysException : IllegalArgumentException</ID>
+    <ID>MaxLineLength:ConfigUtilities.kt$UnknownConfigurationKeysException$require(unknownKeys.isNotEmpty()) { "Absence of unknown keys should not raise UnknownConfigurationKeysException." }</ID>
+    <ID>MaxLineLength:ConfigUtilities.kt$UnknownConfigurationKeysException.Companion$fun of(offendingKeys: Set&lt;String&gt;): UnknownConfigurationKeysException</ID>
+    <ID>MaxLineLength:ConfigUtilities.kt$UnknownConfigurationKeysException.Companion$private fun message(offendingKeys: Set&lt;String&gt;)</ID>
+    <ID>MaxLineLength:ConfigUtilities.kt$fun Any?.toConfigValue(): ConfigValue</ID>
+    <ID>MaxLineLength:ConfigUtilities.kt$getConfig(path).parseAs(typeClass, onUnknownKeys, nestedPath?.let { "$it.$path" } ?: path, baseDirectory = baseDirectory)</ID>
+    <ID>MaxLineLength:ConfigUtilities.kt$inline fun &lt;reified T : Any&gt; Config.parseAs(noinline onUnknownKeys: ((Set&lt;String&gt;, logger: Logger) -&gt; Unit) = UnknownConfigKeysPolicy.FAIL::handle): T</ID>
+    <ID>MaxLineLength:ConfigUtilities.kt$private</ID>
+    <ID>MaxLineLength:ConfigUtilities.kt$private fun parseEnum(enumType: Class&lt;*&gt;, name: String): Enum&lt;*&gt;</ID>
+    <ID>MaxLineLength:ConfigUtilities.kt$require(clazz.isData) { "Only Kotlin data classes or class annotated with CustomConfigParser can be parsed. Offending: ${clazz.qualifiedName}" }</ID>
+    <ID>MaxLineLength:ConfigUtilities.kt$return getValueInternal(metadata.name, metadata.returnType, UnknownConfigKeysPolicy.IGNORE::handle, nestedPath = null, baseDirectory = null)</ID>
+    <ID>MaxLineLength:ConfigUtilities.kt$return uncheckedCast(if (type.arguments.isEmpty()) getSingleValue(path, type, onUnknownKeys, nestedPath, baseDirectory) else getCollectionValue(path, type, onUnknownKeys, nestedPath, baseDirectory))</ID>
+    <ID>MaxLineLength:ConfigUtilities.kt$val elementClass = type.arguments[0].type?.jvmErasure ?: throw IllegalArgumentException("Cannot work with star projection: $type")</ID>
+    <ID>MaxLineLength:ConfigUtilities.kt${ // These types are supported by Config as use as is value }</ID>
+    <ID>MaxLineLength:ConfigUtilities.kt${ // These types make sense to be represented as Strings and the exact inverse parsing function for use in parseAs value.toString() }</ID>
+    <ID>MaxLineLength:ConfigUtilities.kt${ // if baseDirectory been specified try resolving path against it. Note if `pathFromConfig` is an absolute path - this instruction has no effect. baseDirectory.resolve(path) }</ID>
+    <ID>MaxLineLength:ConnectionChange.kt$ConnectionChange$data</ID>
+    <ID>MaxLineLength:ConnectionChange.kt$ConnectionChange$return "ConnectionChange remoteAddress: $remoteAddress connected state: $connected cert subject: ${remoteCert?.subjectDN} cert ok: ${!badCert}"</ID>
+    <ID>MaxLineLength:ConnectionStateMachine.kt$ConnectionStateMachine$logDebugWithMDC { "Put tag ${javax.xml.bind.DatatypeConverter.printHexBinary(delivery.tag)} on wire uuid: ${nextMessage.applicationProperties["_AMQ_DUPL_ID"]}" }</ID>
+    <ID>MaxLineLength:ConnectionStateMachine.kt$ConnectionStateMachine$logDebugWithMDC { "Sender delivery confirmed tag ${javax.xml.bind.DatatypeConverter.printHexBinary(delivery.tag)}" }</ID>
+    <ID>MaxLineLength:ConnectionStateMachine.kt$ConnectionStateMachine$sender.send(messageBuf.array(), messageBuf.arrayOffset() + messageBuf.readerIndex(), messageBuf.readableBytes())</ID>
+    <ID>MaxLineLength:ConnectionStateMachine.kt$ConnectionStateMachine$val pending = transport.pending() // Note this drives frame generation, which the susbsequent writes push to the socket</ID>
+    <ID>MaxLineLength:ContentSignerBuilder.kt$ContentSignerBuilder$fun build(signatureScheme: SignatureScheme, privateKey: PrivateKey, provider: Provider, random: SecureRandom? = null): ContentSigner</ID>
+    <ID>MaxLineLength:ContractsScanning.kt$// When scanning of the CorDapp Jar is performed without "corda-core.jar" being in the classpath, there is no way to appreciate // relationships between those interfaces, therefore they have to be listed explicitly. val coreContractClasses = setOf(Contract::class, UpgradedContractWithLegacyConstraint::class, UpgradedContract::class)</ID>
+    <ID>MaxLineLength:CordaPersistence.kt$// Add the subscriber to the wrapping subscriber, which will invoke the original subscribers together inside a database transaction. wrappingSubscriber.delegates.add(toBeWrappedInDbTx) // If we are the first subscriber, return the shared subscriber, otherwise return a subscriber that does nothing. if (wrappingSubscriber.delegates.size == 1) wrappingSubscriber else NoOpSubscriber(toBeWrappedInDbTx) // Clean up the shared list of subscribers when they unsubscribe.</ID>
+    <ID>MaxLineLength:CordaPersistence.kt$CordaPersistence$ fun &lt;T&gt; transaction(isolationLevel: TransactionIsolationLevel, recoverableFailureTolerance: Int, recoverAnyNestedSQLException: Boolean, statement: DatabaseTransaction.() -&gt; T): T</ID>
+    <ID>MaxLineLength:CordaPersistence.kt$CordaPersistence$ fun &lt;T&gt; transaction(recoverableFailureTolerance: Int, statement: DatabaseTransaction.() -&gt; T): T</ID>
+    <ID>MaxLineLength:CordaPersistence.kt$CordaPersistence$HibernateConfiguration(schemas, databaseConfig, attributeConverters, jdbcUrl, cacheFactory, customClassLoader)</ID>
+    <ID>MaxLineLength:CordaPersistence.kt$CordaPersistence$error("Was not expecting to find existing database transaction on current strand when setting database: ${Strand.currentStrand()}, $it")</ID>
+    <ID>MaxLineLength:CordaPersistence.kt$CordaPersistence$is SchemaManagementException -&gt; throw HibernateSchemaChangeException("Incompatible schema change detected. Please run the node with database.initialiseSchema=true. Reason: ${e.message}", e)</ID>
+    <ID>MaxLineLength:CordaPersistence.kt$CordaPersistence$recoverAnyNestedSQLException: Boolean</ID>
+    <ID>MaxLineLength:CordaPersistence.kt$CordaPersistence$val connectionBag: ConcurrentBag&lt;ConcurrentBag.IConcurrentBagEntry&gt; = connectionBagField.get(pool) as ConcurrentBag&lt;ConcurrentBag.IConcurrentBagEntry&gt;</ID>
+    <ID>MaxLineLength:CordaPersistence.kt$CordaPersistence$val transaction = contextDatabase.currentOrNew(isolationLevel) // XXX: Does this code really support statement changing the contextDatabase?</ID>
+    <ID>MaxLineLength:CordaPersistence.kt$CordaPersistence${ // DataSource doesn't implement AutoCloseable so we just have to hope that the implementation does so that we can close it (_dataSource as? AutoCloseable)?.close() }</ID>
+    <ID>MaxLineLength:CordaPersistence.kt$CordaPersistence${ // We need to set the database for the current [Thread] or [Fiber] here as some tests share threads across databases. _contextDatabase.set(this) currentDBSession().flush() return contextTransaction.connection }</ID>
+    <ID>MaxLineLength:CordaPersistence.kt$CordaPersistence${ // We need to set the database for the current [Thread] or [Fiber] here as some tests share threads across databases. _contextDatabase.set(this) return currentOrNew(isolationLevel) }</ID>
+    <ID>MaxLineLength:CordaPersistence.kt$CouldNotCreateDataSourceException : Exception</ID>
+    <ID>MaxLineLength:CordaPersistence.kt$currentTx.boundary.filter { !it.success }.subscribe { this.onError(DatabaseTransactionRolledBackException(it.txId)) }</ID>
+    <ID>MaxLineLength:CordaPersistence.kt$return _contextDatabase.get() ?: error("Was expecting to find CordaPersistence set on current thread: ${Strand.currentStrand()}")</ID>
+    <ID>MaxLineLength:CordaPersistence.kt${ var wrappingSubscriber = DatabaseTransactionWrappingSubscriber&lt;T&gt;(db) // Use lift to add subscribers to a special subscriber that wraps a database transaction around observations. // Each subscriber will be passed to this lambda when they subscribe, at which point we add them to wrapping subscriber. return this.lift { toBeWrappedInDbTx: Subscriber&lt;in T&gt; -&gt; // Add the subscriber to the wrapping subscriber, which will invoke the original subscribers together inside a database transaction. wrappingSubscriber.delegates.add(toBeWrappedInDbTx) // If we are the first subscriber, return the shared subscriber, otherwise return a subscriber that does nothing. if (wrappingSubscriber.delegates.size == 1) wrappingSubscriber else NoOpSubscriber(toBeWrappedInDbTx) // Clean up the shared list of subscribers when they unsubscribe. }.doOnUnsubscribe { wrappingSubscriber.cleanUp() // If cleanup removed the last subscriber reset the system, as future subscribers might need the stream again if (wrappingSubscriber.delegates.isEmpty()) { wrappingSubscriber = DatabaseTransactionWrappingSubscriber(db) } } }</ID>
+    <ID>MaxLineLength:CryptoService.kt$SignOnlyCryptoService$ fun defaultIdentitySignatureScheme(): SignatureScheme</ID>
+    <ID>MaxLineLength:CryptoService.kt$SignOnlyCryptoService$ fun defaultTLSSignatureScheme(): SignatureScheme</ID>
+    <ID>MaxLineLength:CryptoServiceFactory.kt$CryptoServiceFactory.Companion$throw IllegalArgumentException("Currently only BouncyCastle is used as a crypto service. A valid signing certificate store is required.")</ID>
+    <ID>MaxLineLength:DatabaseTransaction.kt$get() = contextTransactionOrNull ?: error("Was expecting to find transaction set on current strand: ${Strand.currentStrand()}")</ID>
+    <ID>MaxLineLength:DatabaseTransaction.kt$get() = if (_prohibitDatabaseAccess.get() == true) throw IllegalAccessException("Database access is disabled in this context.") else _contextTransaction.get()</ID>
+    <ID>MaxLineLength:DeduplicationChecker.kt$DeduplicationChecker</ID>
+    <ID>MaxLineLength:DevIdentityGenerator.kt$DevIdentityGenerator$ fun generateDistributedNotaryCompositeIdentity(dirs: List&lt;Path&gt;, notaryName: CordaX500Name, threshold: Int = 1): Party</ID>
+    <ID>MaxLineLength:DevIdentityGenerator.kt$DevIdentityGenerator$DEV_CA_KEY_STORE_PASS</ID>
+    <ID>MaxLineLength:DevIdentityGenerator.kt$DevIdentityGenerator$val p2pKeyStore = FileBasedCertificateStoreSupplier(certificatesDirectory / "sslkeystore.jks", DEV_CA_KEY_STORE_PASS, DEV_CA_KEY_STORE_PASS)</ID>
+    <ID>MaxLineLength:DevIdentityGenerator.kt$DevIdentityGenerator$val p2pTrustStore = FileBasedCertificateStoreSupplier(certificatesDirectory / "truststore.jks", DEV_CA_TRUST_STORE_PASS, DEV_CA_TRUST_STORE_PRIVATE_KEY_PASS)</ID>
+    <ID>MaxLineLength:DevIdentityGenerator.kt$DevIdentityGenerator$val signingCertStore = FileBasedCertificateStoreSupplier(certificatesDirectory / "nodekeystore.jks", DEV_CA_KEY_STORE_PASS, DEV_CA_KEY_STORE_PASS)</ID>
+    <ID>MaxLineLength:EventProcessor.kt$EventProcessor$val status: DeliveryState = if (completer.status == MessageStatus.Acknowledged) Accepted.getInstance() else Rejected()</ID>
+    <ID>MaxLineLength:HibernateConfiguration.kt$HibernateConfiguration$ fun sessionFactoryForSchemas(key: Set&lt;MappedSchema&gt;): SessionFactory</ID>
+    <ID>MaxLineLength:HibernateConfiguration.kt$HibernateConfiguration$// TODO: require mechanism to set schemaOptions (databaseSchema, tablePrefix) which are not global to session schema.mappedTypes.forEach { config.addAnnotatedClass(it) }</ID>
+    <ID>MaxLineLength:HibernateConfiguration.kt$HibernateConfiguration$Configuration(metadataSources).setProperty("hibernate.connection.provider_class", NodeDatabaseConnectionProvider::class.java.name) .setProperty("hibernate.format_sql", "true") .setProperty("hibernate.hbm2ddl.auto", hbm2dll) .setProperty("javax.persistence.validation.mode", "none") .setProperty("hibernate.connection.isolation", databaseConfig.transactionIsolationLevel.jdbcValue.toString())</ID>
+    <ID>MaxLineLength:HibernateConfiguration.kt$HibernateConfiguration$CordaMaterializedBlobType : AbstractSingleColumnStandardBasicType</ID>
+    <ID>MaxLineLength:HibernateConfiguration.kt$HibernateConfiguration$CordaPrimitiveByteArrayTypeDescriptor : PrimitiveByteArrayTypeDescriptor</ID>
+    <ID>MaxLineLength:HibernateConfiguration.kt$HibernateConfiguration$CordaWrapperBinaryType : AbstractSingleColumnStandardBasicType</ID>
+    <ID>MaxLineLength:HibernateConfiguration.kt$HibernateConfiguration$MapBlobToPostgresByteA : AbstractSingleColumnStandardBasicType</ID>
+    <ID>MaxLineLength:HibernateConfiguration.kt$HibernateConfiguration$private</ID>
+    <ID>MaxLineLength:HibernateConfiguration.kt$HibernateConfiguration$private val sessionFactories = cacheFactory.buildNamed&lt;Set&lt;MappedSchema&gt;, SessionFactory&gt;(Caffeine.newBuilder(), "HibernateConfiguration_sessionFactories")</ID>
+    <ID>MaxLineLength:HibernateConfiguration.kt$HibernateConfiguration$val config = Configuration(metadataSources).setProperty("hibernate.connection.provider_class", NodeDatabaseConnectionProvider::class.java.name) .setProperty("hibernate.format_sql", "true") .setProperty("hibernate.hbm2ddl.auto", hbm2dll) .setProperty("javax.persistence.validation.mode", "none") .setProperty("hibernate.connection.isolation", databaseConfig.transactionIsolationLevel.jdbcValue.toString())</ID>
+    <ID>MaxLineLength:HibernateConfiguration.kt$HibernateConfiguration${ "update" }</ID>
+    <ID>MaxLineLength:HibernateConfiguration.kt$HibernateConfiguration${ logger.info("Creating session factory for schemas: $schemas") val serviceRegistry = BootstrapServiceRegistryBuilder().build() val metadataSources = MetadataSources(serviceRegistry) val hbm2dll: String = if(databaseConfig.initialiseSchema &amp;&amp; databaseConfig.initialiseAppSchema == SchemaInitializationType.UPDATE) { "update" } else if((!databaseConfig.initialiseSchema &amp;&amp; databaseConfig.initialiseAppSchema == SchemaInitializationType.UPDATE) || databaseConfig.initialiseAppSchema == SchemaInitializationType.VALIDATE) { "validate" } else { "none" } // We set a connection provider as the auto schema generation requires it. The auto schema generation will not // necessarily remain and would likely be replaced by something like Liquibase. For now it is very convenient though. val config = Configuration(metadataSources).setProperty("hibernate.connection.provider_class", NodeDatabaseConnectionProvider::class.java.name) .setProperty("hibernate.format_sql", "true") .setProperty("hibernate.hbm2ddl.auto", hbm2dll) .setProperty("javax.persistence.validation.mode", "none") .setProperty("hibernate.connection.isolation", databaseConfig.transactionIsolationLevel.jdbcValue.toString()) schemas.forEach { schema -&gt; // TODO: require mechanism to set schemaOptions (databaseSchema, tablePrefix) which are not global to session schema.mappedTypes.forEach { config.addAnnotatedClass(it) } } val sessionFactory = buildSessionFactory(config, metadataSources, customClassLoader) logger.info("Created session factory for schemas: $schemas") // export Hibernate JMX statistics if (databaseConfig.exportHibernateJMXStatistics) initStatistics(sessionFactory) return sessionFactory }</ID>
+    <ID>MaxLineLength:HibernateConfiguration.kt$HibernateConfiguration.Companion$// register custom converters fun buildHibernateMetadata(metadataBuilder: MetadataBuilder, jdbcUrl:String, attributeConverters: Collection&lt;AttributeConverter&lt;*, *&gt;&gt;): Metadata</ID>
+    <ID>MaxLineLength:HibernateConfiguration.kt$HibernateConfiguration.Companion$attributeConverters.forEach { applyAttributeConverter(it) } // Register a tweaked version of `org.hibernate.type.MaterializedBlobType` that truncates logged messages. // to avoid OOM when large blobs might get logged. applyBasicType(CordaMaterializedBlobType, CordaMaterializedBlobType.name) applyBasicType(CordaWrapperBinaryType, CordaWrapperBinaryType.name) // Create a custom type that will map a blob to byteA in postgres and as a normal blob for all other dbms. // This is required for the Checkpoints as a workaround for the issue that postgres has on azure. if (jdbcUrl.contains(":postgresql:", ignoreCase = true)) { applyBasicType(MapBlobToPostgresByteA, MapBlobToPostgresByteA.name) } else { applyBasicType(MapBlobToNormalBlob, MapBlobToNormalBlob.name) } return build()</ID>
+    <ID>MaxLineLength:HibernateConfiguration.kt$HibernateConfiguration.NodeDatabaseConnectionProvider$override fun isUnwrappableAs(unwrapType: Class&lt;*&gt;?): Boolean</ID>
+    <ID>MaxLineLength:KeyOwningIdentity.kt$KeyOwningIdentity</ID>
+    <ID>MaxLineLength:KeyOwningIdentity.kt$KeyOwningIdentity$MappedIdentity : KeyOwningIdentity</ID>
+    <ID>MaxLineLength:KeyOwningIdentity.kt$KeyOwningIdentity$UnmappedIdentity : KeyOwningIdentity</ID>
+    <ID>MaxLineLength:KeyStoreConfigHelpers.kt$"certificates/$DEV_CA_TRUST_STORE_FILE"</ID>
+    <ID>MaxLineLength:KeyStoreConfigHelpers.kt$// A code signing policy is currently under design. // The following interim key represents a self-signed certificate produced using the Java keytool and located in the gradle cordapp plugins resources key store: // https://github.com/corda/corda-gradle-plugins/blob/master/cordapp/src/main/resources/certificates/cordadevcodesign.jks const val DEV_CORDAPP_CODE_SIGNING_STR = "AA59D829F2CA8FDDF5ABEA40D815F937E3E54E572B65B93B5C216AE6594E7D6B"</ID>
+    <ID>MaxLineLength:KeyStoreConfigHelpers.kt$devNodeCa: CertificateAndKeyPair = createDevNodeCa(intermediateCa, legalName)</ID>
+    <ID>MaxLineLength:KeyStoreConfigHelpers.kt$fun CertificateStore.storeLegalIdentity(alias: String, keyPair: KeyPair = Crypto.generateKeyPair()): PartyAndCertificate</ID>
+    <ID>MaxLineLength:KeyStoreConfigHelpers.kt$fun loadDevCaKeyStore(classLoader: ClassLoader = DevCaHelper::class.java.classLoader): CertificateStore</ID>
+    <ID>MaxLineLength:KeyStoreConfigHelpers.kt$fun loadDevCaTrustStore(classLoader: ClassLoader = DevCaHelper::class.java.classLoader): CertificateStore</ID>
+    <ID>MaxLineLength:KeyStoreConfigHelpers.kt$nodeKeyPair: KeyPair = generateKeyPair(X509Utilities.DEFAULT_TLS_SIGNATURE_SCHEME)</ID>
+    <ID>MaxLineLength:KeyStoreConfigHelpers.kt$setPrivateKey</ID>
+    <ID>MaxLineLength:KeyStoreConfigHelpers.kt$val DEV_PUB_KEY_HASHES: List&lt;SecureHash.SHA256&gt; get() = listOf(DEV_INTERMEDIATE_CA.certificate, DEV_ROOT_CA.certificate).map { it.publicKey.hash.sha256() } + SecureHash.parse(DEV_CORDAPP_CODE_SIGNING_STR).sha256()</ID>
+    <ID>MaxLineLength:KeyStoreConfigHelpers.kt$val identityCert = X509Utilities.createCertificate(CertificateType.LEGAL_IDENTITY, nodeCaCertAndKeyPair.certificate, nodeCaCertAndKeyPair.keyPair, nodeCaCertAndKeyPair.certificate.subjectX500Principal, keyPair.public)</ID>
+    <ID>MaxLineLength:KeyStoreConfigHelpers.kt$val nameConstraints = NameConstraints(arrayOf(GeneralSubtree(GeneralName(GeneralName.directoryName, legalName.toX500Name()))), arrayOf())</ID>
+    <ID>MaxLineLength:KeyStoreConfigHelpers.kt$val nodeCaCertAndKeyPair = getCertificateAndKeyPair(X509Utilities.CORDA_CLIENT_CA, this@storeLegalIdentity.entryPassword)</ID>
+    <ID>MaxLineLength:KeyStoreConfigHelpers.kt$val tlsCert = X509Utilities.createCertificate(CertificateType.TLS, devNodeCa.certificate, devNodeCa.keyPair, legalName.x500Principal, tlsKeyPair.public)</ID>
+    <ID>MaxLineLength:KeyStoreUtilities.kt$ fun KeyStore.addOrReplaceKey(alias: String, key: Key, password: CharArray, chain: Array&lt;out Certificate&gt;)</ID>
+    <ID>MaxLineLength:KeyStoreUtilities.kt$ fun KeyStore.getSupportedKey(alias: String, keyPassword: String): PrivateKey</ID>
+    <ID>MaxLineLength:KeyStoreUtilities.kt$ fun KeyStore.save(keyStoreFilePath: Path, storePassword: String)</ID>
+    <ID>MaxLineLength:KeyStoreUtilities.kt$return certificate as? X509Certificate ?: throw IllegalStateException("Certificate under alias \"$alias\" is not an X.509 certificate: $certificate")</ID>
+    <ID>MaxLineLength:MessageSizeChecksInterceptor.kt$AmqpMessageSizeChecksInterceptor : MessageSizeChecksInterceptorAmqpInterceptor</ID>
+    <ID>MaxLineLength:MessageSizeChecksInterceptor.kt$ArtemisMessageSizeChecksInterceptor : MessageSizeChecksInterceptorInterceptor</ID>
+    <ID>MaxLineLength:MessageSizeChecksInterceptor.kt$ArtemisMessageSizeChecksInterceptor$is MessagePacket -&gt; (packet.message.persistentSize - packet.message.headersAndPropertiesEncodeSize - 4).toInt()</ID>
+    <ID>MaxLineLength:MessageSizeChecksInterceptor.kt$MessageSizeChecksInterceptor$logger</ID>
+    <ID>MaxLineLength:NOT_YET_REGISTERED_MARKER_KEYS_AND_CERTS.kt$NOT_YET_REGISTERED_MARKER_KEYS_AND_CERTS$val ECDSAR1_KEYPAIR by lazy { Crypto.deriveKeyPairFromEntropy(Crypto.ECDSA_SECP256R1_SHA256, BigInteger.valueOf(0)) }</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$CopyCordapps$println("WARNING: ${it.fileName} already exists in $cordappsDir, ignoring and leaving existing CorDapp untouched")</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$CopyCordapps$protected abstract fun copyTo(cordappJars: List&lt;Path&gt;, nodeDirs: List&lt;Path&gt;, networkAlreadyExists: Boolean, fromCordform: Boolean)</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$CopyCordapps.FirstRunOnly$override</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$CopyCordapps.FirstRunOnly$println("Not copying CorDapp JARs as --copy-cordapps is set to FirstRunOnly, and it looks like this network has already been bootstrapped.")</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$CopyCordapps.No$override</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$CopyCordapps.Yes$override fun copyTo(cordappJars: List&lt;Path&gt;, nodeDirs: List&lt;Path&gt;, networkAlreadyExists: Boolean, fromCordform: Boolean)</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapper$1 -&gt; return netParamsFilesGrouped.keys.first().deserialize().verifiedNetworkParametersCert(DEV_ROOT_CA.certificate)</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapper$bootstrap(directory, cordappJars, CopyCordapps.No, fromCordform = true, networkParametersOverrides = networkParametersOverrides)</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapper$bootstrap(directory, cordappJars, copyCordapps, fromCordform = false, networkParametersOverrides = networkParameterOverrides)</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapper$is NotaryCluster.CFT -&gt; DevIdentityGenerator.generateDistributedNotarySingularIdentity(directories, cluster.name)</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapper$listOf(CordaX500Name.parse(config.getString("notary.serviceLegalName")) to DirectoryAndConfig(path, config))</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapper$override</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapper$paths.filter { it.toString().endsWith(".jar") &amp;&amp; !it.isSameAs(bootstrapperJar) &amp;&amp; !jarsThatArentCordapps.contains(it.fileName.toString().toLowerCase()) }</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapper$private val contractsJarConverter: (Path) -&gt; ContractsJar</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapper$require(networkParameterOverrides.minimumPlatformVersion == null || networkParameterOverrides.minimumPlatformVersion &lt;= PLATFORM_VERSION) { "Minimum platform version cannot be greater than $PLATFORM_VERSION" }</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapper$val configuration = ConfigFactory.parseString(extraConfigurations).resolve().getObject("networkParameterOverrides").toConfig().parseAsNetworkParametersConfiguration()</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapper$val msg = StringBuilder("Differing sets of network parameters were found. Make sure all the nodes have the same " + "network parameters by copying the correct $NETWORK_PARAMS_FILE_NAME file across.\n\n")</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapper$val networkParametersOverrides = configuration.doOnErrors(::reportErrors).optional ?: throw IllegalStateException("Invalid configuration passed.")</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapper$val newNetParams = installNetworkParameters(notaryInfos, newWhitelist, existingNetParams, nodeDirs, networkParametersOverrides)</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapper$val newWhitelist = generateWhitelist(existingNetParams, readExcludeWhitelist(directory), unsignedJars.map(contractsJarConverter), readIncludeWhitelist(directory), signedJars.map(contractsJarConverter))</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapper$val nodeDirs = directory.list { subDir -&gt; subDir.filter { (it / "node.conf").exists() &amp;&amp; !(it / "corda.jar").exists() }.toList() }</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapper$val signedJars = cordappJars.filter { isSigned(it) } // signed JARs are excluded by default, optionally include them in order to transition states from CZ whitelist to signature constraint</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapper$webServerConfFiles.firstOrNull { directory.relativize(it).toString().removeSuffix("_web-server.conf") == nodeName }</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapper$when (legalIdentities.size) { // Single node notaries have just one identity like all other nodes. This identity is the notary identity 1 -&gt; legalIdentities[0] // Nodes which are part of a distributed notary have a second identity which is the composite identity of the // cluster and is shared by all the other members. This is the notary identity. 2 -&gt; legalIdentities[1] else -&gt; throw IllegalArgumentException("Not sure how to get the notary identity in this scenario: $this") }</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapper.AMQPParametersSerializationScheme$override</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapper.Companion$val timePerNode = 40.seconds // On the test machine, generating the node info takes 7 seconds for a single node.</ID>
+    <ID>MaxLineLength:NetworkBootstrapper.kt$NetworkBootstrapperWithOverridableParameters$fun bootstrap(directory: Path, copyCordapps: CopyCordapps, networkParameterOverrides: NetworkParametersOverrides = NetworkParametersOverrides())</ID>
+    <ID>MaxLineLength:NetworkMap.kt$ParametersUpdate</ID>
+    <ID>MaxLineLength:NetworkParameterOverridesSpec.kt$NetworkParameterOverridesSpec$internal</ID>
+    <ID>MaxLineLength:NetworkParameterOverridesSpec.kt$NetworkParameterOverridesSpec.PackageOwnershipSpec$badValue("Error reading the key store from the file for keyStoreFilePath: $suppliedKeystorePath ${e.message}.")</ID>
+    <ID>MaxLineLength:NetworkParameterOverridesSpec.kt$NetworkParameterOverridesSpec.PackageOwnershipSpec$badValue("Password is incorrect or the key store is damaged for keyStoreFilePath: $suppliedKeystorePath.")</ID>
+    <ID>MaxLineLength:NetworkParameterOverridesSpec.kt$fun Config.parseAsNetworkParametersConfiguration(options: Configuration.Validation.Options = Configuration.Validation.Options(strict = false)): Valid&lt;NetworkParametersOverrides&gt;</ID>
+    <ID>MaxLineLength:NetworkParameterOverridesSpec.kt$internal fun &lt;T&gt; badValue(msg: String): Valid&lt;T&gt;</ID>
+    <ID>MaxLineLength:NetworkParametersCopier.kt$NetworkParametersCopier$private val serialisedSignedNetParams: SerializedBytes&lt;SignedDataWithCert&lt;NetworkParameters&gt;&gt; = signingCertAndKeyPair.sign(networkParameters).serialize()</ID>
+    <ID>MaxLineLength:NodeInfoFilesCopier.kt$NodeInfoFilesCopier$atomicCopy(previouslySeenFile, newNodeFile.additionalNodeInfoDirectory.resolve(previouslySeenFile.fileName))</ID>
+    <ID>MaxLineLength:NodeInfoFilesCopier.kt$NodeInfoFilesCopier$for (destination in this.values.filter { it.nodeDir != nodeData.nodeDir }.map { it.additionalNodeInfoDirectory }) { val fullDestinationPath = destination.resolve(path.fileName) atomicCopy(path, fullDestinationPath) }</ID>
+    <ID>MaxLineLength:NodeInfoFilesCopier.kt$NodeInfoFilesCopier$private fun allPreviouslySeenFiles()</ID>
+    <ID>MaxLineLength:PublicKeyToOwningIdentityCache.kt$PublicKeyToOwningIdentityCache</ID>
+    <ID>MaxLineLength:RPCApi.kt$RPCApi.ServerToClient$FailedToDeserializeReply : RuntimeException</ID>
+    <ID>MaxLineLength:RPCApi.kt$RPCApi.ServerToClient.Companion$val id = message.invocationId(RPC_ID_FIELD_NAME, RPC_ID_TIMESTAMP_FIELD_NAME) ?: throw IllegalStateException("Cannot parse invocation id from client message.")</ID>
+    <ID>MaxLineLength:RPCApi.kt$RPCApi.ServerToClient.Companion$val observableId = message.invocationId(OBSERVABLE_ID_FIELD_NAME, OBSERVABLE_ID_TIMESTAMP_FIELD_NAME) ?: throw IllegalStateException("Cannot parse invocation id from client message.")</ID>
+    <ID>MaxLineLength:RPCApi.kt$RPCApi.ServerToClient.Companion$val payload = message.getBodyAsByteArray().deserialize&lt;Notification&lt;*&gt;&gt;(context = poolWithIdContext)</ID>
+    <ID>MaxLineLength:RPCApi.kt$RPCApi.ServerToClient.Companion${ val id = message.invocationId(RPC_ID_FIELD_NAME, RPC_ID_TIMESTAMP_FIELD_NAME) ?: throw IllegalStateException("Cannot parse invocation id from client message.") val poolWithIdContext = context.withProperty(RpcRequestOrObservableIdKey, id) // The result here is a Try&lt;&gt; that represents the attempt to try the operation on the server side. // If anything goes wrong with deserialisation of the response, we propagate it differently because // we also need to pass through the invocation and dedupe IDs. val result: Try&lt;Any?&gt; = try { message.getBodyAsByteArray().deserialize(context = poolWithIdContext) } catch (e: Exception) { throw FailedToDeserializeReply(id, e) } RpcReply( id = id, deduplicationIdentity = deduplicationIdentity, result = result ) }</ID>
+    <ID>MaxLineLength:RPCApi.kt$RPCApi.ServerToClient.Observation$message.bodyBuffer.writeBytes(content.safeSerialize(context) { Notification.createOnError&lt;Void?&gt;(it) }.bytes)</ID>
+    <ID>MaxLineLength:RPCApi.kt$net.corda.nodeapi.RPCApi.kt</ID>
+    <ID>MaxLineLength:RPCApi.kt$private</ID>
+    <ID>MaxLineLength:RPCApi.kt$private fun ClientMessage.invocationId(valueProperty: String, timestampProperty: String): InvocationId?</ID>
+    <ID>MaxLineLength:RPCApi.kt$private fun ClientMessage.sessionId(valueProperty: String, timestampProperty: String): SessionId?</ID>
+    <ID>MaxLineLength:RPCApi.kt$private fun SessionId.mapTo(message: ClientMessage)</ID>
+    <ID>MaxLineLength:RPCApi.kt$private fun Trace.mapToExternal(message: ClientMessage)</ID>
+    <ID>MaxLineLength:RPCApi.kt$return invocationId(RPC_ID_FIELD_NAME, RPC_ID_TIMESTAMP_FIELD_NAME) ?: throw IllegalStateException("Cannot extract reply id from client message.")</ID>
+    <ID>MaxLineLength:RPCApi.kt$return sessionId(RPC_SESSION_ID_FIELD_NAME, RPC_SESSION_ID_TIMESTAMP_FIELD_NAME) ?: throw IllegalStateException("Cannot extract the session id from client message.")</ID>
+    <ID>MaxLineLength:RpcExceptions.kt$DuplicateAttachmentException : FileAlreadyExistsExceptionClientRelevantError</ID>
+    <ID>MaxLineLength:RpcExceptions.kt$InternalNodeException : CordaRuntimeExceptionClientRelevantErrorIdentifiableException</ID>
+    <ID>MaxLineLength:RpcExceptions.kt$NonRpcFlowException : IllegalArgumentExceptionClientRelevantError</ID>
+    <ID>MaxLineLength:RpcExceptions.kt$OutdatedNetworkParameterHashException : CordaRuntimeExceptionClientRelevantError</ID>
+    <ID>MaxLineLength:RpcExceptions.kt$OutdatedNetworkParameterHashException.Companion$private const val TEMPLATE = "Refused to accept parameters with hash %s because network map advertises update with hash %s. Please check newest version"</ID>
+    <ID>MaxLineLength:RpcHelpers.kt$return Observable.interval(interval, unit).map { isWaitingForShutdown() }.takeFirst { waiting -&gt; waiting == false }.map { Unit }</ID>
+    <ID>MaxLineLength:SSLHelper.kt$// As per Javadoc in: https://docs.oracle.com/javase/8/docs/api/javax/net/ssl/KeyManagerFactory.html `init` method // 2nd parameter `password` - the password for recovering keys in the KeyStore fun KeyManagerFactory.init(keyStore: CertificateStore)</ID>
+    <ID>MaxLineLength:SSLHelper.kt$LoggingTrustManagerWrapper$AuthorityKeyIdentifier.getInstance(bcCert.getExtension(Extension.authorityKeyIdentifier).parsedValue).keyIdentifier.toHex()</ID>
+    <ID>MaxLineLength:SSLHelper.kt$LoggingTrustManagerWrapper$SubjectKeyIdentifier.getInstance(bcCert.getExtension(Extension.subjectKeyIdentifier).parsedValue).keyIdentifier.toHex()</ID>
+    <ID>MaxLineLength:SSLHelper.kt$internal</ID>
+    <ID>MaxLineLength:SSLHelper.kt$private const val DEFAULT_SSL_TIMEOUT = 20000 // Aligned with sun.security.provider.certpath.URICertStore.DEFAULT_CRL_CONNECT_TIMEOUT</ID>
+    <ID>MaxLineLength:SSLHelper.kt$sslHandler.handshakeTimeoutMillis = Integer.getInteger(SSL_HANDSHAKE_TIMEOUT_PROP_NAME, DEFAULT_SSL_TIMEOUT).toLong()</ID>
+    <ID>MaxLineLength:SSLHelper.kt$val trustManagers = trustManagerFactory.trustManagers.filterIsInstance(X509ExtendedTrustManager::class.java).map { LoggingTrustManagerWrapper(it) }.toTypedArray()</ID>
+    <ID>MaxLineLength:SSLHelper.kt${ val secureHash = SecureHash.sha256(x500Name.toString()) // RFC 1035 specifies a limit 255 bytes for hostnames with each label being 63 bytes or less. Due to this, the string // representation of the SHA256 hash is truncated to 32 characters. return String.format(HOSTNAME_FORMAT, secureHash.toString().take(32).toLowerCase()) }</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$CheckpointsException : DatabaseMigrationException</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$CheckpointsException$"This is dangerous because the node might not be able to restore the flows correctly and could consequently fail. "</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$DatabaseIncompatibleException : DatabaseMigrationException</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$DatabaseIncompatibleException.Companion$fun errorMessageFor(reason: String): String</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$MissingMigrationException : DatabaseMigrationException</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$MissingMigrationException.Companion$fun errorMessageFor(mappedSchema: MappedSchema): String</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$OutstandingDatabaseChangesException : DatabaseMigrationException</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$SchemaMigration</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$SchemaMigration$ private fun migrateOlderDatabaseToUseLiquibase(existingCheckpoints: Boolean): Boolean</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$SchemaMigration$(mappedSchema::class.qualifiedName == "net.corda.finance.schemas.CashSchemaV1" || mappedSchema::class.qualifiedName == "net.corda.finance.schemas.CommercialPaperSchemaV1") &amp;&amp; mappedSchema.migrationResource == null -&gt; null</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$SchemaMigration$(run &amp;&amp; !check) &amp;&amp; (unRunChanges.isNotEmpty() &amp;&amp; existingCheckpoints!!) -&gt; throw CheckpointsException()</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$SchemaMigration$// Collect all changelog file referenced in the included schemas. // For backward compatibility reasons, when failOnMigrationMissing=false, we don't manage CorDapps via Liquibase but use the hibernate hbm2ddl=update. val changelogList = schemas.mapNotNull { mappedSchema -&gt; val resource = getMigrationResource(mappedSchema, classLoader) when { resource != null -&gt; resource // Corda OS FinanceApp in v3 has no Liquibase script, so no error is raised (mappedSchema::class.qualifiedName == "net.corda.finance.schemas.CashSchemaV1" || mappedSchema::class.qualifiedName == "net.corda.finance.schemas.CommercialPaperSchemaV1") &amp;&amp; mappedSchema.migrationResource == null -&gt; null else -&gt; throw MissingMigrationException(mappedSchema) } } val path = currentDirectory?.toString() if (path != null) { System.setProperty(NODE_BASE_DIR_KEY, path) // base dir for any custom change set which may need to load a file (currently AttachmentVersionNumberMigration) } System.setProperty(NODE_X500_NAME, ourName.toString()) val customResourceAccessor = CustomResourceAccessor(dynamicInclude, changelogList, classLoader) checkResourcesInClassPath(changelogList) // current version of Liquibase appears to be non-threadsafe // this is apparent when multiple in-process nodes are all running migrations simultaneously mutex.withLock { val liquibase = Liquibase(dynamicInclude, customResourceAccessor, getLiquibaseDatabase(JdbcConnection(connection))) val unRunChanges = liquibase.listUnrunChangeSets(Contexts(), LabelExpression()) when { (run &amp;&amp; !check) &amp;&amp; (unRunChanges.isNotEmpty() &amp;&amp; existingCheckpoints!!) -&gt; throw CheckpointsException() // Do not allow database migration when there are checkpoints run &amp;&amp; !check -&gt; liquibase.update(Contexts()) check &amp;&amp; !run &amp;&amp; unRunChanges.isNotEmpty() -&gt; throw OutstandingDatabaseChangesException(unRunChanges.size) check &amp;&amp; !run -&gt; { } // Do nothing will be interpreted as "check succeeded" else -&gt; throw IllegalStateException("Invalid usage.") } }</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$SchemaMigration$System.setProperty(NODE_BASE_DIR_KEY, path)</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$SchemaMigration$check &amp;&amp; !run &amp;&amp; unRunChanges.isNotEmpty() -&gt; throw OutstandingDatabaseChangesException(unRunChanges.size)</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$SchemaMigration$it.execute("SELECT COUNT(*) FROM DATABASECHANGELOG WHERE FILENAME IN ('migration/cash.changelog-init.xml','migration/commercial-paper.changelog-init.xml')")</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$SchemaMigration$private</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$SchemaMigration$throw DatabaseMigrationException("Could not find Liquibase database migration script $resource. Please ensure the jar file containing it is deployed in the cordapps directory.")</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$SchemaMigration$val dynamicInclude = "master.changelog.json" // Virtual file name of the changelog that includes all schemas.</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$SchemaMigration$val isFinanceAppWithLiquibaseNotMigrated = isFinanceAppWithLiquibase // If Finance App is pre v4.0 then no need to migrate it so no need to check. &amp;&amp; existingDatabase &amp;&amp; (!hasLiquibase // Migrate as other tables. || (hasLiquibase &amp;&amp; it.createStatement().use { noLiquibaseEntryLogForFinanceApp(it) })) // If Liquibase is already in the database check if Finance App schema log is missing.</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$SchemaMigration$val liquibase = Liquibase(dynamicInclude, customResourceAccessor, getLiquibaseDatabase(JdbcConnection(connection)))</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$SchemaMigration$||</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$SchemaMigration.CustomResourceAccessor$private</ID>
+    <ID>MaxLineLength:SchemaMigration.kt$SchemaMigration.CustomResourceAccessor$val includeAllFiles = mapOf("databaseChangeLog" to changelogList.filter { it != null }.map { file -&gt; mapOf("include" to mapOf("file" to file)) })</ID>
+    <ID>MaxLineLength:SignedNodeInfo.kt$NodeInfoAndSigned$constructor(nodeInfo: NodeInfo, signer: (PublicKey, SerializedBytes&lt;NodeInfo&gt;) -&gt; DigitalSignature) : this(nodeInfo, nodeInfo.sign(signer))</ID>
+    <ID>MaxLineLength:SslConfiguration.kt$MutualSslOptions : MutualSslConfiguration</ID>
+    <ID>MaxLineLength:SslConfiguration.kt$SslConfiguration.Companion$fun mutual(keyStore: FileBasedCertificateStoreSupplier, trustStore: FileBasedCertificateStoreSupplier): MutualSslConfiguration</ID>
+    <ID>MaxLineLength:WhitelistGenerator.kt$logger.info("Include contracts from $INCLUDE_WHITELIST_FILE_NAME: ${includeContracts.joinToString()} present in JARs: $optionalCordappJars.")</ID>
+    <ID>MaxLineLength:WhitelistGenerator.kt$private fun readAllLines(path: Path) : List&lt;String&gt;</ID>
+    <ID>MaxLineLength:X509KeyStore.kt$X509KeyStore</ID>
+    <ID>MaxLineLength:X509KeyStore.kt$X509KeyStore$val certArray = requireNotNull(internal.getCertificateChain(alias)) { "No certificate chain under the alias $alias" }</ID>
+    <ID>MaxLineLength:X509KeyStore.kt$X509KeyStore.Companion$val internal: KeyStore = if (createNew) loadOrCreateKeyStore(keyStoreFile, storePassword) else loadKeyStore(keyStoreFile, storePassword)</ID>
+    <ID>MaxLineLength:X509Utilities.kt$CertificateType$enum</ID>
+    <ID>MaxLineLength:X509Utilities.kt$X509Utilities$ @JvmStatic fun createCertificate(certificateType: CertificateType, issuerCertificate: X509Certificate, issuerKeyPair: KeyPair, subject: X500Principal, subjectPublicKey: PublicKey, validityWindow: Pair&lt;Duration, Duration&gt; = DEFAULT_VALIDITY_WINDOW, nameConstraints: NameConstraints? = null, crlDistPoint: String? = null, crlIssuer: X500Name? = null): X509Certificate</ID>
+    <ID>MaxLineLength:X509Utilities.kt$X509Utilities$ @JvmStatic fun saveCertificateAsPEMFile(certificate: X509Certificate, file: Path)</ID>
+    <ID>MaxLineLength:X509Utilities.kt$X509Utilities$ fun createCertificateSigningRequest(subject: X500Principal, email: String, publicKey: PublicKey, contentSigner: ContentSigner, certRole: CertRole = CertRole.NODE_CA): PKCS10CertificationRequest</ID>
+    <ID>MaxLineLength:X509Utilities.kt$X509Utilities$ fun getCertificateValidityWindow(before: Duration, after: Duration, parent: X509Certificate? = null): Pair&lt;Date, Date&gt;</ID>
+    <ID>MaxLineLength:X509Utilities.kt$X509Utilities$JcaX509v3CertificateBuilder(issuer, serial, validityWindow.first, validityWindow.second, subject, subjectPublicKey) .addExtension(Extension.subjectKeyIdentifier, false, BcX509ExtensionUtils().createSubjectKeyIdentifier(subjectPublicKeyInfo))</ID>
+    <ID>MaxLineLength:X509Utilities.kt$X509Utilities$JcaX509v3CertificateBuilder(issuer, serial, validityWindow.first, validityWindow.second, subject, subjectPublicKey) .addExtension(Extension.subjectKeyIdentifier, false, BcX509ExtensionUtils().createSubjectKeyIdentifier(subjectPublicKeyInfo)) .addExtension(Extension.basicConstraints, true, BasicConstraints(certificateType.isCA)) .addExtension(Extension.keyUsage, false, certificateType.keyUsage) .addExtension(Extension.extendedKeyUsage, false, keyPurposes) .addExtension(Extension.authorityKeyIdentifier, false, JcaX509ExtensionUtils().createAuthorityKeyIdentifier(issuerPublicKey))</ID>
+    <ID>MaxLineLength:X509Utilities.kt$X509Utilities$fun createCertificateSigningRequest(subject: X500Principal, email: String, keyPair: KeyPair, certRole: CertRole = CertRole.NODE_CA): PKCS10CertificationRequest</ID>
+    <ID>MaxLineLength:X509Utilities.kt$X509Utilities$require(isSignatureValid(JcaContentVerifierProviderBuilder().build(issuerKeyPair.public))){"Invalid signature"}</ID>
+    <ID>MaxLineLength:X509Utilities.kt$X509Utilities$val builder = JcaX509v3CertificateBuilder(issuer, serial, validityWindow.first, validityWindow.second, subject, subjectPublicKey) .addExtension(Extension.subjectKeyIdentifier, false, BcX509ExtensionUtils().createSubjectKeyIdentifier(subjectPublicKeyInfo)) .addExtension(Extension.basicConstraints, true, BasicConstraints(certificateType.isCA)) .addExtension(Extension.keyUsage, false, certificateType.keyUsage) .addExtension(Extension.extendedKeyUsage, false, keyPurposes) .addExtension(Extension.authorityKeyIdentifier, false, JcaX509ExtensionUtils().createAuthorityKeyIdentifier(issuerPublicKey))</ID>
+    <ID>MaxLineLength:X509Utilities.kt$X509Utilities$val builder = createPartialCertificate(certificateType, issuer, issuerPublicKey, subject, subjectPublicKey, validityWindow, nameConstraints, crlDistPoint, crlIssuer)</ID>
+    <ID>MaxLineLength:X509Utilities.kt$X509Utilities$val distPointName = DistributionPointName(GeneralNames(GeneralName(GeneralName.uniformResourceIdentifier, crlDistPoint)))</ID>
+    <ID>MaxLineLength:X509Utilities.kt$X509Utilities$val signer = ContentSignerBuilder.build(signatureScheme, keyPair.private, Crypto.findProvider(signatureScheme.providerName))</ID>
+    <ID>MaxLineLength:X509Utilities.kt$X509Utilities$validityWindow: Pair&lt;Duration, Duration&gt; = DEFAULT_VALIDITY_WINDOW</ID>
+    <ID>MaxLineLength:X509Utilities.kt$X509Utilities${ val distPointName = DistributionPointName(GeneralNames(GeneralName(GeneralName.uniformResourceIdentifier, crlDistPoint))) val crlIssuerGeneralNames = crlIssuer?.let { GeneralNames(GeneralName(crlIssuer)) } // The second argument is flag that allows you to define what reason of certificate revocation is served by this distribution point see [ReasonFlags]. // The idea is that you have different revocation per revocation reason. Since we won't go into such a granularity, we can skip that parameter. // The third argument allows you to specify the name of the CRL issuer, it needs to be consistent with the crl (IssuingDistributionPoint) extension and the idp argument. // If idp == true, set it, if idp == false, leave it null as done here. val distPoint = DistributionPoint(distPointName, null, crlIssuerGeneralNames) builder.addExtension(Extension.cRLDistributionPoints, false, CRLDistPoint(arrayOf(distPoint))) }</ID>
+    <ID>MaxLineLength:X509Utilities.kt$val Certificate.x509: X509Certificate get() = requireNotNull(this as? X509Certificate) { "Not an X.509 certificate: $this" }</ID>
+    <ID>NestedBlockDepth:AttachmentVersionNumberMigration.kt$AttachmentVersionNumberMigration$override fun execute(database: Database?)</ID>
+    <ID>NestedBlockDepth:ConnectionStateMachine.kt$ConnectionStateMachine$override fun onConnectionFinal(event: Event)</ID>
+    <ID>NestedBlockDepth:ConnectionStateMachine.kt$ConnectionStateMachine$override fun onDelivery(event: Event)</ID>
+    <ID>NestedBlockDepth:CordaPersistence.kt$CordaPersistence$private fun &lt;T&gt; inTopLevelTransaction(isolationLevel: TransactionIsolationLevel, recoverableFailureTolerance: Int, recoverAnyNestedSQLException: Boolean, statement: DatabaseTransaction.() -&gt; T): T</ID>
+    <ID>NestedBlockDepth:NetworkBootstrapper.kt$CopyCordapps$protected fun List&lt;Path&gt;.copy(nodeDirs: List&lt;Path&gt;)</ID>
+    <ID>NewLineAtEndOfFile:AMQPBridgeManager.kt$net.corda.nodeapi.internal.bridging.AMQPBridgeManager.kt</ID>
+    <ID>NewLineAtEndOfFile:AMQPChannelHandler.kt$net.corda.nodeapi.internal.protonwrapper.netty.AMQPChannelHandler.kt</ID>
+    <ID>NewLineAtEndOfFile:AMQPClient.kt$net.corda.nodeapi.internal.protonwrapper.netty.AMQPClient.kt</ID>
+    <ID>NewLineAtEndOfFile:AMQPServer.kt$net.corda.nodeapi.internal.protonwrapper.netty.AMQPServer.kt</ID>
+    <ID>NewLineAtEndOfFile:ApplicationMessage.kt$net.corda.nodeapi.internal.protonwrapper.messages.ApplicationMessage.kt</ID>
+    <ID>NewLineAtEndOfFile:ArtemisTcpTransport.kt$net.corda.nodeapi.internal.ArtemisTcpTransport.kt</ID>
+    <ID>NewLineAtEndOfFile:AttachmentVersionNumberMigration.kt$net.corda.nodeapi.internal.persistence.AttachmentVersionNumberMigration.kt</ID>
+    <ID>NewLineAtEndOfFile:BridgeControlListener.kt$net.corda.nodeapi.internal.bridging.BridgeControlListener.kt</ID>
+    <ID>NewLineAtEndOfFile:BridgeControlMessages.kt$net.corda.nodeapi.internal.bridging.BridgeControlMessages.kt</ID>
+    <ID>NewLineAtEndOfFile:BridgeManager.kt$net.corda.nodeapi.internal.bridging.BridgeManager.kt</ID>
+    <ID>NewLineAtEndOfFile:BridgeMetricsService.kt$net.corda.nodeapi.internal.bridging.BridgeMetricsService.kt</ID>
+    <ID>NewLineAtEndOfFile:BrokerRpcSslOptions.kt$net.corda.nodeapi.BrokerRpcSslOptions.kt</ID>
+    <ID>NewLineAtEndOfFile:CertificateStore.kt$net.corda.nodeapi.internal.config.CertificateStore.kt</ID>
+    <ID>NewLineAtEndOfFile:ConnectionChange.kt$net.corda.nodeapi.internal.protonwrapper.netty.ConnectionChange.kt</ID>
+    <ID>NewLineAtEndOfFile:ConnectionStateMachine.kt$net.corda.nodeapi.internal.protonwrapper.engine.ConnectionStateMachine.kt</ID>
+    <ID>NewLineAtEndOfFile:CordappLoader.kt$net.corda.nodeapi.internal.cordapp.CordappLoader.kt</ID>
+    <ID>NewLineAtEndOfFile:CryptoServiceFactory.kt$net.corda.nodeapi.internal.cryptoservice.CryptoServiceFactory.kt</ID>
+    <ID>NewLineAtEndOfFile:EventProcessor.kt$net.corda.nodeapi.internal.protonwrapper.engine.EventProcessor.kt</ID>
+    <ID>NewLineAtEndOfFile:HibernateStatistics.kt$net.corda.nodeapi.internal.persistence.HibernateStatistics.kt</ID>
+    <ID>NewLineAtEndOfFile:KeyOwningIdentity.kt$net.corda.nodeapi.internal.KeyOwningIdentity.kt</ID>
+    <ID>NewLineAtEndOfFile:KeyStoreConfigHelpers.kt$net.corda.nodeapi.internal.KeyStoreConfigHelpers.kt</ID>
+    <ID>NewLineAtEndOfFile:MessageStatus.kt$net.corda.nodeapi.internal.protonwrapper.messages.MessageStatus.kt</ID>
+    <ID>NewLineAtEndOfFile:NettyWritable.kt$net.corda.nodeapi.internal.protonwrapper.engine.NettyWritable.kt</ID>
+    <ID>NewLineAtEndOfFile:NetworkBootstrapper.kt$net.corda.nodeapi.internal.network.NetworkBootstrapper.kt</ID>
+    <ID>NewLineAtEndOfFile:NetworkMap.kt$net.corda.nodeapi.internal.network.NetworkMap.kt</ID>
+    <ID>NewLineAtEndOfFile:NetworkParameterOverridesSpec.kt$net.corda.nodeapi.internal.network.NetworkParameterOverridesSpec.kt</ID>
+    <ID>NewLineAtEndOfFile:PublicKeyToOwningIdentityCache.kt$net.corda.nodeapi.internal.PublicKeyToOwningIdentityCache.kt</ID>
+    <ID>NewLineAtEndOfFile:RPCApi.kt$net.corda.nodeapi.RPCApi.kt</ID>
+    <ID>NewLineAtEndOfFile:ReceivedMessage.kt$net.corda.nodeapi.internal.protonwrapper.messages.ReceivedMessage.kt</ID>
+    <ID>NewLineAtEndOfFile:ReceivedMessageImpl.kt$net.corda.nodeapi.internal.protonwrapper.messages.impl.ReceivedMessageImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:RestrictedEntityManager.kt$net.corda.nodeapi.internal.persistence.RestrictedEntityManager.kt</ID>
+    <ID>NewLineAtEndOfFile:RpcExceptions.kt$net.corda.nodeapi.exceptions.RpcExceptions.kt</ID>
+    <ID>NewLineAtEndOfFile:RpcHelpers.kt$net.corda.nodeapi.internal.RpcHelpers.kt</ID>
+    <ID>NewLineAtEndOfFile:SchemaMigration.kt$net.corda.nodeapi.internal.persistence.SchemaMigration.kt</ID>
+    <ID>NewLineAtEndOfFile:SendableMessage.kt$net.corda.nodeapi.internal.protonwrapper.messages.SendableMessage.kt</ID>
+    <ID>NewLineAtEndOfFile:SendableMessageImpl.kt$net.corda.nodeapi.internal.protonwrapper.messages.impl.SendableMessageImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:SslConfiguration.kt$net.corda.nodeapi.internal.config.SslConfiguration.kt</ID>
+    <ID>ReturnCount:AttachmentVersionNumberMigration.kt$AttachmentVersionNumberMigration$override fun execute(database: Database?)</ID>
+    <ID>ReturnCount:BridgeControlListener.kt$BridgeControlListener$private fun processControlMessage(msg: ClientMessage)</ID>
+    <ID>SpreadOperator:CertificateStore.kt$CertificateStore$(*options)</ID>
+    <ID>SpreadOperator:NetworkParametersCopier.kt$NetworkParametersCopier$(nodeDir / fileName, *copyOptions)</ID>
+    <ID>SpreadOperator:X509Utilities.kt$X509Utilities$(*certificates)</ID>
+    <ID>ThrowsCount:NodeInfoFilesCopier.kt$NodeInfoFilesCopier$private fun atomicCopy(source: Path, destination: Path)</ID>
+    <ID>ThrowsCount:RPCApi.kt$RPCApi.ServerToClient.Companion$fun fromClientMessage(context: SerializationContext, message: ClientMessage): ServerToClient</ID>
+    <ID>ThrowsCount:SchemaMigration.kt$SchemaMigration$private fun doRunMigration(run: Boolean, check: Boolean, existingCheckpoints: Boolean? = null)</ID>
+    <ID>ThrowsCount:SignedNodeInfo.kt$SignedNodeInfo$// TODO Add root cert param (or TrustAnchor) to make sure all the identities belong to the same root fun verified(): NodeInfo</ID>
+    <ID>TooGenericExceptionCaught:AMQPChannelHandler.kt$AMQPChannelHandler$ex: Exception</ID>
+    <ID>TooGenericExceptionCaught:AttachmentVersionNumberMigration.kt$AttachmentVersionNumberMigration$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:BCCryptoService.kt$BCCryptoService$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:BridgeControlListener.kt$BridgeControlListener$ex: Exception</ID>
+    <ID>TooGenericExceptionCaught:ConfigUtilities.kt$e:Exception</ID>
+    <ID>TooGenericExceptionCaught:ConnectionStateMachine.kt$ConnectionStateMachine$ex: Exception</ID>
+    <ID>TooGenericExceptionCaught:CordaPersistence.kt$CordaPersistence$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:EventProcessor.kt$EventProcessor$ex: Exception</ID>
+    <ID>TooGenericExceptionCaught:HibernateConfiguration.kt$HibernateConfiguration$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NetworkBootstrapper.kt$NetworkBootstrapper$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NetworkParameterOverridesSpec.kt$NetworkParameterOverridesSpec.PackageOwnershipSpec$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:RPCApi.kt$RPCApi.ServerToClient.Companion$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:SSLHelper.kt$LoggingTrustManagerWrapper$ex: Exception</ID>
+    <ID>TooManyFunctions:AMQPChannelHandler.kt$AMQPChannelHandler : ChannelDuplexHandler</ID>
+    <ID>TooManyFunctions:ArtemisTcpTransport.kt$ArtemisTcpTransport$Companion</ID>
+    <ID>TooManyFunctions:BCCryptoService.kt$BCCryptoService : CryptoService</ID>
+    <ID>TooManyFunctions:CertificateStore.kt$CertificateStore : Iterable</ID>
+    <ID>TooManyFunctions:ConfigUtilities.kt$net.corda.nodeapi.internal.config.ConfigUtilities.kt</ID>
+    <ID>TooManyFunctions:ConnectionStateMachine.kt$ConnectionStateMachine : BaseHandler</ID>
+    <ID>TooManyFunctions:CordaPersistence.kt$CordaPersistence : Closeable</ID>
+    <ID>TooManyFunctions:EventProcessor.kt$EventProcessor : BaseHandler</ID>
+    <ID>TooManyFunctions:HibernateStatistics.kt$DelegatingStatisticsService : StatisticsService</ID>
+    <ID>TooManyFunctions:NettyWritable.kt$NettyWritable : WritableBuffer</ID>
+    <ID>TooManyFunctions:NetworkBootstrapper.kt$NetworkBootstrapper : NetworkBootstrapperWithOverridableParameters</ID>
+    <ID>TooManyFunctions:RPCApi.kt$net.corda.nodeapi.RPCApi.kt</ID>
+    <ID>TooManyFunctions:X509KeyStore.kt$X509KeyStore</ID>
+    <ID>TooManyFunctions:X509Utilities.kt$X509Utilities</ID>
+    <ID>TopLevelPropertyNaming:CordaPersistence.kt$internal val _prohibitDatabaseAccess = ThreadLocal.withInitial { false }</ID>
+    <ID>WildcardImport:AMQPClient.kt$import io.netty.channel.*</ID>
+    <ID>WildcardImport:ArtemisMessagingClient.kt$import org.apache.activemq.artemis.api.core.client.*</ID>
+    <ID>WildcardImport:ConfigUtilities.kt$import com.typesafe.config.*</ID>
+    <ID>WildcardImport:ConnectionStateMachine.kt$import org.apache.qpid.proton.amqp.messaging.*</ID>
+    <ID>WildcardImport:ConnectionStateMachine.kt$import org.apache.qpid.proton.engine.*</ID>
+    <ID>WildcardImport:ContractsScanning.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:EventProcessor.kt$import org.apache.qpid.proton.engine.*</ID>
+    <ID>WildcardImport:HibernateStatistics.kt$import org.hibernate.stat.*</ID>
+    <ID>WildcardImport:KeyStoreUtilities.kt$import java.security.*</ID>
+    <ID>WildcardImport:KeyStoreUtilities.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:NetworkBootstrapper.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:NetworkBootstrapper.kt$import net.corda.nodeapi.internal.*</ID>
+    <ID>WildcardImport:NodeInfoFilesCopier.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:SSLHelper.kt$import java.security.cert.*</ID>
+    <ID>WildcardImport:SSLHelper.kt$import javax.net.ssl.*</ID>
+    <ID>WildcardImport:WhitelistGenerator.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:X509Utilities.kt$import java.security.cert.*</ID>
+    <ID>WildcardImport:X509Utilities.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:X509Utilities.kt$import org.bouncycastle.asn1.*</ID>
+    <ID>WildcardImport:X509Utilities.kt$import org.bouncycastle.asn1.x509.*</ID>
+  </Whitelist>
+</SmellBaseline>

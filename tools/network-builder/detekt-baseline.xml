@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>EmptyFunctionBlock:AzureContainerPusher.kt$AzureContainerPusher.&lt;no name provided&gt;${ }</ID>
+    <ID>LongMethod:NetworkBuilder.kt$NetworkBuilderImpl$override fun build(): CompletableFuture&lt;Pair&lt;List&lt;NodeInstance&gt;, Context&gt;&gt;</ID>
+    <ID>MagicNumber:AzureSmbVolume.kt$AzureSmbVolume$5000</ID>
+    <ID>MagicNumber:BootstrapperView.kt$BootstrapperView$4</ID>
+    <ID>MatchingDeclarationName:AzureRegistryLocator.kt$net.corda.networkbuilder.containers.push.azure.AzureRegistryLocator.kt</ID>
+    <ID>MatchingDeclarationName:SerializationHelper.kt$net.corda.networkbuilder.serialization.SerializationHelper.kt</ID>
+    <ID>MaxLineLength:AzureBackend.kt$AzureBackend.Companion$azure.resourceGroups().define(resourceGroupName).withRegion(context.extraParams[Constants.REGION_ARG_NAME]).create()</ID>
+    <ID>MaxLineLength:AzureBackend.kt$AzureBackend.Companion$val azureInstantiatorFuture = azureNetworkStore.thenCombine(registryLocatorFuture) { azureVolume, registryLocator -&gt; AzureInstantiator(azure, registryLocator.registry, azureVolume, resourceGroup) }</ID>
+    <ID>MaxLineLength:AzureBackend.kt$AzureBackend.Companion$val resourceGroupName = context.networkName.replace(Constants.ALPHA_NUMERIC_DOT_AND_UNDERSCORE_ONLY_REGEX, "")</ID>
+    <ID>MaxLineLength:AzureInstantiator.kt$AzureInstantiator.&lt;no name provided&gt;$LOG.info("Completed instantiation: $instanceName is running at $fqdn with port(s) $portsToOpen exposed")</ID>
+    <ID>MaxLineLength:AzureRegistryLocator.kt$RegistryLocator$LOG.info("Did not find existing container registry - creating new registry with name ${resourceGroup.restFriendlyName()}")</ID>
+    <ID>MaxLineLength:AzureRegistryLocator.kt$RegistryLocator$val found = azure.containerRegistries().getByResourceGroup(resourceGroup.name(), resourceGroup.restFriendlyName())</ID>
+    <ID>MaxLineLength:AzureSmbVolume.kt$AzureSmbVolume$networkParamsFile.uploadFromByteArray(networkParameters.signWithCert(keyPair.private, networkMapCert).serialize().bytes)</ID>
+    <ID>MaxLineLength:BootstrapperView.kt$BootstrapperView$nodeAdder.addNode(context, nodeToAdd, x500ToUse?.let { CordaX500Name.parse(it) })</ID>
+    <ID>MaxLineLength:BootstrapperView.kt$BootstrapperView$return Pair(mapOf(Constants.REGION_ARG_NAME to ChoiceDialog&lt;Region&gt;(Region.EUROPE_WEST, Region.values().toList().sortedBy { it.name() }).showAndWait().get().name()), networkName1)</ID>
+    <ID>MaxLineLength:BootstrapperView.kt$BootstrapperView.State$var hasNodesOrNotaries = Bindings.size(foundNotaries).greaterThan(0).or(Bindings.size(foundNotaries).greaterThan(0))</ID>
+    <ID>MaxLineLength:BuiltNode.kt$BuiltNode$return PushedNode(configFile, baseDirectory, copiedNodeConfig, copiedNodeDir, nodeConfig, localImageId, remoteImageName)</ID>
+    <ID>MaxLineLength:BuiltNode.kt$BuiltNode$val nodeConfig: NodeConfiguration</ID>
+    <ID>MaxLineLength:CommandLineInterface.kt$CommandLineInterface$"${instance.reachableAddress} {ssh:${instance.portMapping[Constants.NODE_SSHD_PORT]}, "</ID>
+    <ID>MaxLineLength:CommandLineInterface.kt$CommandLineInterface$NetworkBuilder.instance() .withBasedir(baseDir) .withNetworkName(networkName) .onNodeBuild { builtNode -&gt; println("Built node: ${builtNode.name} to image: ${builtNode.localImageId}") }</ID>
+    <ID>MaxLineLength:CommandLineInterface.kt$CommandLineInterface$NetworkBuilder.instance() .withBasedir(baseDir) .withNetworkName(networkName) .onNodeBuild { builtNode -&gt; println("Built node: ${builtNode.name} to image: ${builtNode.localImageId}") } .onNodePushed { pushedNode -&gt; println("Pushed node: ${pushedNode.name} to: ${pushedNode.remoteImageName}") }</ID>
+    <ID>MaxLineLength:CommandLineInterface.kt$CommandLineInterface$nodeAdder.addNode(context, Constants.ALPHA_NUMERIC_ONLY_REGEX.replace(it.key.toLowerCase(), ""), CordaX500Name.parse(it.value))</ID>
+    <ID>MaxLineLength:CommandParsers.kt$CliParser$@Option(names = ["--add"], split = ":", description = ["The node to add. Format is &lt;Name&gt;:&lt;X500&gt;. Eg; \"Node1:O=Bank A, L=New York, C=US, OU=Org Unit, CN=Service Name\""])</ID>
+    <ID>MaxLineLength:CommandParsers.kt$CliParser$@Option(names = ["-b", "--backend"], description = ["The backend to use when instantiating nodes. Valid values: LOCAL_DOCKER and AZURE."])</ID>
+    <ID>MaxLineLength:Context.kt$Context</ID>
+    <ID>MaxLineLength:CopiedNode.kt$CopiedNode$return BuiltNode(this.configFile, this.baseDirectory, this.copiedNodeConfig, this.copiedNodeDir, nodeConfig, localImageId)</ID>
+    <ID>MaxLineLength:DockerContainerPusher.kt$DockerContainerPusher$override</ID>
+    <ID>MaxLineLength:DockerUtils.kt$DockerUtils$private</ID>
+    <ID>MaxLineLength:FoundNode.kt$FoundNode$val name: String = configFile.parentFile.name.toLowerCase().replace(Constants.ALPHA_NUMERIC_ONLY_REGEX, "")</ID>
+    <ID>MaxLineLength:LocalVolume.kt$LocalVolume$networkParamsFile.outputStream() .use { networkParameters.signWithCert(Volume.keyPair.private, Volume.networkMapCert).serialize().writeTo(it) }</ID>
+    <ID>MaxLineLength:NetworkBuilder.kt$NetworkBuilderImpl$nodeInstantiator.createInstanceRequest(it).also { onNodeInstanceRequestedCallback(listOf(it)) }</ID>
+    <ID>MaxLineLength:NetworkBuilder.kt$NetworkBuilderImpl$nodeInstantiator.instantiateNotaryInstance(request).thenApply { it.also(onNodeInstanceCallback) }</ID>
+    <ID>MaxLineLength:NodeAdder.kt$NodeAdder$?:</ID>
+    <ID>MaxLineLength:NodeBuilder.kt$NodeBuilder$localDockerClient.buildImageCmd() .withDockerfile(File(nodeDir, "Dockerfile")) .withBaseDirectory(nodeDir)</ID>
+    <ID>MaxLineLength:NodeBuilder.kt$NodeBuilder.&lt;no name provided&gt;$future.completeExceptionally(IllegalStateException("Could not build image for: $nodeDir, reason: ${result?.errorDetail}"))</ID>
+    <ID>MaxLineLength:NodeBuilder.kt$NodeBuilder.&lt;no name provided&gt;$val config = nodeConfig.parseAsNodeConfigWithFallback(ConfigFactory.parseFile(copiedNode.configFile)).value()</ID>
+    <ID>MaxLineLength:NodeBuilder.kt$fun Config.parseAsNodeConfigWithFallback(preCopyConfig: Config): Validated&lt;NodeConfiguration, Configuration.Validation.Error&gt;</ID>
+    <ID>MaxLineLength:NodeInstanceRequest.kt$NodeInstanceRequest$localImageId</ID>
+    <ID>MaxLineLength:NodeInstanceRequest.kt$NodeInstanceRequest$return "NodeInstanceRequest(nodeInstanceName='$nodeInstanceName', actualX500='$actualX500', expectedFqName='$expectedFqName') ${super.toString()}"</ID>
+    <ID>MaxLineLength:NodeInstantiator.kt$NodeInstantiator$return instantiateNodeInstance(request.remoteImageName, request.instanceName, request.fqdn, request.instanceX500).thenApplyAsync { InstanceInfo(request.groupName, request.instanceName, request.fqdn, it.first, it.second) }</ID>
+    <ID>MaxLineLength:NodeInstantiator.kt$NodeInstantiator$return instantiateNodeInstance(request.remoteImageName, request.nodeInstanceName, request.expectedFqName, request.actualX500) .thenApplyAsync { (reachableName, portMapping) -&gt; request.toNodeInstance(reachableName, portMapping) }</ID>
+    <ID>MaxLineLength:PushedNode.kt$PushedNode$fun toNodeInstanceRequest(nodeInstanceName: String, actualX500: String, expectedFqName: String): NodeInstanceRequest</ID>
+    <ID>MaxLineLength:PushedNode.kt$PushedNode$return NodeInstanceRequest(configFile, baseDirectory, copiedNodeConfig, copiedNodeDir, nodeConfig, localImageId, remoteImageName, nodeInstanceName, actualX500, expectedFqName)</ID>
+    <ID>MaxLineLength:Volume.kt$Volume$nodeInfoFile.readBytes().deserialize&lt;SignedNodeInfo&gt;().verified().let { NotaryInfo(it.legalIdentities.first(), validating) }</ID>
+    <ID>MaxLineLength:Volume.kt$Volume$val validating = ConfigFactory.parseFile(configFile).getConfig("notary").getBooleanCaseInsensitive("validating")</ID>
+    <ID>NewLineAtEndOfFile:AzureBackend.kt$net.corda.networkbuilder.backends.AzureBackend.kt</ID>
+    <ID>NewLineAtEndOfFile:AzureContainerPusher.kt$net.corda.networkbuilder.containers.push.azure.AzureContainerPusher.kt</ID>
+    <ID>NewLineAtEndOfFile:AzureInstantiator.kt$net.corda.networkbuilder.containers.instance.azure.AzureInstantiator.kt</ID>
+    <ID>NewLineAtEndOfFile:AzureRegistryLocator.kt$net.corda.networkbuilder.containers.push.azure.AzureRegistryLocator.kt</ID>
+    <ID>NewLineAtEndOfFile:AzureSmbVolume.kt$net.corda.networkbuilder.volumes.azure.AzureSmbVolume.kt</ID>
+    <ID>NewLineAtEndOfFile:Backend.kt$net.corda.networkbuilder.backends.Backend.kt</ID>
+    <ID>NewLineAtEndOfFile:BootstrapperView.kt$net.corda.networkbuilder.gui.BootstrapperView.kt</ID>
+    <ID>NewLineAtEndOfFile:BuiltNode.kt$net.corda.networkbuilder.nodes.BuiltNode.kt</ID>
+    <ID>NewLineAtEndOfFile:Constants.kt$net.corda.networkbuilder.Constants.kt</ID>
+    <ID>NewLineAtEndOfFile:ContainerPusher.kt$net.corda.networkbuilder.containers.push.ContainerPusher.kt</ID>
+    <ID>NewLineAtEndOfFile:Context.kt$net.corda.networkbuilder.context.Context.kt</ID>
+    <ID>NewLineAtEndOfFile:CopiedNode.kt$net.corda.networkbuilder.nodes.CopiedNode.kt</ID>
+    <ID>NewLineAtEndOfFile:CopiedNotary.kt$net.corda.networkbuilder.notaries.CopiedNotary.kt</ID>
+    <ID>NewLineAtEndOfFile:DockerBackend.kt$net.corda.networkbuilder.backends.DockerBackend.kt</ID>
+    <ID>NewLineAtEndOfFile:DockerInstantiator.kt$net.corda.networkbuilder.containers.instance.docker.DockerInstantiator.kt</ID>
+    <ID>NewLineAtEndOfFile:DockerUtils.kt$net.corda.networkbuilder.docker.DockerUtils.kt</ID>
+    <ID>NewLineAtEndOfFile:FoundNode.kt$net.corda.networkbuilder.nodes.FoundNode.kt</ID>
+    <ID>NewLineAtEndOfFile:InstanceInfo.kt$net.corda.networkbuilder.containers.instance.InstanceInfo.kt</ID>
+    <ID>NewLineAtEndOfFile:Instantiator.kt$net.corda.networkbuilder.containers.instance.Instantiator.kt</ID>
+    <ID>NewLineAtEndOfFile:LocalVolume.kt$net.corda.networkbuilder.volumes.docker.LocalVolume.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeAdder.kt$net.corda.networkbuilder.nodes.NodeAdder.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeCopier.kt$net.corda.networkbuilder.nodes.NodeCopier.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeFinder.kt$net.corda.networkbuilder.nodes.NodeFinder.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeInstance.kt$net.corda.networkbuilder.nodes.NodeInstance.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeInstanceRequest.kt$net.corda.networkbuilder.nodes.NodeInstanceRequest.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeInstantiator.kt$net.corda.networkbuilder.nodes.NodeInstantiator.kt</ID>
+    <ID>NewLineAtEndOfFile:NodePusher.kt$net.corda.networkbuilder.nodes.NodePusher.kt</ID>
+    <ID>NewLineAtEndOfFile:NotaryCopier.kt$net.corda.networkbuilder.notaries.NotaryCopier.kt</ID>
+    <ID>NewLineAtEndOfFile:PushedNode.kt$net.corda.networkbuilder.nodes.PushedNode.kt</ID>
+    <ID>NewLineAtEndOfFile:Volume.kt$net.corda.networkbuilder.volumes.Volume.kt</ID>
+    <ID>SpreadOperator:AzureInstantiator.kt$AzureInstantiator$(*portsToOpen.toIntArray())</ID>
+    <ID>SpreadOperator:DockerInstantiator.kt$DockerInstantiator$(*it.toTypedArray())</ID>
+    <ID>SpreadOperator:Main.kt$(*args)</ID>
+    <ID>SpreadOperator:NetworkBuilder.kt$(*this.toTypedArray())</ID>
+    <ID>TooGenericExceptionCaught:AzureSmbVolume.kt$AzureSmbVolume$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:BootstrapperView.kt$BootstrapperView$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:DockerInstantiator.kt$DockerInstantiator$e: Exception</ID>
+    <ID>TooGenericExceptionThrown:AzureBackend.kt$AzureBackend.Companion$throw RuntimeException(e)</ID>
+    <ID>TooGenericExceptionThrown:CommandParsers.kt$AzureParser.RegionConverter$throw Error("Unknown azure region: $value")</ID>
+    <ID>TooManyFunctions:NetworkBuilder.kt$NetworkBuilder</ID>
+    <ID>TooManyFunctions:NetworkBuilder.kt$NetworkBuilderImpl : NetworkBuilder</ID>
+    <ID>VariableNaming:BootstrapperView.kt$BootstrapperView$val YAML_MAPPER = Constants.getContextMapper()</ID>
+    <ID>WildcardImport:BootstrapperView.kt$import javafx.scene.control.*</ID>
+    <ID>WildcardImport:BootstrapperView.kt$import net.corda.networkbuilder.nodes.*</ID>
+    <ID>WildcardImport:BootstrapperView.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:Constants.kt$import com.fasterxml.jackson.databind.*</ID>
+    <ID>WildcardImport:DockerInstantiator.kt$import com.github.dockerjava.api.model.*</ID>
+    <ID>WildcardImport:Gui.kt$import tornadofx.*</ID>
+    <ID>WildcardImport:NetworkBuilder.kt$import net.corda.networkbuilder.nodes.*</ID>
+  </Whitelist>
+</SmellBaseline>

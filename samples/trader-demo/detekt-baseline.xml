@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>MagicNumber:TraderDemo.kt$TraderDemo$1_000_000_000_000</ID>
+    <ID>MagicNumber:TraderDemo.kt$TraderDemo$1_100_000_000_000</ID>
+    <ID>MagicNumber:TraderDemoClientApi.kt$TraderDemoClientApi$10</ID>
+    <ID>MagicNumber:TraderDemoClientApi.kt$TraderDemoClientApi$1000.0</ID>
+    <ID>MagicNumber:TraderDemoClientApi.kt$TraderDemoClientApi$3</ID>
+    <ID>MaxLineLength:TraderDemoClientApi.kt$TraderDemoClientApi$println("Sale completed - we have a happy customer!\n\nFinal transaction is:\n\n${Emoji.renderIfSupported(stx.tx)}")</ID>
+    <ID>MaxLineLength:TraderDemoClientApi.kt$TraderDemoClientApi$val otherParty = rpc.wellKnownPartyFromX500Name(buyerName) ?: throw IllegalStateException("Don't know $buyerName")</ID>
+    <ID>SpreadOperator:TraderDemo.kt$TraderDemo$(*args)</ID>
+    <ID>TooGenericExceptionCaught:TraderDemo.kt$TraderDemo$e: Exception</ID>
+  </Whitelist>
+</SmellBaseline>

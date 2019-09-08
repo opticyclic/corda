@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ForbiddenComment:FixingFlow.kt$FixingFlow.Fixer$// TODO: this is in no way secure and will be replaced by general session initiation logic in the future</ID>
+    <ID>ForbiddenComment:NodeInterestRates.kt$NodeInterestRates.FixContainer$// TODO: the calendar data needs to be specified for every fix type in the input string</ID>
+    <ID>ForbiddenComment:NodeInterestRates.kt$NodeInterestRates.UnknownFix$// TODO: can we split into two? Fix not available (retryable/transient) and unknown (permanent)</ID>
+    <ID>ForbiddenComment:RatesFixFlow.kt$RatesFixFlow$// TODO: Kick to a user confirmation / ui flow if it's out of bounds instead of raising an exception.</ID>
+    <ID>ForbiddenComment:RatesFixFlow.kt$RatesFixFlow.FixQueryFlow$// TODO: add deadline to receive</ID>
+    <ID>MagicNumber:FixingFlow.kt$FixingFlow.Fixer.&lt;no name provided&gt;$30</ID>
+    <ID>MagicNumber:Interpolators.kt$CubicSplineInterpolator$3</ID>
+    <ID>MagicNumber:Interpolators.kt$CubicSplineInterpolator$3.0</ID>
+    <ID>MaxLineLength:AutoOfferFlow.kt$AutoOfferFlow$ReportToRegulatorFlow : FlowLogic</ID>
+    <ID>MaxLineLength:AutoOfferFlow.kt$AutoOfferFlow.Requester$val notary = serviceHub.networkMapCache.notaryIdentities.first() // TODO We should pass the notary as a parameter to the flow, not leave it to random choice.</ID>
+    <ID>MaxLineLength:AutoOfferFlow.kt$AutoOfferFlow.Requester$val otherParty = excludeHostNode(serviceHub, groupAbstractPartyByWellKnownParty(serviceHub, dealToBeOffered.participants)).keys.single()</ID>
+    <ID>MaxLineLength:AutoOfferFlow.kt$AutoOfferFlow.Requester.Companion$// We vend a progress tracker that already knows there's going to be a TwoPartyTradingFlow involved at some // point: by setting up the tracker in advance, the user can see what's coming in more detail, instead of being // surprised when it appears as a new set of tasks below the current one. fun tracker()</ID>
+    <ID>MaxLineLength:FinanceJSONSupport.kt$CalendarDeserializer$StringArrayDeserializer.instance.deserialize(parser, context).fold(BusinessCalendar.EMPTY) { acc, name -&gt; acc + loadTestCalendar(name) }</ID>
+    <ID>MaxLineLength:FinanceJSONSupport.kt$ExpressionSerializer$override fun serialize(expr: Expression, generator: JsonGenerator, provider: SerializerProvider)</ID>
+    <ID>MaxLineLength:FixingFlow.kt$FixingFlow.Fixer$@Suspendable override</ID>
+    <ID>MaxLineLength:FixingFlow.kt$FixingFlow.Fixer$override</ID>
+    <ID>MaxLineLength:FixingFlow.kt$FixingFlow.Fixer$val addFixing = object : RatesFixFlow(ptx, handshake.payload.oracle, fixOf, BigDecimal.ZERO, BigDecimal.ONE) { @Suspendable override fun beforeSigning(fix: Fix) { newDeal.generateFix(ptx, StateAndRef(txState, handshake.payload.ref), fix) // We set the transaction's time-window: it may be that none of the contracts need this! // But it can't hurt to have one. ptx.setTimeWindow(serviceHub.clock.instant(), 30.seconds) } @Suspendable override fun filtering(elem: Any): Boolean { return when (elem) { // Only expose Fix commands in which the oracle is on the list of requested signers // to the oracle node, to avoid leaking privacy is Command&lt;*&gt; -&gt; handshake.payload.oracle.owningKey in elem.signers &amp;&amp; elem.value is Fix else -&gt; false } } }</ID>
+    <ID>MaxLineLength:FixingFlow.kt$FixingFlow.FixingRoleDecider$val counterparty = serviceHub.identityService.wellKnownPartyFromAnonymous(parties[1]) ?: throw IllegalStateException("Cannot resolve floater party")</ID>
+    <ID>MaxLineLength:FixingFlow.kt$FixingFlow.Floater$override val progressTracker: ProgressTracker = TwoPartyDealFlow.Primary.tracker()</ID>
+    <ID>MaxLineLength:Interpolators.kt$CubicSplineInterpolator : Interpolator</ID>
+    <ID>MaxLineLength:Interpolators.kt$Polynomial</ID>
+    <ID>MaxLineLength:NodeInterestRates.kt$NodeInterestRates.Oracle$// TODO There is security problem with that. What if transaction contains several commands of the same type, but // Oracle gets signing request for only some of them with a valid partial tree? We sign over a whole transaction. // It will be fixed by adding partial signatures later. // DOCSTART 1 fun sign(ftx: FilteredTransaction): TransactionSignature</ID>
+    <ID>MaxLineLength:NodeInterestRates.kt$NodeInterestRates.Oracle$knownFixes = parseFile(IOUtils.toString(this::class.java.classLoader.getResourceAsStream("net/corda/irs/simulation/example.rates.txt"), Charsets.UTF_8.name()))</ID>
+    <ID>MaxLineLength:RatesFixFlow.kt$RatesFixFlow$ @Suspendable protected open fun filtering(elem: Any): Boolean</ID>
+    <ID>MaxLineLength:RatesFixFlow.kt$RatesFixFlow$override val progressTracker: ProgressTracker = RatesFixFlow.tracker(fixOf.name)</ID>
+    <ID>NewLineAtEndOfFile:UpdateBusinessDayFlow.kt$net.corda.irs.flows.UpdateBusinessDayFlow.kt</ID>
+    <ID>ReturnCount:Interpolators.kt$LinearInterpolator$override fun interpolate(x: Double): Double</ID>
+    <ID>TooGenericExceptionCaught:FinanceJSONSupport.kt$CalendarDeserializer$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NodeInterestRates.kt$NodeInterestRates$e: Exception</ID>
+    <ID>WildcardImport:AutoOfferFlow.kt$import net.corda.core.flows.*</ID>
+    <ID>WildcardImport:FinanceJSONSupport.kt$import com.fasterxml.jackson.databind.*</ID>
+    <ID>WildcardImport:FixingFlow.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:FixingFlow.kt$import net.corda.core.flows.*</ID>
+    <ID>WildcardImport:FixingFlow.kt$import net.corda.core.utilities.*</ID>
+    <ID>WildcardImport:NodeInterestRates.kt$import net.corda.core.flows.*</ID>
+    <ID>WildcardImport:UpdateBusinessDayFlow.kt$import net.corda.core.flows.*</ID>
+  </Whitelist>
+</SmellBaseline>

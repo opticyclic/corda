@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>MatchingDeclarationName:Main.kt$net.corda.bootstrapper.Main.kt</ID>
+    <ID>MaxLineLength:Main.kt$NetworkBootstrapperRunner : CordaCliWrapper</ID>
+    <ID>MaxLineLength:Main.kt$NetworkBootstrapperRunner$@Option(names = ["--copy-cordapps"], description = ["Whether or not to copy the CorDapp JARs into the nodes' 'cordapps' directory. \${COMPLETION-CANDIDATES}"])</ID>
+    <ID>MaxLineLength:Main.kt$NetworkBootstrapperRunner$@Option(names = ["--event-horizon"], description = ["The event horizon to use in the network-parameters. Default is 30 days."])</ID>
+    <ID>MaxLineLength:Main.kt$NetworkBootstrapperRunner$@Option(names = ["--max-message-size"], description = ["The maximum message size to use in the network-parameters, in bytes. Current default is $DEFAULT_MAX_MESSAGE_SIZE."])</ID>
+    <ID>MaxLineLength:Main.kt$NetworkBootstrapperRunner$@Option(names = ["--max-transaction-size"], description = ["The maximum transaction size to use in the network-parameters, in bytes. Current default is $DEFAULT_MAX_TRANSACTION_SIZE."])</ID>
+    <ID>MaxLineLength:Main.kt$NetworkBootstrapperRunner$@Option(names = ["--minimum-platform-version"], description = ["The minimum platform version to use in the network-parameters. Current default is $PLATFORM_VERSION."])</ID>
+    <ID>MaxLineLength:Main.kt$NetworkBootstrapperRunner$@Option(names = ["--network-parameter-overrides", "-n"], description = ["Overrides the default network parameters with those in the given file."])</ID>
+    <ID>MaxLineLength:Main.kt$NetworkBootstrapperRunner$@Option(names = ["--no-copy"], hidden = true, description = ["""DEPRECATED. Don't copy the CorDapp JARs into the nodes' "cordapps" directories."""])</ID>
+    <ID>MaxLineLength:Main.kt$NetworkBootstrapperRunner$description</ID>
+    <ID>MaxLineLength:Main.kt$NetworkBootstrapperRunner$if (networkParametersFile?.exists() != true) throw FileNotFoundException("Unable to find specified network parameters config file at $networkParametersFile")</ID>
+    <ID>MaxLineLength:Main.kt$NetworkBootstrapperRunner$overrides += minimumPlatformVersion?.let { mapOf("minimumPlatformVersion" to minimumPlatformVersion!!) } ?: mutableMapOf()</ID>
+    <ID>MaxLineLength:Main.kt$NetworkBootstrapperRunner$printError("Error${errors.pluralise()} found parsing the network parameter overrides file at $networkParametersFile:")</ID>
+    <ID>MaxLineLength:Main.kt$NetworkBootstrapperRunner$printWarning("The --no-copy parameter has been deprecated and been replaced with the --copy-cordapps parameter.")</ID>
+    <ID>MaxLineLength:Main.kt$NetworkBootstrapperRunner$require(eventHorizon == null || eventHorizon?.isNegative == false) { "The --event-horizon parameter must be a positive value" }</ID>
+    <ID>MaxLineLength:Main.kt$NetworkBootstrapperRunner$require(maxMessageSize == null || maxMessageSize ?: 0 &gt; 0) { "The --max-message-size parameter must be at least 1" }</ID>
+    <ID>MaxLineLength:Main.kt$NetworkBootstrapperRunner$require(maxTransactionSize == null || maxTransactionSize ?: 0 &gt; 0) { "The --max-transaction-size parameter must be at least 1" }</ID>
+    <ID>MaxLineLength:Main.kt$NetworkBootstrapperRunner$require(minimumPlatformVersion == null || minimumPlatformVersion ?: 0 &gt; 0) { "The --minimum-platform-version parameter must be at least 1" }</ID>
+    <ID>MaxLineLength:Main.kt$NetworkBootstrapperRunner$val networkParameterOverrides = getNetworkParametersOverrides().doOnErrors(::reportErrors).optional ?: return ExitCodes.FAILURE</ID>
+    <ID>WildcardImport:Main.kt$import net.corda.cliutils.*</ID>
+    <ID>WildcardImport:Main.kt$import net.corda.nodeapi.internal.network.*</ID>
+  </Whitelist>
+</SmellBaseline>

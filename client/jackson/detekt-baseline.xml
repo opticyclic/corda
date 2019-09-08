@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ComplexMethod:StringToMethodCallParser.kt$StringToMethodCallParser$ @Throws(UnparseableCallException::class) fun parse(target: T?, command: String): ParsedMethodCall</ID>
+    <ID>MaxLineLength:CordaModule.kt$AmountBeanDeserializerModifier$override</ID>
+    <ID>MaxLineLength:CordaModule.kt$CordaModule${ super.setupModule(context) // For classes which are annotated with CordaSerializable we want to use the same set of properties as the Corda serilasation scheme. // To do that we use CordaSerializableClassIntrospector to first turn on field visibility for these classes (the Jackson default is // private fields are not included) and then we use CordaSerializableBeanSerializerModifier to remove any extra properties that Jackson // might pick up. context.setClassIntrospector(CordaSerializableClassIntrospector(context)) context.addBeanSerializerModifier(CordaSerializableBeanSerializerModifier()) context.addBeanDeserializerModifier(AmountBeanDeserializerModifier()) context.setMixInAnnotations(PartyAndCertificate::class.java, PartyAndCertificateMixin::class.java) context.setMixInAnnotations(NetworkHostAndPort::class.java, NetworkHostAndPortMixin::class.java) context.setMixInAnnotations(CordaX500Name::class.java, CordaX500NameMixin::class.java) context.setMixInAnnotations(Amount::class.java, AmountMixin::class.java) context.setMixInAnnotations(AbstractParty::class.java, AbstractPartyMixin::class.java) context.setMixInAnnotations(AnonymousParty::class.java, AnonymousPartyMixin::class.java) context.setMixInAnnotations(Party::class.java, PartyMixin::class.java) context.setMixInAnnotations(PublicKey::class.java, PublicKeyMixin::class.java) context.setMixInAnnotations(ByteSequence::class.java, ByteSequenceMixin::class.java) context.setMixInAnnotations(SecureHash.SHA256::class.java, SecureHashSHA256Mixin::class.java) context.setMixInAnnotations(SecureHash::class.java, SecureHashSHA256Mixin::class.java) context.setMixInAnnotations(SerializedBytes::class.java, SerializedBytesMixin::class.java) context.setMixInAnnotations(DigitalSignature.WithKey::class.java, ByteSequenceWithPropertiesMixin::class.java) context.setMixInAnnotations(DigitalSignatureWithCert::class.java, ByteSequenceWithPropertiesMixin::class.java) context.setMixInAnnotations(TransactionSignature::class.java, ByteSequenceWithPropertiesMixin::class.java) context.setMixInAnnotations(SignedTransaction::class.java, SignedTransactionMixin::class.java) context.setMixInAnnotations(WireTransaction::class.java, WireTransactionMixin::class.java) context.setMixInAnnotations(TransactionState::class.java, TransactionStateMixin::class.java) context.setMixInAnnotations(Command::class.java, CommandMixin::class.java) context.setMixInAnnotations(TimeWindow::class.java, TimeWindowMixin::class.java) context.setMixInAnnotations(PrivacySalt::class.java, PrivacySaltMixin::class.java) context.setMixInAnnotations(SignatureScheme::class.java, SignatureSchemeMixin::class.java) context.setMixInAnnotations(SignatureMetadata::class.java, SignatureMetadataMixin::class.java) context.setMixInAnnotations(PartialTree::class.java, PartialTreeMixin::class.java) context.setMixInAnnotations(NodeInfo::class.java, NodeInfoMixin::class.java) context.setMixInAnnotations(StateMachineRunId::class.java, StateMachineRunIdMixin::class.java) }</ID>
+    <ID>MaxLineLength:CordaModule.kt$CordaSerializableBeanSerializerModifier$// We need to pass in a SerializerFactory when scanning for properties, but don't actually do any serialisation so any will do. private val serializerFactory = SerializerFactoryBuilder.build(AllWhitelist, javaClass.classLoader)</ID>
+    <ID>MaxLineLength:CordaModule.kt$CordaSerializableBeanSerializerModifier$val propertyNames = typeInformation.propertiesOrEmptyMap.mapNotNull { if (it.value.isCalculated) null else it.key }</ID>
+    <ID>MaxLineLength:CordaModule.kt$CordaSerializableClassIntrospector$context.configOverride(type.rawClass).visibility = Value.defaultVisibility().withFieldVisibility(Visibility.ANY)</ID>
+    <ID>MaxLineLength:CordaModule.kt$NetworkHostAndPortDeserializer : SimpleDeserializer</ID>
+    <ID>MaxLineLength:CordaModule.kt$SignatureSchemeDeserializer$signatureSchemesByNumberID[parser.intValue] ?: throw JsonParseException(parser, "Unable to find SignatureScheme ${parser.text}")</ID>
+    <ID>MaxLineLength:CordaModule.kt$SignedTransactionDeserializer$val core = wrapper.run { wire ?: filtered ?: notaryChangeWire ?: contractUpgradeWire ?: contractUpgradeFiltered!! }</ID>
+    <ID>MaxLineLength:CordaModule.kt$StxJson$val count = Booleans.countTrue(wire != null, filtered != null, notaryChangeWire != null, contractUpgradeWire != null, contractUpgradeFiltered != null)</ID>
+    <ID>MaxLineLength:JacksonSupport.kt$JacksonSupport$ @JvmStatic @JvmOverloads fun createDefaultMapper(rpc: CordaRPCOps, factory: JsonFactory = JsonFactory(), fuzzyIdentityMatch: Boolean = false, fullParties: Boolean = false): ObjectMapper</ID>
+    <ID>MaxLineLength:JacksonSupport.kt$JacksonSupport$ @JvmStatic @JvmOverloads fun createInMemoryMapper(identityService: IdentityService, factory: JsonFactory = JsonFactory(), fuzzyIdentityMatch: Boolean = false, fullParties: Boolean = false): ObjectMapper</ID>
+    <ID>MaxLineLength:JacksonSupport.kt$JacksonSupport$ @JvmStatic @JvmOverloads fun createNonRpcMapper(factory: JsonFactory = JsonFactory(), fullParties: Boolean = false): ObjectMapper</ID>
+    <ID>MaxLineLength:JacksonSupport.kt$JacksonSupport$@CordaInternal @VisibleForTesting internal</ID>
+    <ID>MaxLineLength:JacksonSupport.kt$JacksonSupport$@Deprecated("Do not use this as it's not thread safe. Instead get a ObjectMapper instance with one of the create*Mapper methods.")</ID>
+    <ID>MaxLineLength:JacksonSupport.kt$JacksonSupport.IdentityObjectMapper$override fun wellKnownPartyFromX500Name(name: CordaX500Name): Party?</ID>
+    <ID>MaxLineLength:JacksonSupport.kt$JacksonSupport.PartyDeserializer$?:</ID>
+    <ID>MaxLineLength:JacksonSupport.kt$JacksonSupport.PartyDeserializer$mapper.wellKnownPartyFromX500Name(principal) ?: throw JsonParseException(parser, "Could not find a Party with name $principal")</ID>
+    <ID>MaxLineLength:JacksonSupport.kt$JacksonSupport.PartyDeserializer$throw JsonParseException(parser, "No matching Party found, then tried to directly deserialise ${parser.text} as a PublicKey with no success", e)</ID>
+    <ID>MaxLineLength:JacksonSupport.kt$JacksonSupport.RpcObjectMapper$@Deprecated("This is an internal class, do not use", replaceWith = ReplaceWith("JacksonSupport.createDefaultMapper"))</ID>
+    <ID>MaxLineLength:JacksonSupport.kt$JacksonSupport.X509CertificateSerializer$writeObjectField("keyUsage", value.keyUsage?.asList()?.mapIndexedNotNull { i, flag -&gt; if (flag) keyUsages[i] else null })</ID>
+    <ID>MaxLineLength:JacksonSupport.kt$JacksonSupport.X509CertificateSerializer$writeObjectField("pathLength", value.basicConstraints.let { if (it != Int.MAX_VALUE) it else null })</ID>
+    <ID>MaxLineLength:StringToMethodCallParser.kt$StringToMethodCallParser$/** A map of method name to parameter names for the target type. */ val methodParamNames: Map&lt;String, List&lt;String&gt;&gt; = targetType.declaredMethods.filterNot(Method::isSynthetic).mapNotNull { try { it.name to paramNamesFromMethod(it) } catch (e: KotlinReflectionInternalError) { // Kotlin reflection doesn't support every method that can exist on an object (in particular, reified // inline methods) so we just ignore those here. null } }.toMap()</ID>
+    <ID>MaxLineLength:StringToMethodCallParser.kt$StringToMethodCallParser$kf != null -&gt; kf.parameters[index + 1].name ?: throw UnparseableCallException.ReflectionDataMissing(method.name, index)</ID>
+    <ID>MaxLineLength:StringToMethodCallParser.kt$StringToMethodCallParser$kf != null -&gt; kf.parameters[index].name ?: throw UnparseableCallException.ReflectionDataMissing("&lt;init&gt;", index)</ID>
+    <ID>MaxLineLength:StringToMethodCallParser.kt$StringToMethodCallParser$private</ID>
+    <ID>MaxLineLength:StringToMethodCallParser.kt$StringToMethodCallParser$when { param.isNamePresent -&gt; param.name // index + 1 because the first Kotlin reflection param is 'this', but that doesn't match Java reflection. kf != null -&gt; kf.parameters[index + 1].name ?: throw UnparseableCallException.ReflectionDataMissing(method.name, index) else -&gt; throw UnparseableCallException.ReflectionDataMissing(method.name, index) }</ID>
+    <ID>MaxLineLength:StringToMethodCallParser.kt$StringToMethodCallParser.Companion$for ((key, value) in clazz.methods.filterNot { it.isSynthetic &amp;&amp; it.name !in ignoredNames }.map { it.name to it }) { result.put(key, value) }</ID>
+    <ID>MaxLineLength:StringToMethodCallParser.kt$StringToMethodCallParser.UnparseableCallException$MissingParameter : UnparseableCallException</ID>
+    <ID>MaxLineLength:StringToMethodCallParser.kt$StringToMethodCallParser.UnparseableCallException$ReflectionDataMissing : UnparseableCallException</ID>
+    <ID>MaxLineLength:StringToMethodCallParser.kt$StringToMethodCallParser.UnparseableCallException$TooManyParameters : UnparseableCallException</ID>
+    <ID>MaxLineLength:StringToMethodCallParser.kt$StringToMethodCallParser.UnparseableCallException$open</ID>
+    <ID>MaxLineLength:StringToMethodCallParser.kt$StringToMethodCallParser&lt;in T : Any&gt;</ID>
+    <ID>SpreadOperator:StringToMethodCallParser.kt$StringToMethodCallParser.ParsedMethodCall$(target, *args)</ID>
+    <ID>ThrowsCount:JacksonSupport.kt$JacksonSupport.PartyDeserializer$private fun lookupByNameSegment(mapper: PartyObjectMapper, parser: JsonParser): Party</ID>
+    <ID>ThrowsCount:StringToMethodCallParser.kt$StringToMethodCallParser$ @Throws(UnparseableCallException::class) fun parse(target: T?, command: String): ParsedMethodCall</ID>
+    <ID>ThrowsCount:StringToMethodCallParser.kt$StringToMethodCallParser$ @Throws(UnparseableCallException::class) fun parseArguments(methodNameHint: String, parameters: List&lt;Pair&lt;String, Type&gt;&gt;, args: String): Array&lt;Any?&gt;</ID>
+    <ID>TooGenericExceptionCaught:JacksonSupport.kt$JacksonSupport.PartyDeserializer$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:JacksonSupport.kt$JacksonSupport.PublicKeyDeserializer$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:JacksonSupport.kt$JacksonSupport.SecureHashDeserializer$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:StringToMethodCallParser.kt$StringToMethodCallParser$e: Exception</ID>
+    <ID>WildcardImport:CordaModule.kt$import com.fasterxml.jackson.annotation.*</ID>
+    <ID>WildcardImport:CordaModule.kt$import com.fasterxml.jackson.databind.*</ID>
+    <ID>WildcardImport:CordaModule.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:CordaModule.kt$import net.corda.core.crypto.*</ID>
+    <ID>WildcardImport:CordaModule.kt$import net.corda.core.identity.*</ID>
+    <ID>WildcardImport:CordaModule.kt$import net.corda.core.transactions.*</ID>
+    <ID>WildcardImport:JacksonSupport.kt$import com.fasterxml.jackson.core.*</ID>
+    <ID>WildcardImport:JacksonSupport.kt$import com.fasterxml.jackson.databind.*</ID>
+    <ID>WildcardImport:JacksonSupport.kt$import net.corda.core.crypto.*</ID>
+    <ID>WildcardImport:JacksonSupport.kt$import net.corda.core.identity.*</ID>
+    <ID>WildcardImport:JacksonSupport.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:JacksonUtils.kt$import com.fasterxml.jackson.databind.*</ID>
+  </Whitelist>
+</SmellBaseline>

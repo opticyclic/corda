@@ -1,0 +1,97 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ComplexMethod:PrettyPrint.kt$PrettyPrint$fun prettyPrint(arr: Arrangement)</ID>
+    <ID>ComplexMethod:PrettyPrint.kt$PrettyPrint$fun prettyPrintBigDecimal(per: Perceivable&lt;BigDecimal&gt;)</ID>
+    <ID>ComplexMethod:PrettyPrint.kt$PrettyPrint$fun prettyPrintBoolean(per: Perceivable&lt;Boolean&gt;)</ID>
+    <ID>ComplexMethod:UniversalContract.kt$UniversalContract$fun &lt;T&gt; replaceStartEnd(p: Perceivable&lt;T&gt;, start: Instant, end: Instant): Perceivable&lt;T&gt;</ID>
+    <ID>ComplexMethod:UniversalContract.kt$UniversalContract$fun evalBigDecimal(tx: LedgerTransaction, expr: Perceivable&lt;BigDecimal&gt;): BigDecimal</ID>
+    <ID>ComplexMethod:UniversalContract.kt$UniversalContract$fun evalBoolean(tx: LedgerTransaction, expr: Perceivable&lt;Boolean&gt;): Boolean</ID>
+    <ID>ComplexMethod:UniversalContract.kt$UniversalContract$override fun verify(tx: LedgerTransaction)</ID>
+    <ID>ComplexMethod:Util.kt$fun &lt;T&gt; debugCompare(perLeft: Perceivable&lt;T&gt;, perRight: Perceivable&lt;T&gt;)</ID>
+    <ID>ComplexMethod:Util.kt$fun debugCompare(arrLeft: Arrangement, arrRight: Arrangement)</ID>
+    <ID>ComplexMethod:Util.kt$fun replaceParty(arrangement: Arrangement, from: Party, to: Party): Arrangement</ID>
+    <ID>ForbiddenComment:Arrangement.kt$Obligation$// TODO: should be replaced with something that uses Corda assets and/or cash?</ID>
+    <ID>ForbiddenComment:Arrangement.kt$Obligation$// TODO: should only be allowed to transfer non-negative amounts</ID>
+    <ID>ForbiddenComment:Arrangement.kt$RollOut$// TODO: fixing offset</ID>
+    <ID>ForbiddenComment:Arrangement.kt$RollOut$// TODO: think about payment offset (ie. settlement) - probably it doesn't belong on a distributed ledger</ID>
+    <ID>ForbiddenComment:Perceivable.kt$// TODO: fix should have implied default date and perhaps tenor when used in a rollOut template</ID>
+    <ID>ForbiddenComment:Perceivable.kt$Interest$// todo: holidays</ID>
+    <ID>ForbiddenComment:UniversalContract.kt$UniversalContract$// TODO: calendar + rolling conventions</ID>
+    <ID>ForbiddenComment:UniversalContract.kt$UniversalContract$// TODO: look into schedule for final dates</ID>
+    <ID>ForbiddenComment:UniversalContract.kt$UniversalContract$// TODO: not sure this is necessary??</ID>
+    <ID>ForbiddenComment:UniversalContract.kt$UniversalContract$// TODO: think about multi layered rollouts</ID>
+    <ID>ForbiddenComment:UniversalContract.kt$UniversalContract$// TODO: we may have to save original start date in order to roll out correctly</ID>
+    <ID>ForbiddenComment:UniversalContract.kt$UniversalContract.Commands.Split$// todo: Who should sign this?</ID>
+    <ID>FunctionNaming:ContractFunctions.kt$// building an fx swap using abstract swap fun fx_swap2(expiry: String, notional: Long, strike: Double, foreignCurrency: Currency, domesticCurrency: Currency, partyA: Party, partyB: Party)</ID>
+    <ID>FunctionNaming:ContractFunctions.kt$fun fx_swap(expiry: String, notional: BigDecimal, strike: BigDecimal, foreignCurrency: Currency, domesticCurrency: Currency, partyA: Party, partyB: Party)</ID>
+    <ID>LongMethod:UniversalContract.kt$UniversalContract$override fun verify(tx: LedgerTransaction)</ID>
+    <ID>LongParameterList:ContractFunctions.kt$(expiry: String, notional: BigDecimal, strike: BigDecimal, foreignCurrency: Currency, domesticCurrency: Currency, partyA: Party, partyB: Party)</ID>
+    <ID>LongParameterList:ContractFunctions.kt$(expiry: String, notional: Long, strike: Double, foreignCurrency: Currency, domesticCurrency: Currency, partyA: Party, partyB: Party)</ID>
+    <ID>LongParameterList:ContractFunctions.kt$(partyA: Party, amountA: BigDecimal, currencyA: Currency, partyB: Party, amountB: BigDecimal, currencyB: Currency)</ID>
+    <ID>MagicNumber:Literal.kt$1000</ID>
+    <ID>MagicNumber:Literal.kt$1000000</ID>
+    <ID>MagicNumber:UniversalContract.kt$UniversalContract$100.0</ID>
+    <ID>MagicNumber:Util.kt$24</ID>
+    <ID>MagicNumber:Util.kt$60</ID>
+    <ID>MaxLineLength:Arrangement.kt$And : Arrangement</ID>
+    <ID>MaxLineLength:Arrangement.kt$Obligation$data</ID>
+    <ID>MaxLineLength:Arrangement.kt$RollOut$data</ID>
+    <ID>MaxLineLength:ContractFunctions.kt$fun swap(partyA: Party, amountA: BigDecimal, currencyA: Currency, partyB: Party, amountB: BigDecimal, currencyB: Currency)</ID>
+    <ID>MaxLineLength:ContractFunctions.kt$swap(partyA, BigDecimal(notional * strike), domesticCurrency, partyB, BigDecimal(notional), foreignCurrency)</ID>
+    <ID>MaxLineLength:Literal.kt$ContractBuilder$@Suppress("UNUSED_PARAMETER") p3: kotlin.Pair&lt;Parameter&lt;T3&gt;, Perceivable&lt;T3&gt;&gt;</ID>
+    <ID>MaxLineLength:Literal.kt$ContractBuilder$fun &lt;T&gt; rollOut(startDate: LocalDate, endDate: LocalDate, frequency: Frequency, vars: T, init: RollOutBuilder&lt;T&gt;.() -&gt; Unit): RollOut</ID>
+    <ID>MaxLineLength:Literal.kt$ContractBuilder$fun rollOut(startDate: LocalDate, endDate: LocalDate, frequency: Frequency, init: RollOutBuilder&lt;Dummy&gt;.() -&gt; Unit): RollOut</ID>
+    <ID>MaxLineLength:Literal.kt$RollOutBuilder&lt;T&gt; : ContractBuilder</ID>
+    <ID>MaxLineLength:Perceivable.kt$@Suppress("UNUSED_PARAMETER") start: Perceivable&lt;Instant&gt;</ID>
+    <ID>MaxLineLength:Perceivable.kt$@Suppress("UNUSED_PARAMETER") start: String</ID>
+    <ID>MaxLineLength:Perceivable.kt$Interest$val interest: Perceivable&lt;BigDecimal&gt;</ID>
+    <ID>MaxLineLength:Perceivable.kt$Interest(Const(amount), dayCountConvention, interest, const(parseDate(start).toInstant()), const(parseDate(end).toInstant()))</ID>
+    <ID>MaxLineLength:Perceivable.kt$PerceivableComparison&lt;T&gt; : Perceivable</ID>
+    <ID>MaxLineLength:Perceivable.kt$PerceivableOperation&lt;T&gt; : Perceivable</ID>
+    <ID>MaxLineLength:Perceivable.kt$fun fix(source: String, date: LocalDate, tenor: Tenor): Perceivable&lt;BigDecimal&gt;</ID>
+    <ID>MaxLineLength:Perceivable.kt$fun interest(@Suppress("UNUSED_PARAMETER") amount: BigDecimal, @Suppress("UNUSED_PARAMETER") dayCountConvention: String, @Suppress("UNUSED_PARAMETER") interest: BigDecimal /* todo - appropriate type */, @Suppress("UNUSED_PARAMETER") start: Perceivable&lt;Instant&gt;, @Suppress("UNUSED_PARAMETER") end: Perceivable&lt;Instant&gt;): Perceivable&lt;BigDecimal&gt;</ID>
+    <ID>MaxLineLength:Perceivable.kt$fun interest(@Suppress("UNUSED_PARAMETER") amount: BigDecimal, @Suppress("UNUSED_PARAMETER") dayCountConvention: String, @Suppress("UNUSED_PARAMETER") interest: BigDecimal /* todo - appropriate type */, @Suppress("UNUSED_PARAMETER") start: String, @Suppress("UNUSED_PARAMETER") end: String): Perceivable&lt;BigDecimal&gt;</ID>
+    <ID>MaxLineLength:Perceivable.kt$fun interest(@Suppress("UNUSED_PARAMETER") amount: BigDecimal, @Suppress("UNUSED_PARAMETER") dayCountConvention: String, @Suppress("UNUSED_PARAMETER") interest: Perceivable&lt;BigDecimal&gt; /* todo - appropriate type */, @Suppress("UNUSED_PARAMETER") start: Perceivable&lt;Instant&gt;, @Suppress("UNUSED_PARAMETER") end: Perceivable&lt;Instant&gt;): Perceivable&lt;BigDecimal&gt;</ID>
+    <ID>MaxLineLength:Perceivable.kt$fun interest(@Suppress("UNUSED_PARAMETER") amount: BigDecimal, @Suppress("UNUSED_PARAMETER") dayCountConvention: String, @Suppress("UNUSED_PARAMETER") interest: Perceivable&lt;BigDecimal&gt; /* todo - appropriate type */, @Suppress("UNUSED_PARAMETER") start: String, @Suppress("UNUSED_PARAMETER") end: String): Perceivable&lt;BigDecimal&gt;</ID>
+    <ID>MaxLineLength:Perceivable.kt$operator fun Perceivable&lt;BigDecimal&gt;.minus(n: Double)</ID>
+    <ID>MaxLineLength:Perceivable.kt$operator fun Perceivable&lt;BigDecimal&gt;.times(n: Double)</ID>
+    <ID>MaxLineLength:PrettyPrint.kt$PrettyPrint$println("val ${createPartyName(it)} = Party(\"${it.name.organisation}\", \"${it.owningKey.toStringShort()}\")")</ID>
+    <ID>MaxLineLength:UniversalContract.kt$UniversalContract$"action must have a time-window" using (tx.timeWindow != null) // "action must be authorized" by (cmd.signers.any { action.actors.any { party -&gt; party.owningKey == it } }) // todo perhaps merge these two requirements? "condition must be met" using evalBoolean(tx, action.condition)</ID>
+    <ID>MaxLineLength:UniversalContract.kt$UniversalContract$"the transaction is signed by all liable parties" using (liableParties(outState.details).all { it in cmd.signers })</ID>
+    <ID>MaxLineLength:UniversalContract.kt$UniversalContract$Action(arr.name, replaceFixing(tx, arr.condition, fixings, unusedFixings), replaceFixing(tx, arr.arrangement, fixings, unusedFixings))</ID>
+    <ID>MaxLineLength:UniversalContract.kt$UniversalContract$if (dt != null &amp;&amp; fixings.containsKey(FixOf(perceivable.source, dt.toLocalDate(), perceivable.tenor))) { unusedFixings.remove(FixOf(perceivable.source, dt.toLocalDate(), perceivable.tenor)) uncheckedCast(Const(fixings[FixOf(perceivable.source, dt.toLocalDate(), perceivable.tenor)]!!)) } else perceivable</ID>
+    <ID>MaxLineLength:UniversalContract.kt$UniversalContract$is Actions -&gt; Actions(arr.actions.map { Action(it.name, it.condition, replaceFixing(tx, it.arrangement, fixings, unusedFixings)) }.toSet())</ID>
+    <ID>MaxLineLength:UniversalContract.kt$UniversalContract$is Actions -&gt; Actions(arrangement.actions.map { Action(it.name, it.condition, removeNext(it.arrangement)) }.toSet())</ID>
+    <ID>MaxLineLength:UniversalContract.kt$UniversalContract$is Actions -&gt; Actions(arrangement.actions.map { Action(it.name, it.condition, replaceNext(it.arrangement, nextReplacement)) }.toSet())</ID>
+    <ID>MaxLineLength:UniversalContract.kt$UniversalContract$is Actions -&gt; Actions(arrangement.actions.map { Action(it.name, replaceStartEnd(it.condition, start, end), replaceStartEnd(it.arrangement, start, end)) }.toSet())</ID>
+    <ID>MaxLineLength:UniversalContract.kt$UniversalContract$is Interest -&gt; uncheckedCast(Interest(replaceStartEnd(p.amount, start, end), p.dayCountConvention, replaceStartEnd(p.interest, start, end), replaceStartEnd(p.start, start, end), replaceStartEnd(p.end, start, end)))</ID>
+    <ID>MaxLineLength:UniversalContract.kt$UniversalContract$is Obligation -&gt; Obligation(replaceFixing(tx, arr.amount, fixings, unusedFixings), arr.currency, arr.from, arr.to)</ID>
+    <ID>MaxLineLength:UniversalContract.kt$UniversalContract$is Obligation -&gt; Obligation(replaceStartEnd(arrangement.amount, start, end), arrangement.currency, arrangement.from, arrangement.to)</ID>
+    <ID>MaxLineLength:UniversalContract.kt$UniversalContract$is PerceivableAnd -&gt; uncheckedCast(replaceStartEnd(p.left, start, end) and replaceStartEnd(p.right, start, end))</ID>
+    <ID>MaxLineLength:UniversalContract.kt$UniversalContract$is PerceivableOperation</ID>
+    <ID>MaxLineLength:UniversalContract.kt$UniversalContract$is PerceivableOperation -&gt; PerceivableOperation(replaceStartEnd(p.left, start, end), p.op, replaceStartEnd(p.right, start, end))</ID>
+    <ID>MaxLineLength:UniversalContract.kt$UniversalContract$is PerceivableOr -&gt; uncheckedCast(replaceStartEnd(p.left, start, end) or replaceStartEnd(p.right, start, end))</ID>
+    <ID>MaxLineLength:UniversalContract.kt$UniversalContract$is RollOut -&gt; RollOut(arr.startDate, arr.endDate, arr.frequency, replaceFixing(tx, arr.template, fixings, unusedFixings))</ID>
+    <ID>MaxLineLength:UniversalContract.kt$UniversalContract$val action = actions[value.name] ?: throw IllegalArgumentException("Failed requirement: action must be defined")</ID>
+    <ID>MaxLineLength:UniversalContract.kt$UniversalContract$val schedule = BusinessCalendar.createGenericSchedule(start, rollOut.frequency, noOfAdditionalPeriods = 1, endDate = end)</ID>
+    <ID>MaxLineLength:Util.kt$arrangement.actions.fold(ImmutableSet.builder&lt;Party&gt;(), { builder, k -&gt; builder.addAll(involvedPartiesVisitor(k)) }).build()</ID>
+    <ID>MaxLineLength:Util.kt$arrangement.actions.fold(ImmutableSet.builder&lt;PublicKey&gt;(), { builder, k -&gt; builder.addAll(liablePartiesVisitor(k)) }).build()</ID>
+    <ID>MaxLineLength:Util.kt$arrangement.arrangements.fold(ImmutableSet.builder&lt;Party&gt;(), { builder, k -&gt; builder.addAll(involvedPartiesVisitor(k)) }).build()</ID>
+    <ID>MaxLineLength:Util.kt$arrangement.arrangements.fold(ImmutableSet.builder&lt;PublicKey&gt;(), { builder, k -&gt; builder.addAll(liablePartiesVisitor(k)) }).build()</ID>
+    <ID>MaxLineLength:Util.kt$is PerceivableAnd -&gt; Sets.union( signingParties( perceivable.left ), signingParties(perceivable.right) ).immutableCopy()</ID>
+    <ID>MaxLineLength:Util.kt$is PerceivableOr -&gt; Sets.union( signingParties( perceivable.left ), signingParties(perceivable.right) ).immutableCopy()</ID>
+    <ID>MaxLineLength:Util.kt$net.corda.finance.contracts.universal.Util.kt</ID>
+    <ID>NewLineAtEndOfFile:Arrangement.kt$net.corda.finance.contracts.universal.Arrangement.kt</ID>
+    <ID>ReturnCount:Util.kt$fun &lt;T&gt; debugCompare(perLeft: Perceivable&lt;T&gt;, perRight: Perceivable&lt;T&gt;)</ID>
+    <ID>ReturnCount:Util.kt$fun debugCompare(arrLeft: Arrangement, arrRight: Arrangement)</ID>
+    <ID>TooGenericExceptionThrown:UniversalContract.kt$UniversalContract$throw Error("Unable to evaluate")</ID>
+    <ID>TooManyFunctions:Literal.kt$ContractBuilder</ID>
+    <ID>TooManyFunctions:Perceivable.kt$net.corda.finance.contracts.universal.Perceivable.kt</ID>
+    <ID>TooManyFunctions:UniversalContract.kt$UniversalContract : Contract</ID>
+    <ID>TooManyFunctions:Util.kt$net.corda.finance.contracts.universal.Util.kt</ID>
+    <ID>VariableNaming:Literal.kt$ActionBuilder$val This = this</ID>
+    <ID>WildcardImport:UniversalContract.kt$import net.corda.core.contracts.*</ID>
+  </Whitelist>
+</SmellBaseline>

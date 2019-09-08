@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>MatchingDeclarationName:TargetVersionDependentRules.kt$net.corda.core.internal.rules.TargetVersionDependentRules.kt</ID>
+    <ID>MaxLineLength:SerializationFactory.kt$SerializationFactory$ abstract fun &lt;T : Any&gt; serialize(obj: T, context: SerializationContext): SerializedBytes&lt;T&gt;</ID>
+    <ID>MaxLineLength:SerializationFactory.kt$SerializationFactory$ fun &lt;T&gt; asCurrent(block: SerializationFactory.() -&gt; T): T</ID>
+    <ID>MaxLineLength:SerializationFactory.kt$SerializationFactory$/** * A context to use as a default if you do not require a specially configured context. It will be the current context * if the use is somehow nested (see [currentContext]). */ val defaultContext: SerializationContext get() = currentContext ?: effectiveSerializationEnv.p2pContext</ID>
+    <ID>MaxLineLength:SerializationFactory.kt$SerializationFactory$/** * If there is a need to nest serialization/deserialization with a modified context during serialization or deserialization, * this will return the current context used to start serialization/deserialization. */ val currentContext: SerializationContext? get() = _currentContext</ID>
+    <ID>MaxLineLength:SerializationFactory.kt$SerializationFactory$abstract</ID>
+    <ID>MaxLineLength:SerializationFactory.kt$SerializationFactory.Companion$/** * A default factory for serialization/deserialization, taking into account the [currentFactory] if set. */ val defaultFactory: SerializationFactory get() = currentFactory ?: effectiveSerializationEnv.serializationFactory</ID>
+    <ID>MaxLineLength:SerializationFactory.kt$SerializationFactory.Companion$/** * If there is a need to nest serialization/deserialization with a modified context during serialization or deserialization, * this will return the current factory used to start serialization/deserialization. */ val currentFactory: SerializationFactory? get() = _currentFactory</ID>
+    <ID>MaxLineLength:ToggleField.kt$InheritableThreadLocalToggleField$private val isAGlobalThreadBeingCreated: (Array&lt;StackTraceElement&gt;) -&gt; Boolean</ID>
+    <ID>NewLineAtEndOfFile:TargetVersionDependentRules.kt$net.corda.core.internal.rules.TargetVersionDependentRules.kt</ID>
+    <ID>NewLineAtEndOfFile:ToggleField.kt$net.corda.core.internal.ToggleField.kt</ID>
+  </Whitelist>
+</SmellBaseline>

@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>MagicNumber:EventGenerator.kt$ErrorFlowsEventGenerator$0.2</ID>
+    <ID>MagicNumber:EventGenerator.kt$ErrorFlowsEventGenerator$0.3</ID>
+    <ID>MagicNumber:EventGenerator.kt$ErrorFlowsEventGenerator$0.7</ID>
+    <ID>MagicNumber:EventGenerator.kt$ErrorFlowsEventGenerator$0.8</ID>
+    <ID>MagicNumber:EventGenerator.kt$EventGenerator$0.1</ID>
+    <ID>MagicNumber:EventGenerator.kt$EventGenerator$0.9</ID>
+    <ID>MagicNumber:EventGenerator.kt$EventGenerator$10000</ID>
+    <ID>MagicNumber:EventGenerator.kt$EventGenerator$1000000</ID>
+    <ID>MagicNumber:Generator.kt$Generator.Companion$16</ID>
+    <ID>MagicNumber:Generator.kt$Generator.Companion$17</ID>
+    <ID>MaxLineLength:EventGenerator.kt$ErrorFlowsEventGenerator : EventGenerator</ID>
+    <ID>MaxLineLength:EventGenerator.kt$ErrorFlowsEventGenerator$private</ID>
+    <ID>MaxLineLength:EventGenerator.kt$EventGenerator$open</ID>
+    <ID>MaxLineLength:EventGenerator.kt$EventGenerator$protected</ID>
+    <ID>MaxLineLength:EventGenerator.kt$EventGenerator$protected val currencyMap: MutableMap&lt;Currency, Long&gt; = mutableMapOf(USD to 0L, GBP to 0L) // Used for estimation of how much money we have in general.</ID>
+    <ID>MaxLineLength:Generator.kt$Generator$fun &lt;B, C, D, E, R&gt; combine(other1: Generator&lt;B&gt;, other2: Generator&lt;C&gt;, other3: Generator&lt;D&gt;, other4: Generator&lt;E&gt;, function: (A, B, C, D, E) -&gt; R)</ID>
+    <ID>MaxLineLength:Generator.kt$Generator$fun &lt;B, C, D, R&gt; combine(other1: Generator&lt;B&gt;, other2: Generator&lt;C&gt;, other3: Generator&lt;D&gt;, function: (A, B, C, D) -&gt; R)</ID>
+    <ID>MaxLineLength:Generator.kt$Generator$product&lt;R&gt;(other1.product(other2.product(other3.product(other4.product(pure({ e -&gt; { d -&gt; { c -&gt; { b -&gt; { a -&gt; function(a, b, c, d, e) } } } } }))))))</ID>
+    <ID>MaxLineLength:Generator.kt$Generator$product&lt;R&gt;(other1.product(other2.product(other3.product(pure({ d -&gt; { c -&gt; { b -&gt; { a -&gt; function(a, b, c, d) } } } })))))</ID>
+    <ID>MaxLineLength:Generator.kt$Generator.Companion$fun &lt;A&gt; replicatePoisson(meanSize: Double, generator: Generator&lt;A&gt;, atLeastOne: Boolean = false)</ID>
+    <ID>MaxLineLength:Generator.kt$Generator&lt;out A&gt;</ID>
+    <ID>NewLineAtEndOfFile:Generator.kt$net.corda.client.mock.Generator.kt</ID>
+    <ID>TooGenericExceptionThrown:Generator.kt$Generator$throw Exception("Failed to generate", error)</ID>
+    <ID>TooManyFunctions:Generator.kt$Generator$Companion</ID>
+  </Whitelist>
+</SmellBaseline>

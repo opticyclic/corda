@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>EmptyFunctionBlock:NoOpTestDatabaseContext.kt$NoOpTestDatabaseContext${}</ID>
+    <ID>MaxLineLength:DBRunnerExtension.kt$DBRunnerExtension : ExtensionBeforeAllCallbackAfterAllCallbackBeforeEachCallbackAfterEachCallback</ID>
+    <ID>MaxLineLength:DBRunnerExtension.kt$DBRunnerExtension$if (annotationClass.isAssignableFrom(annotation::class.java)) sequenceOf(annotationClass.cast(annotation)) else annotation.annotationClass.java.findAnnotations(annotationClass)</ID>
+    <ID>MaxLineLength:DBRunnerExtension.kt$DBRunnerExtension$private</ID>
+    <ID>MaxLineLength:DBRunnerExtension.kt$DBRunnerExtension$private val AnnotatedElement.requiredSql: List&lt;String&gt; get() = findAnnotations(RequiresSql::class.java).map { it.name }.toList()</ID>
+    <ID>MaxLineLength:DBRunnerExtension.kt$DBRunnerExtension$val store = rootContext.getStore(ExtensionContext.Namespace.create(DBRunnerExtension::class.java.simpleName, groupName))</ID>
+    <ID>MaxLineLength:RequiresDb.kt$RequiresDb</ID>
+    <ID>MaxLineLength:RequiresDb.kt$RequiresSql</ID>
+    <ID>MaxLineLength:TestDatabaseContext.kt$TestDatabaseContext : CloseableResource</ID>
+    <ID>MaxLineLength:TestDatabaseContext.kt$TestDatabaseContext$ fun afterClass(teardownSql: List&lt;String&gt;)</ID>
+    <ID>MaxLineLength:TestDatabaseContext.kt$TestDatabaseContext$ fun afterTest(teardownSql: List&lt;String&gt;)</ID>
+    <ID>MaxLineLength:TestDatabaseContext.kt$TestDatabaseContext$ fun beforeClass(setupSql: List&lt;String&gt;)</ID>
+    <ID>MaxLineLength:TestDatabaseContext.kt$TestDatabaseContext$ fun beforeTest(setupSql: List&lt;String&gt;)</ID>
+    <ID>MaxLineLength:TestDatabaseContext.kt$TestDatabaseContext$ fun initialize(groupName: String)</ID>
+    <ID>NewLineAtEndOfFile:DBRunnerExtension.kt$net.corda.testing.internal.db.DBRunnerExtension.kt</ID>
+    <ID>NewLineAtEndOfFile:NoOpTestDatabaseContext.kt$net.corda.testing.internal.db.NoOpTestDatabaseContext.kt</ID>
+    <ID>NewLineAtEndOfFile:RequiresDb.kt$net.corda.testing.internal.db.RequiresDb.kt</ID>
+    <ID>NewLineAtEndOfFile:TestDatabaseContext.kt$net.corda.testing.internal.db.TestDatabaseContext.kt</ID>
+    <ID>ReturnCount:DBRunnerExtension.kt$DBRunnerExtension$private fun getDatabaseContext(context: ExtensionContext?): TestDatabaseContext?</ID>
+    <ID>WildcardImport:DBRunnerExtension.kt$import org.junit.jupiter.api.extension.*</ID>
+  </Whitelist>
+</SmellBaseline>

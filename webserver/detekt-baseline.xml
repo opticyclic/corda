@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ComplexMethod:WebServer.kt$fun main(args: Array&lt;String&gt;)</ID>
+    <ID>EmptyFunctionBlock:WebServerPluginRegistry.kt$WebServerPluginRegistry${}</ID>
+    <ID>ForbiddenComment:NodeWebServer.kt$NodeWebServer$// TODO: Redesign</ID>
+    <ID>ForbiddenComment:WebServerConfig.kt$WebServerConfig$// TODO: remove this once config format is updated</ID>
+    <ID>ForbiddenComment:WebServerConfig.kt$WebServerConfig$// TODO: replace with credentials supplied by a user</ID>
+    <ID>MagicNumber:AllExceptionMapper.kt$AllExceptionMapper$500</ID>
+    <ID>MagicNumber:NodeWebServer.kt$NodeWebServer$100</ID>
+    <ID>MagicNumber:NodeWebServer.kt$NodeWebServer$32768</ID>
+    <ID>MagicNumber:NodeWebServer.kt$NodeWebServer$40</ID>
+    <ID>MagicNumber:WebServer.kt$10</ID>
+    <ID>MagicNumber:WebServer.kt$100.0</ID>
+    <ID>MatchingDeclarationName:Query.kt$net.corda.webserver.api.Query.kt</ID>
+    <ID>MaxLineLength:APIServer.kt$APIServer</ID>
+    <ID>MaxLineLength:AttachmentDownloadServlet.kt$AttachmentDownloadServlet$log.warn("404 Not Found whilst trying to handle attachment download request for ${servletContext.contextPath}/$reqPath")</ID>
+    <ID>MaxLineLength:Converters.kt$CordaConverterProvider$override</ID>
+    <ID>MaxLineLength:CorDappInfoServlet.kt$CorDappInfoServlet$private</ID>
+    <ID>MaxLineLength:NodeWebServer.kt$NodeWebServer$/** Fetch WebServerPluginRegistry classes registered in META-INF/services/net.corda.webserver.services.WebServerPluginRegistry files that exist in the classpath */ val pluginRegistries: List&lt;WebServerPluginRegistry&gt; by lazy { ServiceLoader.load(WebServerPluginRegistry::class.java).toList() }</ID>
+    <ID>MaxLineLength:NodeWebServer.kt$NodeWebServer$if (e is BindException || e is Errors.NativeIoException &amp;&amp; e.message?.contains("Address already in use") == true) { throw AddressBindingException(address) } else { throw e }</ID>
+    <ID>MaxLineLength:NodeWebServer.kt$NodeWebServer$private fun reconnectingCordaRPCOps()</ID>
+    <ID>MaxLineLength:NodeWebServer.kt$NodeWebServer$val sslConnector = ServerConnector(server, SslConnectionFactory(sslContextFactory, "http/1.1"), HttpConnectionFactory(httpsConfiguration))</ID>
+    <ID>MaxLineLength:NodeWebServer.kt$NodeWebServer.&lt;no name provided&gt;$@Throws(IOException::class) override</ID>
+    <ID>MaxLineLength:WebArgsParser.kt$ArgsParser$// The intent of allowing a command line configurable directory and config path is to allow deployment flexibility. // Other general configuration should live inside the config file unless we regularly need temporary overrides on the command line private val baseDirectoryArg = optionParser .accepts("base-directory", "The node working directory where all the files are kept") .withRequiredArg() .defaultsTo(".")</ID>
+    <ID>MaxLineLength:WebArgsParser.kt$ArgsParser$private val logToConsoleArg = optionParser.accepts("log-to-console", "If set, prints logging to the console as well as to a file.")</ID>
+    <ID>MaxLineLength:WebServerPluginRegistry.kt$WebServerPluginRegistry</ID>
+    <ID>MaxLineLength:WebServerPluginRegistry.kt$WebServerPluginRegistry$/** * Map of static serving endpoints to the matching resource directory. All endpoints will be prefixed with "/web" and postfixed with "\*. * Resource directories can be either on disk directories (especially when debugging) in the form "a/b/c". Serving from a JAR can * be specified with: javaClass.getResource("&lt;folder-in-jar&gt;").toExternalForm() */ val staticServeDirs: Map&lt;String, String&gt; get() = emptyMap()</ID>
+    <ID>NewLineAtEndOfFile:APIServer.kt$net.corda.webserver.api.APIServer.kt</ID>
+    <ID>NewLineAtEndOfFile:AllExceptionMapper.kt$net.corda.webserver.internal.AllExceptionMapper.kt</ID>
+    <ID>NewLineAtEndOfFile:Converters.kt$net.corda.webserver.converters.Converters.kt</ID>
+    <ID>NewLineAtEndOfFile:WebServer.kt$net.corda.webserver.WebServer.kt</ID>
+    <ID>NewLineAtEndOfFile:WebServerPluginRegistry.kt$net.corda.webserver.services.WebServerPluginRegistry.kt</ID>
+    <ID>SpreadOperator:WebArgsParser.kt$ArgsParser$(*args)</ID>
+    <ID>SpreadOperator:WebServer.kt$(*args)</ID>
+    <ID>TooGenericExceptionCaught:DataUploadServlet.kt$DataUploadServlet$e: RuntimeException</ID>
+    <ID>TooGenericExceptionCaught:WebServer.kt$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:WebServer.kt$ex: Exception</ID>
+    <ID>TooGenericExceptionThrown:WebServerConfig.kt$WebServerConfig$throw Exception("Missing rpc address property. Either 'rpcSettings' or 'rpcAddress' must be specified.")</ID>
+    <ID>WildcardImport:CorDappInfoServlet.kt$import kotlinx.html.*</ID>
+    <ID>WildcardImport:NodeWebServer.kt$import net.corda.webserver.servlets.*</ID>
+    <ID>WildcardImport:NodeWebServer.kt$import org.eclipse.jetty.server.*</ID>
+  </Whitelist>
+</SmellBaseline>

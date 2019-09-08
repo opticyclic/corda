@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>MaxLineLength:AnotherDummyContract.kt$AnotherDummyContract$return TransactionBuilder(notary).withItems(StateAndContract(state, ANOTHER_DUMMY_PROGRAM_ID), Command(Commands.Create(), owner.party.owningKey))</ID>
+    <ID>NewLineAtEndOfFile:AnotherDummyContract.kt$net.corda.isolated.contracts.AnotherDummyContract.kt</ID>
+    <ID>WildcardImport:AnotherDummyContract.kt$import net.corda.core.contracts.*</ID>
+  </Whitelist>
+</SmellBaseline>

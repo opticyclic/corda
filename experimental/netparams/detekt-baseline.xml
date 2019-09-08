@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ForbiddenComment:NetParams.kt$NetParamsSigner$// TODO: not supported</ID>
+    <ID>MatchingDeclarationName:NetParams.kt$net.corda.netparams.NetParams.kt</ID>
+    <ID>MaxLineLength:NetParams.kt$ fun main(args: Array&lt;String&gt;)</ID>
+    <ID>MaxLineLength:NetParams.kt$NetParamsSigner$CertificatePathAndKeyPair</ID>
+    <ID>MaxLineLength:NetParams.kt$NetParamsSigner.AMQPInspectorSerializationScheme$override</ID>
+  </Whitelist>
+</SmellBaseline>

@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ClassNaming:BuyerFlow.kt$BuyerFlow$STARTING_BUY : Step</ID>
+    <ID>ClassNaming:SellerFlow.kt$SellerFlow.Companion$SELF_ISSUING : Step</ID>
+    <ID>ForbiddenComment:CommercialPaperIssueFlow.kt$CommercialPaperIssueFlow$// TODO: Consider moving these two steps below into generateIssue.</ID>
+    <ID>ForbiddenComment:LoggingBuyerFlow.kt$LoggingBuyerFlow$// TODO: This is potentially very expensive, and requires transaction details we may no longer have once</ID>
+    <ID>MagicNumber:CommercialPaperIssueFlow.kt$CommercialPaperIssueFlow$10</ID>
+    <ID>MagicNumber:CommercialPaperIssueFlow.kt$CommercialPaperIssueFlow$30</ID>
+    <ID>MaxLineLength:CommercialPaperIssueFlow.kt$CommercialPaperIssueFlow$constructor(amount: Amount&lt;Currency&gt;, issueRef: OpaqueBytes, recipient: Party, notary: Party) : this(amount, issueRef, recipient, notary, tracker())</ID>
+    <ID>MaxLineLength:CommercialPaperIssueFlow.kt$CommercialPaperIssueFlow$val tx = CommercialPaperUtils.generateIssue(ourIdentity.ref(issueRef), amount `issued by` ourIdentity.ref(issueRef), Instant.now() + 10.days, notary)</ID>
+    <ID>MaxLineLength:SellerFlow.kt$SellerFlow$serviceHub.vaultService.queryBy(CommercialPaper.State::class.java) .states</ID>
+    <ID>MaxLineLength:SellerFlow.kt$SellerFlow.Companion$SELF_ISSUING : Step</ID>
+    <ID>MaxLineLength:TransactionGraphSearch.kt$TransactionGraphSearch$Query</ID>
+    <ID>MaxLineLength:TransactionGraphSearch.kt$TransactionGraphSearch$val unvisitedInputTxs: Map&lt;SecureHash, SignedTransaction&gt; = inputsLeadingToUnvisitedTx.map { it.txhash }.toHashSet().mapNotNull { transactions.getTransaction(it) }.associateBy { it.id }</ID>
+    <ID>MaxLineLength:TransactionGraphSearch.kt$TransactionGraphSearch$val unvisitedInputTxsWithInputIndex: Iterable&lt;Pair&lt;SignedTransaction, Int&gt;&gt; = inputsLeadingToUnvisitedTx.filter { it.txhash in unvisitedInputTxs.keys }.map { Pair(unvisitedInputTxs[it.txhash]!!, it.index) }</ID>
+    <ID>WildcardImport:CommercialPaperIssueFlow.kt$import net.corda.core.flows.*</ID>
+  </Whitelist>
+</SmellBaseline>

@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ComplexMethod:StatusTransitions.kt$StatusTransitions$ fun verify(tx: LedgerTransaction)</ID>
+    <ID>EqualsWithHashCodeExist:Utils.kt$StateRefHere</ID>
+    <ID>MatchingDeclarationName:Utils.kt$io.cryptoblk.core.Utils.kt</ID>
+    <ID>MaxLineLength:StatusTransitions.kt$StatusTransitions$?:</ID>
+    <ID>MaxLineLength:StatusTransitions.kt$StatusTransitions$if (options.isEmpty()) throw IllegalStateException("Transition [$input -(${command.javaClass.simpleName})-&gt; $output] not allowed")</ID>
+    <ID>MaxLineLength:StatusTransitions.kt$StatusTransitions$private vararg val ts: TransitionDef&lt;S, R&gt;</ID>
+    <ID>MaxLineLength:StatusTransitions.kt$StatusTransitions$require(relevantCmds.isNotEmpty()) { "Transaction must have at least one Command relevant to its defined transitions" }</ID>
+    <ID>MaxLineLength:StatusTransitions.kt$StatusTransitions${ // which state determines who is the signer? by default the input, unless it's the initial transition val state = (inp ?: outp)!! val signerParty = state.roleToParty(signer) if (!cmd.signers.contains(signerParty.owningKey)) throw IllegalStateException("Command ${cmd.value.javaClass} must be signed by $signer") }</ID>
+    <ID>MaxLineLength:StatusTransitions.kt$StatusTransitions&lt;out S, in R, T : StatusTrackingContractState&lt;S, R&gt;&gt;</ID>
+    <ID>MaxLineLength:StatusTransitions.kt$TransitionDef&lt;out S, out R&gt;</ID>
+    <ID>MaxLineLength:Utils.kt$ fun TransactionBuilder.addAttachmentOnce(att: SecureHash?): TransactionBuilder</ID>
+    <ID>MaxLineLength:Utils.kt$@Suppress("UNCHECKED_CAST") inline</ID>
+    <ID>MaxLineLength:Utils.kt$StateRefHere</ID>
+    <ID>MaxLineLength:Utils.kt$return results.states.firstOrNull() ?: throw IllegalArgumentException("State (type=${T::class}) corresponding to the reference $ref not found (or is spent).")</ID>
+    <ID>NestedBlockDepth:StatusTransitions.kt$StatusTransitions$ fun verify(tx: LedgerTransaction)</ID>
+    <ID>NewLineAtEndOfFile:StatusTransitions.kt$io.cryptoblk.core.StatusTransitions.kt</ID>
+    <ID>NewLineAtEndOfFile:Utils.kt$io.cryptoblk.core.Utils.kt</ID>
+  </Whitelist>
+</SmellBaseline>

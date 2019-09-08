@@ -1,0 +1,257 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ComplexCondition:FlowStackSnapshot.kt$FlowStackSnapshotFactoryImpl$it != null &amp;&amp; (it is FlowLogic&lt;*&gt; || it is FlowStateMachine&lt;*&gt; || it is Fiber&lt;*&gt; || it is SerializeAsToken)</ID>
+    <ID>ComplexMethod:Expect.kt$ fun &lt;S, E : Any&gt; S.genericExpectEvents( isStrict: Boolean = true, stream: S.((E) -&gt; Unit) -&gt; Unit, expectCompose: () -&gt; ExpectCompose&lt;E&gt; )</ID>
+    <ID>EmptyFunctionBlock:DummyDealContract.kt$DummyDealContract${}</ID>
+    <ID>EmptyFunctionBlock:UniqueDummyFungibleContract.kt$UniqueDummyFungibleContract${}</ID>
+    <ID>EmptyFunctionBlock:UniqueDummyLinearContract.kt$UniqueDummyLinearContract${}</ID>
+    <ID>ForbiddenComment:VaultFiller.kt$VaultFiller$// TODO: need to make all FungibleAsset commands (issue, move, exit) generic</ID>
+    <ID>FunctionNaming:LedgerDSLInterpreter.kt$LedgerDSLInterpreter$ fun _transaction(transactionLabel: String?, transactionBuilder: TransactionBuilder, dsl: T.() -&gt; EnforceVerifyOrFail): WireTransaction</ID>
+    <ID>FunctionNaming:LedgerDSLInterpreter.kt$LedgerDSLInterpreter$ fun _tweak(dsl: LedgerDSLInterpreter&lt;T&gt;.() -&gt; Unit)</ID>
+    <ID>FunctionNaming:LedgerDSLInterpreter.kt$LedgerDSLInterpreter$ fun _unverifiedTransaction(transactionLabel: String?, transactionBuilder: TransactionBuilder, dsl: T.() -&gt; Unit): WireTransaction</ID>
+    <ID>FunctionNaming:TransactionDSLInterpreter.kt$TransactionDSLInterpreter$ fun _attachment(contractClassName: ContractClassName)</ID>
+    <ID>FunctionNaming:TransactionDSLInterpreter.kt$TransactionDSLInterpreter$ fun _attachment(contractClassName: ContractClassName, attachmentId: AttachmentId, signers: List&lt;PublicKey&gt;)</ID>
+    <ID>FunctionNaming:TransactionDSLInterpreter.kt$TransactionDSLInterpreter$ fun _attachment(contractClassName: ContractClassName, attachmentId: AttachmentId, signers: List&lt;PublicKey&gt;, jarManifestAttributes: Map&lt;String,String&gt;)</ID>
+    <ID>FunctionNaming:TransactionDSLInterpreter.kt$TransactionDSLInterpreter$ fun _tweak(dsl: TransactionDSLInterpreter.() -&gt; EnforceVerifyOrFail): EnforceVerifyOrFail</ID>
+    <ID>LongParameterList:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.Companion$(baseDirectory: Path, certificatesDirectoryName: String = DEFAULT_CERTIFICATES_DIRECTORY_NAME, keyStoreFileName: String = KeyStore.DEFAULT_STORE_FILE_NAME, keyStorePassword: String = KeyStore.DEFAULT_STORE_PASSWORD, keyPassword: String = keyStorePassword, trustStoreFileName: String = TrustStore.DEFAULT_STORE_FILE_NAME, trustStorePassword: String = TrustStore.DEFAULT_STORE_PASSWORD)</ID>
+    <ID>LongParameterList:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.Companion$(certificatesDirectory: Path, keyStoreFileName: String = KeyStore.DEFAULT_STORE_FILE_NAME, keyStorePassword: String = KeyStore.DEFAULT_STORE_PASSWORD, keyPassword: String = keyStorePassword, trustStoreFileName: String = TrustStore.DEFAULT_STORE_FILE_NAME, trustStorePassword: String = TrustStore.DEFAULT_STORE_PASSWORD, trustStoreKeyPassword: String = TrustStore.DEFAULT_KEY_PASSWORD, useOpenSsl: Boolean = false)</ID>
+    <ID>LongParameterList:ContractJarTestUtils.kt$ContractJarTestUtils$(workingDir: Path, contractNames: List&lt;String&gt;, signed: Boolean = false, version: Int = 1, generateManifest: Boolean = true, jarFileName : String? = null)</ID>
+    <ID>LongParameterList:InternalTestUtils.kt$(hikariProperties: Properties, databaseConfig: DatabaseConfig, wellKnownPartyFromX500Name: (CordaX500Name) -&gt; Party?, wellKnownPartyFromAnonymous: (AbstractParty) -&gt; Party?, schemaService: SchemaService = NodeSchemaService(), internalSchemas: Set&lt;MappedSchema&gt; = NodeSchemaService().internalSchemas(), cacheFactory: NamedCacheFactory = TestingNamedCacheFactory(), ourName: CordaX500Name = TestIdentity(ALICE_NAME, 70).name)</ID>
+    <ID>LongParameterList:InternalTestUtils.kt$(inputs: List&lt;StateRef&gt;, attachments: List&lt;SecureHash&gt;, outputs: List&lt;TransactionState&lt;*&gt;&gt;, commands: List&lt;Command&lt;*&gt;&gt;, notary: Party?, timeWindow: TimeWindow?, privacySalt: PrivacySalt = PrivacySalt())</ID>
+    <ID>LongParameterList:JarSignatureTestUtils.kt$JarSignatureTestUtils$(alias: String = "Test", storePassword: String = "secret!", name: String = CODE_SIGNER.toString(), keyalg: String = "RSA", keyPassword: String = storePassword, storeName: String = "_teststore")</ID>
+    <ID>LongParameterList:TransactionDSLInterpreter.kt$TransactionDSLInterpreter$(contractClassName: ContractClassName, label: String?, notary: Party, encumbrance: Int?, attachmentConstraint: AttachmentConstraint, contractState: ContractState)</ID>
+    <ID>LongParameterList:VaultFiller.kt$VaultFiller$(howMuch: Amount&lt;Currency&gt;, issuerServices: ServiceHub, atLeastThisManyStates: Int, atMostThisManyStates: Int, issuedBy: PartyAndReference, owner: AbstractParty? = null, rng: Random? = null, statesToRecord: StatesToRecord = StatesToRecord.ONLY_RELEVANT)</ID>
+    <ID>LongParameterList:VaultFiller.kt$VaultFiller$(howMuch: Amount&lt;Currency&gt;, issuerServices: ServiceHub, thisManyStates: Int, issuedBy: PartyAndReference, owner: AbstractParty? = null, rng: Random? = null, statesToRecord: StatesToRecord = StatesToRecord.ONLY_RELEVANT)</ID>
+    <ID>LongParameterList:VaultFiller.kt$VaultFiller$(numberToCreate: Int, externalId: String? = null, participants: List&lt;AbstractParty&gt; = emptyList(), linearString: String = "", linearNumber: Long = 0L, linearBoolean: Boolean = false, linearTimestamp: Instant = now())</ID>
+    <ID>LongParameterList:VaultFiller.kt$VaultFiller$(numberToCreate: Int, externalId: String? = null, participants: List&lt;AbstractParty&gt; = emptyList(), uniqueIdentifier: UniqueIdentifier? = null, linearString: String = "", linearNumber: Long = 0L, linearBoolean: Boolean = false, linearTimestamp: Instant = now(), constraint: AttachmentConstraint = AutomaticPlaceholderConstraint, includeMe: Boolean = true)</ID>
+    <ID>MagicNumber:FlowStackSnapshot.kt$14</ID>
+    <ID>MagicNumber:FlowStackSnapshot.kt$16</ID>
+    <ID>MagicNumber:FlowStackSnapshot.kt$64</ID>
+    <ID>MagicNumber:HttpUtils.kt$HttpUtils$5</ID>
+    <ID>MagicNumber:HttpUtils.kt$HttpUtils$60</ID>
+    <ID>MagicNumber:InternalTestUtils.kt$70</ID>
+    <ID>MagicNumber:JarSignatureTestUtils.kt$JarSignatureTestUtils$14</ID>
+    <ID>MagicNumber:TestNodeInfoBuilder.kt$TestNodeInfoBuilder$1234</ID>
+    <ID>MagicNumber:TestUtils.kt$10000</ID>
+    <ID>MagicNumber:TestUtils.kt$30000</ID>
+    <ID>MagicNumber:TransactionDSLInterpreter.kt$TransactionDSL$30</ID>
+    <ID>MagicNumber:VaultFiller.kt$VaultFiller$3</ID>
+    <ID>MatchingDeclarationName:CheckpointSerializationTestHelpers.kt$net.corda.testing.core.internal.CheckpointSerializationTestHelpers.kt</ID>
+    <ID>MatchingDeclarationName:FlowStackSnapshot.kt$net.corda.testing.internal.FlowStackSnapshot.kt</ID>
+    <ID>MatchingDeclarationName:RigorousMock.kt$net.corda.testing.internal.RigorousMock.kt</ID>
+    <ID>MatchingDeclarationName:TestConstants.kt$net.corda.testing.core.TestConstants.kt</ID>
+    <ID>MatchingDeclarationName:TestUtils.kt$net.corda.testing.core.TestUtils.kt</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.Companion$@JvmStatic fun withBaseDirectory(baseDirectory: Path, certificatesDirectoryName: String = DEFAULT_CERTIFICATES_DIRECTORY_NAME, keyStoreFileName: String = KeyStore.DEFAULT_STORE_FILE_NAME, keyStorePassword: String = KeyStore.DEFAULT_STORE_PASSWORD, keyPassword: String = keyStorePassword, trustStoreFileName: String = TrustStore.DEFAULT_STORE_FILE_NAME, trustStorePassword: String = TrustStore.DEFAULT_STORE_PASSWORD): MutualSslConfiguration</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.Companion$@JvmStatic fun withCertificatesDirectory(certificatesDirectory: Path, keyStoreFileName: String = KeyStore.DEFAULT_STORE_FILE_NAME, keyStorePassword: String = KeyStore.DEFAULT_STORE_PASSWORD, keyPassword: String = keyStorePassword, trustStoreFileName: String = TrustStore.DEFAULT_STORE_FILE_NAME, trustStorePassword: String = TrustStore.DEFAULT_STORE_PASSWORD, trustStoreKeyPassword: String = TrustStore.DEFAULT_KEY_PASSWORD, useOpenSsl: Boolean = false): MutualSslConfiguration</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.Companion$keyPassword: String = keyStorePassword</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.Companion$keyStoreFileName: String = KeyStore.DEFAULT_STORE_FILE_NAME</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.Companion$keyStorePassword: String = KeyStore.DEFAULT_STORE_PASSWORD</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.Companion$return withCertificatesDirectory(baseDirectory / certificatesDirectoryName, keyStoreFileName, keyStorePassword, keyPassword, trustStoreFileName, trustStorePassword)</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.Companion$trustStoreFileName: String = TrustStore.DEFAULT_STORE_FILE_NAME</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.Companion$trustStorePassword: String = TrustStore.DEFAULT_STORE_PASSWORD</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.Companion$val keyStore = FileBasedCertificateStoreSupplier(certificatesDirectory / keyStoreFileName, keyStorePassword, keyPassword)</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.Companion$val trustStore = FileBasedCertificateStoreSupplier(certificatesDirectory / trustStoreFileName, trustStorePassword, trustStoreKeyPassword)</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.KeyStore.Companion$@JvmStatic fun withBaseDirectory(baseDirectory: Path, password: String = DEFAULT_STORE_PASSWORD, keyPassword: String = password, certificatesDirectoryName: String = DEFAULT_CERTIFICATES_DIRECTORY_NAME, certificateStoreFileName: String = DEFAULT_STORE_FILE_NAME): FileBasedCertificateStoreSupplier</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.KeyStore.Companion$@JvmStatic fun withCertificatesDirectory(certificatesDirectory: Path, password: String = DEFAULT_STORE_PASSWORD, keyPassword: String = password, certificateStoreFileName: String = DEFAULT_STORE_FILE_NAME): FileBasedCertificateStoreSupplier</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.KeyStore.Companion$certificateStoreFileName: String = DEFAULT_STORE_FILE_NAME</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.KeyStore.Companion$certificatesDirectoryName: String = DEFAULT_CERTIFICATES_DIRECTORY_NAME</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.KeyStore.Companion$return FileBasedCertificateStoreSupplier(baseDirectory / certificatesDirectoryName / certificateStoreFileName, password, keyPassword)</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.KeyStore.Companion$return FileBasedCertificateStoreSupplier(certificatesDirectory / certificateStoreFileName, password, keyPassword)</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.TrustStore.Companion$@JvmStatic fun withBaseDirectory(baseDirectory: Path, password: String = DEFAULT_STORE_PASSWORD, keyPassword: String = DEFAULT_KEY_PASSWORD, certificatesDirectoryName: String = DEFAULT_CERTIFICATES_DIRECTORY_NAME, certificateStoreFileName: String = DEFAULT_STORE_FILE_NAME): FileBasedCertificateStoreSupplier</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.TrustStore.Companion$certificatesDirectoryName: String = DEFAULT_CERTIFICATES_DIRECTORY_NAME</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.TrustStore.Companion$keyPassword: String = DEFAULT_KEY_PASSWORD</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.TrustStore.Companion$return FileBasedCertificateStoreSupplier(baseDirectory / certificatesDirectoryName / certificateStoreFileName, password, keyPassword)</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.TrustStore.Companion$return FileBasedCertificateStoreSupplier(certificatesDirectory / certificateStoreFileName, password, keyPassword)</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.Signing.Companion$@JvmStatic fun withBaseDirectory(baseDirectory: Path, password: String = DEFAULT_STORE_PASSWORD, keyPassword: String = password, certificatesDirectoryName: String = DEFAULT_CERTIFICATES_DIRECTORY_NAME, certificateStoreFileName: String = DEFAULT_STORE_FILE_NAME): FileBasedCertificateStoreSupplier</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.Signing.Companion$certificatesDirectoryName: String = DEFAULT_CERTIFICATES_DIRECTORY_NAME</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.Signing.Companion$keyPassword: String = password</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.Signing.Companion$return FileBasedCertificateStoreSupplier(baseDirectory / certificatesDirectoryName / certificateStoreFileName, password, keyPassword)</ID>
+    <ID>MaxLineLength:CertificateStoreStubs.kt$CertificateStoreStubs.Signing.Companion$return FileBasedCertificateStoreSupplier(certificatesDirectory / certificateStoreFileName, password, keyPassword)</ID>
+    <ID>MaxLineLength:CheckpointSerializationTestHelpers.kt$CheckpointSerializationEnvironmentRule.Companion$Executors.newCachedThreadPool(testThreadFactory(true)) // Close enough to what InVMConnector makes normally.</ID>
+    <ID>MaxLineLength:CheckpointSerializationTestHelpers.kt$CheckpointSerializationEnvironmentRule.Companion$InVMConnector::class.staticField&lt;ExecutorService&gt;("threadPoolExecutor").value</ID>
+    <ID>MaxLineLength:ContractJarTestUtils.kt$ContractJarTestUtils$@JvmOverloads fun makeTestContractJar(workingDir: Path, contractName: String, signed: Boolean = false, version: Int = 1, versionSeed: Int = 0): Path</ID>
+    <ID>MaxLineLength:ContractJarTestUtils.kt$ContractJarTestUtils$@JvmOverloads fun makeTestContractJar(workingDir: Path, contractNames: List&lt;String&gt;, signed: Boolean = false, version: Int = 1, generateManifest: Boolean = true, jarFileName : String? = null): Path</ID>
+    <ID>MaxLineLength:ContractJarTestUtils.kt$ContractJarTestUtils$@JvmOverloads fun makeTestSignedContractJar(workingDir: Path, contractName: String, version: Int = 1, versionSeed: Int = 0): Pair&lt;Path, PublicKey&gt;</ID>
+    <ID>MaxLineLength:ContractJarTestUtils.kt$ContractJarTestUtils$fun signContractJar(jarURL: URL, copyFirst: Boolean, keyStoreDir: Path? = null, alias: String = "testAlias", pwd: String = "testPassword"): Pair&lt;Path, PublicKey&gt;</ID>
+    <ID>MaxLineLength:ContractJarTestUtils.kt$ContractJarTestUtils$private</ID>
+    <ID>MaxLineLength:ContractJarTestUtils.kt$ContractJarTestUtils$val outFile = fileManager.getFileForInput(StandardLocation.CLASS_OUTPUT, packages.joinToString("."), "$className.class")</ID>
+    <ID>MaxLineLength:ContractJarTestUtils.kt$ContractJarTestUtils$val source = object : SimpleJavaFileObject(URI.create("string:///${packages.joinToString("/")}/$className.java"), JavaFileObject.Kind.SOURCE) { override fun getCharContent(ignoreEncodingErrors: Boolean): CharSequence { return newClass } }</ID>
+    <ID>MaxLineLength:DummyContract.kt$DummyContract.Companion$ @JvmStatic fun generateInitial(magicNumber: Int, notary: Party, owner: PartyAndReference, vararg otherOwners: PartyAndReference): TransactionBuilder</ID>
+    <ID>MaxLineLength:DummyContract.kt$DummyContract.Companion$StateAndContract(SingleOwnerState(magicNumber, owners.first().party), PROGRAM_ID)</ID>
+    <ID>MaxLineLength:DummyContract.kt$DummyContract.Companion$TransactionBuilder(notary).withItems(StateAndContract(state, PROGRAM_ID), Command(Commands.Create(), owners.map { it.party.owningKey }))</ID>
+    <ID>MaxLineLength:DummyContract.kt$DummyContract.Companion$val items = arrayOf(StateAndContract(SingleOwnerState(magicNumber, owners.first().party), PROGRAM_ID), Command(Commands.Create(), owners.first().party.owningKey), StateAndContract(SingleOwnerState(magicNumber, owners.first().party), PROGRAM_ID), Command(Commands.Create(), owners.first().party.owningKey))</ID>
+    <ID>MaxLineLength:DummyContract.kt$DummyContract.SingleOwnerState$data</ID>
+    <ID>MaxLineLength:DummyDealStateSchemaV1.kt$DummyDealStateSchemaV1 : MappedSchema</ID>
+    <ID>MaxLineLength:DummyDealStateSchemaV1.kt$DummyDealStateSchemaV1.PersistentDummyDealState$@CollectionTable(name = "dummy_deal_states_parts", joinColumns = [(JoinColumn(name = "output_index", referencedColumnName = "output_index")), (JoinColumn(name = "transaction_id", referencedColumnName = "transaction_id"))])</ID>
+    <ID>MaxLineLength:DummyLinearContract.kt$DummyLinearContract.State$override fun supportedSchemas(): Iterable&lt;MappedSchema&gt;</ID>
+    <ID>MaxLineLength:DummyLinearStateSchemaV1.kt$DummyLinearStateSchemaV1 : MappedSchema</ID>
+    <ID>MaxLineLength:DummyLinearStateSchemaV1.kt$DummyLinearStateSchemaV1.PersistentDummyLinearState$@Table(name = "dummy_linear_states", indexes = [Index(name = "external_id_idx", columnList = "external_id"), Index(name = "uuid_idx", columnList = "uuid")])</ID>
+    <ID>MaxLineLength:DummyLinearStateSchemaV2.kt$DummyLinearStateSchemaV2.PersistentDummyLinearState$@CollectionTable(name = "dummy_linear_states_v2_parts", joinColumns = [(JoinColumn(name = "output_index", referencedColumnName = "output_index")), (JoinColumn(name = "transaction_id", referencedColumnName = "transaction_id"))])</ID>
+    <ID>MaxLineLength:Expect.kt$ fun &lt;E&gt; parallel(expectations: List&lt;ExpectCompose&lt;E&gt;&gt;): ExpectCompose&lt;E&gt;</ID>
+    <ID>MaxLineLength:Expect.kt$ fun &lt;E&gt; parallel(vararg expectations: ExpectCompose&lt;E&gt;): ExpectCompose&lt;E&gt;</ID>
+    <ID>MaxLineLength:Expect.kt$ fun &lt;E&gt; sequence(vararg expectations: ExpectCompose&lt;E&gt;): ExpectCompose&lt;E&gt;</ID>
+    <ID>MaxLineLength:Expect.kt$/** * Internally we create a "lazy" state automaton. The outgoing edges are state.getExpectedEvents() modulo additional * matching logic. When an event comes we extract the first edge that matches using state.nextState(event), which * returns the next state and the piece of dsl to be run on the event. If nextState() returns null it means the event * didn't match at all, in this case we either fail (if isStrict=true) or carry on with the same state (if isStrict=false) * * TODO Think about pre-compiling the state automaton, possibly introducing regexp constructs. This requires some * thinking, as the [parallel] construct blows up the state space factorially, so we need some clever lazy expansion * of states. */ var state = ExpectComposeState.fromExpectCompose(expectCompose())</ID>
+    <ID>MaxLineLength:Expect.kt$/** * This file defines a simple DSL for testing non-deterministic sequence of events arriving on an [Observable]. * * [sequence] is used to impose ordering invariants on the stream, whereas [parallel] allows events to arrive in any order. * * The only restriction on [parallel] is that we should be able to discriminate which branch to take based on the * arrived event's type and optionally custom matching logic. If this is ambiguous the first matching piece of DSL will * be run. * * [sequence]s and [parallel]s can be nested arbitrarily * * Example usage: * * val stream: Observable&lt;SomeEvent&gt; = (..) * stream.expectEvents { * sequence( * expect { event: SomeEvent.A -&gt; require(event.isOk()) }, * parallel( * expect { event.SomeEvent.B -&gt; }, * expect { event.SomeEvent.C -&gt; } * ) * ) * } * * The above will test our expectation that the stream should first emit an A, and then a B and C in unspecified order. */ private val log: Logger = LoggerFactory.getLogger("Expect")</ID>
+    <ID>MaxLineLength:Expect.kt$log.info("$event :: ${expectedStates.map { it.simpleName }} -&gt; ${next?.second?.getExpectedEvents()?.map { it.simpleName }}")</ID>
+    <ID>MaxLineLength:FlowStackSnapshot.kt$FlowStackSnapshotFactoryImpl$if (it != null &amp;&amp; (it is FlowLogic&lt;*&gt; || it is FlowStateMachine&lt;*&gt; || it is Fiber&lt;*&gt; || it is SerializeAsToken)) { StackFrameDataToken(it::class.java.name) } else { it }</ID>
+    <ID>MaxLineLength:FlowStackSnapshot.kt$FlowStackSnapshotFactoryImpl$private</ID>
+    <ID>MaxLineLength:FlowStackSnapshot.kt$FlowStackSnapshotFactoryImpl$val stackObjects = if (frameObjectsIterator.hasNext() &amp;&amp; (annotation == null || !annotation.methodOptimized)) { frameObjectsIterator.next() } else { emptyList() }</ID>
+    <ID>MaxLineLength:HttpApi.kt$HttpApi.Companion$fun fromHostAndPort(hostAndPort: NetworkHostAndPort, base: String, protocol: String = "http", mapper: ObjectMapper = defaultMapper): HttpApi</ID>
+    <ID>MaxLineLength:HttpUtils.kt$HttpUtils$inline</ID>
+    <ID>MaxLineLength:HttpUtils.kt$HttpUtils$throw IOException("${request.method()} to ${request.url()} returned a ${response.code()}: ${response.body()?.string()}")</ID>
+    <ID>MaxLineLength:InternalSerializationTestHelpers.kt$fun &lt;T&gt; SerializationEnvironment.asTestContextEnv(inheritable: Boolean = false, callable: (SerializationEnvironment) -&gt; T): T</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$ fun NodeInfo.chooseIdentity(): Party</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$ fun createDevNodeCaCertPath( legalName: CordaX500Name, nodeKeyPair: KeyPair = generateKeyPair(X509Utilities.DEFAULT_TLS_SIGNATURE_SCHEME), rootCaName: X500Principal = defaultRootCaName, intermediateCaName: X500Principal = defaultIntermediateCaName ): Triple&lt;CertificateAndKeyPair, CertificateAndKeyPair, CertificateAndKeyPair&gt;</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$RPCSecurityManagerImpl(SecurityConfiguration.AuthService.fromUsers(users).copy(id = id), TestingNamedCacheFactory())</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$fun fakeAttachment(filePath1: String, content1: String, filePath2: String, content2: String, manifestAttributes: Map&lt;String, String&gt; = emptyMap()): ByteArray</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$manifestAttributes.forEach { manifest[it.key] = it.value }</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$val componentGroups = createComponentGroups(inputs, outputs, commands, attachments, notary, timeWindow, emptyList(), null)</ID>
+    <ID>MaxLineLength:InternalTestUtils.kt$val persistence = createCordaPersistence(databaseConfig, wellKnownPartyFromX500Name, wellKnownPartyFromAnonymous, schemaService, hikariProperties, cacheFactory, null)</ID>
+    <ID>MaxLineLength:JarSignatureTestUtils.kt$JarSignatureTestUtils$executeProcess("jarsigner", "-keystore", "_teststore", "-storepass", storePassword, "-keypass", keyPassword, fileName, alias)</ID>
+    <ID>MaxLineLength:JarSignatureTestUtils.kt$JarSignatureTestUtils$executeProcess("keytool", "-genkeypair", "-keystore", storeName, "-storepass", storePassword, "-keyalg", keyalg, "-alias", alias, "-keypass", keyPassword, "-dname", name)</ID>
+    <ID>MaxLineLength:JarSignatureTestUtils.kt$JarSignatureTestUtils$fun Path.generateKey(alias: String = "Test", storePassword: String = "secret!", name: String = CODE_SIGNER.toString(), keyalg: String = "RSA", keyPassword: String = storePassword, storeName: String = "_teststore") : PublicKey</ID>
+    <ID>MaxLineLength:JarSignatureTestUtils.kt$JarSignatureTestUtils$fun Path.signJar(fileName: String, alias: String, storePassword: String, keyPassword: String = storePassword): PublicKey</ID>
+    <ID>MaxLineLength:LedgerDSLInterpreter.kt$LedgerDSL$ @JvmOverloads fun unverifiedTransaction(label: String? = null, transactionBuilder: TransactionBuilder = TransactionBuilder(notary = notary), dsl: TransactionDSL&lt;TransactionDSLInterpreter&gt;.() -&gt; Unit)</ID>
+    <ID>MaxLineLength:LedgerDSLInterpreter.kt$LedgerDSL&lt;out T : TransactionDSLInterpreter, out L : LedgerDSLInterpreter&lt;T&gt;&gt; : LedgerDSLInterpreter</ID>
+    <ID>MaxLineLength:MockAttachmentStorage.kt$MockAttachmentStorage$// This function only covers those possibilities currently used within tests. Each ColumnPredicate type can have multiple operators, // and not all predicate types are covered here. private fun &lt;C&gt; criteriaFilter(metadata: C, predicate: ColumnPredicate&lt;C&gt;?): Boolean</ID>
+    <ID>MaxLineLength:MockAttachmentStorage.kt$MockAttachmentStorage$@JvmOverloads fun importContractAttachment(contractClassNames: List&lt;ContractClassName&gt;, uploader: String, jar: InputStream, attachmentId: AttachmentId? = null, signers: List&lt;PublicKey&gt; = emptyList()): AttachmentId</ID>
+    <ID>MaxLineLength:MockAttachmentStorage.kt$MockAttachmentStorage$ContractAttachment.create(baseAttachment, contractClassNames.first(), contractClassNames.toSet(), uploader, signers, version)</ID>
+    <ID>MaxLineLength:MockAttachmentStorage.kt$MockAttachmentStorage$ContractAttachmentMetadata</ID>
+    <ID>MaxLineLength:MockAttachmentStorage.kt$MockAttachmentStorage$MockAttachment : AbstractAttachment</ID>
+    <ID>MaxLineLength:MockAttachmentStorage.kt$MockAttachmentStorage$fun getAttachmentIdAndBytes(jar: InputStream): Pair&lt;AttachmentId, ByteArray&gt;</ID>
+    <ID>MaxLineLength:MockAttachmentStorage.kt$MockAttachmentStorage$private</ID>
+    <ID>MaxLineLength:MockAttachmentStorage.kt$MockAttachmentStorage$val attachmentQueryCriteria = AttachmentQueryCriteria.AttachmentsQueryCriteria(contractClassNamesCondition = Builder.equal(listOf(contractClassName)), versionCondition = Builder.greaterThanOrEqual(minContractVersion), uploaderCondition = Builder.`in`(TRUSTED_UPLOADERS))</ID>
+    <ID>MaxLineLength:MockAttachmentStorage.kt$MockAttachmentStorage$val attachmentSort = AttachmentSort(listOf(AttachmentSort.AttachmentSortColumn(AttachmentSort.AttachmentSortAttribute.VERSION, Sort.Direction.DESC)))</ID>
+    <ID>MaxLineLength:MockAttachmentStorage.kt$MockAttachmentStorage$val contractClassMetadata = ContractAttachmentMetadata(contractClassName, version, signers.isNotEmpty(), signers, uploader)</ID>
+    <ID>MaxLineLength:MockAttachmentStorage.kt$MockAttachmentStorage$val version = try { Integer.parseInt(baseAttachment.openAsJAR().manifest?.mainAttributes?.getValue(Attributes.Name.IMPLEMENTATION_VERSION)) } catch (e: Exception) { DEFAULT_CORDAPP_VERSION }</ID>
+    <ID>MaxLineLength:MockAttachmentStorage.kt$MockAttachmentStorage$versionCondition = Builder.greaterThanOrEqual(minContractVersion)</ID>
+    <ID>MaxLineLength:MockCordappProvider.kt$MockCordappProvider$attachments.importContractAttachment(contractClassNames, DEPLOYED_CORDAPP_UPLOADER, data.inputStream(), contractHash, signers)</ID>
+    <ID>MaxLineLength:MockCordappProvider.kt$MockCordappProvider$fakeAttachment(contractClass.replace('.', '/') + ".class", "fake class file for $contractClass", manifestAttributes)</ID>
+    <ID>MaxLineLength:MockCordappProvider.kt$MockCordappProvider$if (cordappRegistry.none { it.first.contractClassNames.contains(contractClassName) &amp;&amp; it.second == contractHash }) { cordappRegistry.add(Pair( cordapp, findOrImportAttachment( listOf(contractClassName), fakeAttachmentCached(contractClassName, jarManifestAttributesWithObligatoryElement), attachments, contractHash, signers ) )) }</ID>
+    <ID>MaxLineLength:MockCordappProvider.kt$MockCordappProvider$private</ID>
+    <ID>MaxLineLength:Rate.kt$Rate$override fun toString(): String</ID>
+    <ID>MaxLineLength:RigorousMock.kt$ fun &lt;T&gt; participant(clazz: Class&lt;out T&gt;)</ID>
+    <ID>MaxLineLength:RigorousMock.kt$ fun &lt;T&gt; rigorousMock(clazz: Class&lt;out T&gt;)</ID>
+    <ID>MaxLineLength:RigorousMock.kt$ fun &lt;T&gt; spectator(clazz: Class&lt;out T&gt;)</ID>
+    <ID>MaxLineLength:RigorousMock.kt$ParticipantDefaultAnswer$"Please specify what should happen when '${invocation.method}' is called, or don't call it. Args: ${Arrays.toString(invocation.arguments)}"</ID>
+    <ID>MaxLineLength:RigorousMock.kt$RigorousMockDefaultAnswer$return if (Modifier.isAbstract(invocation.method.modifiers)) ParticipantDefaultAnswer.answerImpl(invocation) else invocation.callRealMethod()</ID>
+    <ID>MaxLineLength:RigorousMock.kt$SpectatorDefaultAnswer.MethodInfo$private fun newSpectator(invocation: InvocationOnMock)</ID>
+    <ID>MaxLineLength:RigorousMock.kt$SpectatorDefaultAnswer.MethodInfo$return context.actualTypeArguments[clazz.typeParameters.indexOf(resolveType(clazz.genericSuperclass, type))]</ID>
+    <ID>MaxLineLength:RigorousMock.kt$UndefinedMockBehaviorException : RuntimeException</ID>
+    <ID>MaxLineLength:SampleCashSchemaV1.kt$SampleCashSchemaV1 : MappedSchema</ID>
+    <ID>MaxLineLength:SampleCashSchemaV1.kt$SampleCashSchemaV1.PersistentCashState$@Table(name = "contract_cash_states_v1", indexes = [Index(name = "ccy_code_idx1", columnList = "ccy_code"), Index(name = "pennies_idx1", columnList = "pennies")])</ID>
+    <ID>MaxLineLength:SampleCashSchemaV2.kt$SampleCashSchemaV2.PersistentCashState$@CollectionTable(name = "cash_states_v2_participants", joinColumns = [JoinColumn(name = "output_index", referencedColumnName = "output_index"), JoinColumn(name = "transaction_id", referencedColumnName = "transaction_id")])</ID>
+    <ID>MaxLineLength:SerializationEnvironmentRule.kt$SerializationEnvironmentRule.Companion$Executors.newCachedThreadPool(testThreadFactory(true)) // Close enough to what InVMConnector makes normally.</ID>
+    <ID>MaxLineLength:SerializationEnvironmentRule.kt$SerializationEnvironmentRule.Companion$InVMConnector::class.staticField&lt;ExecutorService&gt;("threadPoolExecutor").value</ID>
+    <ID>MaxLineLength:TestConstants.kt$ fun dummyCommand(vararg signers: PublicKey = arrayOf(generateKeyPair().public))</ID>
+    <ID>MaxLineLength:TestDSL.kt$AttachmentResolutionException : FlowException</ID>
+    <ID>MaxLineLength:TestDSL.kt$DoubleSpentInputs : FlowException</ID>
+    <ID>MaxLineLength:TestDSL.kt$TestLedgerDSLInterpreter$( transactionLabel: String?, transactionBuilder: TransactionBuilder, dsl: TestTransactionDSLInterpreter.() -&gt; Unit )</ID>
+    <ID>MaxLineLength:TestDSL.kt$TestLedgerDSLInterpreter$throw IllegalStateException("A transaction-DSL block that is part of a test ledger must return a valid transaction.", e)</ID>
+    <ID>MaxLineLength:TestDSL.kt$TestLedgerDSLInterpreter$val transactionsUnverified: List&lt;WireTransaction&gt; get() = nonVerifiedTransactionWithLocations.values.map { it.transaction }</ID>
+    <ID>MaxLineLength:TestDSL.kt$TestTransactionDSLInterpreter$attachment((services.cordappProvider as MockCordappProvider).addMockCordapp(contractClassName, services.attachments as MockAttachmentStorage))</ID>
+    <ID>MaxLineLength:TestDSL.kt$TestTransactionDSLInterpreter$attachment((services.cordappProvider as MockCordappProvider).addMockCordapp(contractClassName, services.attachments as MockAttachmentStorage, attachmentId, signers))</ID>
+    <ID>MaxLineLength:TestDSL.kt$TestTransactionDSLInterpreter$attachment((services.cordappProvider as MockCordappProvider).addMockCordapp(contractClassName, services.attachments as MockAttachmentStorage, attachmentId, signers, jarManifestAttributes))</ID>
+    <ID>MaxLineLength:TestDSL.kt$TestTransactionDSLInterpreter$override</ID>
+    <ID>MaxLineLength:TestDSL.kt$net.corda.testing.dsl.TestDSL.kt</ID>
+    <ID>MaxLineLength:TestNodeInfoBuilder.kt$TestNodeInfoBuilder</ID>
+    <ID>MaxLineLength:TestNodeInfoBuilder.kt$TestNodeInfoBuilder$fun addServiceIdentity(name: CordaX500Name, nodeKeyPair: KeyPair = Crypto.generateKeyPair(X509Utilities.DEFAULT_TLS_SIGNATURE_SCHEME)): Pair&lt;PartyAndCertificate, PrivateKey&gt;</ID>
+    <ID>MaxLineLength:TestNodeInfoBuilder.kt$TestNodeInfoBuilder$listOf(NetworkHostAndPort("my.${identitiesAndPrivateKeys[0].first.party.name.organisation.replace(' ', '-')}.com", 1234))</ID>
+    <ID>MaxLineLength:TestNodeInfoBuilder.kt$fun createNodeInfoAndSigned(vararg names: CordaX500Name, serial: Long = 1, platformVersion: Int = 1): NodeInfoAndSigned</ID>
+    <ID>MaxLineLength:TestUtils.kt$@Deprecated("Returned port is not guaranteed to be free when used, which can result in flaky tests. Instead use a port " + "range that's unlikely to be used by the rest of the system, such as PortAllocation.Incremental(10000).")</ID>
+    <ID>MaxLineLength:TestUtils.kt$TestIdentity$@JvmOverloads</ID>
+    <ID>MaxLineLength:TestUtils.kt$TestIdentity.Companion$ @JvmStatic @JvmOverloads fun fresh(organisation: String, signatureScheme: SignatureScheme = Crypto.DEFAULT_SIGNATURE_SCHEME): TestIdentity</ID>
+    <ID>MaxLineLength:TestUtils.kt$net.corda.testing.core.TestUtils.kt</ID>
+    <ID>MaxLineLength:TestingNamedCacheFactory.kt$TestingNamedCacheFactory : BindableNamedCacheFactorySingletonSerializeAsToken</ID>
+    <ID>MaxLineLength:TestingNamedCacheFactory.kt$TestingNamedCacheFactory$override</ID>
+    <ID>MaxLineLength:TestingNamedCacheFactory.kt$TestingNamedCacheFactory$override fun bindWithConfig(nodeConfiguration: NodeConfiguration): BindableNamedCacheFactory</ID>
+    <ID>MaxLineLength:TestingNamedCacheFactory.kt$TestingNamedCacheFactory$override fun bindWithMetrics(metricRegistry: MetricRegistry): BindableNamedCacheFactory</ID>
+    <ID>MaxLineLength:TransactionDSLInterpreter.kt$TransactionDSL$ fun input(stateLabel: String)</ID>
+    <ID>MaxLineLength:TransactionDSLInterpreter.kt$TransactionDSL$ fun reference(stateLabel: String)</ID>
+    <ID>MaxLineLength:TransactionDSLInterpreter.kt$TransactionDSL$fun attachment(contractClassName: ContractClassName, attachmentId: AttachmentId)</ID>
+    <ID>MaxLineLength:TransactionDSLInterpreter.kt$TransactionDSL$fun attachment(contractClassName: ContractClassName, attachmentId: AttachmentId, signers: List&lt;PublicKey&gt;, jarManifestAttributes: Map&lt;String,String&gt; = emptyMap())</ID>
+    <ID>MaxLineLength:TransactionDSLInterpreter.kt$TransactionDSL&lt;out T : TransactionDSLInterpreter&gt; : TransactionDSLInterpreter</ID>
+    <ID>MaxLineLength:TransactionDSLInterpreter.kt$TransactionDSLInterpreter$ fun _attachment(contractClassName: ContractClassName, attachmentId: AttachmentId, signers: List&lt;PublicKey&gt;, jarManifestAttributes: Map&lt;String,String&gt;)</ID>
+    <ID>MaxLineLength:UniqueDummyFungibleContract.kt$UniqueDummyFungibleContract.State$override fun withNewOwnerAndAmount(newAmount: Amount&lt;Issued&lt;Currency&gt;&gt;, newOwner: AbstractParty): FungibleAsset&lt;Currency&gt;</ID>
+    <ID>MaxLineLength:UniqueDummyFungibleContract.kt$UniqueDummyFungibleContract.State$return UniqueDummyFungibleStateSchema.UniquePersistentDummyFungibleState(currency = amount.token.product.currencyCode)</ID>
+    <ID>MaxLineLength:UniqueDummyFungibleContract.kt$UniqueDummyFungibleStateSchema : MappedSchema</ID>
+    <ID>MaxLineLength:UniqueDummyLinearContract.kt$UniqueDummyLinearStateSchema : MappedSchema</ID>
+    <ID>MaxLineLength:VaultFiller.kt$CommodityState$override</ID>
+    <ID>MaxLineLength:VaultFiller.kt$CommodityState$override fun withNewOwner(newOwner: AbstractParty)</ID>
+    <ID>MaxLineLength:VaultFiller.kt$VaultFiller</ID>
+    <ID>MaxLineLength:VaultFiller.kt$VaultFiller$ // TODO: need to make all FungibleAsset commands (issue, move, exit) generic fun fillWithSomeTestCommodity(amount: Amount&lt;Commodity&gt;, issuerServices: ServiceHub, issuedBy: PartyAndReference): Vault&lt;CommodityState&gt;</ID>
+    <ID>MaxLineLength:VaultFiller.kt$VaultFiller$ fun fillWithSomeTestCash(howMuch: Amount&lt;Currency&gt;, issuerServices: ServiceHub, atLeastThisManyStates: Int, atMostThisManyStates: Int, issuedBy: PartyAndReference, owner: AbstractParty? = null, rng: Random? = null, statesToRecord: StatesToRecord = StatesToRecord.ONLY_RELEVANT): Vault&lt;Cash.State&gt;</ID>
+    <ID>MaxLineLength:VaultFiller.kt$VaultFiller$ fun generateCommoditiesIssue(tx: TransactionBuilder, amount: Amount&lt;Issued&lt;Commodity&gt;&gt;, owner: AbstractParty, notary: Party)</ID>
+    <ID>MaxLineLength:VaultFiller.kt$VaultFiller$addOutputState(DummyDealContract.State(ref = "test ref", participants = participants.plus(me)), DUMMY_DEAL_PROGRAM_ID)</ID>
+    <ID>MaxLineLength:VaultFiller.kt$VaultFiller$addOutputState(DummyDealContract.State(ref = it, participants = participantsToUse), DUMMY_DEAL_PROGRAM_ID)</ID>
+    <ID>MaxLineLength:VaultFiller.kt$VaultFiller$cash.generateIssue(issuance, Amount(pennies, Issued(issuedBy, howMuch.token)), owner ?: services.myInfo.singleIdentity(), altNotary)</ID>
+    <ID>MaxLineLength:VaultFiller.kt$VaultFiller$fun evolveLinearState(linearState: StateAndRef&lt;LinearState&gt;): StateAndRef&lt;LinearState&gt;</ID>
+    <ID>MaxLineLength:VaultFiller.kt$VaultFiller$statesToRecord: StatesToRecord = StatesToRecord.ONLY_RELEVANT</ID>
+    <ID>MaxLineLength:VaultFiller.kt$VaultFiller$val amounts = calculateRandomlySizedAmounts(howMuch, atLeastThisManyStates, atMostThisManyStates, rng ?: rngFactory())</ID>
+    <ID>MaxLineLength:VaultFiller.kt$VaultFiller$val signatureMetadata = SignatureMetadata(services.myInfo.platformVersion, Crypto.findSignatureScheme(issuerKey.public).schemeNumberID)</ID>
+    <ID>MaxLineLength:VaultFiller.kt$VaultFiller.Companion${ val numSlots = min + Math.floor(rng.nextDouble() * (max - min)).toInt() val baseSize = howMuch.quantity / numSlots check(baseSize &gt; 0) { baseSize } val amounts = LongArray(numSlots) { baseSize } var distanceFromGoal = 0L // If we want 10 slots then max adjust is 0.1, so even if all random numbers come out to the largest downward // adjustment possible, the last slot ends at zero. With 20 slots, max adjust is 0.05 etc. val maxAdjust = 1.0 / numSlots for (i in amounts.indices) { if (i != amounts.lastIndex) { val adjustBy = rng.nextDouble() * maxAdjust - (maxAdjust / 2) val adjustment = (1 + adjustBy) val adjustTo = (amounts[i] * adjustment).toLong() amounts[i] = adjustTo distanceFromGoal += baseSize - adjustTo } else { amounts[i] += distanceFromGoal } } // The desired amount may not have divided equally to start with, so adjust the first value to make up. amounts[0] += howMuch.quantity - amounts.sum() return amounts }</ID>
+    <ID>NestedBlockDepth:JarSignatureTestUtils.kt$JarSignatureTestUtils$fun Path.addManifest(fileName: String, vararg entry: Pair&lt;Attributes.Name, String&gt;)</ID>
+    <ID>NewLineAtEndOfFile:CertificateStoreStubs.kt$net.corda.testing.internal.stubs.CertificateStoreStubs.kt</ID>
+    <ID>NewLineAtEndOfFile:ContractJarTestUtils.kt$net.corda.testing.core.internal.ContractJarTestUtils.kt</ID>
+    <ID>NewLineAtEndOfFile:DummyLinearContract.kt$net.corda.testing.internal.vault.DummyLinearContract.kt</ID>
+    <ID>NewLineAtEndOfFile:FlowMatchers.kt$net.corda.testing.internal.matchers.flow.FlowMatchers.kt</ID>
+    <ID>NewLineAtEndOfFile:FutureMatchers.kt$net.corda.testing.internal.matchers.future.FutureMatchers.kt</ID>
+    <ID>NewLineAtEndOfFile:InternalTestConstants.kt$net.corda.testing.internal.InternalTestConstants.kt</ID>
+    <ID>NewLineAtEndOfFile:InternalTestUtils.kt$net.corda.testing.internal.InternalTestUtils.kt</ID>
+    <ID>NewLineAtEndOfFile:Matchers.kt$net.corda.testing.internal.matchers.Matchers.kt</ID>
+    <ID>NewLineAtEndOfFile:MockAttachmentStorage.kt$net.corda.testing.services.MockAttachmentStorage.kt</ID>
+    <ID>NewLineAtEndOfFile:MockCordappConfigProvider.kt$net.corda.testing.internal.MockCordappConfigProvider.kt</ID>
+    <ID>NewLineAtEndOfFile:RpcMatchers.kt$net.corda.testing.internal.matchers.rpc.RpcMatchers.kt</ID>
+    <ID>NewLineAtEndOfFile:TestingNamedCacheFactory.kt$net.corda.testing.internal.TestingNamedCacheFactory.kt</ID>
+    <ID>NewLineAtEndOfFile:UniqueDummyFungibleContract.kt$net.corda.testing.internal.vault.UniqueDummyFungibleContract.kt</ID>
+    <ID>NewLineAtEndOfFile:UniqueDummyLinearContract.kt$net.corda.testing.internal.vault.UniqueDummyLinearContract.kt</ID>
+    <ID>ReturnCount:RigorousMock.kt$SpectatorDefaultAnswer$override fun answerImpl(invocation: InvocationOnMock): Any?</ID>
+    <ID>SpreadOperator:ContractJarTestUtils.kt$ContractJarTestUtils$(jarName, *contractNames.map{ "${it.replace(".", "/")}.class" }.toTypedArray())</ID>
+    <ID>SpreadOperator:DummyContract.kt$DummyContract.Companion$( /* INPUTS */ *priors.toTypedArray(), /* COMMAND */ Command(cmd, priorState.owner.owningKey), /* OUTPUT */ StateAndContract(state, PROGRAM_ID) )</ID>
+    <ID>SpreadOperator:DummyContract.kt$DummyContract.Companion$(*items)</ID>
+    <ID>SpreadOperator:DummyContractV2.kt$DummyContractV2.Companion$( /* INPUTS */ *priors.toTypedArray(), /* COMMAND */ Command(cmd, priorState.owners.map { it.owningKey }), /* OUTPUT */ StateAndContract(state, DummyContractV2.PROGRAM_ID) )</ID>
+    <ID>SpreadOperator:Expect.kt$(*Array(number) { expectation(it) })</ID>
+    <ID>SpreadOperator:Expect.kt$(*expectations)</ID>
+    <ID>SpreadOperator:JarSignatureTestUtils.kt$JarSignatureTestUtils$((bin / command[0]).toString(), *command.sliceArray(1 until command.size))</ID>
+    <ID>SpreadOperator:JarSignatureTestUtils.kt$JarSignatureTestUtils$(*(arrayOf("jar", "cvf", fileName) + contents))</ID>
+    <ID>SpreadOperator:JarSignatureTestUtils.kt$JarSignatureTestUtils$(*(arrayOf("jar", "i", fileName)))</ID>
+    <ID>SpreadOperator:JarSignatureTestUtils.kt$JarSignatureTestUtils$(*(arrayOf("jar", "uvf", fileName) + contents))</ID>
+    <ID>SpreadOperator:LogHelper.kt$LogHelper$(*classes.map { "+" + it.packageName }.toTypedArray())</ID>
+    <ID>SpreadOperator:LogHelper.kt$LogHelper$(*classes.map { it.packageName }.toTypedArray())</ID>
+    <ID>SpreadOperator:TestNodeInfoBuilder.kt$TestNodeInfoBuilder$(*certs, intermediateAndRoot.first.certificate, intermediateAndRoot.second)</ID>
+    <ID>SpreadOperator:TestUtils.kt$TestIdentity$(*bytes)</ID>
+    <ID>ThrowsCount:LedgerDSLInterpreter.kt$Verifies$ fun failsWith(expectedMessage: String?): EnforceVerifyOrFail</ID>
+    <ID>TooGenericExceptionCaught:Expect.kt$exception: Exception</ID>
+    <ID>TooGenericExceptionCaught:FutureMatchers.kt$&lt;no name provided&gt;$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:LedgerDSLInterpreter.kt$Verifies$exception: Exception</ID>
+    <ID>TooGenericExceptionCaught:MockAttachmentStorage.kt$MockAttachmentStorage$e: Exception</ID>
+    <ID>TooManyFunctions:Expect.kt$net.corda.testing.core.Expect.kt</ID>
+    <ID>TooManyFunctions:InternalTestUtils.kt$net.corda.testing.internal.InternalTestUtils.kt</ID>
+    <ID>TooManyFunctions:Matchers.kt$net.corda.testing.internal.matchers.Matchers.kt</ID>
+    <ID>TooManyFunctions:MockAttachmentStorage.kt$MockAttachmentStorage : AttachmentStorageSingletonSerializeAsToken</ID>
+    <ID>TooManyFunctions:TestDSL.kt$TestLedgerDSLInterpreter : LedgerDSLInterpreter</ID>
+    <ID>TooManyFunctions:TestDSL.kt$TestTransactionDSLInterpreter : TransactionDSLInterpreterOutputStateLookup</ID>
+    <ID>TooManyFunctions:TransactionDSLInterpreter.kt$TransactionDSL&lt;out T : TransactionDSLInterpreter&gt; : TransactionDSLInterpreter</ID>
+    <ID>TooManyFunctions:VaultFiller.kt$VaultFiller</ID>
+    <ID>VariableNaming:DummyContract.kt$DummyContract$val PROGRAM_ID = "net.corda.testing.contracts.DummyContract"</ID>
+    <ID>WildcardImport:DummyContract.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:DummyContractV2.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:DummyContractV3.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:DummyDealStateSchemaV1.kt$import javax.persistence.*</ID>
+    <ID>WildcardImport:DummyLinearStateSchemaV1.kt$import javax.persistence.*</ID>
+    <ID>WildcardImport:DummyLinearStateSchemaV2.kt$import javax.persistence.*</ID>
+    <ID>WildcardImport:FlowMatchers.kt$import net.corda.testing.internal.matchers.*</ID>
+    <ID>WildcardImport:InternalSerializationTestHelpers.kt$import net.corda.serialization.internal.*</ID>
+    <ID>WildcardImport:InternalTestUtils.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:Matchers.kt$import com.natpryce.hamkrest.*</ID>
+    <ID>WildcardImport:MockAttachmentStorage.kt$import net.corda.core.node.services.vault.*</ID>
+    <ID>WildcardImport:SerializationEnvironmentRule.kt$import net.corda.testing.internal.*</ID>
+    <ID>WildcardImport:TestDSL.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:TestUtils.kt$import net.corda.core.crypto.*</ID>
+    <ID>WildcardImport:TransactionDSLInterpreter.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:UniqueDummyFungibleContract.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:VaultFiller.kt$import net.corda.core.contracts.*</ID>
+  </Whitelist>
+</SmellBaseline>

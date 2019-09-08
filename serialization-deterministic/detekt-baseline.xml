@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>MaxLineLength:AMQPSerializerFactories.kt$ fun createClassCarpenter(context: SerializationContext): ClassCarpenter</ID>
+    <ID>NewLineAtEndOfFile:AMQPSerializerFactories.kt$net.corda.serialization.internal.amqp.AMQPSerializerFactories.kt</ID>
+    <ID>NewLineAtEndOfFile:DefaultCacheProvider.kt$net.corda.serialization.internal.model.DefaultCacheProvider.kt</ID>
+  </Whitelist>
+</SmellBaseline>

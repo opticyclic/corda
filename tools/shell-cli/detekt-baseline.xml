@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <Blacklist></Blacklist>
+  <Whitelist>
+    <ID>ComplexMethod:ShellCmdLineOptions.kt$ShellCmdLineOptions$private fun toConfigFile(): Config</ID>
+    <ID>ComplexMethod:ShellCmdLineOptions.kt$ShellConfigurationFile.ShellConfigFile$fun toShellConfiguration(): ShellConfiguration</ID>
+    <ID>MagicNumber:StandaloneShell.kt$StandaloneShell$7</ID>
+    <ID>MaxLineLength:ShellCmdLineOptions.kt$ShellCmdLineOptions$description = ["The path to the directory containing CorDapp JARs, CorDapps are required when starting flows."]</ID>
+    <ID>MaxLineLength:ShellCmdLineOptions.kt$ShellCmdLineOptions$description = ["The path to the shell configuration file, used instead of providing the rest of command line options."]</ID>
+    <ID>MaxLineLength:ShellCmdLineOptions.kt$ShellConfigurationFile.ShellConfigFile$sshHostKeyDirectory = extensions?.sshd?.let { if (it.enabled &amp;&amp; it.hostkeypath != null) Paths.get(it.hostkeypath) else null }</ID>
+    <ID>MaxLineLength:StandaloneShell.kt$StandaloneShell$Ansi.ansi().fgBrightRed().a( """ ______ __""").newline().a( """ / ____/ _________/ /___ _""").newline().a( """ / / __ / ___/ __ / __ `/ """).newline().fgBrightRed().a( """/ /___ /_/ / / / /_/ / /_/ /""").newline().fgBrightRed().a( """\____/ /_/ \__,_/\__,_/""").reset().fgBrightDefault().bold() .newline()</ID>
+    <ID>MaxLineLength:StandaloneShell.kt$StandaloneShell$if (System.console() != null) System.console().readPassword(format, *args) else this.readLine(format, *args).toCharArray()</ID>
+    <ID>MaxLineLength:StandaloneShell.kt$StandaloneShell$it.filter { it.isRegularFile() &amp;&amp; it.toString().endsWith(".jar") }.map { it.toUri().toURL() }.toList()</ID>
+    <ID>ReturnCount:StandaloneShell.kt$StandaloneShell$override fun runProgram(): Int</ID>
+    <ID>SpreadOperator:StandaloneShell.kt$StandaloneShell$(format, *args)</ID>
+    <ID>TooGenericExceptionCaught:StandaloneShell.kt$StandaloneShell$e: Exception</ID>
+  </Whitelist>
+</SmellBaseline>
