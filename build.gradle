@@ -231,12 +231,12 @@ allprojects {
         }
     }
 
-//    detekt {
-//        toolVersion = detekt_version
-//        buildUponDefaultConfig = true
-//        config = files(new File(rootProject.rootDir, "config/detekt-config.yml"))
-//        baseline = new File("detekt-baseline.xml")
-//    }
+    detekt {
+        toolVersion = detekt_version
+        buildUponDefaultConfig = true
+        config = files(new File(rootProject.rootDir, "config/detekt-config.yml"))
+        baseline = new File("detekt-baseline.xml")
+    }
 
     tasks.withType(Jar) { task ->
         // Includes War and Ear
