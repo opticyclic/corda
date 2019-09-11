@@ -1,9 +1,7 @@
 package net.corda.mappedschemademo.contracts.schema
 
-import net.corda.core.schemas.DirectStatePersistable
 import net.corda.core.schemas.MappedSchema
 import net.corda.core.schemas.PersistentState
-import net.corda.core.schemas.PersistentStateRef
 import net.corda.core.serialization.CordaSerializable
 import java.util.*
 import javax.persistence.*
@@ -33,23 +31,13 @@ object InvoiceFinanceDealSchemaV1 : MappedSchema(
             @Column(name = "loan_amount")
             var loanAmount: Long = 0,
 
-            @Column(name = "payment_amount")
-            var paymentAmount: Long = 0,
+            @Column(name = "fee_amount")
+            var feeAmount: Long = 0,
 
-            @OneToMany(targetEntity = PersistentInvoice::class, cascade = arrayOf(CascadeType.ALL))
+            @OneToMany(targetEntity = PersistentInvoice::class, cascade = [CascadeType.ALL])
             @JoinColumns(JoinColumn(name = "transaction_id", referencedColumnName = "transaction_id"), JoinColumn(name = "output_index", referencedColumnName = "output_index"))
             var invoiceList: MutableList<PersistentInvoice> = mutableListOf()
-    ) : PersistentState() {
-
-        override var stateRef: PersistentStateRef?
-            get() = super.stateRef
-            set(value) {
-                super.stateRef = value
-                invoiceList.forEach {
-                    it.stateRef = value
-                }
-            }
-    }
+    ) : PersistentState()
 
     @CordaSerializable
     @Entity
@@ -75,8 +63,8 @@ object InvoiceFinanceDealSchemaV1 : MappedSchema(
             var invoiceFinanceDealId: UUID = UUID.randomUUID(),
 
             @ManyToOne(targetEntity = PersistentInvoiceFinanceDeal::class)
-            var parentDeal: PersistentInvoiceFinanceDeal = PersistentInvoiceFinanceDeal(),
+            var parentDeal: PersistentInvoiceFinanceDeal = PersistentInvoiceFinanceDeal()//,
 
-            override var stateRef: PersistentStateRef? = null
-    ) : DirectStatePersistable
+            //override var stateRef: PersistentStateRef? = null
+    ) //: DirectStatePersistable
 }

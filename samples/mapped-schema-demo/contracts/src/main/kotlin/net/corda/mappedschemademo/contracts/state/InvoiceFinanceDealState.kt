@@ -16,7 +16,7 @@ import java.util.*
 @BelongsToContract(InvoiceFinanceDealContract::class)
 data class InvoiceFinanceDealState(
         override val linearId: UniqueIdentifier = UniqueIdentifier(),
-        val reference: String,
+        val reference: String = "",
         val borrower: Party,
         val lender: Party,
         val loan: Long,
@@ -55,7 +55,7 @@ data class InvoiceFinanceDealState(
 }
 
 @CordaSerializable
-data class Invoice(
+data class Invoice (
         var invoiceId: UUID = UUID.randomUUID(),
         var invoiceNumber: String = "",
         var supplier: String = "",

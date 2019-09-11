@@ -3,6 +3,7 @@ package net.corda.mappedschemademo.workflows
 import co.paralleluniverse.fibers.Suspendable
 import net.corda.core.contracts.Command
 import net.corda.core.contracts.requireThat
+import net.corda.core.crypto.SecureHash
 import net.corda.core.flows.*
 import net.corda.core.identity.Party
 import net.corda.core.transactions.SignedTransaction
@@ -22,7 +23,7 @@ object InitiateInvoiceFinanceDealFlow {
             val loan: Long,
             val fee: Long,
             val invoiceList: List<Invoice>
-    ): FlowLogic<UUID>() {
+    ): FlowLogic<SecureHash>() {
         companion object {
             object GENERATING_DEAL: ProgressTracker.Step("Generating transaction based on new invoice finance deal.")
             object VERIFYING_DEAL : ProgressTracker.Step("Verifying contract constraints.")
@@ -48,7 +49,7 @@ object InitiateInvoiceFinanceDealFlow {
         override val progressTracker = tracker()
 
         @Suspendable
-        override fun call(): UUID {
+        override fun call(): SecureHash {
             // Obtain a reference to the notary we want to use.
             val notary = serviceHub.networkMapCache.notaryIdentities[0]
 
@@ -88,7 +89,7 @@ object InitiateInvoiceFinanceDealFlow {
             // Notarise and record the transaction in both parties' vaults.
             subFlow(FinalityFlow(fullySignedTx, setOf(lenderSession), FINALISING_DEAL.childProgressTracker()))
 
-            return iouState.linearId.id
+            return fullySignedTx.coreTransaction.id
         }
     }
 

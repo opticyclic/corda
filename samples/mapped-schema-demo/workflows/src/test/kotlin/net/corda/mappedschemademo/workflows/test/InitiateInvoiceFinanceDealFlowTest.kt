@@ -1,7 +1,7 @@
 package net.corda.mappedschemademo.workflows.test
 
-import net.corda.core.contracts.TransactionVerificationException
 import net.corda.core.utilities.getOrThrow
+import net.corda.mappedschemademo.contracts.schema.InvoiceFinanceDealSchemaV1
 import net.corda.mappedschemademo.contracts.state.Invoice
 import net.corda.mappedschemademo.workflows.InitiateInvoiceFinanceDealFlow
 import net.corda.testing.core.singleIdentity
@@ -12,7 +12,6 @@ import net.corda.testing.node.TestCordapp
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
-import kotlin.test.assertFailsWith
 
 class InitiateInvoiceFinanceDealFlowTest {
     private lateinit var network: MockNetwork
@@ -42,11 +41,27 @@ class InitiateInvoiceFinanceDealFlowTest {
                 b.info.singleIdentity(),
                 100,
                 5,
-                listOf(Invoice(invoiceNumber="20000", supplier = "MegaCorp", value = 150)))
+                listOf(Invoice(invoiceNumber = "20000", supplier = "MegaCorp", value = 150), Invoice(invoiceNumber = "20001", supplier = "MegaCorp", value = 150)))
         val future = a.startFlow(flow)
         network.runNetwork()
 
-        // The IOUContract specifies that IOUs cannot have negative values.
-        assertFailsWith<TransactionVerificationException> { future.getOrThrow() }
+        val id = future.getOrThrow()
+
+        b.transaction {
+            val deals = a.services.withEntityManager {
+                val query = criteriaBuilder.createQuery(InvoiceFinanceDealSchemaV1.PersistentInvoiceFinanceDeal::class.java)
+                val type = query.from(InvoiceFinanceDealSchemaV1.PersistentInvoiceFinanceDeal::class.java)
+                query.select(type)
+                createQuery(query).resultList
+            }
+
+            deals.forEach {
+                println("Deal reference ${it.reference} for ${it.loanAmount} and ${it.feeAmount} fee")
+                it.invoiceList.forEach { invoice ->
+                    println("Invoice ${invoice.supplier} for ${invoice.valueAmount}")
+                }
+            }
+
+        }
     }
 }
