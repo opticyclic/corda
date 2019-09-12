@@ -336,7 +336,7 @@ subprojects {
         detekt "io.gitlab.arturbosch.detekt:detekt-formatting:$detekt_version"
     }
 
-    if( project.file("src/main/kotlin").isDirectory() ) {
+    if (project.file("src/main/kotlin").isDirectory()) {
         // using java exec instead of gradle plugin because the detekt gradle plugin doesn't work
         // this is probaly because we're using an older version of kotlin than the detekt gradle plugin
 
@@ -346,7 +346,7 @@ subprojects {
             main = "io.gitlab.arturbosch.detekt.cli.Main"
             args "--build-upon-default-config",
                     "--config", rootProject.file("config/detekt-config.yml").path,
-                    "--input", project.file("/src/main/kotlin").path,
+                    "--input", project.file("src/main/kotlin").path,
                     "--baseline", project.file("detekt-baseline.xml").path,
                     "--plugins", configurations.detekt.files.find { it.name.startsWith("detekt-formatting") }.path
         }
@@ -358,7 +358,7 @@ subprojects {
             main = "io.gitlab.arturbosch.detekt.cli.Main"
             args "--build-upon-default-config",
                     "--config", rootProject.file("config/detekt-config.yml").path + "," + rootProject.file("config/detekt-config-baseline.yml").path,
-                    "--input", project.file("/src/main/kotlin").path,
+                    "--input", project.file("src/main/kotlin").path,
                     "--baseline", project.file("detekt-baseline.xml").path,
                     "--plugins", configurations.detekt.files.find { it.name.startsWith("detekt-formatting") }.path,
                     "--create-baseline"
