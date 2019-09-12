@@ -326,6 +326,7 @@ subprojects {
 
     dependencies {
         detekt "io.gitlab.arturbosch.detekt:detekt-cli:$detekt_version"
+        detekt "io.gitlab.arturbosch.detekt:detekt-formatting:$detekt_version"
     }
 
     if( project.file("src/main/kotlin").isDirectory() ) {
@@ -339,7 +340,8 @@ subprojects {
             args "--build-upon-default-config",
                     "--config", rootProject.file("config/detekt-config.yml").path,
                     "--input", project.file("/src/main/kotlin").path,
-                    "--baseline", project.file("detekt-baseline.xml").path
+                    "--baseline", project.file("detekt-baseline.xml").path,
+                    "--plugins", configurations.detekt.files.find { it.name.startsWith("detekt-formatting") }.path
         }
         check.dependsOn detekt
 
@@ -351,6 +353,7 @@ subprojects {
                     "--config", rootProject.file("config/detekt-config.yml").path + "," + rootProject.file("config/detekt-config-baseline.yml").path,
                     "--input", project.file("/src/main/kotlin").path,
                     "--baseline", project.file("detekt-baseline.xml").path,
+                    "--plugins", configurations.detekt.files.find { it.name.startsWith("detekt-formatting") }.path,
                     "--create-baseline"
         }
     }
