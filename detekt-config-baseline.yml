@@ -3,4 +3,6 @@
 # we don't want a build failure during baseline generation though, so we
 # disable this check
 build:
-  maxIssues: -1
+  warningThreshold: 10000000
+  failThreshold: 10000000
+  maxIssues: 10000000
