@@ -522,24 +522,27 @@ configurations {
 
 dependencies {
     detekt 'io.gitlab.arturbosch.detekt:detekt-cli:1.0.1'
+    detekt "io.gitlab.arturbosch.detekt:detekt-formatting:1.0.1"
 }
 
-task detekt(type: JavaExec) {
+task detekt(type: JavaExec, group: 'verification') {
     main = "io.gitlab.arturbosch.detekt.cli.Main"
     classpath = configurations.detekt
-    def input = "$projectDir"
-    def config = "$projectDir/detekt-config.yml"
-    def baseline = "$projectDir/detekt-baseline.xml"
-    def params = ['-i', input, '-c', config, '-b', baseline]
-    args(params)
+    args "--build-upon-default-config",
+        '--input', "$projectDir",
+        '--config', "$projectDir/detekt-config.yml",
+        '--baseline', "$projectDir/detekt-baseline.xml",
+        '--plugins', configurations.detekt.files.find {it.name.startsWith("detekt-formatting")}.path
 }
+check.dependsOn(detekt)
 
-task detektBaseline(type: JavaExec) {
+task detektBaseline(type: JavaExec, group: 'verification') {
     main = "io.gitlab.arturbosch.detekt.cli.Main"
     classpath = configurations.detekt
-    def input = "$projectDir"
-    def config = "$projectDir/detekt-config.yml"
-    def baseline = "$projectDir/detekt-baseline.xml"
-    def params = ['-i', input, '-c', config, '-b', baseline, '--create-baseline']
-    args(params)
+    args "--build-upon-default-config",
+            '--input', "$projectDir",
+            '--config', "$projectDir/detekt-config.yml,$projectDir/detekt-config-baseline.yml",
+            '--baseline', "$projectDir/detekt-baseline.xml",
+            '--plugins', configurations.detekt.files.find {it.name.startsWith("detekt-formatting")}.path,
+            '--create-baseline'
 }

@@ -1,0 +1,6 @@
+# during baseline generation detekt still calculates the number of issues
+# and the build fails in case the number of issues reaches the configured threshold.
+# we don't want a build failure during baseline generation though, so we
+# disable this check
+build:
+  maxIssues: -1
